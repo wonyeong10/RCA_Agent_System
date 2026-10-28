@@ -1,0 +1,9 @@
+data/
+CLAUDE.md
+.claude/
+graphify-out/
+logs/
+.env
+.venv/
+__pycache__/
+Tests/**/output/
