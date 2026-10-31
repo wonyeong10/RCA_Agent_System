@@ -6,524 +6,231 @@ Model : Upstage solar 4 pro / solar 4 mini
 |
 Output : jsonl   <-> groundtruth.jsonl 채점
 
+- 결과가 나오기까지 응답 시간 또한 고려해야 할 듯 -> 실전에서는 대응 속도가 매우 중요함
+- (2026-10-31 압축) 코드·CLAUDE.md에 있는 내용은 빼고 결정 이유·결과·남은 일만 남김. 압축 전 전문은 git 972e86e
+
 과제1) Raw data 구조 파악 [완료]
 
 data/Claude.md 내용 참고
 
 과제2) 아키텍쳐 설계 [진행 중]
 
-진행 현황
-- 2026-10-27~28: 전체 흐름·도메인 분리 확정 (아이디어 4), reader 설계 확정 (아이디어 6)
-- 2026-10-28: reader 구현 완료 (Agent/Preprocessor/reader.py), 검증 PASS 95 / FAIL 0 / INFO 4, 400건 전수 실행 통과
-  - 구현 중 설계 변경 3번: coverage 출력 삭제, not_applicable 삭제, target 확장(service->pod) 삭제·pod 복원 (아이디어 6)
-- 2026-10-28: 연구실 보고용 reader 구현 요약 작성 (아키텍처, 핵심 원칙 3개, 입력·내부 처리·출력, 철회한 아이디어)
-- 2026-10-29: 피드백 "포기 신호 가설을 먼저 검증" -> 실험 환경 = 실제 환경이어야 하므로 selector를 먼저 구현하기로 함
-- 2026-10-29: selector 설계 확정(OpsAgent 3.2 방식 그대로) 및 구현 (Agent/Preprocessor/selector.py, 아이디어 7)
-  - recall 측정 (Tests/Preprocessor/selector/test_selector.py, 400건): 정답이 셋 중 하나의 Top-5에 드는 비율 61% (node 이름 일치 버그 수정 후 재측정, 처음 67%), 10분 이하 43건은 3σ 불가 (아이디어 7)
-- 2026-10-29: recall 채점 버그 2(node 이름 일치) 수정·재측정 -> 61% (node 57% -> 29%)
-- 2026-10-29: 공용 LLM 래퍼 구현 (Agent/util/llm.py, 토큰·비용·latency -> logs/llm_usage.jsonl)
-- 2026-10-29: 포기 신호 가설 실험 완료 (Experiments/abstain/run.py, 540 호출, $1.58, 46분, 아이디어 5)
-  - 결과: 두 가설 모두 "원인 근거가 빠진 것"은 감지 못함 -> "Solar 포기 성향 활용" 주장 철회
-  - (2026-10-30 정정) v1의 L1·L2는 현실에 거의 없는 조작이라 v2로 교체, 정답률은 느슨한 일치라 무효
-- 2026-10-30: 포기 신호 실험 v2 완료 (840 호출, $3.17, 67.6분, 오류 4, 아이디어 5) -> 연구실 보고
-  - H1(근거 부족 시 답변 포기) 기각, H2(근거 부족 시 재검색)는 재검색 여부만 기각, 재검색 대상은 근거를 따라감
-- 2026-10-30: 엄격 채점 원칙 확정 (루트 CLAUDE.md) - 느슨한 일치(service 단위 묶기)로 보고 정답률이 부풀려짐 (L0 A instance 63% -> 엄격 14%)
-  - 근거 수준 분류(L0/N1/N0)도 느슨한 일치였음 -> 엄격 재분류 시 L0 30건 중 4~5건만 남음 -> 가설 실험은 재설계 후 재실행 (보류)
-- 2026-10-30: 재검색 여부를 코드 규칙("원인 후보 이상 source < 2 -> 재검색")으로 정하는 안 보류
-  - 정답 기준이면 정답 유출, 모델 후보 기준이면 L1a·N1·N0에서 2개 이상 source 후보 27건 전부 오답
-- 2026-10-30: Loop 구현 (Agent/loop.py, 아이디어 4 "루프 (확정)"), 파일럿 10건 × 2회
-- 2026-10-30~31: selector를 OpsAgent 공개 코드와 대조해 수정 (아이디어 7 "변경 2026-10-30~31")
-  - selector recall 엄격 재측정: any_top5 29% (service 정답에 소속 pod 인정 시 43%), 결과 Tests/Preprocessor/selector/output/2026-10-30_213210
-    (trace callee service 단위 시절 측정, OpsAgent 대조 수정 후 재측정은 미완)
-- 2026-10-31: baseline 400건 실행·엄격 채점 (과제3 "baseline 결과") -> Correct 1.8%, Component 8.0%, Fault Type 13.2%
-- 다음: 판단 단계 진단 (fault_type 쏠림, node·service 수준 구분 실패, 근거에 정답이 보여도 못 고르는 경우), TiDB 출력 규칙 결정, 가설 실험 재설계
+현재 상태 (2026-10-31)
+- 구현 완료: reader, selector, Loop, 엄격 채점
+- 성능: 기존 구현 Correct 1.8% / Component 8.0% / Fault Type 13.2%, system card 주입 2.2% / 8.5% / 14.0% (큰 차이 없음, 과제3)
+- 방향: 모델 판단 보강보다 전처리(initial) 개선 우선, 그 후 system card 효과 재측정
+- 다음: 판정 불가 처리, tikv 순위 쏠림 완화 (아이디어 7 "전처리 개선 후보")
 
-- 결과가 나오기까지 응답 시간 또한 고려해야 할 듯 -> 실전에서는 대응 속도가 매우 중요함
+진행 이력
+- 10-27~28: 전체 흐름·도메인 분리 확정 (아이디어 4), reader 설계·구현·검증 (아이디어 6), 연구실 보고
+- 10-27: system card 실험 -> 구조 불확실로 보류, 아키텍처 완성 후 ablation으로 결정 (아이디어 1)
+- 10-29: 피드백 "포기 신호 가설을 먼저 검증" -> 실험 환경을 실제와 맞추려고 selector 먼저 구현 (아이디어 7)
+- 10-29: 공용 LLM 래퍼 구현 (Agent/util/llm.py), 포기 신호 실험 v1 -> "Solar 포기 성향 활용" 주장 철회 (아이디어 5)
+- 10-30: 포기 신호 실험 v2 -> H1 기각, H2는 재검색 여부만 기각 (아이디어 5), 연구실 보고
+- 10-30: 엄격 채점 원칙 확정 (루트 CLAUDE.md). 느슨한 일치로 보고 정답률이 부풀려짐 (L0 A instance 63% -> 엄격 14%)
+- 10-30: Loop 구현 (Agent/loop.py, 아이디어 4), 파일럿 10건 × 2회
+- 10-30~31: selector를 OpsAgent 공개 코드와 대조해 수정 (아이디어 7)
+- 10-31: baseline 400건 실행·엄격 채점, 4개 주제로 커밋·push (selector / 가설 / Loop / baseline)
+- 10-31: 노트북·데스크탑 동기화를 위해 .gitignore 변경 (.env, data만 제외, data/CLAUDE.md는 포함), 커밋 972e86e
+- 10-31: system card 주입 400건 실행 -> 기존 구현과 비교 진단, 연구실 보고 문안 정리 (과제3)
 
 아이디어 1. 시스템 구조 주입 (system card)
 
-- 기존 RCA 에이전트는 log/metric/trace만 받고, 엔지니어처럼 "시스템이 어떻게 생겼는지"는 모른 채 시작함
-  (그래프 기반 RCA는 trace 호출 그래프는 쓰지만 서비스 역할·언어·상태 같은 의미 정보는 없음) -> 차별점은 "운영 지식 주입"
-- 효과 근거: JVM 장애 55건이 전부 adservice (유일한 Java 서비스) -> "adservice만 Java" 한 줄이 탐색 범위를 크게 줄임
-- 구조 정보 출처: 원본 저장소 GoogleCloudPlatform/microservices-demo (README 서비스 표, protos/demo.proto, kubernetes-manifests의 *_ADDR 환경변수)
-- 원본 구조 (v0.10.7)
-  frontend -> productcatalog, currency, cart, recommendation, shipping, checkout, ad
-  checkout -> productcatalog, shipping, payment, email, currency, cart
-  recommendation -> productcatalog / cart -> redis-cart / 나머지는 호출 대상 없음
-  언어: frontend·productcatalog·shipping·checkout=Go, cart=C#, currency·payment=Node.js, email·recommendation=Python, ad=Java
-- 데이터와 대조 결과 (06-06·06-20·06-29 trace/log/metric)
-  - 원본 간선은 전부 존재 (원본에 없는 간선 여부는 계측 범위 밖은 확인 불가, 아래 실험 결과)
-  - TiDB/TiKV/PD 추가됨 (원본엔 없음). 사용 서비스는 productcatalogservice로 추정 (근거: groundtruth TiDB 장애 key_observations에 productcatalog만 등장, 분석용으로만 사용). trace·log엔 DB 호출 흔적 없음 -> 실험 결과 강력 후보, 아래 참고
-    -> TiDB 장애 구간에 productcatalog span 지연·에러가 튀는지로 데이터만으로 확정 필요
-  - TiDB 계층 장애 55건/400 (tikv 44, tidb 6, pd 5) -> system card에 필수
-  - adservice·currencyservice·paymentservice는 server span 없음 (호출자 client span으로만 보임)
-  - productcatalogservice는 로그 없음, redis-cart 로그 거의 없음
-  - trace 태그 이질: cartservice(.NET)는 podName/nodeName 키, redis span은 serviceName="redis"지만 실제는 cartservice -> redis-cart client span, python 서비스는 span.kind 대문자·operationName 앞 "/"
-  - replica 보통 3개(-0~-2), 날짜별로 일부 pod 빠짐
-- 표현 방식: 3층으로 나눔 (11개 서비스라 프롬프트 1~2k 토큰이면 충분, 그래프 DB 불필요)
-  1) 정적 의미: 서비스 역할·언어·상태 여부·TiDB 관계 -> 손으로 작성, 시스템 프롬프트에 텍스트로
-  2) 호출 토폴로지: 인접 리스트 텍스트, trace에서 추출해 검증 (trace 없는 케이스는 정적 토폴로지로 대체)
-  3) 동적 배치: pod 목록·pod->node 매핑 -> 케이스마다 데이터에서 추출 (하드코딩 금지)
-     -> (2026-10-28) service↔pod 관계도 여기로 (reader는 관계를 안 따라감), 생성은 selector가 initial에서. 아이디어 6 참고
-- 주의
-  - 전파 방향: 하위 장애가 상위(frontend 등)에서 가장 시끄럽게 보임 -> "증상은 위, 원인은 아래" 추론을 명시해야 효과
-  - system card엔 시스템 사실만. groundtruth 분포에서 배운 휴리스틱 넣으면 유출
-  - 검증: system card 유무 ablation (위치·유형 정확도, tool 호출 수 = 응답 시간)
-- 실험 결과 (2026-10-27) -> system_card 보류
-  - 산출물: system_card.py (dict, json.dumps로 프롬프트 입력, ~930토큰), hipstershop-tidb-map.html (구조도)
-  - 원본 15개 간선: 18일 전부(장애 구간 ±10분 제외) trace에 존재, 날짜별 변화 없음
-    - 단, "원본에 없는 간선 없음"은 확인 불가: ad·currency·payment·redis-cart는 자체 span이 없음(계측 꺼짐, 호출자 client span으로만 보임),
-      DB 호출은 계측된 서비스도 trace에 안 남음 -> 이들의 나가는 호출은 원본 README 기준
-    - shipping·email은 server span 있고 client span 없음 -> gRPC 말단은 데이터로 확인
-    - trace의 serviceName "redis" span = cartservice의 redis client span (redis-cart 자체 아님)
-  - TiDB 계층 (metric으로만 관찰, trace·log·infra_pod 없음)
-    - 인스턴스 각 1개: tidb 10.233.74.171:10080 / tikv 10.233.85.118:20180 / pd tidb-pd-0
-    - tidb qps type=Select가 실제 SELECT 처리량: Use=Select(84% 분 동일, 상관 0.99), Begin=Commit(99%), Select ≈ tikv kv_get(26.5 vs 27.2/s, 상관 0.99)
-    - tidb->tikv: tikv grpc_qps type(kv_get/prewrite/commit), tidb failed_query_ops type(tikv:9001/9005)
-    - ->pd: 데이터 근거 없음 (일반 지식)
-    - 배치: pod IP 3번째 옥텟 <-> 노드 1:1 (06-29: tidb k8s-05, tikv k8s-07, pd 불명)
+- 동기: 기존 RCA 에이전트는 log/metric/trace만 받고 시스템 구조는 모른 채 시작함 -> 차별점은 "운영 지식 주입"
+- 산출물: system_card.py (~930토큰), hipstershop-tidb-map.html. 출처 = GoogleCloudPlatform/microservices-demo v0.10.7 + 데이터 대조
+- 3층 구성 (11개 서비스라 프롬프트 텍스트면 충분, 그래프 DB 불필요)
+  1) 정적 의미(역할·언어·TiDB 관계) 2) 호출 토폴로지 -> system_card.py에 구현
+  3) 동적 배치(pod 목록, service<->pod, pod->node) -> 케이스마다 데이터에서 생성해야 함, 미구현
+- 원칙: 시스템 사실만 넣음 (groundtruth 분포에서 배운 휴리스틱은 유출)
+- 데이터 대조 결과
+  - 원본 15개 간선은 18일 전부 trace에 존재. "원본에 없는 간선 없음"은 확인 불가 (ad·currency·payment·redis-cart 자체 span 없음, DB 호출은 trace에 없음)
+  - TiDB/TiKV/PD는 원본에 없고 metric으로만 관찰, 인스턴스 각 1개. 장애 55/400건 (tikv 44, tidb 6, pd 5)
   - productcatalog -> TiDB = 강력 후보 (확정 아님)
-    - 분 단위 span 수 vs Select 차분 상관은 판별력 없음: 4일(06-29·06·20·28) 모두 productcatalog ≈ recommendation ≈ cart ≈ redis-cart로 붙어 있음
-      -> 부하 발생기의 행동 패턴(조회·장바구니 묶음 vs 주문 묶음)을 반영한 것으로 보임. 1분 해상도로는 인과 구분 불가
-    - 처음 06-29만 보고 "productcatalog 1위"라 한 건 계측된 서비스(serviceName 기준)만 비교한 결과. 호출자 client span 기준으로 11개 전부 다시 세니 위와 같음
-    - 요청량 비율(Select / productcatalog)이 날마다 0.9~2.4로 흔들림 -> 1요청=1SELECT 아님
-    - currency 등 계측 꺼진 서비스: 4일 모두 상관 음수 -> 배제
-    - 가장 강한 근거: 06-29 tidb duration_99th 64.9초 구간 2회(UTC 10:11-10:25, 14:11-14:33, Select 21->0.24/s)
-      productcatalog 지연 10ms->28.8s(x2800), frontend x380(productcatalog 대기), 나머지 서비스 변화 없음 (recommendation도 그대로 -> ListProducts는 DB 안 탈 가능성)
-      단 하루 2구간, 구간 내 요청 수 평소의 1~5%
-    - tidb duration_avg/99th는 초 단위 반올림이라 평소엔 0.00/0.01뿐 -> 정상 구간 지연 상관 불가
-  - 데이터 주의 (reader 반영)
-    - tidb metric은 trace보다 1분 늦게 찍힘 (trace t분 <-> tidb t+1분, 구간 끝 시각 라벨로 추정)
-    - 06-29도 깨끗하지 않음: 위 tidb 정지 2구간(:10~:11 시작, 장애 주입 패턴과 같음) -> baseline으로 쓸 때 제외
-    - infra_tidb qps는 06-29에 분마다 type 행 수가 2~9개로 다름 (06-06은 항상 9) -> 행 없음 처리 결정 필요
-    - 라벨 이상: infra_tikv_io_util = 전체 노드 디스크 사용률, infra_tidb_block_cache_size instance = tikv 주소
-    - 외부 논문(arXiv 2606.29193, 2602.08804): TiDB 계층 추가는 의도된 설계(저장 계층 장애 주입). 어느 서비스가 TiDB 쓰는지 언급 없음, TiFlash·비동기 메시징 언급은 데이터와 불일치
-  - 결정: 구조가 틀리면 에이전트 판단도 틀림 -> system_card 보류, reader·selector 이후 아키텍처 설계 먼저
-    -> 아키텍처 완성 후 system_card 선택적 도입 ablation (유무, productcatalog->TiDB 포함 여부)으로 정확도 변화 측정
+    - 근거: 06-29 tidb duration_99th 64.9초 구간 2회에 productcatalog 지연 10ms -> 28.8s, frontend x380, 나머지 변화 없음 (단 하루 2구간)
+    - span 수 상관·요청량 비율은 판별력 없음 (부하 패턴 반영, 1분 해상도로 인과 구분 불가)
+  - 데이터 주의: tidb metric은 trace보다 1분 늦음, 06-29(장애 없는 날)도 tidb 정지 2구간 있음,
+    infra_tikv_io_util = 전체 노드 디스크 사용률, infra_tidb_block_cache_size instance = tikv 주소
+- ablation 결과 (2026-10-31, 과제3): 답변 분포는 바꾸지만 정답률은 못 올림. "not confirmed"인 TiDB 경로를 모델이 확정처럼 사용
 
 아이디어 2. LLM 모델 특징 (Upstage Solar, 2026-10-27 조사)
 
-- Solar Pro 4 (2026-08 출시, solar-pro4-260806)
-  - 구조·파라미터 비공개. 컨텍스트 Upstage 512K/출력 128K, AA 측정 384K/256K (출처마다 다름)
-  - 가격(1M 토큰, VAT 별도): 입력 $0.30 / 캐시 $0.06 / 출력 $1.20 (upstage.ai/pricing)
-  - 한도: 분당 100요청 / 25만 토큰
-  - reasoning 기본 꺼짐, reasoning_effort(none~max)로 켬, 추론 토큰은 completion_tokens에 포함
-  - Responses API, tool calling, json_schema 구조화 출력 지원
-  - AA 지수 42 (Pro 3은 14), Terminal-Bench 57%, AA-LCR 71%, τ³-Banking 23%
-  - 과제 1건당 8.6분·출력 43k 토큰 -> 느리고 장황함
-  - 환각률 88% -> 24%지만 정확도는 19% 그대로, 답변 시도율 92% -> 41% => "모르면 답 안 함" 성향
-- Solar Mini 4 (2026-09 출시, solar-mini4-260922)
-  - MoE 35B / 활성 3B, 512K/128K
-  - 가격: 입력 $0.10 / 캐시 $0.01 / 출력 $0.40 (할인 10/22 종료)
-  - 한도: 분당 100요청 / 5만 토큰 -> 400건 일괄 실행 시 한도 주의
-  - AA 지수 24, 추론 토큰 많음
-- API 사용 주의 (console.upstage.ai/docs 공식 문서)
-  - OpenAI SDK 호환: base_url=https://api.upstage.ai/v1, 별칭(solar-pro4) 사용 권장, 실제 버전은 응답 model 필드
+- Solar Pro 4 (solar-pro4-260806): 분당 100요청 / 25만 토큰, 단가는 Agent/util/llm.py. 실측 건당 $0.0185, 93s
+  - AA-Omniscience: 시도율 92% -> 41%, 환각률 88% -> 24%, 정확도 19% 그대로 -> "모르면 답 안 함" 가설의 출발점 (아이디어 5에서 기각)
+- Solar Mini 4 (solar-mini4-260922): 분당 100요청 / 5만 토큰 -> 400건 일괄 실행 시 주의, Tool 모델 분리는 ablation 후보
+- API 주의 (console.upstage.ai/docs)
+  - OpenAI SDK 호환, base_url=https://api.upstage.ai/v1, 별칭 사용 권장, 실제 버전은 응답 model 필드
   - Responses API는 상태 저장 안 함: previous_response_id·conversation 쓰면 400 -> history 매번 통째로 전달
-  - reasoning_effort: low/medium/high/xhigh/max = 켬, none/minimal·생략 = 끔 (Responses API는 reasoning={"effort":...})
-    - 추론 결과는 message.reasoning, 토큰은 usage.completion_tokens_details.reasoning_tokens
-    - max_tokens 작으면 추론이 다 써서 content=null, finish_reason=length -> 여유 있게 잡을 것
-    - 추론 내용에 입력 데이터 섞임 -> 운영 로그엔 기본 미기록
-  - 구조화 출력(json_schema, strict=true)
-    - root는 object, 모든 키 required (선택값은 ["string","null"]), 모든 object에 additionalProperties=false, 중첩 10단계
-    - allOf/oneOf/not/if-then-else/patternProperties/재귀 $ref 미지원, 중첩 anyOf 피할 것
-    - JSON 문자열로 옴 -> 직접 파싱, finish_reason=stop 확인 후 파싱 (length면 잘림)
-    -> 아이디어 3의 {status, candidates, missing} 출력과 fault_type 18종을 enum으로 강제 가능
-  - tool calling: parallel_tool_calls 지원, tool_choice auto/특정 함수 강제, arguments가 잘못된 JSON일 수 있음 -> 검증 필수
-  - solar-pro3/pro2/mini는 2026-10-30(KST) 완전 종료 -> 비교 실험 대상에서 제외
-- 시사점
-  - OpenRCA 모델(GPT-4o, Claude 3.5 등 2024년 세대)보다 약하다는 전제는 재검토 필요 -> 작은 케이스 세트로 직접 측정
-  - 추론은 최종 판단 단계에서만, 반복 tool 호출 단계는 추론 끄거나 Mini 4
-  - 비용: 케이스당 입력 50K·출력 10K 가정 시 Pro 4 약 $0.027, 400건 약 $11
-  - CLAUDE.md 비용 기록 규칙의 단가 표에 위 공식 가격 사용
+  - reasoning: low~max = 켬, none/minimal·생략 = 끔. max_tokens 작으면 추론이 다 써서 잘림 -> 여유 있게
+  - json_schema strict: root object, 모든 키 required, additionalProperties=false, allOf/oneOf/not/if-then-else/patternProperties/재귀 $ref 미지원, 중첩 anyOf 피할 것
+  - tool calling: arguments가 잘못된 JSON일 수 있음 -> 검증 필수
+  - solar-pro3/pro2/mini는 2026-10-30 종료 -> 비교 대상 제외
   - 중국어 미지원 -> kpi_name 대신 kpi_key만 (data/CLAUDE.md 16번)
 
-아이디어 3. Tool 중심 구조 + "모르면 다시 수집" 루프
+아이디어 3. Tool 중심 구조
 
-- OpenRCA 최고 조합도 정답률 약 11% -> 병목은 추론보다 "LLM이 거대 데이터를 직접 코드로 탐색하는 구조"
-- 방향: 데이터 처리는 결정적 코드, LLM은 좁혀진 후보 중 판단만 (자유 코드 생성 금지, 고정 시그니처 tool만)
-- TAMO처럼 학습 모델을 tool로 쓰진 않음: 라벨 400건뿐이라 과적합·유출 위험, LLM 역할이 사라짐
-  -> tool은 통계·규칙 기반 (baseline 대비 z-score, 에러율 급증, trace 간선별 지연 변화)
-- 역할 분담
-  1) 전처리(코드): 시간 변환·필터, 소스별 커버리지
-  2) 이상 탐지(코드): 엔티티(pod/service/node/TiDB)별 metric·log·trace 이상 점수 -> 후보 상위 N + 근거 표
-  3) 전파 보정(코드 + system card): 토폴로지로 상위=증상, 하위=원인 점수 조정
-  4) 판단(LLM): 후보 표 + system card로 위치·유형 결정, 필요 시 get_entity_metrics / get_edge_traces / get_pod_logs 호출
-  5) 출력(코드): fault_type 18종·instance 형식 검증, reason에 kpi_key 지표명 포함
-- "모르면 다시 수집" 루프 (Solar의 답변 포기 성향 활용)
-  - LLM 출력을 구조화: {status: answer|insufficient, candidates, missing:[{entity, source, window}]}
-  - insufficient -> 코드가 missing대로 추가 수집 (후보 세부 지표 -> 토폴로지 이웃 -> 시간 구간 확장 -> 다른 소스)
-  - N회차(예: 3)엔 insufficient 금지, 최선의 답 강제 (채점은 모든 케이스에 답 필요, "모름"=0점)
-  - 코드 기반 점검 병행: 1·2등 점수 차 크면 바로 답, 차이 작은데 확신하면 한 번 더 수집
-  - 커버리지를 모델에 알려 없는 데이터(trace 없음 40건, log 없음 21건) 요청 방지
-    -> (2026-10-28 변경) reader coverage 삭제, 빈 결과 해석은 프롬프트 규칙으로. 아이디어 6 참고
-  - 주의: AA-Omniscience는 사실 지식 시험 -> "근거 충분성 판단"으로 이어지는지는 직접 측정해야 함
-  - 과도한 포기(시도율 41%)로 루프·지연 늘 위험 -> 회차 상한 필수
-- 검증 실험
-  - 규칙만 vs 규칙+LLM vs 규칙+LLM+system card ("LLM이 왜 필요한가"에 답)
-  - 강제 답변 vs 포기 신호 루프: 정확도·평균 회차·응답 시간
-  - 포기 신호 신뢰도: "충분" 판단 시 실제 정답률, "부족" 후 추가 수집으로 정답률이 오르는지
-  - LLM이 가치를 내야 할 지점: pod/service 영향 범위 판별, 비슷한 유형 구분(pod failure/kill, network delay/loss), 데이터 누락 케이스, reason 작성
+- OpenRCA 최고 조합도 정답률 약 11% -> 병목은 "LLM이 거대 데이터를 직접 코드로 탐색하는 구조"
+- 방향: 데이터 처리는 결정적 코드, LLM은 좁혀진 데이터로 판단만 (자유 코드·SQL 금지, 고정 시그니처 tool만)
+- TAMO처럼 학습 모델을 tool로 쓰지 않음: 라벨 400건뿐이라 과적합·유출 위험, LLM 역할이 사라짐
+- "모르면 다시 수집" 루프({status, missing} 구조화 출력)는 철회 -> finish tool 루프 (아이디어 4), 포기 성향 기각 (아이디어 5)
+- 남은 검증 후보: 규칙만 vs 규칙+LLM vs 규칙+LLM+system card ("LLM이 왜 필요한가"에 답)
+- LLM이 가치를 내야 할 지점: pod/service 영향 범위 판별, 비슷한 유형 구분(pod failure/kill, network delay/loss), 데이터 누락 케이스
 
-아이디어 4. 전체 흐름 정리 (2026-10-27 논의)
+아이디어 4. 전체 흐름 (2026-10-27 논의, 구현 기준으로 갱신)
 
 - 전체 흐름
-  input(uuid, 장애 구간) -> [reader] 시간대 변환·필터·정렬·정규화 -> [selector] baseline 대비 이상 탐지로 필요한 데이터만 선별
-  -> initial brief + system card -> [결정 LLM] tool 선택 반복 -> finish -> [답변 LLM] json 답변 -> 출력 검증 -> output.jsonl
+  input(uuid, 장애 구간) -> [reader] 시간대 변환·구간 자르기·정렬 -> [selector] 이상 패턴 선별 -> initial brief
+  -> [Tool 모델] search 반복 -> finish -> [Answer 모델] json 답변 -> output.jsonl
+- 전처리 필수: 16분 기준 log ~4만 줄, trace ~4만 span -> 원본 그대로 LLM 입력 불가
+- 도메인 분리: reader = 원본 보존, selector = 정규화·quirk·선별 (아이디어 6, 7)
+- initial 데이터 (확정): input 구간 고정, 코드가 고정 규칙으로 생성, 구간 안 모든 엔티티 대상
+  - 이유: 첫 수집까지 모델이 정하면 첫 수집과 재검색이 섞이고, 사전지식 편향으로 node·TiKV 장애를 놓침
+- Tool: search(sources, target, window) + finish. tool 3개는 같은 함수의 껍데기라 1개 + sources 리스트
+  - window = {before_min, after_min} 0~60, 구간 확장 전용 tool 불필요. 그 외 tool 없음
+- 루프 (확정)
+  - 결정 호출과 답변 호출 분리: 결정 = tool_choice=required·reasoning 끔, 답변 = json_schema strict·reasoning medium·실패 시 1회 재시도
+  - MAX_LOOPS 5 (근거와 무관하게 첫 호출 82%가 search라 상한 필수, tool 병렬 호출 가능), 소진 시 강제 답변
+  - search는 병렬, finish와 섞이면 finish 우선. 형식 오류·중복 조회도 tool 결과로 돌려줌 (회차 소모)
+  - search target 선택지 = 케이스별 entities(입력 ±60분): 구간 내만 주면 failure 장애의 원인이 빠지고, 시간대마다 활동 엔티티가 다름
+  - 답변 선택지 = 전체 날짜 metric 행 주인 합집합 56개 (groundtruth 미사용)
+  - 모델은 Pro 4 하나로 시작, Mini 4 분리는 ablation
+- history: stateless라 매번 통째로 전달, append-only (프리픽스 캐시)
+  - (2026-10-29 피드백) 누적 방식 검증 미완: 회차별 input 토큰 증가, 앞 회차 근거를 최종 판단에 쓰는지 -> 나쁘면 요약·잘라내기
 
-- 전처리 필수: 장애 구간만 잘라도 원본이 너무 큼 (16분 기준 log ~4만 줄, trace ~4만 span) -> 원본 그대로 LLM 입력 불가
-
-- 도메인 분리 (확정)
-  1) reader: 시간대 변환(파일명 CST / 내부 UTC), 시각 필터, 정렬, 컬럼 정규화(ts, service, pod, node), 데이터 quirk 흡수
-  2) selector: 정렬된 데이터에서 이상 탐지 기반으로 필요한 데이터만 선별
-  -> 데이터 quirk는 reader 밖으로 새지 않게
-  -> (2026-10-28 변경) reader는 원본 보존 + 시간대 변환·정렬만, 정규화·quirk는 selector. 아이디어 6 참고
-
-- 데이터 표현: OpsAgent(텍스트로 통일) vs TAMO(시계열 + 딥러닝 학습)
-  - 양자택일 아님: 계산용 표현(정렬·비교)과 LLM 입력 표현은 다른 층. Solar 입력은 어차피 텍스트
-  - 방향: 시계열로 정렬(TAMO식, 딥러닝 대신 통계 z-score) -> 이상 부분만 텍스트로(OpsAgent식)
-  - 시계열 층을 두는 이유
-    - source 간 시각·엔티티 맞추기를 LLM에 맡기지 않음 (LLM은 긴 텍스트 속 숫자·시각 대조에 약함)
-    - onset(누가 먼저 튀었나) 계산 -> 원인/증상 구분 단서
-    - LLM 없이 recall@K(후보에 정답 포함 비율)로 전처리 품질 검증 가능
-  - log·trace는 분 단위 count로만 줄이면 의미 손실 (로그 내용, 호출 트리, 1초짜리 장애) -> 집계는 선별용, 근거는 원본에서
-    - log: 숫자·ID 마스킹으로 템플릿화 후 집계, 구간에 새로 등장한 템플릿이 핵심 신호
-    - trace: 호출 트리 복원 후 self_time(자기 duration - 자식 duration) -> 지연이 실제로 생긴 위치 특정
-    - onset은 집계 단위가 아니라 원본 첫 이상 이벤트 시각
-    - 원래 텍스트인 정보(템플릿 문장, 에러 메시지, trace status.message)는 원문 유지
-  - 실험: source별 텍스트 요약만(OpsAgent식) vs 시계열 정렬 -> 텍스트, 같은 LLM·케이스로 정확도·토큰 비교
-
-- initial 데이터 (확정)
-  - input 장애 구간 [start, end]로 고정, 코드가 고정 규칙으로 생성
-    (첫 수집 범위까지 모델이 정하면 "첫 수집"과 "재검색"이 섞여 tool 설계가 애매해짐)
-  - 구간 안 모든 pod·service·node·TiDB 계층 포함
-    (모델은 장애 위치를 모름. 처음부터 모델이 고르게 하면 사전지식 편향으로 node·TiKV 장애를 놓침)
-  - 압축: (엔티티, signal)당 1행 - baseline, 구간 평균·최대, z, onset. 이상 행만 상세, 나머지는 엔티티별 "정상 n개" 한 줄
-  - 엔티티 종류별 따로 Top-K (frontend 등 시끄러운 상위 서비스가 node·TiKV 후보를 가리지 않게)
-  - baseline 값을 열로 함께 넣음 (없으면 값이 이상한지 판단 불가). 코드 규칙이지 모델 판단 아님
-  - 원인 시점이 구간 밖일 수 있음 -> onset이 구간 경계에 붙으면 "구간 앞 원인 가능" 표시, 확장은 tool로
-  - 현재 데이터셋은 input 시각 = groundtruth 시각 -> dev 날짜에서 실제 onset이 start에서 얼마나 벗어나는지 먼저 확인
-
-- system card 활용
-  - 아이디어 1의 3층 + 추가 2개: signal 카탈로그(사용 가능한 kpi_key 목록), 케이스별 데이터 커버리지
-    -> (2026-10-28 변경) 케이스별 커버리지 대신 일반 규칙("행 0 = 정상 근거 아님") + observability. 아이디어 6 참고
-  - initial 단계가 아니라 tool 단계에서 "어느 엔티티를 더 볼지" 고르는 근거
-
-- Tool 설계
-  - get_metrics / get_traces / get_logs / finish
-  - 모델이 엔티티와 window 지정. window = {before_min, after_min} (input 구간 기준 앞뒤 확장, 0/0 = 원 구간) -> 구간 확장 전용 tool 불필요
-  - get_metrics: service 지정 시 소속 pod 나란히, node 지정 시 올라간 pod 포함 (pod vs service 범위 판단)
-  -> (2026-10-28 변경) tool 1개 + sources 리스트, node는 자신만. 아이디어 6 참고
-  - 반환은 baseline 대비 요약, raw 덤프 금지
-  - 그 외 tool 추가 안 함 (이웃 조회=system card, 커버리지=initial, replica 비교=get_metrics). 자유 코드/SQL 실행 배제
-
-- 루프 (확정, 아이디어 3의 {status, missing} 구조화 출력 대신 finish tool 방식)
-  - 결정 호출과 답변 호출 분리
-    - 결정: tool_choice=required, reasoning 끔 -> 검색 tool 또는 finish
-    - finish -> 답변 호출 1회: json_schema strict (fault_type enum 18종, instance 형식), reasoning 켬
-  - 포기 신호 = finish 대신 검색 tool 호출 -> finish까지 회차 수로 측정
-  - MAX_LOOPS 소진 시 결정 호출 건너뛰고 바로 답변 호출 (강제 답변)
-  - tool arguments가 깨진 JSON -> 검증 후 오류를 tool 결과로 돌려줌 (회차 소모)
-  - 모델은 하나(Pro 4)로 시작, Mini 4 분리는 ablation
-
-- 재검색 시 중복 방지
-  - 이미 읽은 결과 재투입: 대화 history 자체 (Responses API stateless라 매번 통째로 전달) -> 별도 캐시 불필요
-  - 중복 읽기 방지: 케이스별 메모리 dict (tool, entity, window) -> 겹치는 구간이면 새 구간만 읽음
-  - ContextVar: 케이스를 스레드로 병렬 실행할 때만 필요 (copy_context 필수). 순차 실행이면 dict로 충분
-  - (2026-10-29 피드백) history 누적 방식 검증 필요 -> Loop 설계 시 테스트
-    - 회차별 프롬프트 길이: 회차마다 input 토큰 수(usage 값) 기록 -> 증가 곡선, MAX_LOOPS 도달 시 최대 길이, 비용·응답 시간
-    - 긴 프롬프트 활용도: 앞 회차 tool 결과에만 있는 근거를 모델이 최종 판단·reason에 실제로 쓰는지
-      (예: 핵심 근거를 1회차/중간/마지막 회차에 두고 정답률·인용 비교, lost-in-the-middle 확인)
-    - 결과가 나쁘면 대안: 이전 tool 결과를 요약/압축해 넘기기, 오래된 결과 잘라내기
-
-- 보류: 저장소 구조 (날짜별 사전 계산 파일 / 이벤트 테이블·집계 테이블 분리)
-- 미결정: baseline 계산 방식 (구간 앞 수 시간 median/MAD + 과거 장애 구간 제외 vs 장애 없는 06-29), 순차 vs 병렬 실행
-
-아이디어 5. 답변 포기·근거 부족 신호 검증 (2026-10-28 논의)
+아이디어 5. 답변 포기·근거 부족 신호 검증 (2026-10-28~30)
 
 - 피드백: "모델이 답변을 포기하는 순간과 근거가 부족한 경우를 어떻게 알아내는가?"
-- 문제: AA-Omniscience 시도율 41%는 closed-book 사실 질문 + 명시적 기권 옵션에서 측정
-  -> 우리 루프는 결정 호출(tool_choice=required, reasoning 끔)에서 "finish 대신 검색 tool = 포기 신호"
-  -> 답변 생성 상황과 tool 선택 상황은 다른 행동, 성향이 옮겨온다는 근거 없음
-- Upstage 예제 분석 (Solar-Pro4-Cookbook research-agent, solar_model_test/research-agent)
-  - "보류"는 모델 기능이 아니라 프롬프트 규칙: 단일 출처·애매·fetch 실패 주장에 "unconfirmed" 라벨 (답변 안 하는 게 아니라 라벨 표시)
-  - 근거 부족 기준을 사람이 셀 수 있게 정의함 (출처 1개 = 부족, 독립 출처 3개 이상)
-  - 채택 실행(pro4, reasoning high)에서 라벨 0회 사용 (checklist에 Upstage 스스로 [X])
-    단일 출처 주장 다수 있었는데도 자가검증 ✅, "별도 표기했다"고 거짓 서술, 조회일도 실제 실행일과 다름 -> 모델 자기 판정 신뢰 불가
-  - 재검색은 404 등 fetch 실패에 대한 재시도뿐 (의미적 근거 부족 판단 아님), 종료는 "출처 3개" 개수 규칙이 결정
-  -> 이 예제로 "tool 선택 시 근거 부족을 알아채고 재검색"은 증명 안 됨
-- 방향 (2026-10-30 보류: 코드 판정은 정답 유출 문제, 진행 현황 참고)
-  - 근거 부족을 셀 수 있는 규칙으로 정의 (예: 원인 후보는 metric·log·trace 중 2개 이상 소스에서 이상) -> 프롬프트에도 기준 명시
-  - 판정은 코드가: 답변 JSON의 근거 필드를 규칙으로 검사, 미달이면 재수집. Solar 기권 성향은 보조 신호로만
-  - 피드백 답변: "모델의 포기 순간에 의존하지 않고, 근거 부족은 규칙으로 정의·코드가 판정. Upstage 예제도 같은 구조이며 거기서도 자기 판정은 불신"
-- 자체 실험안 (2026-10-29 보류 -> 우선 진행, selector 구현 후. 아이디어 7): 근거를 일부러 지운 케이스(전체/일부/없음) × 모드(답변 생성 + insufficient 옵션 / tool 선택)
-  - 측정: 포기율 민감도(없음 - 전체), 재검색 표적성(지운 근거를 요청하는가), 답했을 때 정답률, 근거 돌려준 뒤 회복
-  - 상세: C:\Users\성원영\.claude\plans\zesty-soaring-rose.md
-- 실험 결과 (2026-10-29, Experiments/abstain/output/2026-10-29_202346, 실행법 Experiments/CLAUDE.md)
-  - 설정: Solar Pro 4, recall에서 정답 근거가 L0에 실제로 있는 30건(fault_type 라운드로빈, io fault는 hit 0건이라 제외) × 3수준 × 2트랙 × 3회 = 540 호출
-    - L0 원본 / L1 정답 엔티티가 주인인 줄만 삭제(호출자·로그 메시지 속 언급 = 상위 증상은 남김) / L2 이상 줄 전부 삭제, 헤더만
-    - A: reasoning medium, json_schema {status answer|insufficient, ...} / B: reasoning 끔, tool_choice=required, search|finish 첫 호출만
-  - 포기율 A: L0 7% / L1 11% / L2 100% (민감도 +93%), B: 82% / 80% / 80% (민감도 -2%)
-  - B 표적성 (무작위 기준선 12%): target=정답 L0 47% / L1 1% / L2 4%, L2는 target=null(전체 조회) 63%
-    -> 재검색은 "빠진 것"이 아니라 "보이는 것"을 따라감 (L0 = 보이는 원인 확인, L1 = 남은 증상 엔티티 조회)
-    -> window 확장은 search 호출의 절반(161/322)
-  - A 조건부 정답률 (답한 경우, 느슨한 일치라 무효): L0 instance 45% / fault_type 14%, L1 6% / 9% -> L1에서 89% 답하고 남은 증상 엔티티(tikv, redis-cart 등)를 원인으로 지목
-  - 해석
-    - A: 근거가 통째로 없을 때만 포기 (L2는 코드로도 판정 가능, 이상 줄 0개). 현실적 부족(증상만 보임)에선 확신 있게 오답
-    - B: 근거와 무관한 습관적 검색 ("tool이 있으니 일단 부름" 편향), 지운 원인을 추론해 찾아가지 못함
-    -> 계획서 결정표 "둘 다 둔감": 포기 성향 활용 주장 철회, 근거 부족은 규칙 정의·코드 판정 (위 '방향'과 동일), B 과잉 검색은 MAX_LOOPS 근거
-    -> L0 정확도 자체가 낮음 -> 포기 신호와 별개로 판단 단계(system card, 프롬프트) 보강 필요
-  - 비용·시간 (호출당): A $0.005·평균 37.6s·최대 189s (reasoning 3.3k 토큰), B $0.0009·1.2s
-  - 구현 중 발견
-    - json_schema strict에서 긴 문자열(reason) 뒤 공백 무한 반복 -> 다음 키 누락 (파일럿 2/9) -> reason을 마지막 필드로 옮겨 1%(3/270)로 감소, Loop엔 재시도 1회 필요
-    - instance에 설명문 섞임 -> "이름 하나만" 프롬프트 규칙
-  - 한계: 첫 결정만 (재검색 후 회복 미측정), system card 없음, 30건 × 3회
-- 실험 v2 (2026-10-30, Experiments/abstain/output/2026-10-30_133021, 840 호출, $3.17, 67.6분, 오류 4)
-  - v1 L1·L2 교체 이유: 원인을 3 source 전부에서 지우거나 이상 줄 전부 삭제는 현실에 거의 없는 조건
-  - 근거 수준 ("보인다" = 정답 엔티티가 주인인 줄)
-    - L0: 원인이 2개 이상 source에서 보임 (원본) / L1a: 같은 케이스에서 원인 source 1개만 남김 (인공)
-    - N1: 원래 1개 source에서만 보임 (자연) / N0: 어느 source에도 안 보임, 10분 초과 (자연)
-    - Nshort(10분 이하) 제외: 근거 수준이 섞이고, "판정 불가"가 떠도 window 확장이 늘지 않음 (51%)
-  - 결과 (L0 / L1a / N1 / N0)
-    - A 포기율: 8% / 4% / 11% / 16%
-    - B 재검색률: 81% / 80% / 67% / 86%
-    - B target=정답 (엄격): 42% / 28% / 28% / 8% (무작위 기준선 ~11%)
-  - 해석: 근거가 부족해도 답을 포기하지 않고(H1 기각), 재검색은 근거와 무관하게 습관적(H2 재검색 여부 기각).
-    다만 재검색 대상은 보이는 근거를 따라감 (무작위보다 높음)
-  - 엄격 재채점 (참고): A instance 정답 L0 63% -> 14%
-  - 한계: 근거 수준 분류가 느슨한 일치 -> 엄격 재분류 시 L0 4~5건 -> 실험 재설계 후 재실행 필요 (보류)
-  - 설계 함의: 재검색 대상은 모델이 고름, 재검색 여부는 판정 수단이 없어 MAX_LOOPS로 막음, reasoning은 답변 호출에서만, 재시도 1회
+- 문제: 시도율 41%는 closed-book 사실 질문 + 기권 옵션에서 측정 -> tool 선택 상황으로 옮겨온다는 근거 없음
+- Upstage 예제 (solar_model_test/research-agent): "보류"는 프롬프트 규칙, 근거 부족 기준을 셀 수 있게 정의.
+  채택 실행에서 라벨 0회·자가검증 거짓 -> 모델 자기 판정 신뢰 불가. 재검색도 404 재시도뿐
+- 실험 v1 (2026-10-29, Experiments/abstain/output/2026-10-29_202346, 540 호출): "원인 근거가 빠진 것" 감지 못함 -> 포기 성향 활용 철회
+  - L1·L2 조작이 비현실적이고 정답률은 느슨한 일치라 무효. 남는 관찰: 재검색은 "빠진 것"이 아니라 "보이는 것"을 따라감
+- 실험 v2 (2026-10-30, Experiments/abstain/output/2026-10-30_133021, 840 호출, $3.17)
+  - 근거 수준: L0 원인이 2개 이상 source에 보임 / L1a 원인 source 1개만 남김(인공) / N1 원래 1개 source / N0 어느 source에도 없음
+  - 결과 (L0 / L1a / N1 / N0): A 포기율 8 / 4 / 11 / 16%, B 재검색률 81 / 80 / 67 / 86%, B target=정답 42 / 28 / 28 / 8% (무작위 ~11%)
+  - 해석: 근거가 부족해도 답을 포기하지 않고(H1 기각), 재검색은 근거와 무관하게 습관적(H2 재검색 여부 기각), 재검색 대상은 보이는 근거를 따라감
+  - 한계: 근거 수준 분류가 느슨한 일치 -> 엄격 재분류 시 L0 4~5건 -> 재설계 후 재실행 필요 (보류)
+  - 설계 함의: 재검색 대상은 모델이 고름, 재검색 여부는 판정 수단이 없어 MAX_LOOPS로 막음, reasoning은 답변 호출에서만
+- 코드 판정 규칙("원인 후보 이상 source < 2 -> 재검색") 보류: 정답 기준이면 유출, 모델 후보 기준이면 2개 이상 source 후보 27건 전부 오답
+- 구현 중 발견: json_schema strict에서 긴 문자열 뒤 공백 반복 -> 다음 키 누락 -> reason을 마지막 필드로 (파일럿 2/9 -> 1%)
 
-아이디어 6. reader 설계 (2026-10-28 논의, 아이디어 4의 reader·tool 항목 갱신)
+아이디어 6. reader 설계 (2026-10-28)
 
 - 핵심 원칙 (연구실 보고 기준)
   1) 원본을 최대한 훼손하지 않고 원시 작업만. 도메인·외부 지식을 넣지 않음
-     -> 시스템 구조·도메인 지식이 바뀌어도 reader는 안 고침, selector는 원본이 살아 있어야 제대로 고름
-  2) 모델의 유동적인 재검색 지시(구간·entity·source)를 정확히 읽어옴 (단방향 1회 실행이 아니라 Tool 루프)
+  2) 모델의 유동적인 재검색 지시(구간·entity·source)를 정확히 읽어옴
   3) 모델 지시 오류는 전처리가 아니라 Loop에서 미리 검사 -> 전처리 독립성
-- 내부 처리 순서: 파일 선택(UTC 구간 -> CST 파일명·날짜 폴더, metric은 target type·name으로 파일) -> 시각 필터(읽을 때 pyarrow filters)
-  -> target 행 필터(infra_pod·infra_node처럼 여러 엔티티가 섞인 파일만, log·trace는 행 주인) -> ts 정렬·날짜별 file_key 이어 붙임
+- 역할: 원본 보존 + 시간대 변환 + 구간 자르기 + 정렬만. 정규화·quirk는 selector로 (정규화하면 selector가 쓸 정보가 사라짐)
+- target 확장 없음: 모든 target이 "행 주인 == name"인 자기 데이터만
+  - 경과: service가 이름 패턴으로 pod를 끌어오게 했다가 되돌림 (<service>-N 규칙도 외부 지식, node->pod를 안 따라가는 것과 일관성 깨짐)
+  - node 유지: node 장애 82/400건, node 지표는 node target으로만 나옴
+  - 관계 지식(pod 목록, service<->pod, pod->node)은 system card 3층으로. replica·node 비교는 모델이 병렬 호출
+- 선택지 목록: 장애 구간이 아니라 넓은 구간에서 추출 (pod failure면 구간 안에서 pod가 사라짐), tool enum + 코드 검증
+- coverage 삭제: 엔티티 단위로 제대로 하려면 구현이 끝없고 source 단위로는 의미가 약함 -> 빈 결과 해석은 프롬프트 규칙 ("행 0 = 정상 근거 아님")
+- 엔티티 종류별로 source가 없다고 미리 판단하지 않음 (외부 지식이라 제거), 대가는 빈 결과 읽기 ~1-2s
+- TiDB 계층 metric instance는 엔티티 이름이 아님 -> target은 컴포넌트 단위, groundtruth tidb-tikv-0 표기는 채점·출력 단계 매핑
+- Agent Loop 입력 검사 (reader 앞단, loop.py validate에 반영 완료)
+  - 시간대 없는 ISO를 reader가 KST로 해석해 9시간 어긋난 구간을 오류 없이 반환 -> 모델은 시각을 쓰지 않고 window만, 시각은 코드가 계산
+  - 비문자열·비dict target의 TypeError·AttributeError -> 스키마·타입 검증 후 넘김
+- 검증 (Tests/Preprocessor/reader/test_reader.py, 독립 oracle과 행 단위 대조): PASS 95 / FAIL 0 / INFO 4 (INFO = Loop로 넘긴 입력 검사)
+  - 400건 전수: 예외 0, 건당 평균 2.4s·최대 7.6s, 행 0 케이스 log 21 / trace 40 (data/CLAUDE.md와 일치)
 
-- 역할 변경: reader = 원본 보존 + 시간대 변환 + 구간 자르기 + 정렬만. 정규화·quirk 처리는 selector로
-  - 이유: 내부 정보가 살아 있어야 selector가 고름. 정규화하면서 버리는 정보(trace logs, tags 대부분, 노드 IP 등)가 생김
-  - 추가 열은 ts(UTC) 하나, 빼는 열은 kpi_name 하나. 'null' 문자열·대소문자·operationName 등 원본 그대로
-  - 출력: {log: DF, trace: DF, metric: {file_key: DF}} (요청 source만). metric은 파일마다 스키마가 달라 파일 1개 = DF 1개
-  - source 개수와 무관하게 같은 모양, 합치지 않음, 호출자는 항상 selector로 넘김
-- 인터페이스: read(sources, target, start_time, end_time)
-  - sources 복수: tool 1개 + sources 리스트 (tool 3개는 같은 함수의 껍데기일 뿐)
-    - 비용은 LLM 호출 수 기준 -> source별로 구간이 다르면 같은 tool을 인자만 바꿔 병렬 호출 (per-source window 인자 불필요)
-  - target: None(initial) | {type: pod|service|node|tidb|tikv|pd, name}
-    - node 유지: node 장애 82/400건은 정답이 node명(service 빈 값), node 지표는 node target으로만 나옴
-    - type은 metric 폴더 분기에만 씀 (모델이 kpi까지 고르진 않음, metric 하루 ~2MB라 전부 읽고 selector가 추림)
-  - 확장 기준 (2026-10-28 최종): 확장 없음, 모든 target이 "행 주인 == name"인 자기 데이터만
-    - 경과: pod를 빼고 service가 이름 패턴(^{name}-\d+$)으로 하위 pod를 끌어오게 했다가 되돌림
-      -> <service>-N 명명 규칙도 k8s 배포 방식에서 온 외부 지식, node->pod 배치를 안 따라가는 것과 일관성 깨짐
-      -> service 자신의 log·trace 행은 원래 없음 (log·trace 주인은 항상 pod)
-    - pod: apm pod 파일 + infra_pod 행 + log·trace 행 / service: apm service 집계 파일만 / node: infra_node 행만 / tidb·tikv·pd: 각 파일
-    - replica 비교·node vs pod 비교는 모델이 pod target을 병렬 호출해서 (LLM 호출 1회 유지)
-    - 관계 지식(pod 목록, service↔pod, pod->node)은 전부 system card 3층(selector가 initial에서 생성) -> ablation 가능
-    - 호출자 client span은 안 넣음 (frontend -> adservice span은 frontend 데이터)
-    - 관찰: infra_pod에만 있고 log·trace가 없는 pod 존재 (06-06 00시: checkoutservice-0/1, recommendationservice-1/2) -> 활동 replica ≠ metric상 pod 목록, selector 참고
-  - 선택지 목록: target은 케이스별 데이터에서 추출, 장애 구간이 아니라 baseline 포함 넓은 구간에서 (pod failure면 구간 안에서 pod가 사라짐)
-    tool 스키마 enum(케이스별 동적) + 코드 검증
-- 시각 필터: 양끝 포함 [start, end], 초 정밀도
-  - log @timestamp: 경계를 "...SS.000Z"/"...SS.999Z"로 맞춰 문자열 비교 (그대로 쓰면 "...02.045Z" < "...02Z" 참 -> 경계 행 누락)
-  - trace startTime(μs) span 시작 기준 / metric time 분 내림 (안 하면 1초 장애는 metric 0행)
-  - 실측: 모든 파일 row group 1개 -> pushdown 프루닝 없음. trace 1시간 필터 읽기 0.25s, log 0.03s -> 캐시 불필요
-- target 행 필터: 모든 source에 같은 규칙 (행 주인 = log k8_pod, trace pod 태그, apm 파일명, infra pod/kubernetes_node가 target 이름과 같으면 남김)
-  - 특정 엔티티 종류에 source가 없다고 미리 판단하지 않음 (2026-10-28, 처음엔 node·TiDB의 log·trace를 not_applicable로 막았으나 외부 지식이라 제거)
-  - 대가: service·node·TiDB target에 log·trace 요청 시 파일 읽고 빈 결과 (~1-2s)
-- coverage (2026-10-28 삭제) -> "없음"의 해석은 LLM 프롬프트의 도메인 지식으로
-  - 경과: no_file / gap / no_target_rows / ok 상태를 reader가 판정했으나
-    initial(target=None)에선 source 전체 수집 중단만 잡고(no_target_rows 불가), metric은 109파일 합산이라 거의 항상 ok
-    -> 엔티티 단위로 제대로 하려면 구현이 끝없음, source 단위로는 의미가 약함
-  - 지금: reader는 데이터만 반환. 빈 DataFrame = 그 구간·target에 행 없음 (파일 없음·구간 공백·엔티티 없음 구분 안 함, 모델엔 셋 다 "근거로 못 씀")
-    - 분 단위 공백은 selector가 분 집계할 때 빈 분으로 드러남. 엔티티별 존재 여부(pod별·file_key별 분 수, baseline 대비 사라짐)도 selector가 데이터에서 계산
-  - system card에 넣을 규칙 (날짜별 누락표 같은 데이터셋 사례 목록은 안 넣음)
-    - "source 행 0 = 수집 안 됨 또는 해당 엔티티 데이터 없음. 정상의 근거로 쓰지 말 것"
-    - observability: ad·currency·payment·redis-cart는 trace 없음, node·TiDB 계층은 log·trace 없음, productcatalog 로그 거의 없음
-- 배치표(pod 목록·pod->node): reader가 아니라 selector가 initial에서 생성 (원본에서 쌍을 뽑는 건 요약 작업)
-- selector 참고용 사전 지식 (18일 스키마 전수 + 날짜별 trace 샘플, 2026-10-28)
-  - 스키마 18일 동일. trace 태그 체계 서비스별 1종, 날짜 무관
-  - trace: pod/node 키 name/node_name (cart·redis는 podName/nodeName), recommendation·email kind 대문자,
-    callee rpc.service (python CLIENT는 없음 -> operationName 파싱, redis는 net.peer.name),
-    status status.code (cart는 grpc.status_code, redis 없음), cart operationName "POST " 접두, references 0개 또는 CHILD_OF 1개
-  - metric: 빈 값 = 문자열 'null', apm *_ratio int64/double 혼재,
-    kpi_key 충돌(cpu_usage·memory_usage는 tidb/tikv/pd, qps·server_is_up은 tidb/tikv) -> (object_type, kpi_key)로 구분
-    TiDB 계층 instance는 엔티티 이름 아님 (tidb 행에 tikv 포트, tikv 행에 node-exporter IP, pd 대부분 'null')
-    -> target은 컴포넌트 단위, groundtruth tidb-tikv-0 형식 매핑은 출력 단계
-    파일 접두(infra_tidb_/infra_tikv_/infra_pd_) ↔ object_type 1:1
-    infra_pod에 example-ant-10-<숫자>-N pod (namespace hipstershop, 정체 미상)
-- metric dtype 승격 (selector 참고): 일 파일마다 그날 값이 전부 정수면 int64, 아니면 double로 저장됨
-  -> 18일 중 날짜별 타입이 다른 (파일, 열) 58개 (apm *_error_ratio 55, node_sockstat_TCP_inuse, tidb duration_avg·failed_query_ops)
-  -> 단위 차이 아님 (ratio는 둘 다 퍼센트, int 날은 대부분 전부 0)
-  -> reader가 CST 자정 넘는 구간에서 같은 file_key를 이어 붙이면 열 전체 float64로 승격. 값 손실 없음, dtype만 바뀜
-  -> groundtruth 구간엔 없음, window 확장·전날 baseline에서 발생 가능. selector는 날짜 간 비교 시 어차피 float로 통일
-- Agent Loop 입력 검사 (reader 앞단, 2026-10-28 결정)
-  - 원칙: 모델의 잘못된 tool 인자는 전처리 내부 분기가 아니라 Agent Loop에서 미리 검사 -> 올바른 형식으로만 reader에 넘김
-    (아이디어 4 "깨진 JSON -> 검증 후 오류를 tool 결과로 돌려줌"과 같은 자리)
-  - [심각] 조용히 틀린 결과: 시간대 없는 ISO("...T16:10:02")·공백 구분("2025-06-05 16:10")을 reader가 로컬 시간대(KST)로 해석
-    -> 9시간 어긋난 구간을 오류 없이 반환 (테스트에서 행 0개)
-    -> 근본 대책: 모델은 시각을 직접 쓰지 않고 window{before_min, after_min}만, 시각은 코드가 input 구간에서 계산 (기존 설계 유지)
-    -> 그래도 Loop에서 Z/오프셋 필수 검사
-  - 오류 형태 불일치: target name 비문자열 -> TypeError, target 비dict -> AttributeError (ValueError 아님)
-    -> Loop에서 tool 스키마(type·name enum)·타입 검증 후 넘김
-  - 근거: Tests/Preprocessor/reader/output/2026-10-28_173105/report.md 1번 그룹
-- 남은 일 (system_card.py): 9행 배치표 생성 주체 reader -> selector, 3층에 service↔pod 관계 추가,
-  notes에 node vs pod 비교 기준 보강, "행 0 = 정상 근거 아님" 규칙·observability(엔티티별 없는 source) 추가
-- 미결: selector 출력을 엔티티별로 묶을지 source별로 둘지 (아이디어 4 실험 항목과 동일)
-- 구현·검증 결과 (2026-10-28)
-  - 코드: Agent/Preprocessor/reader.py, 검증: Tests/Preprocessor/reader/test_reader.py (실행법 Tests/CLAUDE.md)
-  - 검증 방식: reader 코드를 재사용하지 않는 독립 oracle(원본 전체를 pandas로 읽어 직접 자름)과 행 단위 대조
-  - 결과 (coverage 삭제·target 통일 후 최종): PASS 95 / FAIL 0 / INFO 4 (INFO = Agent Loop로 넘긴 입력 검사)
-    - 원본 보존: log·trace(중첩 열 포함)·metric 109파일 열·값·순서·dtype 일치
-    - 경계: 초 단위 양끝, 1초 장애(metric 행 확보), UTC 시 경계, CST 자정 경계, 데이터 없는 날짜
-    - target: 구간 내 모든 pod·11개 service·11개 node·TiDB 계층 누락·초과 0, (deleted) 파일 포함, 부분·정규식 이름 오매칭 없음
-    - service·node·TiDB target의 log·trace는 파일을 실제로 읽은 뒤 빈 결과 (미리 건너뛰지 않음)
-  - 400건 전수 (target=None): 예외 0, 비정렬·구간 밖 행 0, 건당 평균 2.4s·최대 7.6s
-    - 행 0 케이스 log 21 / trace 40, trace 2분 이상 공백 7건 -> data/CLAUDE.md 기록과 일치
-    - 추가 관찰: trace 1분 공백 5건(매시 :00), log 1분 공백 3건, metric 2분 이상 공백 1건(29f88351-232, 16분 중 4분)
-  - 테스트가 잡은 것: oracle 버그 1 (빈 frame concat으로 dtype 승격), reader 입력 검사 4건 -> Agent Loop로 이관
-  - 결과 폴더: Tests/Preprocessor/reader/output/2026-10-28_215448 (sweep 포함, coverage 삭제 후), 2026-10-28_222435 (target 통일 후)
+아이디어 7. selector 설계 (2026-10-29 구현, 10-30~31 OpsAgent 공개 코드와 대조 수정)
 
-아이디어 7. selector 설계 (2026-10-29 논의·구현, OpsAgent 전처리 그대로)
-
-- 순서 결정: 피드백 "Solar가 근거 부족 시 정말 답변을 포기하는지 먼저 검증해야 재검색 Tool 설계가 뒷받침된다"
-  - 실험안: 근거가 부족한 케이스를 만들어 답변 생성 트랙(보류하는가) / Tool 선택 트랙(재검색 tool을 부르는가) 행동 관찰 (아이디어 5 실험안과 같음)
-  - reader 출력으로 따로 만든 brief는 실제와 형식·노이즈가 달라 결론이 약함 -> selector 먼저, 그 출력으로 실험
-  - selector는 루프 앞단이라 가설 결과와 무관 (결과에 따라 바뀌는 건 루프 종료·재수집 규칙뿐) -> 선구현해도 버릴 위험 없음
-- 원칙: OpsAgent(참고논문/OpsAgent.pdf 3.2 Training-free Data Processor)를 그대로 따르고 3가지만 반영
-  1) 데이터셋 차이 2) 조회 구간이 바뀌는 Loop 3) target이 한정될 수 있음
-- OpsAgent 원문 요약
-  - metric: 3-sigma -> CNN 모양 분류(앞 20 / 뒤 10 포인트) -> <instance, metric, 모양: 시각, kσ> 정렬 -> Top-5 instance, Top-5 metric
-  - log: 키워드(fatal, error, crash, fail) -> Drain3 템플릿 -> TF-IDF 상위 80% 분위 이상 -> 같은 템플릿 1분 내 첫 1건 -> 원문
-  - trace: 호출 유형별 p95 초과 = 고지연 -> (60초, callee)별 건수·최대 지연·caller 분포 + 3-hop 경로 빈도
-  - 공개 저장소 확인 (https://anonymous.4open.science/r/OpsAgent-CCC0, API /api/repo/OpsAgent-CCC0/file/<path>로 읽힘, utils/·agents/는 not_connected)
-    - 가중치 patterncla.pt (PyTorch, 11종: Level shift up/down, Steady increase/decrease, Single spike/dip,
-      Transient level shift up/down, Multiple spikes/dips, Fluctuations), 입력 30포인트 고정(Linear 512), min-max 정규화
-    - 코드는 논문과 다름: 점수 |x-μ|/σ/2 > 1 (= 2σ), mean·std는 미리 계산해 파일명에 저장 (계산 구간은 확인 불가)
-    - 라이선스 파일 없음 -> 출처 표기
-- 결정 사항
-  - 임계값: 논문 3σ로 시작 (코드의 2σ 아님)
-  - Top-K: target=None(initial) -> 전체 Top-5 instance + Top-5 metric / target 지정(재검색) -> 그 엔티티 안 Top-5 metric
-    - reader 수정 불필요 (target 인자로 이미 구분)
-    - initial에서 시끄러운 서비스가 node·TiKV를 가릴 위험은 모델 재검색으로 넘김 -> recall@K와 포기 신호 실험 B 트랙(표적성)에서 확인
-  - trace: 지연만 봄 (오류 span status.code는 안 봄). 고지연 없으면 빈 결과
-    - "행 없음"(수집 공백)과 "고지연 0건"이 섞이지 않게 source마다 헤더 한 줄 (행 수 / 행 없음)
-  - baseline = 조회 구간 전체 (OpsAgent와 동일). initial은 input 구간 그대로, 재검색은 넓힌 구간 전체로 다시 계산
-    - 논의 경과: 앞 N분 분리(30분) -> 오프라인 날짜별 정상 구간 -> 케이스별 앞 N분 고정 -> OpsAgent식으로 통일
-    - 철회 이유: "정상 구간"을 장애와 인접한 곳에서 특정하기 어려움 (장애가 거의 매시간, 같은 날 연속 장애 간격 최소 34.6분),
-      "input 구간 전체가 장애"라는 전제도 근거 없음 (groundtruth 구간 = 주입 기간 ≠ 이상이 보이는 기간), 마감 고려
-    - 06-29(장애 없는 날) baseline 안은 기각: 부하 ~2.5배, apm pod 20개·redis-cart service 파일 없음, 누적값(store_size 등) 차이
-    - 한계 (보고서에 명시): 장애가 구간 대부분을 차지하면 기준이 오염되어 이상이 덜 튐. OpsAgent 자체의 한계와 같음 -> 유형별 recall로 확인
-  - selector는 상태 없음: 재검색 = 넓힌 구간으로 reader를 다시 읽음 (캐시 안 함, reader 실측상 빠름)
-  - 구간 끝 처리 (구간을 늘리지 않고 표시): CNN 30포인트 못 채우면 "판정 불가(30포인트 미만)", metric 포인트 ≤10이면 3σ 판정 불가
-    (모표준편차 기준 z 최댓값 = sqrt(n-1) -> n ≤ 10이면 3σ 초과 불가능)
-- 구현 (Agent/Preprocessor/selector.py, select(sources, target, start, end) -> str)
-  - metric quirk: apm은 숫자 열마다 지표(행 주인 object_id), infra/other는 kpi_key 값 열 + 차원(type·cf·device·mountpoint·sql_type, TiDB 계층은 instance도)을 지표명에 붙임
-    ('null' 문자열 -> NaN, 엔티티 = pod / kubernetes_node / TiDB 계층은 컴포넌트명). 시리즈당 1행(최대 점수 시점 + 첫 이상 시점)
-  - log TF-IDF: 문서 = 구간 안의 1분 묶음 (구간 전체에서 많이 나오되 일부 분에 몰린 템플릿이 높음)
-  - trace: callee = span 자신의 서비스, caller = 부모 span의 서비스 (rpc.service 등 태그 quirk 회피, 논문 예시 "IG01→IG01→IG01"과 일치)
-    호출 유형 = (서비스, operation), 순위 = 그 분 callee span 중 고지연 비율 (구간 내 p95라 정상이어도 ~5%는 항상 걸림 -> 실제로 빈 결과는 거의 안 나옴)
-    target 지정 시에도 부모 span 때문에 전체를 읽고 target이 자신 또는 부모인 span만 남김
-  - 출력 상한: metric 30줄, log 40줄, trace 20줄 + 경로 10개 (토큰 측정 후 조정)
-  - 시각 옆 +Nm = 조회 구간 시작 분 기준 상대 시각
-  - 의존성: drain3, torch(CPU). 자체 점검: .venv/Scripts/python.exe Agent/Preprocessor/selector.py
-- 첫 관찰 (345fbe93-80 emailservice cpu stress, 21분)
-  - metric Top-5에 emailservice 없음, trace 1~5위가 emailservice (checkoutservice -> emailservice 고지연)
-  - 22포인트라 단일 spike는 모두 4.6σ(= sqrt(21))로 포화 -> 동점 다수
-  - initial 구간이 대부분 30분 미만이라 CNN 모양은 거의 항상 "판정 불가" (OpsAgent 쿼리는 30분)
-  - 출력 길이 평균 ~12,000자 (5건)
-- recall 측정 (Tests/Preprocessor/selector/test_selector.py): 정답 엔티티가 metric Top-5 instance / trace 앞쪽 고유 callee 5개 / log 상위 pod 5개에 드는 비율
-  - trace는 20줄 전체로 세면 거의 모든 서비스가 걸려 의미 없음 -> 앞쪽 5개로 판정
-  - 결과 (400건, 오류 0, 결과 폴더 Tests/Preprocessor/selector/output/2026-10-29_195515, 채점 버그 2 수정 후)
-    - (2026-10-30) 아래 수치는 service 단위 느슨한 일치라 무효. 엄격 재측정은 진행 현황 참고
-    - 전체: metric Top-5 43% / trace 25% / log 20% / 셋 중 하나 61%
-    - instance_type별 (셋 중 하나): service 81% / node 29% (metric만) / pod 50%
-    - 강함 (≥90%): jvm 계열·memory stress·network corrupt/loss 100%, dns error 90% (trace)
-    - 약함: io fault 0%, node cpu stress 13%, node disk fill 19%, pod kill 33%, pod failure 40%, node memory stress 45%, cpu stress 50%
-    - 10분 이하 구간 43건(io fault 28 전부 5분, pod kill 15)은 3σ 원리상 불가 -> 이상 0개. OpsAgent식 구간 내 기준의 한계가 그대로 드러남
-      (판정 불가 케이스 recall 12% vs 나머지 67%)
-    - node 장애는 trace·log에 원래 안 나옴 -> metric Top-5만 의존 (29%, 구간 20분 이상/미만 차이 없음 29% vs 30%) -> 가장 약한 instance_type
-    - 구간 20분 이상 vs 미만: metric Top-5 49% vs 40%
-    - metric_any = metric_top5 (설명 줄을 Top-5 instance로 한정하므로 같은 값, 별도 의미 없음)
-    - 출력 평균 9,072자 / 최대 21,046자, 건당 평균 3.5s
-  - 채점 버그 1: groundtruth TiDB 계층은 tidb-tikv-0 형식, selector는 tikv -> 이름 매핑 추가 후 재측정 (pod failure 16% -> 33%)
-  - 채점 버그 2 (2026-10-29): svc()가 node 이름 aiops-k8s-06의 -06을 replica 번호로 보고 떼서 모든 node가 서로 일치
-    -> node는 정확 일치로 수정 후 재측정: node 57% -> 29%, 전체 67% -> 61% (service·pod 변화 없음). 이전 결과 2026-10-29_184514는 무시
-  - 범위: initial 조건(target=None, input 구간 그대로)의 recall. 루프에서 모델이 재검색(target 지정·window 확장)하면 오를 수 있으나 아직 미측정
-    (target 지정 시 다른 엔티티와 Top-5 경쟁이 없어짐, 구간 확장 시 10분 이하 43건도 3σ 판정 가능해짐. 단 그 엔티티를 고르는 건 모델 몫)
-- 변경 (2026-10-30~31, OpsAgent 공개 코드 참고 구현/OpsAgent-CCC0와 대조)
-  - 원칙: OpsAgent 코드를 따르고, 논문과 코드가 다르면 논문 (log 80 분위, trace p95, log 원문 출력)
-  - 조회 구간 = 입력 구간 그대로 (연구실 보고와 동일). OpsAgent 구간 확장(쿼리 30분, metric 앞 20분·뒤 10분)은 baseline 이후로 보류
-    - 짧은 구간은 "판정 불가(구간 짧음)" + "구간을 넓히면 판정 가능" 안내를 출력해 모델이 재검색 판단에 쓰게 함
-  - metric: 3σ 넘은 모든 시점 CNN (끝은 OpsAgent식 채움), Top-5 instance = 이상 z 합, Top-5 metric은 Top-5 instance 안,
-    (엔티티, 지표, 모양) 묶음 최대 편차순 24줄, 피크 10개 초과·6σ 미만 묶음은 건너뜀
-  - log: 키워드 걸린 로그만 Drain3 -> TF-IDF(sklearn, 줄 단위 평균) 80 분위 이상 -> 분·템플릿 첫 1건, 원문 전체
-    (OpsAgent 코드는 전체 로그 Drain3 + 없는 키 참조 버그로 원문 사용, 77k줄 38s)
-  - trace: callee = pod (기존 service 단위는 논문 IG01을 service로 오독한 내 선택 -> 수정), 호출 유형 = (서비스, operation)별 p95,
-    (60초, callee pod)별 건수·최대 지연·caller, 건수 -> 최대 지연순 24줄, 경로는 조부모 있고 2회 이상 24개
-  - 기준 오염 한계는 OpsAgent에도 있음: 구간 비율 p를 차지하는 level shift는 z = sqrt((1-p)/p), p > 0.1이면 3σ 미만
-  - 해석 두 가지는 유지: 호출 유형 = (서비스, operation), TF-IDF는 키워드 걸린 템플릿으로 학습
+- 순서 결정: 가설 실험의 brief가 실제와 형식·노이즈가 같아야 결론이 유효 -> selector 먼저 구현
+- 원칙: OpsAgent 코드를 따르고, 논문과 코드가 다르면 논문 (log 80 분위, trace p95, log 원문, 3σ). 구현 내용은 selector.py 상단
+  - 논문 참고논문/OpsAgent.pdf 3.2, 코드 참고 구현/OpsAgent-CCC0, 가중치 patterncla.pt (11종, 30포인트). 라이선스 파일 없음 -> 출처 표기
+- 조회 구간 = 입력 구간 그대로 (연구실 보고와 동일). OpsAgent 구간 확장(쿼리 30분, metric 앞 20분·뒤 10분)은 baseline 이후로 보류
+- baseline = 조회 구간 전체 (OpsAgent와 동일), 상태 없음 (재검색 = 넓힌 구간으로 다시 계산)
+  - 경과: 앞 N분 분리 -> 날짜별 정상 구간 -> 케이스별 앞 N분 -> OpsAgent식으로 통일
+  - 철회 이유: 장애가 거의 매시간이라 인접 정상 구간을 특정하기 어려움 (연속 장애 간격 최소 34.6분)
+  - 06-29 baseline 기각: 부하 ~2.5배, apm pod 20개·redis-cart service 파일 없음, 누적값 차이
+  - 한계: 구간 비율 p를 차지하는 level shift는 z = sqrt((1-p)/p), p > 0.1이면 3σ 미만
+- 판정 불가는 두 단계 (입력 구간이 최대 25분이라 발생)
+  - 3σ 판정 불가: 포인트 10개 이하 (z 최댓값 (n-1)/sqrt(n)) -> 43건, Top-5 instance 줄 자체가 없음
+  - 모양 판정 불가: CNN 30포인트 못 채움 -> initial metric 설명 줄 8,568개 100%, 400건 전부 모양 없이 들어감
+- 그 외 한계: 22포인트면 단일 spike가 모두 4.6σ로 포화해 동점 다수, trace p95는 구간 내 기준이라 정상이어도 ~5%는 항상 걸림
+- 정답 노출(recall) 이력
+  - 61%: service 단위 느슨한 일치라 무효 / 29%: 엄격 any_top5, callee service 단위 시절 (Tests/Preprocessor/selector/output/2026-10-30_213210)
+  - 현재 selector: 전부 18% / 하나라도 21% (baseline initial에서 계산, 과제3). test_selector.py 재실행은 안 함
+  - 채점 버그 2건 수정 이력: tidb-tikv-0 표기 매핑, node 이름의 -06을 replica로 오인
+- 전처리 개선 후보 (효과 미측정, 2026-10-31 기준 우선 과제)
+  1) 조회 구간 확장 (OpsAgent식): 판정 불가 두 단계를 직접 해소
+  2) tikv처럼 상시 상위에 오르는 엔티티 쏠림 완화: 엔티티 종류별 따로 Top-K, 평소 대비 변화 기준
+  3) service 정답 노출: Top-5가 pod 위주라 이름 기준 12%뿐 -> service 단위 요약 검토
+  4) pod 목록·pod->node 배치표 (node vs pod 구분 근거)
+  5) onset 순서(누가 먼저 튀었나), 구간 경계에 붙은 onset 표시, 전파 보정(토폴로지로 상위=증상, 하위=원인)
+  6) log는 구간에 새로 등장한 템플릿, trace는 self_time(자기 duration - 자식 duration)
 
 ToDo
-- [x] reader 구현·검증 (2026-10-28)
-- [x] selector 설계·구현 (2026-10-29, 아이디어 7)
-- [x] selector recall 측정·검토 (2026-10-29, 61% (node 버그 수정 후), 아이디어 7)
-- [ ] patterncla.pt(OpsAgent 가중치, 라이선스 미확인) 커밋 여부 결정
-- [x] 포기 신호 가설 실험 (2026-10-29, 두 가설 모두 원인 누락 감지 못함 -> 포기 성향 활용 철회, 아이디어 5)
-- [x] 공용 LLM 비용 래퍼 Agent/util/llm.py (2026-10-29)
+
+전처리 개선 (우선)
+- [ ] 판정 불가 처리: OpsAgent 조회 구간 확장 적용 여부 결정
+- [ ] tikv 순위 쏠림 완화 설계
 - [ ] 재검색 상한 측정: 정답 엔티티 target + window 확장 시 selector recall (LLM 없음)
-- [ ] 판단 단계 정확도 보강 (baseline Correct 1.8%, 과제3 "baseline 결과")
+- [ ] selector recall 엄격 재측정 (test_selector.py, OpsAgent 대조 수정 후)
 - [ ] selector 미결: 출력 묶음 방식(엔티티별/source별), pod 목록·배치표 생성
-- [ ] system_card.py 수정: 9행(배치표 생성 주체 -> selector), 3층 service↔pod 관계, notes(node vs pod 비교 기준), 빈 결과 해석 규칙·observability
-- [ ] Agent Loop 설계 시 입력 검사 반영 (아이디어 6 "Agent Loop 입력 검사")
-- [x] Agent의 답변 포기 신호(finish 대신 검색 tool 호출)가 실제 근거 부족과 연동되는지 검증 -> 연동 안 됨 (B 민감도 -2%)
-- [ ] (보류 2026-10-30, 정답 유출) 근거 부족 판정 규칙(코드) 정의 후, 규칙 판정이 정답률을 올리는지 검증
-- [x] Loop 구현 (2026-10-30, Agent/loop.py)
-- [x] 엄격 채점 코드 (2026-10-31, Tests/loop/score.py)
-- [x] baseline 400건 실행·채점 (2026-10-31)
-- [ ] selector recall 엄격 재측정 (OpsAgent 대조 수정 후)
-- [ ] TiDB 정답 형식 대응 결정 (출력 변환 vs system card 규칙, 과제3 "baseline 결과")
+- [ ] 전처리 개선 후 system card 효과 재측정
+
+진단·실험
+- [ ] 같은 설정 반복 실행으로 실행 간 변동 폭 측정 (약 $8)
+- [ ] 답변 선택 단계 진단: service 장애는 이름이 보여도 Component가 안 오름, fault_type 쏠림
 - [ ] 가설 실험 재설계·재실행 (엄격 근거 수준 분류)
-- [ ] OpsAgent 조회 구간 확장 적용 (baseline 이후)
-- [ ] Loop 설계 시 history 누적 테스트: 회차별 프롬프트 길이 증가, 긴 프롬프트 속 앞 회차 근거 활용 여부 (아이디어 4 "재검색 시 중복 방지")
+- [ ] history 누적 테스트 (아이디어 4)
+- [ ] 진단 스크립트를 Tests/loop로 옮길지 결정 (지금은 세션 임시 폴더라 재현 불가)
+
+결정·정리
+- [ ] TiDB 정답 형식 대응 결정 (출력 변환 vs system card 규칙, 과제3)
+- [ ] system_card.py 수정: 9행(배치표 생성 주체 -> selector), 3층 service<->pod 관계, node vs pod 비교 기준, TiDB 경로 표현 재검토
+- [ ] 라이선스 미확인 patterncla.pt·참고 구현이 저장소에 포함됨 -> 저장소 공개 범위 확인
+- [ ] requirements.txt 작성 (노트북·데스크탑 환경 재현)
+- [ ] (보류, 정답 유출) 근거 부족 판정 규칙(코드) 정의 후 검증
 
 과제3) 채점
 
-최종 성능 지표 (2026-10-30 확정, 원 지표에서 Time 요소 제외)
-- Time Accuracy 제외: input.json 시각 = groundtruth start/end (400건 전부 동일, data/CLAUDE.md 1번) -> 채점 의미 없음
-  -> 평가 요소는 Component, Fault Type 2개
-- Correct Score : 두 요소(Component, Fault Type)를 모두 맞힌 비율
-- Partial Score : 두 요소 중 1개만 맞힌 비율
-- Component Accuracy : 원인 컴포넌트를 맞힌 비율
-- Fault Type Accuracy : 장애 유형(fault_type 18종)을 맞힌 비율
-- 정답 판정은 엄격 (루트 CLAUDE.md 규칙)
-  - Component = instance_type 일치 + instance 리스트 완전 일치 (원소·개수 전부, 표기 매핑 tidb-tikv-0 -> tikv만 허용, pod<->service 묶기·일부 일치 인정 안 함)
-    - 리스트 순서 반영 여부(네트워크 장애 [source, destination] 방향)는 채점 코드 작성 시 확정
-  - Fault Type = 문자열 정확 일치
-- 분모 = 400건 전체 (Loop 실패·답변 없음 = 오답)
-- 보조 지표 (점수 아님): 케이스당 비용·응답 시간·회차 수·search 수, 종료 사유(finish / max_loops)
-- reason 채점(key_metrics 키워드, fault_description 유사도)은 미정
+최종 성능 지표 (2026-10-30 확정, Time 제외: input 시각 = groundtruth 시각이라 채점 의미 없음)
+- Correct = Component·Fault Type 둘 다 / Partial = 하나만 / Component Accuracy / Fault Type Accuracy
+- Component = instance_type 일치 + instance 리스트 순서까지 완전 일치 (표기 매핑 tidb-X-N -> X만, 루트 CLAUDE.md)
+- 분모 = 400건 전체, 실패 = 오답. Partial은 한쪽만 맞은 합이라 Component·Fault Type보다 클 수 있음
+- 보조 지표(점수 아님): 비용·시간·search 수·종료 사유. reason 채점은 미정
 
-baseline 결과 (2026-10-31, Agent/output/baseline_2026-10-31, 채점 Tests/loop/score.py)
-- 설정: Loop(Agent/loop.py) Solar Pro 4, Tool 결정 reasoning 끔 최대 5회, 답변 reasoning medium, selector는 OpsAgent 대조 수정 후 버전
-  - 답변 instance 선택지 = 전체 날짜 원본 metric 행 주인 합집합 56개 (groundtruth 미사용, (deleted)·example-ant-* 제외)
-  - 메모리 부족으로 2번 중단 -> 남은 uuid로 이어 실행한 3개 실행 합본 (SOURCES.txt)
-- 결과 (엄격, 분모 400, 오류 0)
-  - 전체: Correct 1.8% / Partial 17.8% / Component 8.0% / Fault Type 13.2%
-  - TiDB 제외 345건: Correct 2.0% / Component 9.3% / Fault Type 12.8%
-  - instance_type별 Component: service 5.6% / pod 13.8% / node 4.9%
-  - 비용 $7.39 (건당 $0.0185), 건당 평균 93s, finish 323 / max_loops 77, search 평균 4.9회
-- 진단
-  - fault_type 쏠림: code error 112건 예측 (실제 21), node 계열 82건 fault_type 0%
-  - instance_type 쏠림: service 정답 195건 중 141건, node 정답 82건 중 58건을 pod로 답함
-  - 보조(느슨, 정답 이름 하나라도 포함) 16.2% -> 형식이 아니라 위치 자체를 못 찾음, selector 엄격 recall 29%보다 낮음
-  - 답 instance 쏠림: tikv 52건, adservice-0 32건, frontend 계열 다수
-- TiDB 정답 형식 검토 (55건, ["tidb-tikv-0", "tidb-tikv"] 형식)
-  - 이름은 도출 가능: 각 컴포넌트 replica 1개 (분당 동시 인스턴스 최대 1, IP 변경 = 재시작), pd metric instance 열에 tidb-pd-0 그대로 있음
-    -> TiDB Operator StatefulSet 명명 <클러스터 tidb>-<컴포넌트>-<순번 0>
-  - [pod, service] 리스트 형식은 데이터로 도출 불가지만 일관된 작성 규칙: replica 1개 대상은 service와 pod를 함께 적음
-    (redis-cart도 같음: 목적지가 redis-cart인 network 6건 전부 [cartservice, redis-cart, redis-cart-0])
-  - log·infra_pod(hipstershop namespace만)·trace(DB span 없음)에는 TiDB 이름 없음
-  - 대응 후보: 출력 변환 규칙(채점 매핑 확장) vs system card에 규칙 주입(채점 기준 유지, 권장). 이번 실행에서 컴포넌트를 맞힌 건 17/55
+baseline 결과 (2026-10-31, Tests/loop/score.py)
+- 기존 구현: Agent/output/baseline_2026-10-31 (메모리 부족으로 3개 실행 합본, SOURCES.txt)
+- system card 주입: Agent/output/2026-10-31_113258_card (loop.py --system-card, 429 오류 1건 = 오답)
+- 결과 (기존 -> 주입): 정답률은 큰 차이 없음, 비용 +21%, 시간 +32%
+  - Correct 1.8 -> 2.2% / Partial 17.8 -> 18.0% / Component 8.0 -> 8.5% / Fault Type 13.2 -> 14.0%
+  - TiDB 제외 Component 9.3 -> 9.9%, type별 Component: service 5.6 -> 10.3%, pod 13.8 -> 8.9%, node 4.9 -> 3.7%
+  - 비용 $7.39 -> $8.92, 건당 93s -> 123s, search 평균 4.93 -> 5.41회
+  - 한쪽에서만 맞힌 건수: Component 18 / 20건 (p=0.87), Fault Type 26 / 29건 (p=0.79). 같은 케이스의 instance 답 일치 33%
+
+initial 데이터 처리의 한계 (initial은 두 실험 동일)
+- 정답 이름 노출: 전부 18%, 하나라도 21% (소속 pod 인정 58%, 보조). type별 pod 49 / node 24 / TiDB 15 / service 12%
+- 판정 불가: 3σ 불가 43건 = io fault 28 + pod kill 15 전부, 그중 TiKV 장애 28건 (TiKV 44건의 64%). 모양 판정은 400건 전부 불가 (아이디어 7)
+- 신호 어긋남: metric Top-1 tikv 78%. Top-5에 tikv = TiKV 장애 18%(8/44), 다른 장애 90%(322/356). 판정 가능 케이스만 50%(8/16) vs 94%(322/341)
+- 모델이 initial을 따라감 (기존 / 주입): target이 Top-5 안 62 / 53% (호출 단위, 무작위 13%), 답한 서비스가 Top-5 안 83 / 81%
+- 이름이 보일 때 vs 안 보일 때 Component (기존 / 주입), type 혼재라 전체값 21.2 vs 4.4%는 쓰지 말 것
+  - pod 45.5 vs 5.7 / 27.3 vs 5.7%, node 15.0 vs 1.6 / 10.0 vs 1.6%, service 0.0 vs 6.4 / 4.2 vs 11.2%
+- 재검색 보완 제한: initial에 정답 없던 케이스 중 재검색 출력에 정답 등장 28 / 22%, 그때 Component 4.5 / 8.7% (이름 등장 기준이라 이상 신호로 드러났다는 뜻은 아님)
+- 전처리로 안 풀릴 수 있는 부분: Fault Type은 노출과 함께 안 오름 (보임 vs 안 보임 8.2 vs 14.6 / 5.9 vs 16.2%), service 장애의 답변 선택
+
+시스템 구조 주입의 영향 (기존 -> 주입)
+- 재검색 대상 변화: frontend 23 -> 15%, productcatalog 14 -> 19%, 저장소 14 -> 19%. 정답 target 28 -> 28%는 상쇄값 (TiDB 29 -> 53%, 그 외 28 -> 24%)
+- 답변 분포 변화 (유의): frontend 포함 101 -> 41, tikv 포함 52 -> 85, productcatalog 37 -> 57, type=service 94 -> 133, 원소 2개 이상 58 -> 25, code error 112 -> 56, io fault 65 -> 115, jvm exception 1 -> 23
+- 오답이 오답으로 이동
+  - frontend에서 벗어난 76건의 Component 0 -> 2건, 새로 tikv로 답한 60건 중 실제 tikv 장애 8건
+  - service 답 비율이 정답 type과 무관하게 증가 (service 23 -> 33, pod 24 -> 32, node 23 -> 38%) -> Component 건수 service 11 -> 20, pod 17 -> 11, node 4 -> 3
+  - tikv로 답하면 약 90%가 io fault -> 라벨은 고른 엔티티를 따라감
+- TiDB 경로로 쏠림: tikv 답 reason의 경로 언급 38.5 -> 84.7% (키워드 기준). 말단 서비스 답은 거의 그대로라 "가장 하류를 고른다"는 아님
+  - tikv 노이즈 + 카드의 전파 설명이 맞물린 것으로 추정 (인과 미검증)
+- 도움이 된 부분: jvm 답의 대상이 adservice뿐인 비율 5/28 -> 44/45, jvm 장애를 jvm 계열로 답함 4 -> 22건 (세부 유형 정답 1 -> 5건), replica 묶음 답 44 -> 16건
+- 못 바꾼 부분: node 답 20 -> 21건, network 답의 원소 2개 이상 28/85 -> 12/59
+
+해석 주의
+- 무효 수치: "재검색 후 Top-5 노출 21 -> 25%", "재검색으로 새로 노출 5%"는 target 지정 결과에 Top-5 줄이 없어 과소 집계된 측정 오류
+- window 확장(판정 불가 86 / 84%, 그 외 75 / 67%)은 모델 판단으로 해석 금지: 프롬프트가 확장만 허용, 400건 전부 "구간을 넓히면 판정 가능" 안내 있음
+- 반복 실행 전이라 ±1%p 수준 차이는 해석 불가. 원인 항목은 전부 관측이고 인과 미검증
+
+TiDB 정답 형식 (55건, ["tidb-tikv-0", "tidb-tikv"] 형식) -> 현재 답 선택지로는 Component를 맞힐 수 없음
+- 이름은 도출 가능: 컴포넌트별 replica 1개, pd metric instance에 tidb-pd-0 그대로, TiDB Operator 명명 <클러스터 tidb>-<컴포넌트>-0
+- [pod, service] 리스트 형식은 데이터로 도출 불가지만 일관된 규칙: replica 1개 대상은 둘 다 적음 (redis-cart network 6건도 [cartservice, redis-cart, redis-cart-0])
+- log·infra_pod·trace에는 TiDB 이름 없음. 엔티티만 맞힌 건수(보조) 17 -> 23건
+- 대응 후보: 출력 변환 규칙(채점 매핑 확장) vs system card 규칙 주입(채점 기준 유지, 권장)
