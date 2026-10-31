@@ -1,0 +1,1501 @@
+﻿traceID,spanID,flags,operationName,references,startTime,startTimeMillis,duration,tags,logs,process,ts
+f6962c8abd0274a7f4f8daa626c2dfba,2a78b4ccc20401f6,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': 'ec4cabaf88b47535', 'traceID': 'f6962c8abd0274a7f4f8daa626c2dfba'}]",1749139802678302,1749139802678,2764,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:02.678302+00:00
+f6962c8abd0274a7f4f8daa626c2dfba,d0f3728eee98b5ef,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '2a78b4ccc20401f6', 'traceID': 'f6962c8abd0274a7f4f8daa626c2dfba'}]",1749139802679539,1749139802679,1347,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749139802679567}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749139802679591}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749139802680882}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:02.679539+00:00
+58f69b5f37414d1100296a1e2d685aa9,69d569e56c2beb50,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': 'd54ed47a8876a231', 'traceID': '58f69b5f37414d1100296a1e2d685aa9'}]",1749139802739384,1749139802739,1960,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:02.739384+00:00
+58f69b5f37414d1100296a1e2d685aa9,a1c1eb10345a8cf9,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '69d569e56c2beb50', 'traceID': '58f69b5f37414d1100296a1e2d685aa9'}]",1749139802740107,1749139802740,913,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749139802740129}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749139802740199}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749139802741018}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:02.740107+00:00
+06d4bc9523d0c438dc59fc24c7acaa36,5f38f320cbe94bbc,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '2f264484f2981f9d', 'traceID': '06d4bc9523d0c438dc59fc24c7acaa36'}]",1749139803454502,1749139803454,1799,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:03.454502+00:00
+06d4bc9523d0c438dc59fc24c7acaa36,e13e4153d29a3189,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '5f38f320cbe94bbc', 'traceID': '06d4bc9523d0c438dc59fc24c7acaa36'}]",1749139803454788,1749139803454,1302,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749139803455048}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749139803455066}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749139803456088}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:03.454788+00:00
+635f9a0e2629c5d4af5bcb20a5e1bc80,f940054cd3259b83,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': 'dbb44ce840e1c17b', 'traceID': '635f9a0e2629c5d4af5bcb20a5e1bc80'}]",1749139803712546,1749139803712,1280,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:03.712546+00:00
+635f9a0e2629c5d4af5bcb20a5e1bc80,89c20cd628b18479,,HGET,"[{'refType': 'CHILD_OF', 'spanID': 'f940054cd3259b83', 'traceID': '635f9a0e2629c5d4af5bcb20a5e1bc80'}]",1749139803712865,1749139803712,761,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749139803712887}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749139803712905}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749139803713625}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:03.712865+00:00
+5618ee201e00796c7489275e07be116f,15edc8163a32de3e,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '0117b95d46f1c260', 'traceID': '5618ee201e00796c7489275e07be116f'}]",1749139803733840,1749139803733,1172,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:03.733840+00:00
+5618ee201e00796c7489275e07be116f,949667ea7bfcaf00,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '15edc8163a32de3e', 'traceID': '5618ee201e00796c7489275e07be116f'}]",1749139803734091,1749139803734,796,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749139803734111}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749139803734126}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749139803734885}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:03.734091+00:00
+a6d6bf7d4535197620be824eafaac76e,a0fc2ec77951cc2d,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '085d17737fb8c5d3', 'traceID': 'a6d6bf7d4535197620be824eafaac76e'}]",1749139804422302,1749139804422,1575,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:04.422302+00:00
+a6d6bf7d4535197620be824eafaac76e,9080dfd9212afb3b,,HGET,"[{'refType': 'CHILD_OF', 'spanID': 'a0fc2ec77951cc2d', 'traceID': 'a6d6bf7d4535197620be824eafaac76e'}]",1749139804422545,1749139804422,736,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749139804422566}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749139804422582}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749139804423281}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:04.422545+00:00
+def403fcb556d82369d911ce7856adbb,ad249d4d33e4c685,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '5c872f703779bff3', 'traceID': 'def403fcb556d82369d911ce7856adbb'}]",1749139805477887,1749139805477,3237,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:05.477887+00:00
+def403fcb556d82369d911ce7856adbb,57a587920203f22a,,HGET,"[{'refType': 'CHILD_OF', 'spanID': 'ad249d4d33e4c685', 'traceID': 'def403fcb556d82369d911ce7856adbb'}]",1749139805478199,1749139805478,2178,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749139805478220}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749139805478329}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749139805480376}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:05.478199+00:00
+c575d07c0f0151b39b2944f0a09bbe79,3572a5dff7ef9dee,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '438ce3194d4e97b2', 'traceID': 'c575d07c0f0151b39b2944f0a09bbe79'}]",1749139805997404,1749139805997,2011,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:05.997404+00:00
+c575d07c0f0151b39b2944f0a09bbe79,47c6ea8b4d51611a,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '3572a5dff7ef9dee', 'traceID': 'c575d07c0f0151b39b2944f0a09bbe79'}]",1749139805998451,1749139805998,802,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749139805998472}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749139805998489}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749139805999251}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:05.998451+00:00
+c575d07c0f0151b39b2944f0a09bbe79,ca918f18bbd5d60f,,POST /hipstershop.CartService/EmptyCart,"[{'refType': 'CHILD_OF', 'spanID': 'be032be35c5f6925', 'traceID': 'c575d07c0f0151b39b2944f0a09bbe79'}]",1749139806076843,1749139806076,2360,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/EmptyCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/EmptyCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/EmptyCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.120'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-0'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '6d82d2af-9e86-4a05-b69c-cd875bffae03'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:06.076843+00:00
+c575d07c0f0151b39b2944f0a09bbe79,56ecc89ea7fdf5f3,,HMSET,"[{'refType': 'CHILD_OF', 'spanID': 'ca918f18bbd5d60f', 'traceID': 'c575d07c0f0151b39b2944f0a09bbe79'}]",1749139806077281,1749139806077,1590,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'DemandMaster'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HMSET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749139806077355}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749139806077383}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749139806078869}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.120'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-0'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '01269cdc-cb83-4e88-9a77-b343c4d1f420'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:06.077281+00:00
+0288a86595bd6a9aabab1140174fd507,3ba305d7007f569f,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '988e298064346d37', 'traceID': '0288a86595bd6a9aabab1140174fd507'}]",1749139806189434,1749139806189,1556,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:06.189434+00:00
+0288a86595bd6a9aabab1140174fd507,2586b9c169ce368c,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '3ba305d7007f569f', 'traceID': '0288a86595bd6a9aabab1140174fd507'}]",1749139806189967,1749139806189,861,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749139806190079}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749139806190098}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749139806190827}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:06.189967+00:00
+1455b68d49a032b662671bbeaf83c485,7b44ba0f733f245b,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': 'dbf78e35aefef48d', 'traceID': '1455b68d49a032b662671bbeaf83c485'}]",1749139806577422,1749139806577,1660,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:06.577422+00:00
+1455b68d49a032b662671bbeaf83c485,1a2b44c2f69d19be,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '7b44ba0f733f245b', 'traceID': '1455b68d49a032b662671bbeaf83c485'}]",1749139806578042,1749139806578,873,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749139806578065}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749139806578099}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749139806578913}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:06.578042+00:00
+0f7da5d3df05101d986dc1e60b87f11a,6cde55ddf8e0ba4a,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '1bf94795c2fe2f34', 'traceID': '0f7da5d3df05101d986dc1e60b87f11a'}]",1749139807241447,1749139807241,1885,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:07.241447+00:00
+0f7da5d3df05101d986dc1e60b87f11a,c604af66c5f22a1b,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '6cde55ddf8e0ba4a', 'traceID': '0f7da5d3df05101d986dc1e60b87f11a'}]",1749139807242211,1749139807242,912,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749139807242240}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749139807242306}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749139807243122}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:07.242211+00:00
+36a28616a571f2ff4bdf2f4c1673ec93,b054aaad1271a3e7,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '4ae257cdf36e26c1', 'traceID': '36a28616a571f2ff4bdf2f4c1673ec93'}]",1749139807821616,1749139807821,3934,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:07.821616+00:00
+36a28616a571f2ff4bdf2f4c1673ec93,051ced4d1751e2da,,HGET,"[{'refType': 'CHILD_OF', 'spanID': 'b054aaad1271a3e7', 'traceID': '36a28616a571f2ff4bdf2f4c1673ec93'}]",1749139807823279,1749139807823,983,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749139807823306}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749139807823327}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749139807824260}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:07.823279+00:00
+db8b721a9522f8b6614f7cf184a905c4,b73eec3dc0ed7671,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '9f135b8564c512d1', 'traceID': 'db8b721a9522f8b6614f7cf184a905c4'}]",1749139808786807,1749139808786,2778,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:08.786807+00:00
+db8b721a9522f8b6614f7cf184a905c4,90ed83f24fd0f3f8,,HGET,"[{'refType': 'CHILD_OF', 'spanID': 'b73eec3dc0ed7671', 'traceID': 'db8b721a9522f8b6614f7cf184a905c4'}]",1749139808787984,1749139808787,973,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749139808788008}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749139808788030}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749139808788954}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:08.787984+00:00
+a5fca765bc1ba0309992653f25794b98,7bd707f43d24903a,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '7bbb6f5bbb5877d9', 'traceID': 'a5fca765bc1ba0309992653f25794b98'}]",1749139808793582,1749139808793,1223,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:08.793582+00:00
+a5fca765bc1ba0309992653f25794b98,6d8c3ccaeb3cefcc,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '7bd707f43d24903a', 'traceID': 'a5fca765bc1ba0309992653f25794b98'}]",1749139808793874,1749139808793,742,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749139808793896}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749139808793913}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749139808794615}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:10:08.793874+00:00
+8c6eb6a083a51feaec9ad22c2ff506dc,b730b1d4e435aaf1,,HGET,"[{'refType': 'CHILD_OF', 'spanID': 'b892f39d0efb0fb7', 'traceID': '8c6eb6a083a51feaec9ad22c2ff506dc'}]",1749141057712413,1749141057712,929,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141057712438}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141057712460}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141057713341}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:30:57.712413+00:00
+8670372ec0b7320848d8879d0c79f05b,73693b037b5dbe98,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': 'af83f04d394903cd', 'traceID': '8670372ec0b7320848d8879d0c79f05b'}]",1749141058066503,1749141058066,1874,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:30:58.066503+00:00
+8670372ec0b7320848d8879d0c79f05b,d9db5a461e21b71d,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '73693b037b5dbe98', 'traceID': '8670372ec0b7320848d8879d0c79f05b'}]",1749141058066972,1749141058066,1220,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141058066996}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141058067014}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141058068191}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:30:58.066972+00:00
+49b417de1d06278a42e0034ab7e2462e,8fe0838aa3d8b3cb,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': 'b0c3f49a2a7aa05e', 'traceID': '49b417de1d06278a42e0034ab7e2462e'}]",1749141059078086,1749141059078,1666,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:30:59.078086+00:00
+49b417de1d06278a42e0034ab7e2462e,14b2bc1d90408f48,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '8fe0838aa3d8b3cb', 'traceID': '49b417de1d06278a42e0034ab7e2462e'}]",1749141059078392,1749141059078,1059,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141059078416}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141059078436}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141059079450}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:30:59.078392+00:00
+0c890d7a48a426d53616edb8a8307c5d,72652e4315e88e9a,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': 'adaa68701162db7c', 'traceID': '0c890d7a48a426d53616edb8a8307c5d'}]",1749141059602280,1749141059602,1487,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:30:59.602280+00:00
+0c890d7a48a426d53616edb8a8307c5d,eb2b5d5b654fdd02,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '72652e4315e88e9a', 'traceID': '0c890d7a48a426d53616edb8a8307c5d'}]",1749141059602638,1749141059602,912,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141059602697}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141059602744}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141059603547}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:30:59.602638+00:00
+bf1224fbb157773e6dead0c5bf3528a4,e5135e3d53a7f1a7,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '8811ad6a677c8b91', 'traceID': 'bf1224fbb157773e6dead0c5bf3528a4'}]",1749141059691391,1749141059691,1614,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:30:59.691391+00:00
+bf1224fbb157773e6dead0c5bf3528a4,068e9be5779f962e,,HGET,"[{'refType': 'CHILD_OF', 'spanID': 'e5135e3d53a7f1a7', 'traceID': 'bf1224fbb157773e6dead0c5bf3528a4'}]",1749141059691735,1749141059691,1076,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141059692112}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141059692178}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141059692809}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:30:59.691735+00:00
+05e9664cf210d22ce6f8785afcead856,53fe9bb16217c089,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': 'ed539ae3a31a1f8e', 'traceID': '05e9664cf210d22ce6f8785afcead856'}]",1749141060811234,1749141060811,2705,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:00.811234+00:00
+05e9664cf210d22ce6f8785afcead856,3f0fd683e77c30c3,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '53fe9bb16217c089', 'traceID': '05e9664cf210d22ce6f8785afcead856'}]",1749141060811702,1749141060811,1528,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141060811727}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141060811751}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141060813227}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:00.811702+00:00
+c4cfeca9df0738df47550f6ba37a3d4c,7c7e4540fe2e23f2,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': 'f95ef911fdde1f7c', 'traceID': 'c4cfeca9df0738df47550f6ba37a3d4c'}]",1749141060825050,1749141060825,2135,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:00.825050+00:00
+c4cfeca9df0738df47550f6ba37a3d4c,82e989ecfc2b2c3f,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '7c7e4540fe2e23f2', 'traceID': 'c4cfeca9df0738df47550f6ba37a3d4c'}]",1749141060825646,1749141060825,925,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141060825673}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141060825701}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141060826569}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:00.825646+00:00
+c4cfeca9df0738df47550f6ba37a3d4c,6c7e4239cb784412,,POST /hipstershop.CartService/EmptyCart,"[{'refType': 'CHILD_OF', 'spanID': '0ccda0cc10913837', 'traceID': 'c4cfeca9df0738df47550f6ba37a3d4c'}]",1749141060961377,1749141060961,1851,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/EmptyCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/EmptyCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/EmptyCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.120'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-0'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '6d82d2af-9e86-4a05-b69c-cd875bffae03'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:00.961377+00:00
+c4cfeca9df0738df47550f6ba37a3d4c,c25febb1034d7dcd,,HMSET,"[{'refType': 'CHILD_OF', 'spanID': '6c7e4239cb784412', 'traceID': 'c4cfeca9df0738df47550f6ba37a3d4c'}]",1749141060961719,1749141060961,1308,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'DemandMaster'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HMSET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141060961747}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141060961770}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141060963027}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.120'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-0'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '01269cdc-cb83-4e88-9a77-b343c4d1f420'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:00.961719+00:00
+a80b27305c6236afef08710b6b46a9ca,a1c620b4634b3d4c,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '86eb485ac53bcc52', 'traceID': 'a80b27305c6236afef08710b6b46a9ca'}]",1749141061136860,1749141061136,1655,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.81.24'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-2'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-03'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': 'fcb9db24-c617-4cdd-9dbd-f7aa4eca0c4b'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:01.136860+00:00
+a80b27305c6236afef08710b6b46a9ca,f45eeff91dd1d6f3,,HGET,"[{'refType': 'CHILD_OF', 'spanID': 'a1c620b4634b3d4c', 'traceID': 'a80b27305c6236afef08710b6b46a9ca'}]",1749141061137232,1749141061137,1076,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141061137258}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141061137279}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141061138306}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.81.24'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-2'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-03'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': 'b0335808-d04d-4e3b-899a-32ea8a455eb3'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:01.137232+00:00
+a80b27305c6236afef08710b6b46a9ca,4f6732003a900501,,POST /hipstershop.CartService/EmptyCart,"[{'refType': 'CHILD_OF', 'spanID': 'ca7ce0b7b212e217', 'traceID': 'a80b27305c6236afef08710b6b46a9ca'}]",1749141061269389,1749141061269,1700,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/EmptyCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/EmptyCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/EmptyCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:01.269389+00:00
+a80b27305c6236afef08710b6b46a9ca,df91e5ed9f09e8fe,,HMSET,"[{'refType': 'CHILD_OF', 'spanID': '4f6732003a900501', 'traceID': 'a80b27305c6236afef08710b6b46a9ca'}]",1749141061270054,1749141061270,706,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'DemandMaster'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HMSET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141061270084}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141061270176}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141061270756}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:01.270054+00:00
+0efc061a516eedd52b0ce2654ea33dfa,3c220c5e25947d70,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': 'bf5125570dd5551c', 'traceID': '0efc061a516eedd52b0ce2654ea33dfa'}]",1749141061626249,1749141061626,1207,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:01.626249+00:00
+0efc061a516eedd52b0ce2654ea33dfa,ff83d90e9a230fa7,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '3c220c5e25947d70', 'traceID': '0efc061a516eedd52b0ce2654ea33dfa'}]",1749141061626542,1749141061626,748,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141061626564}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141061626606}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141061627287}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:01.626542+00:00
+6f555b8182e06ba1bc5258feccabcc37,a356287421dc2207,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '2d60aaad9eaa9c93', 'traceID': '6f555b8182e06ba1bc5258feccabcc37'}]",1749141062147404,1749141062147,1397,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:02.147404+00:00
+6f555b8182e06ba1bc5258feccabcc37,d3302797c7ada388,,HGET,"[{'refType': 'CHILD_OF', 'spanID': 'a356287421dc2207', 'traceID': '6f555b8182e06ba1bc5258feccabcc37'}]",1749141062147660,1749141062147,881,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141062147679}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141062147696}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141062148537}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:02.147660+00:00
+2f2f92d632e734862a36109667996b13,c4020a82b4b3498b,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '225454526517344e', 'traceID': '2f2f92d632e734862a36109667996b13'}]",1749141062285320,1749141062285,1220,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:02.285320+00:00
+2f2f92d632e734862a36109667996b13,c0a241eba3bf06c0,,HGET,"[{'refType': 'CHILD_OF', 'spanID': 'c4020a82b4b3498b', 'traceID': '2f2f92d632e734862a36109667996b13'}]",1749141062285628,1749141062285,767,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141062285654}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141062285675}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141062286393}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:02.285628+00:00
+f931d56b84ace882ac0969652101d0fc,6fce67c6252373bd,,POST /hipstershop.CartService/AddItem,"[{'refType': 'CHILD_OF', 'spanID': 'a090a91f035d9da6', 'traceID': 'f931d56b84ace882ac0969652101d0fc'}]",1749141062730980,1749141062730,2100,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/AddItem'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/AddItem'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/AddItem'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:02.730980+00:00
+f931d56b84ace882ac0969652101d0fc,3e706d119e6773a2,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '6fce67c6252373bd', 'traceID': 'f931d56b84ace882ac0969652101d0fc'}]",1749141062731313,1749141062731,721,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141062731336}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141062731354}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141062732033}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:02.731313+00:00
+f931d56b84ace882ac0969652101d0fc,7ce5be8851fec552,,HMSET,"[{'refType': 'CHILD_OF', 'spanID': '6fce67c6252373bd', 'traceID': 'f931d56b84ace882ac0969652101d0fc'}]",1749141062732058,1749141062732,817,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'DemandMaster'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HMSET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141062732075}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141062732089}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141062732873}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:02.732058+00:00
+80687a955def3cd84bb9d17815306b79,9e9f98c858408271,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': 'ee10676f81b5a644', 'traceID': '80687a955def3cd84bb9d17815306b79'}]",1749141062737956,1749141062737,1095,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '4b93a925-eac0-43c7-be6c-a08d7324a397'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:02.737956+00:00
+80687a955def3cd84bb9d17815306b79,bfb7c8d469a4e337,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '9e9f98c858408271', 'traceID': '80687a955def3cd84bb9d17815306b79'}]",1749141062738209,1749141062738,697,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749141062738227}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749141062738242}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749141062738905}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.89.126'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-1'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-08'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '67b403ff-ac8f-4427-899a-9300af84668d'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-05 16:31:02.738209+00:00

@@ -1,0 +1,55 @@
+조회 구간: 2025-06-18T12:10:24Z ~ 2025-06-18T12:23:24Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1121개, 최대 14포인트, 이상 125개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, adservice-2, adservice-1, adservice, emailservice-2
+Top-5 metrics with largest deviations: timeout, rrt_max, rrt, client_error_ratio, error_ratio
+Metric descriptions sorted by deviation_score:
+- tikv | qps{type=scan_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 12:15:00 (+5m), peak 12:15:00 (+5m), deviation_score ≈ 3.6σ
+- adservice-2 | client_error_ratio | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- adservice-2 | error_ratio | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- adservice-1 | client_error | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- adservice-1 | error | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- adservice-1 | timeout | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- adservice-2 | client_error | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- adservice-2 | error | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- adservice-2 | timeout | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- adservice-2 | pod_cpu_usage | 판정 불가(30포인트 미만): first 12:19:00 (+9m), peak 12:19:00 (+9m), deviation_score ≈ 3.6σ
+- emailservice-2 | pod_memory_working_set_bytes | 판정 불가(30포인트 미만): first 12:10:00 (+0m), peak 12:10:00 (+0m), deviation_score ≈ 3.6σ
+- tikv | io_util{device=dm-0,instance=10.233.79.155:9100} | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- tikv | io_util{device=dm-0,instance=10.233.81.5:9100} | 판정 불가(30포인트 미만): first 12:14:00 (+4m), peak 12:14:00 (+4m), deviation_score ≈ 3.6σ
+- tikv | io_util{device=dm-0,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 12:18:00 (+8m), peak 12:18:00 (+8m), deviation_score ≈ 3.6σ
+- tikv | io_util{device=dm-0,instance=223.193.36.128} | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- tikv | io_util{device=dm-0,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 12:18:00 (+8m), peak 12:18:00 (+8m), deviation_score ≈ 3.6σ
+- tikv | io_util{device=dm-0,instance=223.193.36.89} | 판정 불가(30포인트 미만): first 12:14:00 (+4m), peak 12:14:00 (+4m), deviation_score ≈ 3.6σ
+- tikv | io_util{device=vdb,instance=10.233.79.155:9100} | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- tikv | io_util{device=vdb,instance=10.233.81.5:9100} | 판정 불가(30포인트 미만): first 12:14:00 (+4m), peak 12:14:00 (+4m), deviation_score ≈ 3.6σ
+- tikv | io_util{device=vdb,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 12:18:00 (+8m), peak 12:18:00 (+8m), deviation_score ≈ 3.6σ
+- tikv | io_util{device=vdb,instance=223.193.36.128} | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- tikv | io_util{device=vdb,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 12:18:00 (+8m), peak 12:18:00 (+8m), deviation_score ≈ 3.6σ
+- tikv | io_util{device=vdb,instance=223.193.36.89} | 판정 불가(30포인트 미만): first 12:14:00 (+4m), peak 12:14:00 (+4m), deviation_score ≈ 3.6σ
+- tikv | raft_apply_wait{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- adservice-1 | client_error_ratio | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- adservice-1 | error_ratio | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- adservice | timeout | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- tikv | qps{type=resolve_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 12:20:00 (+10m), peak 12:20:00 (+10m), deviation_score ≈ 3.6σ
+- adservice | rrt_max | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+- adservice-1 | rrt_max | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.6σ
+
+[log] 행 111570개, 키워드 일치 228개, 템플릿 1종 중 상위 20% 1종, 출력 14건
+Failure-indicative log entries after two-stage filtering:
+- 12:10:31 (+0m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"edff1ad
+- 12:11:02 (+1m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"4e3cb11
+- 12:12:05 (+2m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"8635710
+- 12:13:00 (+3m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"ba94676
+- 12:14:05 (+4m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"f348497
+- 12:15:03 (+5m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"65fd454
+- 12:16:05 (+6m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"40b94fd
+- 12:17:00 (+7m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"09a179f
+- 12:18:02 (+8m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"a4b7903
+- 12:19:01 (+9m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"8b77611
+- 12:20:03 (+10m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"7b0bd5a
+- 12:21:01 (+11m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"d7ff1af
+- 12:22:04 (+12m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"d9ae00a
+- 12:23:00 (+13m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"d348763
+
+[trace] 행 없음

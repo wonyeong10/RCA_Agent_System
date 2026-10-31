@@ -1,0 +1,23 @@
+case: 06_node_aiops-k8s-03
+
+[log] 0행
+
+[trace] 0행
+
+[metric] file 수 16, 총 행 255
+  infra/infra_node/infra_node_node_cpu_usage_rate: 15행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00
+  infra/infra_node/infra_node_node_disk_read_bytes_total: 15행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00
+  infra/infra_node/infra_node_node_disk_read_time_seconds_total: 15행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00
+  infra/infra_node/infra_node_node_disk_write_time_seconds_total: 15행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00
+  infra/infra_node/infra_node_node_disk_written_bytes_total: 15행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00
+  infra/infra_node/infra_node_node_filesystem_free_bytes: 15행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00
+  infra/infra_node/infra_node_node_filesystem_size_bytes: 15행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00
+  infra/infra_node/infra_node_node_filesystem_usage_rate: 30행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00
+  infra/infra_node/infra_node_node_memory_MemAvailable_bytes: 15행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00
+  infra/infra_node/infra_node_node_memory_MemTotal_bytes: 15행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00
+  infra/infra_node/infra_node_node_memory_usage_rate: 15행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00
+  infra/infra_node/infra_node_node_network_receive_bytes_total: 15행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00
+  infra/infra_node/infra_node_node_network_receive_packets_total: 15행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00
+  infra/infra_node/infra_node_node_network_transmit_bytes_total: 15행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00
+  infra/infra_node/infra_node_node_network_transmit_packets_total: 15행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00
+  infra/infra_node/infra_node_node_sockstat_TCP_inuse: 15행, ts 2025-06-05 23:10:00+00:00 ~ 2025-06-05 23:24:00+00:00

@@ -1,0 +1,93 @@
+조회 구간: 2025-06-11T13:10:50Z ~ 2025-06-11T13:30:50Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1140개, 최대 21포인트, 이상 94개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, adservice-0, adservice, redis-cart-0, aiops-k8s-08
+Top-5 metrics with largest deviations: pod_cpu_usage, rrt_max, rrt, client_error_ratio, error_ratio
+Metric descriptions sorted by deviation_score:
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/dm-0} | 판정 불가(30포인트 미만): first 13:17:00 (+7m), peak 13:17:00 (+7m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=vda,instance=10.233.77.67:9100} | 판정 불가(30포인트 미만): first 13:13:00 (+3m), peak 13:13:00 (+3m), deviation_score ≈ 4.5σ
+- tikv | qps{type=check_txn_status,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 13:12:00 (+2m), peak 13:12:00 (+2m), deviation_score ≈ 4.5σ
+- tikv | qps{type=resolve_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 13:12:00 (+2m), peak 13:12:00 (+2m), deviation_score ≈ 4.5σ
+- tikv | raft_propose_wait{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 13:16:00 (+6m), peak 13:16:00 (+6m), deviation_score ≈ 4.5σ
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/vdb} | 판정 불가(30포인트 미만): first 13:17:00 (+7m), peak 13:17:00 (+7m), deviation_score ≈ 4.5σ
+- redis-cart-0 | pod_processes | 판정 불가(30포인트 미만): first 13:22:00 (+12m), peak 13:22:00 (+12m), deviation_score ≈ 4.5σ
+- redis-cart-0 | pod_cpu_usage | 판정 불가(30포인트 미만): first 13:17:00 (+7m), peak 13:17:00 (+7m), deviation_score ≈ 4.4σ
+- tikv | grpc_qps{type=kv_prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 13:11:00 (+1m), peak 13:11:00 (+1m), deviation_score ≈ 4.4σ
+- tikv | snapshot_apply_count{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 13:11:00 (+1m), peak 13:11:00 (+1m), deviation_score ≈ 4.3σ
+- tikv | qps{type=commit,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 13:12:00 (+2m), peak 13:12:00 (+2m), deviation_score ≈ 4.3σ
+- aiops-k8s-08 | node_cpu_usage_rate | 판정 불가(30포인트 미만): first 13:16:00 (+6m), peak 13:16:00 (+6m), deviation_score ≈ 4.2σ
+- tikv | qps{type=prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 13:12:00 (+2m), peak 13:12:00 (+2m), deviation_score ≈ 4.1σ
+- adservice-0 | pod_cpu_usage | 판정 불가(30포인트 미만): first 13:12:00 (+2m), peak 13:12:00 (+2m), deviation_score ≈ 4.0σ
+- adservice | rrt_max | 판정 불가(30포인트 미만): first 13:30:00 (+20m), peak 13:30:00 (+20m), deviation_score ≈ 3.9σ
+- adservice-0 | rrt_max | 판정 불가(30포인트 미만): first 13:30:00 (+20m), peak 13:30:00 (+20m), deviation_score ≈ 3.8σ
+- aiops-k8s-08 | node_filesystem_free_bytes{device=/dev/vda2,mountpoint=/} | 판정 불가(30포인트 미만): first 13:16:00 (+6m), peak 13:16:00 (+6m), deviation_score ≈ 3.6σ
+- aiops-k8s-08 | node_filesystem_usage_rate{device=/dev/vda2,mountpoint=/} | 판정 불가(30포인트 미만): first 13:16:00 (+6m), peak 13:16:00 (+6m), deviation_score ≈ 3.5σ
+- tikv | grpc_qps{type=kv_commit,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 13:11:00 (+1m), peak 13:11:00 (+1m), deviation_score ≈ 3.5σ
+- tikv | cpu_usage{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 13:12:00 (+2m), peak 13:12:00 (+2m), deviation_score ≈ 3.5σ
+- aiops-k8s-08 | node_network_transmit_bytes_total | 판정 불가(30포인트 미만): first 13:30:00 (+20m), peak 13:30:00 (+20m), deviation_score ≈ 3.4σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 13:11:00 (+1m), peak 13:11:00 (+1m), deviation_score ≈ 3.3σ
+- adservice | rrt | 판정 불가(30포인트 미만): first 13:30:00 (+20m), peak 13:30:00 (+20m), deviation_score ≈ 3.3σ
+- adservice-0 | rrt | 판정 불가(30포인트 미만): first 13:30:00 (+20m), peak 13:30:00 (+20m), deviation_score ≈ 3.2σ
+- adservice-0 | client_error_ratio | 판정 불가(30포인트 미만): first 13:13:00 (+3m), peak 13:13:00 (+3m), deviation_score ≈ 3.2σ
+- adservice-0 | error_ratio | 판정 불가(30포인트 미만): first 13:13:00 (+3m), peak 13:13:00 (+3m), deviation_score ≈ 3.2σ
+- adservice | client_error_ratio | 판정 불가(30포인트 미만): first 13:13:00 (+3m), peak 13:13:00 (+3m), deviation_score ≈ 3.1σ
+- adservice | error_ratio | 판정 불가(30포인트 미만): first 13:13:00 (+3m), peak 13:13:00 (+3m), deviation_score ≈ 3.1σ
+- tikv | io_util{device=vda,instance=223.193.36.127} | 판정 불가(30포인트 미만): first 13:25:00 (+15m), peak 13:25:00 (+15m), deviation_score ≈ 3.1σ
+- adservice-0 | client_error | 판정 불가(30포인트 미만): first 13:13:00 (+3m), peak 13:13:00 (+3m), deviation_score ≈ 3.1σ
+
+[log] 행 203782개, 키워드 일치 6742개, 템플릿 3종 중 상위 20% 2종, 출력 40건
+Failure-indicative log entries after two-stage filtering:
+- 13:10:55 (+0m) <frontend-1> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"13784c5e-7713-4e04-81e7-4fc283279f99","http.req.method":"GET","http.req.path":"/product/OLJCESPC7Z","message":"failed to retrieve ads","session":"3ac1c739-5feb-4476-a55c-11bac7bb242d","severity":"warning","timestamp":"202
+- 13:11:00 (+1m) <frontend-1> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"89543504-0638-4688-a355-3c5e6a350fa3","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"ded4436e-40b4-4822-b18e-b401ac0e833e","severity":"warning","timestamp":"2025-06-11T13:11:00.1
+- 13:12:00 (+2m) <frontend-1> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"af5ed045-a694-4fec-8529-ff02d8316a8c","http.req.method":"GET","http.req.path":"/product/9SIQT8TOJO","message":"failed to retrieve ads","session":"52451490-342b-473f-80d3-0295030090e2","severity":"warning","timestamp":"202
+- 13:13:00 (+3m) <frontend-2> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"0c1221f9-e371-4d3c-a1e2-2a63b6276b55","http.req.method":"GET","http.req.path":"/product/66VCHSJNUP","message":"failed to retrieve ads","session":"931d4c62-7ff2-4a95-98ca-467bbfa9cbff","severity":"warning","timestamp":"202
+- 13:14:00 (+4m) <frontend-1> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"2fa58fed-5f3f-4b52-92ef-6ec5b383186f","http.req.method":"GET","http.req.path":"/product/OLJCESPC7Z","message":"failed to retrieve ads","session":"71093f5e-6e7e-4ad2-bcab-06734d6948fb","severity":"warning","timestamp":"202
+- 13:15:00 (+5m) <frontend-1> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"8fcf0bfa-58df-4e81-a29b-86301c4b451c","http.req.method":"GET","http.req.path":"/product/1YMWWN1N4O","message":"failed to retrieve ads","session":"8a535a79-9009-4d69-abd9-7d60b7e6d3a4","severity":"warning","timestamp":"202
+- 13:16:00 (+6m) <frontend-1> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"d1c4e5bf-0b07-4efb-b2ca-719452779f97","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"1bf1e9d2-f78d-449d-bc42-3df48b99716f","severity":"warning","timestamp":"2025-06-11T13:16:00.4
+- 13:17:00 (+7m) <frontend-2> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"43c894e8-9ad2-4a55-9cd1-515e8ea03f70","http.req.method":"GET","http.req.path":"/product/9SIQT8TOJO","message":"failed to retrieve ads","session":"34002786-70ab-4d63-bb4d-38be6a714f96","severity":"warning","timestamp":"202
+- 13:18:00 (+8m) <frontend-1> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"1804acaf-1595-44ae-973d-7051824fcb7b","http.req.method":"GET","http.req.path":"/product/2ZYFJ3GM2N","message":"failed to retrieve ads","session":"b3eb87a9-8fe7-4841-94fa-9a40cdea6c3e","severity":"warning","timestamp":"202
+- 13:19:00 (+9m) <frontend-1> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"38de1ba1-8ba0-4739-ab06-56a0010bfde7","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"5fc47268-2ab9-4eda-881f-3e724df0b10f","severity":"warning","timestamp":"2025-06-11T13:19:00.1
+- 13:20:00 (+10m) <frontend-1> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"3a8727c1-0423-43cd-b7b5-5df7737fb863","http.req.method":"GET","http.req.path":"/product/OLJCESPC7Z","message":"failed to retrieve ads","session":"0d318bcd-1d72-4e1b-ac3f-d72412585ff7","severity":"warning","timestamp":"202
+- 13:21:00 (+11m) <frontend-1> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"a8bce16d-d952-4cc8-a7da-5eac157a4a27","http.req.method":"GET","http.req.path":"/product/LS4PSXUNUM","message":"failed to retrieve ads","session":"12649a59-46a9-4750-baa5-39f6aa9c46a4","severity":"warning","timestamp":"202
+- 13:22:00 (+12m) <frontend-1> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"a93b23ac-659f-4e59-b7fa-5dd4eab18a71","http.req.method":"GET","http.req.path":"/product/0PUK6V6EV0","message":"failed to retrieve ads","session":"4609d920-d4fe-46a1-ab9a-20ad39d4e841","severity":"warning","timestamp":"202
+- 13:23:01 (+13m) <frontend-1> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"19272a4a-69c1-4387-95a9-9497a2f98510","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"9a478c74-925b-4928-a351-f9e8187727a5","severity":"warning","timestamp":"2025-06-11T13:23:01.4
+- 13:24:00 (+14m) <frontend-0> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"cdb05b59-b0a0-40c4-b6aa-d1a7aaf643b5","http.req.method":"GET","http.req.path":"/product/LS4PSXUNUM","message":"failed to retrieve ads","session":"3e6c8267-bf11-4e75-bde0-3d901a23604c","severity":"warning","timestamp":"202
+- 13:25:00 (+15m) <frontend-1> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"56d8074f-5f6f-4338-9ea7-62549ca065a2","http.req.method":"GET","http.req.path":"/product/2ZYFJ3GM2N","message":"failed to retrieve ads","session":"01078e4f-4d62-4166-9413-ba64934d5f04","severity":"warning","timestamp":"202
+- 13:26:00 (+16m) <frontend-0> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"0f51ad0f-5f1d-40d9-85f2-94e49928ebec","http.req.method":"GET","http.req.path":"/product/6E92ZMYYFZ","message":"failed to retrieve ads","session":"6d42581c-f75b-4b0b-be0e-d60c68a02c67","severity":"warning","timestamp":"202
+- 13:27:00 (+17m) <frontend-1> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"2bf20ec9-5f09-4785-bc8c-23e85b1e0acf","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"e54bfba9-7703-413d-b979-b6bae9ad42c5","severity":"warning","timestamp":"2025-06-11T13:27:00.6
+- 13:28:00 (+18m) <frontend-1> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"457a46f8-4b7c-4b63-bb3c-3872291d1374","http.req.method":"GET","http.req.path":"/product/2ZYFJ3GM2N","message":"failed to retrieve ads","session":"60e50e8a-c933-4908-9641-12904fbd0c6c","severity":"warning","timestamp":"202
+- 13:29:00 (+19m) <frontend-0> | {"error":"failed to get ads: rpc error: code = Unknown desc = ","http.req.id":"4067194f-76fa-45c0-b54e-8f78af691376","http.req.method":"GET","http.req.path":"/product/LS4PSXUNUM","message":"failed to retrieve ads","session":"317898f7-6c88-4a44-b2f1-a88af9f08b6d","severity":"warning","timestamp":"202
+
+[trace] span 120775개, 호출 유형별 p95 초과 6056건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <13:29:00 (+19m)~+60s, Callee=emailservice, Count=2 (29%), MaxLatency=1134us, Callers=[checkoutservice×2]>
+- <13:20:00 (+10m)~+60s, Callee=emailservice, Count=2 (18%), MaxLatency=1136us, Callers=[checkoutservice×2]>
+- <13:28:00 (+18m)~+60s, Callee=emailservice, Count=2 (17%), MaxLatency=1365us, Callers=[checkoutservice×2]>
+- <13:14:00 (+4m)~+60s, Callee=checkoutservice, Count=17 (12%), MaxLatency=331290us, Callers=[checkoutservice×9, frontend×4, (root)×4]>
+- <13:27:00 (+17m)~+60s, Callee=emailservice, Count=1 (11%), MaxLatency=1077us, Callers=[checkoutservice×1]>
+- <13:16:00 (+6m)~+60s, Callee=cartservice, Count=30 (11%), MaxLatency=74645us, Callers=[frontend×27, checkoutservice×3]>
+- <13:16:00 (+6m)~+60s, Callee=redis, Count=31 (10%), MaxLatency=72093us, Callers=[cartservice×31]>
+- <13:16:00 (+6m)~+60s, Callee=shippingservice, Count=7 (10%), MaxLatency=653us, Callers=[checkoutservice×4, frontend×3]>
+- <13:11:00 (+1m)~+60s, Callee=cartservice, Count=30 (10%), MaxLatency=87806us, Callers=[frontend×27, checkoutservice×3]>
+- <13:12:00 (+2m)~+60s, Callee=emailservice, Count=1 (10%), MaxLatency=1304us, Callers=[checkoutservice×1]>
+- <13:26:00 (+16m)~+60s, Callee=shippingservice, Count=8 (9%), MaxLatency=805us, Callers=[frontend×4, checkoutservice×4]>
+- <13:18:00 (+8m)~+60s, Callee=emailservice, Count=1 (9%), MaxLatency=1213us, Callers=[checkoutservice×1]>
+- <13:11:00 (+1m)~+60s, Callee=redis, Count=29 (9%), MaxLatency=86357us, Callers=[cartservice×29]>
+- <13:23:00 (+13m)~+60s, Callee=shippingservice, Count=6 (9%), MaxLatency=1285us, Callers=[checkoutservice×4, frontend×2]>
+- <13:21:00 (+11m)~+60s, Callee=shippingservice, Count=7 (9%), MaxLatency=675us, Callers=[frontend×6, checkoutservice×1]>
+- <13:11:00 (+1m)~+60s, Callee=checkoutservice, Count=14 (9%), MaxLatency=219341us, Callers=[checkoutservice×10, (root)×3, frontend×1]>
+- <13:13:00 (+3m)~+60s, Callee=shippingservice, Count=8 (9%), MaxLatency=2028us, Callers=[frontend×5, checkoutservice×3]>
+- <13:28:00 (+18m)~+60s, Callee=checkoutservice, Count=12 (8%), MaxLatency=93886us, Callers=[checkoutservice×8, (root)×4]>
+- <13:21:00 (+11m)~+60s, Callee=emailservice, Count=1 (8%), MaxLatency=1089us, Callers=[checkoutservice×1]>
+- <13:14:00 (+4m)~+60s, Callee=emailservice, Count=1 (8%), MaxLatency=1115us, Callers=[checkoutservice×1]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 3035 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 1304 times in the time window
+- "(root) → (root) → frontend" has occurred 284 times in the time window
+- "frontend → cartservice → redis" has occurred 262 times in the time window
+- "frontend → frontend → cartservice" has occurred 249 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 205 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 204 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 204 times in the time window
+- "frontend → checkoutservice → checkoutservice" has occurred 94 times in the time window
+- "frontend → frontend → shippingservice" has occurred 54 times in the time window

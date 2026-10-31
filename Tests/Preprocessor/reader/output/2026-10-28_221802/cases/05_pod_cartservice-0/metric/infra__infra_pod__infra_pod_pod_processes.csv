@@ -1,0 +1,23 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,object_type,pod,pod_processes,sql_type,type,ts
+2025-06-05T16:10:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:10:00+00:00
+2025-06-05T16:11:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:11:00+00:00
+2025-06-05T16:12:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:12:00+00:00
+2025-06-05T16:13:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:13:00+00:00
+2025-06-05T16:14:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:14:00+00:00
+2025-06-05T16:15:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:15:00+00:00
+2025-06-05T16:16:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:16:00+00:00
+2025-06-05T16:17:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:17:00+00:00
+2025-06-05T16:18:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:18:00+00:00
+2025-06-05T16:19:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:19:00+00:00
+2025-06-05T16:20:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:20:00+00:00
+2025-06-05T16:21:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:21:00+00:00
+2025-06-05T16:22:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:22:00+00:00
+2025-06-05T16:23:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:23:00+00:00
+2025-06-05T16:24:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:24:00+00:00
+2025-06-05T16:25:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:25:00+00:00
+2025-06-05T16:26:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:26:00+00:00
+2025-06-05T16:27:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:27:00+00:00
+2025-06-05T16:28:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:28:00+00:00
+2025-06-05T16:29:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:29:00+00:00
+2025-06-05T16:30:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:30:00+00:00
+2025-06-05T16:31:00Z,null,null,aiops-k8s-07,pod_processes,null,null,hipstershop,pod,cartservice-0,1,null,null,2025-06-05 16:31:00+00:00

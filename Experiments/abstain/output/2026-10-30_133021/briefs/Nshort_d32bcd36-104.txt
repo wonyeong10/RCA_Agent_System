@@ -1,0 +1,14 @@
+조회 구간: 2025-06-06T16:10:02Z ~ 2025-06-06T16:10:03Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1107개, 최대 1포인트, 이상 0개 (기준 3σ) — 포인트 1개로는 3σ 판정 불가
+
+[log] 행 15개, 키워드 일치 0개
+
+[trace] span 30개, 호출 유형별 p95 초과 5건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <16:10:00 (+0m)~+60s, Callee=frontend, Count=4 (21%), MaxLatency=60001670us, Callers=[frontend×3, (root)×1]>
+- <16:10:00 (+0m)~+60s, Callee=productcatalogservice, Count=1 (11%), MaxLatency=10777us, Callers=[frontend×1]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 3 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 1 times in the time window
+- "(root) → (root) → frontend" has occurred 1 times in the time window

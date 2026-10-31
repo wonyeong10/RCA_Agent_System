@@ -1,0 +1,12 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,node_network_transmit_packets_total,object_type,pod,sql_type,type,ts
+2025-06-06T04:03:00Z,null,null,223.193.36.109,node_network_transmit_packets_total,aiops-k8s-04,null,null,1.27,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.113,node_network_transmit_packets_total,aiops-k8s-05,null,null,1.73,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.124,node_network_transmit_packets_total,k8s-master3,null,null,0.8,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.126,node_network_transmit_packets_total,k8s-master2,null,null,1.0,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.127,node_network_transmit_packets_total,k8s-master1,null,null,0.67,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.128,node_network_transmit_packets_total,aiops-k8s-06,null,null,1.13,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.129,node_network_transmit_packets_total,aiops-k8s-07,null,null,1.6,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.130,node_network_transmit_packets_total,aiops-k8s-08,null,null,1.27,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.56,node_network_transmit_packets_total,aiops-k8s-01,null,null,1.2,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.88,node_network_transmit_packets_total,aiops-k8s-02,null,null,0.93,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.89,node_network_transmit_packets_total,aiops-k8s-03,null,null,1.27,node,null,null,null,2025-06-06 04:03:00+00:00

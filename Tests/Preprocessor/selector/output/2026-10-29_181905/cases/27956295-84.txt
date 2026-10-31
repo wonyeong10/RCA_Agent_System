@@ -1,0 +1,89 @@
+조회 구간: 2025-06-05T20:10:09Z ~ 2025-06-05T20:34:09Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1119개, 최대 25포인트, 이상 137개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, redis-cart-0, cartservice-2, paymentservice-0, emailservice-2
+Top-5 metrics with largest deviations: rrt_max, rrt, pod_network_transmit_packets, pod_memory_working_set_bytes, pod_network_transmit_bytes
+Metric descriptions sorted by deviation_score:
+- tikv | io_util{device=dm-0,instance=10.233.81.5:9100} | 판정 불가(30포인트 미만): first 20:29:00 (+19m), peak 20:29:00 (+19m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=dm-0,instance=223.193.36.113} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=dm-0,instance=223.193.36.89} | 판정 불가(30포인트 미만): first 20:29:00 (+19m), peak 20:29:00 (+19m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vdb,instance=10.233.81.5:9100} | 판정 불가(30포인트 미만): first 20:29:00 (+19m), peak 20:29:00 (+19m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vdb,instance=223.193.36.113} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vdb,instance=223.193.36.89} | 판정 불가(30포인트 미만): first 20:29:00 (+19m), peak 20:29:00 (+19m), deviation_score ≈ 4.9σ
+- tikv | raft_propose_wait{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:24:00 (+14m), peak 20:24:00 (+14m), deviation_score ≈ 4.9σ
+- redis-cart-0 | timeout | 판정 불가(30포인트 미만): first 20:25:00 (+15m), peak 20:25:00 (+15m), deviation_score ≈ 4.9σ
+- redis-cart-0 | pod_processes | 판정 불가(30포인트 미만): first 20:23:00 (+13m), peak 20:23:00 (+13m), deviation_score ≈ 4.9σ
+- emailservice-2 | pod_memory_working_set_bytes | 판정 불가(30포인트 미만): first 20:25:00 (+15m), peak 20:25:00 (+15m), deviation_score ≈ 4.9σ
+- redis-cart-0 | pod_cpu_usage | 판정 불가(30포인트 미만): first 20:23:00 (+13m), peak 20:23:00 (+13m), deviation_score ≈ 4.9σ
+- cartservice-2 | rrt_max | 판정 불가(30포인트 미만): first 20:22:00 (+12m), peak 20:22:00 (+12m), deviation_score ≈ 4.9σ
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/vdb} | 판정 불가(30포인트 미만): first 20:23:00 (+13m), peak 20:23:00 (+13m), deviation_score ≈ 4.9σ
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/dm-0} | 판정 불가(30포인트 미만): first 20:23:00 (+13m), peak 20:23:00 (+13m), deviation_score ≈ 4.9σ
+- paymentservice-0 | rrt | 판정 불가(30포인트 미만): first 20:14:00 (+4m), peak 20:14:00 (+4m), deviation_score ≈ 4.9σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.9σ
+- cartservice-2 | rrt | 판정 불가(30포인트 미만): first 20:22:00 (+12m), peak 20:22:00 (+12m), deviation_score ≈ 4.8σ
+- tikv | qps{type=prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.8σ
+- paymentservice-0 | rrt_max | 판정 불가(30포인트 미만): first 20:14:00 (+4m), peak 20:14:00 (+4m), deviation_score ≈ 4.8σ
+- tikv | grpc_qps{type=kv_prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.7σ
+- tikv | write_wal_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.5σ
+- tikv | snapshot_apply_count{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.4σ
+- paymentservice-0 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 20:30:00 (+20m), peak 20:30:00 (+20m), deviation_score ≈ 4.2σ
+- emailservice-2 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.0σ
+- emailservice-2 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.0σ
+- paymentservice-0 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 20:30:00 (+20m), peak 20:30:00 (+20m), deviation_score ≈ 4.0σ
+- cartservice-2 | client_error | 판정 불가(30포인트 미만): first 20:34:00 (+24m), peak 20:34:00 (+24m), deviation_score ≈ 4.0σ
+- cartservice-2 | error | 판정 불가(30포인트 미만): first 20:34:00 (+24m), peak 20:34:00 (+24m), deviation_score ≈ 4.0σ
+- paymentservice-0 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 20:30:00 (+20m), peak 20:30:00 (+20m), deviation_score ≈ 4.0σ
+- paymentservice-0 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 20:30:00 (+20m), peak 20:30:00 (+20m), deviation_score ≈ 3.9σ
+
+[log] 행 50596개, 키워드 일치 63개, 템플릿 3종 중 상위 20% 1종, 출력 16건
+Failure-indicative log entries after two-stage filtering:
+- 20:11:11 (+1m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"ce26e094-4de9-4056-9d7c-08224c6b0a85","http.req.method":"POST","http.req.path":"/car
+- 20:12:41 (+2m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"fa21b174-b882-4717-9c96-783a8cc79098","http.req.method":"POST","http.req.path":"/car
+- 20:14:28 (+4m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"5792a5de-2289-439c-9f1c-7d3da150553e","http.req.method":"POST","http.req.path":"/car
+- 20:15:05 (+5m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"978b033f-c5a5-4127-94c4-36723e119388","http.req.method":"POST","http.req.path":"/car
+- 20:17:41 (+7m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"df7fafc2-489d-430f-83b5-762fcd46f136","http.req.method":"POST","http.req.path":"/car
+- 20:18:18 (+8m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"ff3d76b3-eeb2-4180-8b09-14acf839fd3d","http.req.method":"POST","http.req.path":"/car
+- 20:19:28 (+9m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"7b11ca4f-0de2-46df-8e0f-bc5d7632d93e","http.req.method":"POST","http.req.path":"/car
+- 20:20:01 (+10m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"8f4c15f5-e79b-466f-a17b-17d496a0bdf7","http.req.method":"POST","http.req.path":"/car
+- 20:21:13 (+11m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"1517b064-84ad-4953-9dbb-813011ceb663","http.req.method":"POST","http.req.path":"/car
+- 20:23:27 (+13m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"cbb15f45-e51c-4ce7-81d8-bb8a421af21a","http.req.method":"POST","http.req.path":"/car
+- 20:25:34 (+15m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"ec42928a-a664-4108-bacb-f0c4ef32d5f4","http.req.method":"POST","http.req.path":"/car
+- 20:27:15 (+17m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"9e574c19-dc5c-4f75-be79-71e2d16eec2a","http.req.method":"POST","http.req.path":"/car
+- 20:28:43 (+18m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"5ba1eddf-7909-4355-9d24-91592a28bed9","http.req.method":"POST","http.req.path":"/car
+- 20:30:29 (+20m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"a2541cb3-45b6-4c5a-8e17-b69b234036ef","http.req.method":"POST","http.req.path":"/car
+- 20:32:33 (+22m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"fcc9eed2-514d-4bbb-85e8-31d760f0d6f2","http.req.method":"POST","http.req.path":"/car
+- 20:33:20 (+23m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = timed out waiting for server handshake","http.req.id":"7436a0e3-cdcb-4afb-817d-3df0aa042ef8","http.req.method":"POST","http.req.path":"/car
+
+[trace] span 52395개, 호출 유형별 p95 초과 2622건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <20:28:00 (+18m)~+60s, Callee=emailservice, Count=1 (100%), MaxLatency=1076us, Callers=[checkoutservice×1]>
+- <20:21:00 (+11m)~+60s, Callee=emailservice, Count=1 (50%), MaxLatency=1276us, Callers=[checkoutservice×1]>
+- <20:28:00 (+18m)~+60s, Callee=checkoutservice, Count=4 (19%), MaxLatency=33327us, Callers=[checkoutservice×3, (root)×1]>
+- <20:34:00 (+24m)~+60s, Callee=recommendationservice, Count=5 (17%), MaxLatency=5774us, Callers=[frontend×3, recommendationservice×2]>
+- <20:18:00 (+8m)~+60s, Callee=shippingservice, Count=3 (16%), MaxLatency=858us, Callers=[frontend×3]>
+- <20:22:00 (+12m)~+60s, Callee=shippingservice, Count=4 (15%), MaxLatency=645us, Callers=[frontend×2, checkoutservice×2]>
+- <20:26:00 (+16m)~+60s, Callee=checkoutservice, Count=6 (14%), MaxLatency=60000971us, Callers=[checkoutservice×5, frontend×1]>
+- <20:23:00 (+13m)~+60s, Callee=checkoutservice, Count=4 (12%), MaxLatency=60000896us, Callers=[checkoutservice×2, (root)×1, frontend×1]>
+- <20:28:00 (+18m)~+60s, Callee=shippingservice, Count=2 (11%), MaxLatency=560us, Callers=[frontend×2]>
+- <20:28:00 (+18m)~+60s, Callee=recommendationservice, Count=16 (10%), MaxLatency=12083us, Callers=[recommendationservice×8, frontend×8]>
+- <20:34:00 (+24m)~+60s, Callee=cartservice, Count=2 (10%), MaxLatency=6074us, Callers=[frontend×2]>
+- <20:18:00 (+8m)~+60s, Callee=recommendationservice, Count=14 (10%), MaxLatency=7235us, Callers=[frontend×7, recommendationservice×7]>
+- <20:32:00 (+22m)~+60s, Callee=checkoutservice, Count=5 (10%), MaxLatency=60001404us, Callers=[checkoutservice×3, frontend×1, (root)×1]>
+- <20:15:00 (+5m)~+60s, Callee=redis, Count=11 (9%), MaxLatency=5975us, Callers=[cartservice×11]>
+- <20:33:00 (+23m)~+60s, Callee=recommendationservice, Count=13 (9%), MaxLatency=8054us, Callers=[frontend×7, recommendationservice×6]>
+- <20:12:00 (+2m)~+60s, Callee=cartservice, Count=9 (9%), MaxLatency=32175us, Callers=[frontend×8, checkoutservice×1]>
+- <20:31:00 (+21m)~+60s, Callee=checkoutservice, Count=2 (9%), MaxLatency=59948225us, Callers=[checkoutservice×2]>
+- <20:22:00 (+12m)~+60s, Callee=cartservice, Count=8 (9%), MaxLatency=59888us, Callers=[frontend×8]>
+- <20:34:00 (+24m)~+60s, Callee=redis, Count=2 (8%), MaxLatency=3678us, Callers=[cartservice×2]>
+- <20:33:00 (+23m)~+60s, Callee=shippingservice, Count=1 (8%), MaxLatency=547us, Callers=[frontend×1]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 1330 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 561 times in the time window
+- "(root) → (root) → frontend" has occurred 126 times in the time window
+- "frontend → cartservice → redis" has occurred 118 times in the time window
+- "frontend → frontend → cartservice" has occurred 110 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 88 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 88 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 86 times in the time window
+- "frontend → checkoutservice → checkoutservice" has occurred 31 times in the time window
+- "frontend → frontend → shippingservice" has occurred 23 times in the time window

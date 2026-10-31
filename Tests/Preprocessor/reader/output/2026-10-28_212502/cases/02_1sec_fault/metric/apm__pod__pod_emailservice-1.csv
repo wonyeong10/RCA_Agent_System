@@ -1,0 +1,2 @@
+﻿time,client_error,client_error_ratio,error,error_ratio,object_id,object_type,request,response,rrt,rrt_max,server_error,server_error_ratio,timeout,ts
+2025-06-06T04:03:00Z,0,0,0,0,emailservice-1,pod,14,14,1490.92,4401,0,0,0,2025-06-06 04:03:00+00:00

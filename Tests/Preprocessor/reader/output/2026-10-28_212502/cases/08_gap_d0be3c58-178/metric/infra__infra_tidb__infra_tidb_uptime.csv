@@ -1,0 +1,20 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,object_type,pod,sql_type,type,uptime,ts
+2025-06-09T21:10:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,593387.95,2025-06-09 21:10:00+00:00
+2025-06-09T21:11:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,593447.95,2025-06-09 21:11:00+00:00
+2025-06-09T21:12:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,593507.95,2025-06-09 21:12:00+00:00
+2025-06-09T21:13:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,593567.95,2025-06-09 21:13:00+00:00
+2025-06-09T21:14:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,593627.95,2025-06-09 21:14:00+00:00
+2025-06-09T21:15:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,593687.95,2025-06-09 21:15:00+00:00
+2025-06-09T21:16:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,593747.95,2025-06-09 21:16:00+00:00
+2025-06-09T21:17:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,593807.95,2025-06-09 21:17:00+00:00
+2025-06-09T21:18:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,593867.95,2025-06-09 21:18:00+00:00
+2025-06-09T21:19:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,593927.95,2025-06-09 21:19:00+00:00
+2025-06-09T21:20:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,593987.95,2025-06-09 21:20:00+00:00
+2025-06-09T21:21:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,594047.95,2025-06-09 21:21:00+00:00
+2025-06-09T21:22:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,594107.95,2025-06-09 21:22:00+00:00
+2025-06-09T21:23:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,594167.95,2025-06-09 21:23:00+00:00
+2025-06-09T21:24:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,594227.95,2025-06-09 21:24:00+00:00
+2025-06-09T21:25:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,594287.95,2025-06-09 21:25:00+00:00
+2025-06-09T21:26:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,594347.95,2025-06-09 21:26:00+00:00
+2025-06-09T21:27:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,594407.95,2025-06-09 21:27:00+00:00
+2025-06-09T21:28:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,594467.95,2025-06-09 21:28:00+00:00

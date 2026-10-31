@@ -1,0 +1,2 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,object_type,pod,region_pending,sql_type,type,ts
+2025-06-06T04:03:00Z,null,null,10.233.85.101:20180,region_pending,null,null,tidb,tikv,null,251433,null,null,2025-06-06 04:03:00+00:00

@@ -1,0 +1,16 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,node_network_receive_bytes_total,object_type,pod,sql_type,type,ts
+2025-06-05T23:10:00Z,null,null,223.193.36.89,node_network_receive_bytes_total,aiops-k8s-03,null,null,118.13,node,null,null,null,2025-06-05 23:10:00+00:00
+2025-06-05T23:11:00Z,null,null,223.193.36.89,node_network_receive_bytes_total,aiops-k8s-03,null,null,109.33,node,null,null,null,2025-06-05 23:11:00+00:00
+2025-06-05T23:12:00Z,null,null,223.193.36.89,node_network_receive_bytes_total,aiops-k8s-03,null,null,118.13,node,null,null,null,2025-06-05 23:12:00+00:00
+2025-06-05T23:13:00Z,null,null,223.193.36.89,node_network_receive_bytes_total,aiops-k8s-03,null,null,118.13,node,null,null,null,2025-06-05 23:13:00+00:00
+2025-06-05T23:14:00Z,null,null,223.193.36.89,node_network_receive_bytes_total,aiops-k8s-03,null,null,118.13,node,null,null,null,2025-06-05 23:14:00+00:00
+2025-06-05T23:15:00Z,null,null,223.193.36.89,node_network_receive_bytes_total,aiops-k8s-03,null,null,120.93,node,null,null,null,2025-06-05 23:15:00+00:00
+2025-06-05T23:16:00Z,null,null,223.193.36.89,node_network_receive_bytes_total,aiops-k8s-03,null,null,120.93,node,null,null,null,2025-06-05 23:16:00+00:00
+2025-06-05T23:17:00Z,null,null,223.193.36.89,node_network_receive_bytes_total,aiops-k8s-03,null,null,120.93,node,null,null,null,2025-06-05 23:17:00+00:00
+2025-06-05T23:18:00Z,null,null,223.193.36.89,node_network_receive_bytes_total,aiops-k8s-03,null,null,120.93,node,null,null,null,2025-06-05 23:18:00+00:00
+2025-06-05T23:19:00Z,null,null,223.193.36.89,node_network_receive_bytes_total,aiops-k8s-03,null,null,118.13,node,null,null,null,2025-06-05 23:19:00+00:00
+2025-06-05T23:20:00Z,null,null,223.193.36.89,node_network_receive_bytes_total,aiops-k8s-03,null,null,118.13,node,null,null,null,2025-06-05 23:20:00+00:00
+2025-06-05T23:21:00Z,null,null,223.193.36.89,node_network_receive_bytes_total,aiops-k8s-03,null,null,118.13,node,null,null,null,2025-06-05 23:21:00+00:00
+2025-06-05T23:22:00Z,null,null,223.193.36.89,node_network_receive_bytes_total,aiops-k8s-03,null,null,118.13,node,null,null,null,2025-06-05 23:22:00+00:00
+2025-06-05T23:23:00Z,null,null,223.193.36.89,node_network_receive_bytes_total,aiops-k8s-03,null,null,118.13,node,null,null,null,2025-06-05 23:23:00+00:00
+2025-06-05T23:24:00Z,null,null,223.193.36.89,node_network_receive_bytes_total,aiops-k8s-03,null,null,118.13,node,null,null,null,2025-06-05 23:24:00+00:00

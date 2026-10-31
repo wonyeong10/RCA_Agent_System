@@ -1,0 +1,12 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,node_disk_written_bytes_total,object_type,pod,sql_type,type,ts
+2025-06-06T04:03:00Z,null,vda,223.193.36.109,node_disk_written_bytes_total,aiops-k8s-04,null,null,53794.13,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,vda,223.193.36.113,node_disk_written_bytes_total,aiops-k8s-05,null,null,113356.8,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,vda,223.193.36.124,node_disk_written_bytes_total,k8s-master3,null,null,137454.93,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,vda,223.193.36.126,node_disk_written_bytes_total,k8s-master2,null,null,137420.8,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,vda,223.193.36.127,node_disk_written_bytes_total,k8s-master1,null,null,1349939.2,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,vda,223.193.36.128,node_disk_written_bytes_total,aiops-k8s-06,null,null,38229.33,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,vda,223.193.36.129,node_disk_written_bytes_total,aiops-k8s-07,null,null,55910.4,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,vda,223.193.36.130,node_disk_written_bytes_total,aiops-k8s-08,null,null,123972.27,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,vda,223.193.36.56,node_disk_written_bytes_total,aiops-k8s-01,null,null,84514.13,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,vda,223.193.36.88,node_disk_written_bytes_total,aiops-k8s-02,null,null,3003.73,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,vda,223.193.36.89,node_disk_written_bytes_total,aiops-k8s-03,null,null,10376.53,node,null,null,null,2025-06-06 04:03:00+00:00

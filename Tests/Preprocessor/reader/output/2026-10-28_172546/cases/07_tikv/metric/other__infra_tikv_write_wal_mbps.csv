@@ -1,0 +1,23 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,object_type,pod,sql_type,type,write_wal_mbps,ts
+2025-06-05T16:10:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,2981141.0,2025-06-05 16:10:00+00:00
+2025-06-05T16:11:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3007316.0,2025-06-05 16:11:00+00:00
+2025-06-05T16:12:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3009863.0,2025-06-05 16:12:00+00:00
+2025-06-05T16:13:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3010427.0,2025-06-05 16:13:00+00:00
+2025-06-05T16:14:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3010897.0,2025-06-05 16:14:00+00:00
+2025-06-05T16:15:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3011414.0,2025-06-05 16:15:00+00:00
+2025-06-05T16:16:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3012667.0,2025-06-05 16:16:00+00:00
+2025-06-05T16:17:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3013137.0,2025-06-05 16:17:00+00:00
+2025-06-05T16:18:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3013231.0,2025-06-05 16:18:00+00:00
+2025-06-05T16:19:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3014218.0,2025-06-05 16:19:00+00:00
+2025-06-05T16:20:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3014735.0,2025-06-05 16:20:00+00:00
+2025-06-05T16:21:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3015849.0,2025-06-05 16:21:00+00:00
+2025-06-05T16:22:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3017378.0,2025-06-05 16:22:00+00:00
+2025-06-05T16:23:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3017895.0,2025-06-05 16:23:00+00:00
+2025-06-05T16:24:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3018459.0,2025-06-05 16:24:00+00:00
+2025-06-05T16:25:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3018506.0,2025-06-05 16:25:00+00:00
+2025-06-05T16:26:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3020090.0,2025-06-05 16:26:00+00:00
+2025-06-05T16:27:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3020701.0,2025-06-05 16:27:00+00:00
+2025-06-05T16:28:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3021218.0,2025-06-05 16:28:00+00:00
+2025-06-05T16:29:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3021688.0,2025-06-05 16:29:00+00:00
+2025-06-05T16:30:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3022205.0,2025-06-05 16:30:00+00:00
+2025-06-05T16:31:00Z,null,null,10.233.85.101:20180,write_wal_mbps,null,null,tidb,tikv,null,null,null,3023460.0,2025-06-05 16:31:00+00:00

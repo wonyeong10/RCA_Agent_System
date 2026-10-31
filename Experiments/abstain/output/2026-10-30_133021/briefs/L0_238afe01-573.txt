@@ -1,0 +1,93 @@
+조회 구간: 2025-06-27T14:10:41Z ~ 2025-06-27T14:30:41Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1111개, 최대 21포인트, 이상 172개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, cartservice-0, checkoutservice-0, redis-cart-0, tidb
+Top-5 metrics with largest deviations: pod_network_transmit_packets, pod_network_transmit_bytes, pod_network_receive_bytes, pod_network_receive_packets, error_ratio
+Metric descriptions sorted by deviation_score:
+- tidb | connection_count{instance=10.233.74.171:10080} | 판정 불가(30포인트 미만): first 14:10:00 (+0m), peak 14:10:00 (+0m), deviation_score ≈ 4.5σ
+- cartservice-0 | client_error | 판정 불가(30포인트 미만): first 14:30:00 (+20m), peak 14:30:00 (+20m), deviation_score ≈ 4.5σ
+- cartservice-0 | error | 판정 불가(30포인트 미만): first 14:30:00 (+20m), peak 14:30:00 (+20m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=dm-0,instance=10.233.85.37:9100} | 판정 불가(30포인트 미만): first 14:20:00 (+10m), peak 14:20:00 (+10m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=dm-0,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 14:20:00 (+10m), peak 14:20:00 (+10m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=dm-0,instance=223.193.36.88} | 판정 불가(30포인트 미만): first 14:27:00 (+17m), peak 14:27:00 (+17m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=vda,instance=223.193.36.128} | 판정 불가(30포인트 미만): first 14:29:00 (+19m), peak 14:29:00 (+19m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=vdb,instance=10.233.85.37:9100} | 판정 불가(30포인트 미만): first 14:20:00 (+10m), peak 14:20:00 (+10m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=vdb,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 14:20:00 (+10m), peak 14:20:00 (+10m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=vdb,instance=223.193.36.88} | 판정 불가(30포인트 미만): first 14:27:00 (+17m), peak 14:27:00 (+17m), deviation_score ≈ 4.5σ
+- cartservice-0 | client_error_ratio | 판정 불가(30포인트 미만): first 14:30:00 (+20m), peak 14:30:00 (+20m), deviation_score ≈ 4.5σ
+- cartservice-0 | error_ratio | 판정 불가(30포인트 미만): first 14:30:00 (+20m), peak 14:30:00 (+20m), deviation_score ≈ 4.5σ
+- tidb | duration_99th{instance=10.233.74.171:10080} | 판정 불가(30포인트 미만): first 14:15:00 (+5m), peak 14:15:00 (+5m), deviation_score ≈ 4.5σ
+- tidb | qps{type=Update,instance=10.233.74.171:10080} | 판정 불가(30포인트 미만): first 14:11:00 (+1m), peak 14:11:00 (+1m), deviation_score ≈ 4.5σ
+- tidb | block_cache_size{cf=all,instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 14:10:00 (+0m), peak 14:10:00 (+0m), deviation_score ≈ 4.5σ
+- cartservice-0 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 14:10:00 (+0m), peak 14:10:00 (+0m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=dm-0,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 14:27:00 (+17m), peak 14:27:00 (+17m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=vdb,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 14:27:00 (+17m), peak 14:27:00 (+17m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=dm-0,instance=223.193.36.130} | 판정 불가(30포인트 미만): first 14:27:00 (+17m), peak 14:27:00 (+17m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=vdb,instance=223.193.36.130} | 판정 불가(30포인트 미만): first 14:27:00 (+17m), peak 14:27:00 (+17m), deviation_score ≈ 4.5σ
+- redis-cart-0 | rrt_max | 판정 불가(30포인트 미만): first 14:16:00 (+6m), peak 14:16:00 (+6m), deviation_score ≈ 4.5σ
+- cartservice-0 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 14:10:00 (+0m), peak 14:10:00 (+0m), deviation_score ≈ 4.4σ
+- cartservice-0 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 14:10:00 (+0m), peak 14:10:00 (+0m), deviation_score ≈ 4.4σ
+- redis-cart-0 | rrt | 판정 불가(30포인트 미만): first 14:16:00 (+6m), peak 14:16:00 (+6m), deviation_score ≈ 4.4σ
+- cartservice-0 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 14:10:00 (+0m), peak 14:10:00 (+0m), deviation_score ≈ 4.4σ
+- tikv | io_util{device=vda,instance=223.193.36.89} | 판정 불가(30포인트 미만): first 14:27:00 (+17m), peak 14:27:00 (+17m), deviation_score ≈ 4.4σ
+- tikv | io_util{device=dm-0,instance=10.233.77.67:9100} | 판정 불가(30포인트 미만): first 14:28:00 (+18m), peak 14:28:00 (+18m), deviation_score ≈ 4.3σ
+- tikv | io_util{device=vdb,instance=10.233.77.67:9100} | 판정 불가(30포인트 미만): first 14:28:00 (+18m), peak 14:28:00 (+18m), deviation_score ≈ 4.3σ
+- tikv | io_util{device=vda,instance=10.233.81.5:9100} | 판정 불가(30포인트 미만): first 14:27:00 (+17m), peak 14:27:00 (+17m), deviation_score ≈ 4.3σ
+- checkoutservice-0 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 14:10:00 (+0m), peak 14:10:00 (+0m), deviation_score ≈ 4.3σ
+
+[log] 행 48540개, 키워드 일치 101개, 템플릿 1종 중 상위 20% 1종, 출력 20건
+Failure-indicative log entries after two-stage filtering:
+- 14:11:03 (+1m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:12:03 (+2m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:13:02 (+3m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:14:11 (+4m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:15:02 (+5m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:16:07 (+6m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:17:08 (+7m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:18:17 (+8m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:19:05 (+9m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:20:31 (+10m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:21:10 (+11m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:22:17 (+12m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:23:06 (+13m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:24:06 (+14m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:25:14 (+15m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:26:34 (+16m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:27:02 (+17m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:28:03 (+18m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:29:16 (+19m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+- 14:30:09 (+20m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = cart failure: failed to get user cart during checkout: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup cartservice on 10.233.33.139:53: server misbehaving\"","htt
+
+[trace] span 32566개, 호출 유형별 p95 초과 1636건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <14:23:00 (+13m)~+60s, Callee=checkoutservice, Count=3 (33%), MaxLatency=5846957us, Callers=[frontend×1, checkoutservice×1, (root)×1]>
+- <14:10:00 (+0m)~+60s, Callee=shippingservice, Count=1 (25%), MaxLatency=477us, Callers=[(root)×1]>
+- <14:28:00 (+18m)~+60s, Callee=shippingservice, Count=4 (22%), MaxLatency=7992us, Callers=[frontend×3, (root)×1]>
+- <14:25:00 (+15m)~+60s, Callee=checkoutservice, Count=2 (20%), MaxLatency=6779053us, Callers=[frontend×1, checkoutservice×1]>
+- <14:26:00 (+16m)~+60s, Callee=checkoutservice, Count=1 (17%), MaxLatency=2996948us, Callers=[frontend×1]>
+- <14:11:00 (+1m)~+60s, Callee=checkoutservice, Count=2 (17%), MaxLatency=3182738us, Callers=[frontend×1, checkoutservice×1]>
+- <14:21:00 (+11m)~+60s, Callee=shippingservice, Count=2 (14%), MaxLatency=592us, Callers=[frontend×2]>
+- <14:16:00 (+6m)~+60s, Callee=cartservice, Count=9 (12%), MaxLatency=69052us, Callers=[frontend×5, (root)×4]>
+- <14:27:00 (+17m)~+60s, Callee=recommendationservice, Count=8 (11%), MaxLatency=6818us, Callers=[recommendationservice×4, frontend×4]>
+- <14:25:00 (+15m)~+60s, Callee=redis, Count=4 (11%), MaxLatency=7954us, Callers=[(root)×2, cartservice×2]>
+- <14:12:00 (+2m)~+60s, Callee=recommendationservice, Count=20 (11%), MaxLatency=10257us, Callers=[frontend×10, recommendationservice×10]>
+- <14:27:00 (+17m)~+60s, Callee=shippingservice, Count=1 (10%), MaxLatency=706us, Callers=[frontend×1]>
+- <14:14:00 (+4m)~+60s, Callee=shippingservice, Count=2 (10%), MaxLatency=499us, Callers=[frontend×1, (root)×1]>
+- <14:22:00 (+12m)~+60s, Callee=redis, Count=7 (9%), MaxLatency=8637us, Callers=[cartservice×5, (root)×2]>
+- <14:10:00 (+0m)~+60s, Callee=productcatalogservice, Count=16 (9%), MaxLatency=26139us, Callers=[frontend×9, (root)×7]>
+- <14:19:00 (+9m)~+60s, Callee=shippingservice, Count=1 (9%), MaxLatency=483us, Callers=[frontend×1]>
+- <14:26:00 (+16m)~+60s, Callee=cartservice, Count=9 (9%), MaxLatency=60380us, Callers=[frontend×6, (root)×3]>
+- <14:30:00 (+20m)~+60s, Callee=redis, Count=5 (9%), MaxLatency=8276us, Callers=[cartservice×4, (root)×1]>
+- <14:18:00 (+8m)~+60s, Callee=shippingservice, Count=1 (8%), MaxLatency=427us, Callers=[(root)×1]>
+- <14:10:00 (+0m)~+60s, Callee=redis, Count=2 (8%), MaxLatency=3333us, Callers=[(root)×1, cartservice×1]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 655 times in the time window
+- "(root) → (root) → frontend" has occurred 272 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 224 times in the time window
+- "(root) → (root) → productcatalogservice" has occurred 116 times in the time window
+- "(root) → frontend → productcatalogservice" has occurred 48 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 44 times in the time window
+- "frontend → frontend → cartservice" has occurred 35 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 34 times in the time window
+- "frontend → cartservice → redis" has occurred 33 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 32 times in the time window

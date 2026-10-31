@@ -1,0 +1,17 @@
+{
+  "log": {
+    "status": "not_applicable",
+    "minutes_present": 0,
+    "minutes_total": 15
+  },
+  "trace": {
+    "status": "not_applicable",
+    "minutes_present": 0,
+    "minutes_total": 15
+  },
+  "metric": {
+    "status": "ok",
+    "minutes_present": 15,
+    "minutes_total": 15
+  }
+}

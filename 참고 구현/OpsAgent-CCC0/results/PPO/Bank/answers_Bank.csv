@@ -1,0 +1,55 @@
+query_id,answer
+0,['2021-03-04 14:57:00']
+1,"['high memory usage', 'IG01']"
+2,"['2021-03-06 23:36:00', 'high disk I/O read usage', 'Mysql02']"
+3,['Mysql02']
+4,"['high disk I/O read usage', 'Mysql02']"
+5,"['2021-03-09 16:53:00', 'Redis01']"
+6,['2021-03-09 19:12:00']
+7,"['2021-03-09 20:04:00', 'high disk I/O read usage', 'Mysql01']"
+8,"['high memory usage', 'high disk I/O read usage', 'Redis01', 'MG01']"
+9,"['2021-03-12 22:36:00', 'Mysql01']"
+10,"['2021-03-23 14:29:00', 'high memory usage']"
+11,['2021-03-23 16:54:00']
+12,['2021-03-23 17:29:00']
+13,"['2021-03-04 22:05:00', '2021-03-04 22:25:00']"
+14,"['2021-03-04 22:05:00', '2021-03-04 22:25:00']"
+15,"['high disk I/O read usage', 'high memory usage', 'IG01', 'IG02']"
+16,"['2021-03-07 03:00:00', 'MG02']"
+17,['JVM Out of Memory (OOM) Heap']
+18,['high disk space usage']
+19,"['2021-03-10 02:36:00', 'IG02']"
+20,['high memory usage']
+21,['Tomcat02']
+22,"['2021-03-10 15:36:00', 'MG01']"
+23,"['2021-03-10 22:07:00', '2021-03-10 22:26:00', 'JVM Out of Memory (OOM) Heap', 'high disk I/O read usage', 'IG01', 'IG02']"
+24,"['2021-03-06 02:01:00', 'high disk I/O read usage', 'Redis02']"
+25,"['high disk I/O read usage', 'Mysql01']"
+26,"['high CPU usage', 'IG01']"
+27,"['2021-03-07 06:35:00', 'high disk I/O read usage', 'Mysql02']"
+28,"['high disk I/O read usage', 'IG02']"
+29,"['2021-03-09 09:36:00', 'Mysql01']"
+30,['2021-03-09 23:53:00']
+31,"['2021-03-12 10:25:30', '2021-03-12 10:29:00']"
+32,['2021-03-23 23:03:00']
+33,"['JVM Out of Memory (OOM) Heap', 'Tomcat01']"
+34,"['2021-03-25 00:00:00', '2021-03-25 00:15:00', 'MG01', 'Tomcat01']"
+35,"['high disk I/O read usage', 'Mysql02']"
+36,"['2021-03-25 20:09:00', 'high disk I/O read usage']"
+37,"['2021-03-25 20:25:00', 'high memory usage', 'Mysql01']"
+38,"['2021-03-25 22:29:00', 'high memory usage']"
+39,['2021-03-10 17:33:00']
+40,"['2021-03-23 01:30:00', 'JVM Out of Memory (OOM) Heap']"
+41,['Tomcat02']
+42,"['2021-03-24 14:05:00', 'high memory usage']"
+43,['2021-03-25 02:14:00']
+44,['2021-03-24 16:47:00']
+45,['2021-03-25 23:06:00']
+46,"['2021-03-25 09:31:00', 'JVM Out of Memory (OOM) Heap']"
+47,"['high disk I/O read usage', 'Mysql01']"
+48,['Tomcat01']
+49,"['2021-03-25 19:01:00', '2021-03-25 19:08:00', 'high disk I/O read usage', 'high memory usage', 'Mysql01', 'Tomcat01']"
+50,"['2021-03-25 19:19:00', 'high memory usage', 'Mysql02']"
+51,['high disk I/O read usage']
+52,['high memory usage']
+53,"['2021-03-04 05:31:00', 'high memory usage']"

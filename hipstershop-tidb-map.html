@@ -1,0 +1,269 @@
+<title>hipstershop + TiDB 구조도</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: 한 장의 호출 그래프(위=호출자, 아래=피호출자) + 그 아래 근거 노트와 호출 수 표 */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --fg: #1b2230;
+  --muted: #5b6577;
+  --line: #9aa3b2;
+  --accent: #0f7a6c;      /* 원본에 없는 TiDB 계층 */
+  --accent-soft: #e3f3f0;
+  --warn: #a4570f;        /* 관측 공백 배지 */
+  --font-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12161d; --surface: #1a2029; --fg: #e4e8ef; --muted: #98a2b3; --line: #5d6778;
+    --accent: #4cc3b1; --accent-soft: #15302d; --warn: #e3a35f; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12161d; --surface: #1a2029; --fg: #e4e8ef; --muted: #98a2b3; --line: #5d6778;
+  --accent: #4cc3b1; --accent-soft: #15302d; --warn: #e3a35f; color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.6;
+}
+main {
+  max-width: 1120px; margin: 0 auto;
+  padding-block: 32px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 28px;
+}
+header { display: grid; gap: 6px; max-width: 70ch; }
+h1 { margin: 0; font-size: 1.6rem; font-weight: 600; text-wrap: balance; }
+h2 { margin: 0 0 10px; font-size: 1.05rem; font-weight: 600; }
+p { margin: 0; }
+.meta { color: var(--muted); font-size: 0.85rem; font-family: var(--font-mono); }
+figure { margin: 0; background: var(--surface); border: 1px solid color-mix(in srgb, var(--line) 40%, transparent); border-radius: 10px; }
+.scroll { overflow-x: auto; }
+svg { display: block; width: 100%; min-width: 880px; height: auto; color: var(--line); }
+figcaption { padding: 12px 16px 14px; color: var(--muted); font-size: 0.88rem; border-top: 1px solid color-mix(in srgb, var(--line) 30%, transparent); }
+
+/* SVG 스타일 (페이지 스타일시트에서 클래스로 지정) */
+.node rect { fill: var(--surface); stroke: var(--line); stroke-width: 1.2; }
+.node.new rect { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; }
+.name { fill: var(--fg); font: 600 13px var(--font-mono); }
+.lang { fill: var(--muted); font: 400 11px var(--font-mono); }
+.badge { fill: var(--warn); font: 500 10.5px var(--font-body); }
+.place { fill: var(--muted); font: 400 10.5px var(--font-mono); }
+.edge { stroke: var(--line); fill: none; }
+.edge.metric { stroke: var(--accent); stroke-dasharray: 7 5; stroke-width: 2; }
+.edge.solid-new { stroke: var(--accent); stroke-width: 2; }
+.edge.known { stroke: var(--accent); stroke-dasharray: 2 4; stroke-width: 1.6; stroke-linecap: round; }
+.elabel { fill: var(--muted); font: 400 11px var(--font-body); }
+.elabel.new { fill: var(--accent); font-weight: 500; }
+.cluster { fill: none; stroke: var(--accent); stroke-width: 1; stroke-dasharray: 3 3; }
+.cluster-label { fill: var(--accent); font: 600 11.5px var(--font-body); letter-spacing: 0.02em; }
+.legend text { fill: var(--muted); font: 400 11px var(--font-body); }
+.legend .lt { fill: var(--fg); font-weight: 600; }
+.ah { fill: var(--line); }
+.ah-new { fill: var(--accent); }
+
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.note { background: var(--surface); border: 1px solid color-mix(in srgb, var(--line) 40%, transparent); border-radius: 10px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.tag { justify-self: start; font: 500 0.72rem var(--font-mono); letter-spacing: 0.04em; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--accent); color: var(--accent); }
+.tag.kn { border-style: dotted; }
+.tag.tr { border-color: var(--line); color: var(--muted); }
+.note ul { margin: 0; padding-left: 1.1em; display: grid; gap: 4px; font-size: 0.9rem; }
+code { font-family: var(--font-mono); font-size: 0.86em; }
+
+.counts { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; font-variant-numeric: tabular-nums; background: var(--surface); border-radius: 10px; overflow: hidden; }
+th, td { text-align: left; padding: 6px 12px; border-bottom: 1px solid color-mix(in srgb, var(--line) 25%, transparent); white-space: nowrap; }
+th { color: var(--muted); font-weight: 500; font-size: 0.8rem; letter-spacing: 0.03em; }
+td.n { text-align: right; font-family: var(--font-mono); }
+</style>
+
+<main>
+  <header>
+    <h1>hipstershop + TiDB 구조도</h1>
+    <p>원본 Online Boutique 호출 그래프에, 이 데이터셋에만 있는 TiDB / TiKV / PD 계층을 붙인 그림입니다. 선 모양이 근거의 종류를 뜻합니다.</p>
+    <p class="meta">기준: 2025-06-29 (장애 0건) · trace 24시간 전수 · metric · log</p>
+  </header>
+
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 1100 780" role="img" aria-label="frontend가 7개, checkoutservice가 6개 서비스를 호출하고, cartservice는 redis-cart를, productcatalogservice는 TiDB를 쓰는 것으로 추정된다. TiDB는 TiKV에 데이터를 읽고 쓰며, TiDB와 TiKV는 PD에 의존한다. TiDB 계층은 metric으로만 관찰된다.">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+        <marker id="ahn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-new"/></marker>
+      </defs>
+
+      <!-- 간선: 굵기 = 06-29 하루 호출 수 (log 스케일) -->
+      <g marker-end="url(#ah)">
+        <line class="edge" x1="550" y1="90" x2="200" y2="170" stroke-width="2.3"/>   <!-- f→rec 333k -->
+        <line class="edge" x1="550" y1="90" x2="900" y2="170" stroke-width="1.0"/>   <!-- f→checkout 18.6k -->
+        <line class="edge" x1="550" y1="90" x2="100" y2="330" stroke-width="2.2"/>   <!-- f→ad 278k -->
+        <line class="edge" x1="550" y1="90" x2="250" y2="330" stroke-width="3.3"/>   <!-- f→currency 1.70M -->
+        <line class="edge" x1="550" y1="90" x2="400" y2="330" stroke-width="2.4"/>   <!-- f→cart 408k -->
+        <line class="edge" x1="550" y1="90" x2="550" y2="330" stroke-width="3.5"/>   <!-- f→pc 2.14M -->
+        <line class="edge" x1="550" y1="90" x2="700" y2="330" stroke-width="1.7"/>   <!-- f→ship 92k -->
+        <line class="edge" x1="200" y1="220" x2="550" y2="330" stroke-width="2.3"/>  <!-- rec→pc 332k -->
+        <line class="edge" x1="900" y1="220" x2="250" y2="330" stroke-width="1.4"/>  <!-- co→currency 53k -->
+        <line class="edge" x1="900" y1="220" x2="400" y2="330" stroke-width="1.3"/>  <!-- co→cart 36k -->
+        <line class="edge" x1="900" y1="220" x2="550" y2="330" stroke-width="1.3"/>  <!-- co→pc 35k -->
+        <line class="edge" x1="900" y1="220" x2="700" y2="330" stroke-width="1.3"/>  <!-- co→ship 36k -->
+        <line class="edge" x1="900" y1="220" x2="850" y2="330" stroke-width="1.0"/>  <!-- co→pay 18k -->
+        <line class="edge" x1="900" y1="220" x2="1000" y2="330" stroke-width="1.0"/> <!-- co→email 18k -->
+        <line class="edge" x1="400" y1="394" x2="400" y2="470" stroke-width="2.5"/>  <!-- cart→redis 480k -->
+      </g>
+      <text class="elabel" x="390" y="456" text-anchor="end">HGET / HMSET</text>
+
+      <!-- TiDB 계층 -->
+      <rect class="cluster" x="462" y="452" width="604" height="300" rx="10"/>
+      <text class="cluster-label" x="1052" y="472" text-anchor="end">namespace tidb · metric으로만 관찰 (trace·log·infra_pod 없음)</text>
+
+      <line class="edge metric" x1="550" y1="394" x2="550" y2="490" marker-end="url(#ahn)"/>
+      <text class="elabel new" x="540" y="424" text-anchor="end">SQL (trace 없음)</text>
+      <text class="elabel new" x="540" y="439" text-anchor="end">TiDB 정지 시 지연 ×2,800</text>
+
+      <line class="edge solid-new" x1="550" y1="546" x2="550" y2="640" marker-end="url(#ahn)"/>
+      <text class="elabel new" x="562" y="588">kv_get · kv_batch_get</text>
+      <text class="elabel new" x="562" y="603">kv_prewrite · kv_commit</text>
+
+      <line class="edge known" x1="625" y1="525" x2="775" y2="585" marker-end="url(#ahn)"/>
+      <line class="edge known" x1="625" y1="661" x2="775" y2="605" marker-end="url(#ahn)"/>
+      <text class="elabel new" x="890" y="650" text-anchor="middle">TSO · region 위치 조회</text>
+      <text class="elabel new" x="890" y="665" text-anchor="middle">(TiDB 일반 구조, 데이터 미확인)</text>
+
+      <!-- 노드 -->
+      <g class="node"><rect x="465" y="40" width="170" height="50" rx="7"/>
+        <text class="name" x="550" y="62" text-anchor="middle">frontend</text>
+        <text class="lang" x="550" y="79" text-anchor="middle">Go · HTTP 진입점</text></g>
+
+      <g class="node"><rect x="120" y="170" width="160" height="50" rx="7"/>
+        <text class="name" x="200" y="192" text-anchor="middle">recommendation</text>
+        <text class="lang" x="200" y="209" text-anchor="middle">Python</text></g>
+      <g class="node"><rect x="820" y="170" width="160" height="50" rx="7"/>
+        <text class="name" x="900" y="192" text-anchor="middle">checkout</text>
+        <text class="lang" x="900" y="209" text-anchor="middle">Go</text></g>
+
+      <g class="node"><rect x="34" y="330" width="132" height="64" rx="7"/>
+        <text class="name" x="100" y="352" text-anchor="middle">ad</text>
+        <text class="lang" x="100" y="369" text-anchor="middle">Java (유일한 JVM)</text>
+        <text class="badge" x="100" y="385" text-anchor="middle">server span 없음</text></g>
+      <g class="node"><rect x="184" y="330" width="132" height="64" rx="7"/>
+        <text class="name" x="250" y="352" text-anchor="middle">currency</text>
+        <text class="lang" x="250" y="369" text-anchor="middle">Node.js</text>
+        <text class="badge" x="250" y="385" text-anchor="middle">server span 없음</text></g>
+      <g class="node"><rect x="334" y="330" width="132" height="64" rx="7"/>
+        <text class="name" x="400" y="352" text-anchor="middle">cart</text>
+        <text class="lang" x="400" y="369" text-anchor="middle">C#</text></g>
+      <g class="node"><rect x="484" y="330" width="132" height="64" rx="7"/>
+        <text class="name" x="550" y="352" text-anchor="middle">productcatalog</text>
+        <text class="lang" x="550" y="369" text-anchor="middle">Go</text>
+        <text class="badge" x="550" y="385" text-anchor="middle">로그 ≈ 없음</text></g>
+      <g class="node"><rect x="634" y="330" width="132" height="64" rx="7"/>
+        <text class="name" x="700" y="352" text-anchor="middle">shipping</text>
+        <text class="lang" x="700" y="369" text-anchor="middle">Go</text></g>
+      <g class="node"><rect x="784" y="330" width="132" height="64" rx="7"/>
+        <text class="name" x="850" y="352" text-anchor="middle">payment</text>
+        <text class="lang" x="850" y="369" text-anchor="middle">Node.js</text>
+        <text class="badge" x="850" y="385" text-anchor="middle">server span 없음</text></g>
+      <g class="node"><rect x="934" y="330" width="132" height="64" rx="7"/>
+        <text class="name" x="1000" y="352" text-anchor="middle">email</text>
+        <text class="lang" x="1000" y="369" text-anchor="middle">Python</text></g>
+
+      <g class="node"><rect x="334" y="470" width="132" height="64" rx="7"/>
+        <text class="name" x="400" y="492" text-anchor="middle">redis-cart</text>
+        <text class="lang" x="400" y="509" text-anchor="middle">Redis · stateful</text>
+        <text class="badge" x="400" y="525" text-anchor="middle">로그 ≈ 없음</text></g>
+
+      <g class="node new"><rect x="475" y="490" width="150" height="56" rx="7"/>
+        <text class="name" x="550" y="511" text-anchor="middle">TiDB</text>
+        <text class="lang" x="550" y="527" text-anchor="middle">SQL 계층 · 1개</text>
+        <text class="place" x="550" y="540" text-anchor="middle">06-29: aiops-k8s-05</text></g>
+      <g class="node new"><rect x="475" y="640" width="150" height="56" rx="7"/>
+        <text class="name" x="550" y="661" text-anchor="middle">TiKV</text>
+        <text class="lang" x="550" y="677" text-anchor="middle">KV 저장 · store 1개</text>
+        <text class="place" x="550" y="690" text-anchor="middle">06-29: aiops-k8s-07</text></g>
+      <g class="node new"><rect x="775" y="565" width="150" height="56" rx="7"/>
+        <text class="name" x="850" y="586" text-anchor="middle">PD</text>
+        <text class="lang" x="850" y="602" text-anchor="middle">메타데이터 · tidb-pd-0</text>
+        <text class="place" x="850" y="615" text-anchor="middle">노드 알 수 없음 (IP 없음)</text></g>
+
+      <!-- 범례 -->
+      <g class="legend" transform="translate(34 590)">
+        <text class="lt" x="0" y="0">선 모양 = 근거</text>
+        <line class="edge" x1="0" y1="22" x2="44" y2="22" stroke-width="1.6"/>
+        <text x="56" y="26">trace로 확인 (굵기 = 하루 호출 수)</text>
+        <line class="edge metric" x1="0" y1="46" x2="44" y2="46"/>
+        <text x="56" y="50">지연 동반 관찰로 추론 (강력 후보)</text>
+        <line class="edge solid-new" x1="0" y1="70" x2="44" y2="70"/>
+        <text x="56" y="74">metric 라벨이 직접 보여줌</text>
+        <line class="edge known" x1="0" y1="94" x2="44" y2="94"/>
+        <text x="56" y="98">TiDB 일반 구조 (데이터 미확인)</text>
+        <text class="badge" x="0" y="126">주황 글씨</text>
+        <text x="62" y="126">관측 공백: "없음" ≠ "정상"</text>
+      </g>
+    </svg>
+    </div>
+    <figcaption>위가 호출자, 아래가 피호출자입니다. 하위 장애는 위로 전파되어 frontend에서 가장 크게 보이고, TiKV·PD 장애는 TiDB 지연·실패 쿼리 → productcatalog → 호출자 순으로 번집니다. 서비스 이름의 "service" 접미사는 생략했습니다.</figcaption>
+  </figure>
+
+  <section class="notes" aria-label="원본과 다른 부분의 근거">
+    <div class="note">
+      <span class="tag">강력 후보 · 확정 아님</span>
+      <h2>productcatalog → TiDB</h2>
+      <ul>
+        <li>원본 productcatalog는 JSON 파일을 읽고 DB를 쓰지 않습니다. trace에는 DB 호출 기록이 18일 내내 없습니다.</li>
+        <li>06-29에 TiDB <code>duration_99th</code>가 64.9초로 튄 구간이 두 번 있었습니다 (UTC 10:11–10:25, 14:11–14:33). 이때 <code>Select</code>는 21/s에서 0.24/s로 떨어졌습니다.</li>
+        <li>같은 구간 응답시간 중앙값: productcatalog <code>10ms → 28.8s</code> (×2,800), frontend <code>81ms → 30.9s</code> (×380, productcatalog 대기). 나머지 서비스는 변화가 없었습니다.</li>
+        <li>한계: 하루 안의 두 구간이고, 구간 안 요청 수는 평소의 1~5%입니다. recommendation도 productcatalog를 부르지만 느려지지 않았습니다.</li>
+        <li>분당 요청 수 상관은 4일 모두 productcatalog·recommendation·cart·redis-cart가 붙어 있어 근거에서 뺐습니다.</li>
+      </ul>
+    </div>
+    <div class="note">
+      <span class="tag">metric 라벨</span>
+      <h2>TiDB → TiKV</h2>
+      <ul>
+        <li>TiKV <code>grpc_qps</code>의 type이 <code>kv_get</code>, <code>kv_batch_get</code>, <code>kv_prewrite</code>, <code>kv_commit</code>입니다. SQL 계층이 보내는 요청 종류입니다.</li>
+        <li>TiDB <code>failed_query_ops</code>의 type에 <code>tikv:9001</code>, <code>tikv:9005</code>가 있습니다. TiKV에서 올라온 오류 코드입니다.</li>
+        <li>인스턴스: TiDB <code>10.233.74.171:10080</code>, TiKV <code>10.233.85.118:20180</code>, 각 1개.</li>
+      </ul>
+    </div>
+    <div class="note">
+      <span class="tag kn">일반 지식</span>
+      <h2>TiDB · TiKV → PD</h2>
+      <ul>
+        <li>PD metric에는 pod 이름 <code>tidb-pd-0</code>만 있고 IP가 없어 노드를 알 수 없습니다.</li>
+        <li>PD 호출 관계는 데이터에 드러나지 않습니다. TiDB 구조상 TSO 발급과 region 위치 조회를 PD가 맡습니다.</li>
+      </ul>
+    </div>
+    <div class="note">
+      <span class="tag tr">관측 범위</span>
+      <h2>어디서 보이고 어디서 안 보이나</h2>
+      <ul>
+        <li>TiDB 계층은 trace·log·<code>infra_pod</code>에 없고 infra metric으로만 보입니다.</li>
+        <li>배치 노드는 pod IP 3번째 옥텟으로 판단했습니다. trace의 pod IP·노드 쌍에서 옥텟과 노드가 1:1입니다. 날마다 바뀔 수 있습니다.</li>
+        <li>TiDB metric은 trace보다 1분 늦게 찍힙니다. trace의 t분 활동이 TiDB 지표의 t+1분 행에 나타납니다 (구간 끝 시각 라벨로 추정).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>06-29 호출 수 (client span, 하루)</h2>
+    <div class="counts">
+      <table>
+        <thead><tr><th>caller</th><th>callee</th><th style="text-align:right">spans</th><th>caller</th><th>callee</th><th style="text-align:right">spans</th></tr></thead>
+        <tbody>
+          <tr><td>frontend</td><td>productcatalog</td><td class="n">2,135,694</td><td>checkout</td><td>currency</td><td class="n">52,668</td></tr>
+          <tr><td>frontend</td><td>currency</td><td class="n">1,696,505</td><td>checkout</td><td>cart</td><td class="n">36,332</td></tr>
+          <tr><td>cart</td><td>redis-cart</td><td class="n">480,192</td><td>checkout</td><td>shipping</td><td class="n">36,265</td></tr>
+          <tr><td>frontend</td><td>cart</td><td class="n">407,822</td><td>checkout</td><td>productcatalog</td><td class="n">34,630</td></tr>
+          <tr><td>frontend</td><td>recommendation</td><td class="n">332,559</td><td>frontend</td><td>checkout</td><td class="n">18,640</td></tr>
+          <tr><td>recommendation</td><td>productcatalog</td><td class="n">332,203</td><td>checkout</td><td>payment</td><td class="n">18,052</td></tr>
+          <tr><td>frontend</td><td>ad</td><td class="n">277,571</td><td>checkout</td><td>email</td><td class="n">17,829</td></tr>
+          <tr><td>frontend</td><td>shipping</td><td class="n">92,403</td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>

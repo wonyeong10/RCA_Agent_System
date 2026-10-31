@@ -1,0 +1,22 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,node_filesystem_usage_rate,object_type,pod,sql_type,type,ts
+2025-06-06T04:03:00Z,null,/dev/mapper/aiops-aiops,223.193.36.109,node_filesystem_usage_rate,aiops-k8s-04,/data,null,14.54,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/mapper/aiops-aiops,223.193.36.113,node_filesystem_usage_rate,aiops-k8s-05,/data,null,14.53,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/mapper/aiops-aiops,223.193.36.126,node_filesystem_usage_rate,k8s-master2,/data,null,7.04,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/mapper/aiops-aiops,223.193.36.127,node_filesystem_usage_rate,k8s-master1,/data,null,13.83,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/mapper/aiops-aiops,223.193.36.128,node_filesystem_usage_rate,aiops-k8s-06,/data,null,42.29,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/mapper/aiops-aiops,223.193.36.129,node_filesystem_usage_rate,aiops-k8s-07,/data,null,42.59,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/mapper/aiops-aiops,223.193.36.130,node_filesystem_usage_rate,aiops-k8s-08,/data,null,42.66,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/mapper/aiops-aiops,223.193.36.56,node_filesystem_usage_rate,aiops-k8s-01,/data,null,30.02,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/mapper/aiops-aiops,223.193.36.88,node_filesystem_usage_rate,aiops-k8s-02,/data,null,23.04,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/mapper/aiops-aiops,223.193.36.89,node_filesystem_usage_rate,aiops-k8s-03,/data,null,14.3,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/vda2,223.193.36.109,node_filesystem_usage_rate,aiops-k8s-04,/,null,36.44,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/vda2,223.193.36.113,node_filesystem_usage_rate,aiops-k8s-05,/,null,36.0,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/vda2,223.193.36.124,node_filesystem_usage_rate,k8s-master3,/,null,68.32,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/vda2,223.193.36.126,node_filesystem_usage_rate,k8s-master2,/,null,63.17,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/vda2,223.193.36.127,node_filesystem_usage_rate,k8s-master1,/,null,80.94,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/vda2,223.193.36.128,node_filesystem_usage_rate,aiops-k8s-06,/,null,66.15,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/vda2,223.193.36.129,node_filesystem_usage_rate,aiops-k8s-07,/,null,56.82,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/vda2,223.193.36.130,node_filesystem_usage_rate,aiops-k8s-08,/,null,64.74,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/vda2,223.193.36.56,node_filesystem_usage_rate,aiops-k8s-01,/,null,71.4,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/vda2,223.193.36.88,node_filesystem_usage_rate,aiops-k8s-02,/,null,36.67,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_usage_rate,aiops-k8s-03,/,null,36.52,node,null,null,null,2025-06-06 04:03:00+00:00

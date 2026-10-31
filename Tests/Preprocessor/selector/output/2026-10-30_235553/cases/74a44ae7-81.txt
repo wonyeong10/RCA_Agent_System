@@ -1,0 +1,110 @@
+조회 구간: 2025-06-05T17:10:04Z ~ 2025-06-05T17:33:04Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1123개, 최대 24포인트(1분 1포인트), 이상 시점 139개 (기준 3σ) — 조회 구간이 짧아 모양(CNN) 판정에 필요한 30포인트를 못 채움 → 모양 '판정 불가(구간 짧음)'. 30포인트 이상이 되도록 구간을 넓히면 판정 가능
+Top-5 instances with largest deviations: tikv, paymentservice-1, currencyservice-1, redis-cart-0, adservice-1
+Top-5 metrics with largest deviations: pod_memory_working_set_bytes, rrt_max, pod_cpu_usage, response, request
+Metric descriptions sorted by deviation_score:
+- aiops-k8s-08 | node_filesystem_usage_rate{device=/dev/mapper/aiops-aiops,mountpoint=/data} | 판정 불가(구간 짧음): 17:16:00 (+6m), max deviation ≈ 4.7σ
+- adservice-1 | request | 판정 불가(구간 짧음): 17:19:00 (+9m), max deviation ≈ 4.7σ
+- adservice-2 | response | 판정 불가(구간 짧음): 17:18:00 (+8m), max deviation ≈ 4.7σ
+- k8s-master1 | node_disk_write_time_seconds_total{device=vda} | 판정 불가(구간 짧음): 17:16:00 (+6m), max deviation ≈ 4.7σ
+- aiops-k8s-05 | node_disk_read_bytes_total{device=vda} | 판정 불가(구간 짧음): 17:10:00 (+0m), max deviation ≈ 4.7σ
+- emailservice-2 | pod_memory_working_set_bytes | 판정 불가(구간 짧음): 17:11:00 (+1m), max deviation ≈ 4.7σ
+- tidb | duration_99th{instance=10.233.79.158:10080} | 판정 불가(구간 짧음): 17:11:00 (+1m), max deviation ≈ 4.7σ
+- tidb | qps{type=Begin,instance=10.233.79.158:10080} | 판정 불가(구간 짧음): 17:11:00 (+1m), max deviation ≈ 4.7σ
+- tidb | qps{type=Commit,instance=10.233.79.158:10080} | 판정 불가(구간 짧음): 17:11:00 (+1m), max deviation ≈ 4.7σ
+- tidb | qps{type=Insert,instance=10.233.79.158:10080} | 판정 불가(구간 짧음): 17:11:00 (+1m), max deviation ≈ 4.7σ
+- tidb | qps{type=Update,instance=10.233.79.158:10080} | 판정 불가(구간 짧음): 17:11:00 (+1m), max deviation ≈ 4.7σ
+- tikv | io_util{device=vda,instance=223.193.36.126} | 판정 불가(구간 짧음): 17:21:00 (+11m), max deviation ≈ 4.7σ
+- frontend-1 | timeout | 판정 불가(구간 짧음): 17:11:00 (+1m), max deviation ≈ 4.7σ
+- shippingservice-0 | timeout | 판정 불가(구간 짧음): 17:21:00 (+11m), max deviation ≈ 4.7σ
+- shippingservice | timeout | 판정 불가(구간 짧음): 17:21:00 (+11m), max deviation ≈ 4.7σ
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/dm-0} | 판정 불가(구간 짧음): 17:16:00 (+6m), max deviation ≈ 4.7σ
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/vdb} | 판정 불가(구간 짧음): 17:16:00 (+6m), max deviation ≈ 4.7σ
+- adservice-1 | pod_memory_working_set_bytes | 판정 불가(구간 짧음): 17:25:00 (+15m), max deviation ≈ 4.7σ
+- adservice-2 | pod_memory_working_set_bytes | 판정 불가(구간 짧음): 17:33:00 (+23m), max deviation ≈ 4.7σ
+- aiops-k8s-06 | node_memory_usage_rate | 판정 불가(구간 짧음): 17:10:00 (+0m), max deviation ≈ 4.7σ
+- aiops-k8s-06 | node_memory_MemAvailable_bytes | 판정 불가(구간 짧음): 17:10:00 (+0m), max deviation ≈ 4.7σ
+- redis-cart-0 | pod_cpu_usage | 판정 불가(구간 짧음): 17:16:00 (+6m), max deviation ≈ 4.7σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.101:20180} | 판정 불가(구간 짧음): 17:11:00 (+1m), max deviation ≈ 4.6σ
+- currencyservice-1 | rrt_max | 판정 불가(구간 짧음): 17:15:00 (+5m), max deviation ≈ 4.6σ
+
+[log] 행 48677개, 키워드 일치 97개, 상위 20% 분위 이상·분당 템플릿 1건 25건
+Failure-indicative log entries after two-stage filtering:
+- 17:11:07 (+1m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"3e9d37c4-f1d8-466e-ac98-8346c6ce74f6","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"9204ee7b-73ca-404b-a956-f361e80df657","severity":"error","timestamp":"2025-06-05T17:11:07.258138724Z"}
+- 17:12:07 (+2m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"783603a1-8689-400b-b6ce-f59db19973e2","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"0f313a55-b25a-44a5-b025-b2b33b5bf9ad","severity":"error","timestamp":"2025-06-05T17:12:07.743314123Z"}
+- 17:13:02 (+3m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"5eac50fa-9086-405c-a15e-8d25acfa768b","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"bc4ca819-90ad-4997-973b-420926814e38","severity":"error","timestamp":"2025-06-05T17:13:02.261076168Z"}
+- 17:14:45 (+4m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"344c5953-9b03-4985-a4ff-72f8ae546583","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"bd91d836-b6e2-46e5-b6ab-0b9084ce8c94","severity":"error","timestamp":"2025-06-05T17:14:45.101478875Z"}
+- 17:15:01 (+5m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"b1a91701-21f2-4bc8-a95f-dd8e2392ef24","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"47097865-012b-4f7d-99aa-32256fb23398","severity":"error","timestamp":"2025-06-05T17:15:01.497244356Z"}
+- 17:16:28 (+6m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Unavailable desc = shipping error: shipment failed: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"61501f3b-86ff-4526-87c6-e46461b552e3","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"869b98a0-3a80-43ff-a52d-bb864230e417","severity":"error","timestamp":"2025-06-05T17:16:28.748389784Z"}
+- 17:16:53 (+6m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"81c95067-872d-4060-a7ad-fe42f4b2de60","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"2a9c3031-dd7e-4259-b5ab-df000b4bfa7d","severity":"error","timestamp":"2025-06-05T17:16:53.552446395Z"}
+- 17:17:01 (+7m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"8d18fa8f-d846-47c6-8fae-23cccd925ece","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"2c461256-d804-458d-9ed1-0096bb7661df","severity":"error","timestamp":"2025-06-05T17:17:01.792840317Z"}
+- 17:18:32 (+8m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"7d28bd9a-a208-45e1-b2fc-81f4677b2659","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"be5c0c2f-8612-4b75-836e-d6bca5349ab1","severity":"error","timestamp":"2025-06-05T17:18:32.847295612Z"}
+- 17:19:14 (+9m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"d27a891c-2059-4372-93f0-3322c77ad9f0","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"1c34f79b-7b77-4b63-9aa6-90312e78d459","severity":"error","timestamp":"2025-06-05T17:19:14.915491391Z"}
+- 17:20:41 (+10m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Unavailable desc = shipping error: shipment failed: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"6e2edb37-b091-40c5-ad99-26ed0a566df1","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"f2f9d35f-7dec-48d9-8dcf-f25880a175d7","severity":"error","timestamp":"2025-06-05T17:20:41.753995135Z"}
+- 17:20:42 (+10m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"79bf172a-2775-4807-8324-bc6962c5ebe0","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"8fdc0b5e-92a5-4db7-a4f3-3c6636fda9f4","severity":"error","timestamp":"2025-06-05T17:20:42.904763348Z"}
+- 17:21:36 (+11m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"6f431e96-b038-4892-9375-4abac6c12d3e","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"ff2cc49e-150d-43d0-b5d6-edc9c5e1783c","severity":"error","timestamp":"2025-06-05T17:21:36.200062471Z"}
+- 17:22:48 (+12m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"0dbb72be-48e6-4ae0-9f5b-2c46dd3709e8","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"74e828f4-551d-4a43-96ff-9f10e76b9366","severity":"error","timestamp":"2025-06-05T17:22:48.01450418Z"}
+- 17:23:13 (+13m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"51275753-20ef-4e27-9e70-32f6943ee46c","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"d6afb4d5-c9ca-4d9a-9bdb-e15d04c19ade","severity":"error","timestamp":"2025-06-05T17:23:13.629877805Z"}
+- 17:24:05 (+14m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"eca5485f-a0fa-49f2-940f-0106727a258e","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"e65887ff-ee2f-40f3-9dbb-e502e90a3874","severity":"error","timestamp":"2025-06-05T17:24:05.261651403Z"}
+- 17:25:04 (+15m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"192a1913-0726-4dfb-86e2-02c5f4961899","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"1c6a82cf-3897-415b-a33c-89b523ae361f","severity":"error","timestamp":"2025-06-05T17:25:04.66847588Z"}
+- 17:26:23 (+16m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"a5467d8d-4258-499a-91f2-81fdf3638303","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"84e09909-75d7-415c-8f1a-94ad8cdb6343","severity":"error","timestamp":"2025-06-05T17:26:23.148915553Z"}
+- 17:27:27 (+17m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"774df8a2-5163-401a-88f5-13f9f829fa60","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"856f0f87-89c3-494d-a899-01c8ba3ffd96","severity":"error","timestamp":"2025-06-05T17:27:27.757368976Z"}
+- 17:28:32 (+18m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Unavailable desc = shipping error: shipment failed: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"e25b7adf-dd58-4d24-af1e-2e698748ff13","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"44bbb9e3-271e-483a-8f24-3e10ec1d4725","severity":"error","timestamp":"2025-06-05T17:28:32.282221922Z"}
+- 17:28:56 (+18m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"9a6b4408-010a-49cc-ac37-0e934767a9bd","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"f8f21dc5-4175-4685-8312-07d5a9cd8f31","severity":"error","timestamp":"2025-06-05T17:28:56.037500812Z"}
+- 17:29:17 (+19m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"562cd2ca-acee-42c2-8511-29561fd42901","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"4d49c193-4f12-4d8f-b2e9-5c2c45ceec33","severity":"error","timestamp":"2025-06-05T17:29:17.791653113Z"}
+- 17:30:13 (+20m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"682cb9ab-5e84-4f8f-af69-8262d38819fb","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"abb5eb49-9edb-483d-b6a1-0addc1eb445c","severity":"error","timestamp":"2025-06-05T17:30:13.078202636Z"}
+- 17:31:14 (+21m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"860bbcbd-7233-43bb-8f61-9d46572e3e81","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"65fb93d3-c530-487b-b9ea-e2bdbf51e608","severity":"error","timestamp":"2025-06-05T17:31:14.310667609Z"}
+- 17:32:02 (+22m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = shipping quote failure: failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: i/o timeout\"","http.req.id":"2f3a198c-0e47-4c9d-b2bb-60642feb4d9d","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"18666727-ea0b-454b-962b-0c9241f95c92","severity":"error","timestamp":"2025-06-05T17:32:02.001466586Z"}
+
+[trace] span 50277개, 호출 유형별 p95 초과 2523건
+High-latency span descriptions:
+- <17:19:00 (+9m)~+60s, Callee=frontend-0, Count=43, MaxLatency=20092000us, Callers=[frontend-0×43]>
+- <17:18:00 (+8m)~+60s, Callee=frontend-1, Count=35, MaxLatency=20056911us, Callers=[frontend-1×35]>
+- <17:10:00 (+0m)~+60s, Callee=frontend-2, Count=33, MaxLatency=20133252us, Callers=[frontend-2×33]>
+- <17:15:00 (+5m)~+60s, Callee=frontend-0, Count=31, MaxLatency=32752049us, Callers=[frontend-0×31]>
+- <17:26:00 (+16m)~+60s, Callee=frontend-0, Count=31, MaxLatency=20051338us, Callers=[frontend-0×31]>
+- <17:10:00 (+0m)~+60s, Callee=frontend-1, Count=30, MaxLatency=20065001us, Callers=[frontend-1×30]>
+- <17:18:00 (+8m)~+60s, Callee=frontend-0, Count=28, MaxLatency=20055251us, Callers=[frontend-0×28]>
+- <17:24:00 (+14m)~+60s, Callee=frontend-1, Count=28, MaxLatency=20053906us, Callers=[frontend-1×28]>
+- <17:25:00 (+15m)~+60s, Callee=frontend-1, Count=28, MaxLatency=20051979us, Callers=[frontend-1×28]>
+- <17:11:00 (+1m)~+60s, Callee=frontend-2, Count=27, MaxLatency=20067929us, Callers=[frontend-2×27]>
+- <17:26:00 (+16m)~+60s, Callee=frontend-1, Count=27, MaxLatency=20054037us, Callers=[frontend-1×27]>
+- <17:10:00 (+0m)~+60s, Callee=productcatalogservice-2, Count=27, MaxLatency=31081us, Callers=[frontend-0×9, frontend-1×18]>
+- <17:17:00 (+7m)~+60s, Callee=frontend-0, Count=26, MaxLatency=20090865us, Callers=[frontend-0×26]>
+- <17:11:00 (+1m)~+60s, Callee=frontend-1, Count=26, MaxLatency=20060901us, Callers=[frontend-1×26]>
+- <17:27:00 (+17m)~+60s, Callee=frontend-0, Count=26, MaxLatency=20047679us, Callers=[frontend-0×26]>
+- <17:18:00 (+8m)~+60s, Callee=productcatalogservice-2, Count=26, MaxLatency=23540us, Callers=[frontend-0×10, frontend-1×16]>
+- <17:12:00 (+2m)~+60s, Callee=frontend-2, Count=25, MaxLatency=20109288us, Callers=[frontend-2×25]>
+- <17:31:00 (+21m)~+60s, Callee=frontend-1, Count=25, MaxLatency=20067712us, Callers=[frontend-1×25]>
+- <17:15:00 (+5m)~+60s, Callee=frontend-1, Count=25, MaxLatency=20065546us, Callers=[frontend-1×25]>
+- <17:19:00 (+9m)~+60s, Callee=frontend-1, Count=24, MaxLatency=60000149us, Callers=[frontend-1×24]>
+- <17:20:00 (+10m)~+60s, Callee=frontend-1, Count=24, MaxLatency=20064206us, Callers=[frontend-1×24]>
+- <17:11:00 (+1m)~+60s, Callee=frontend-0, Count=24, MaxLatency=20062192us, Callers=[frontend-0×24]>
+- <17:32:00 (+22m)~+60s, Callee=frontend-1, Count=24, MaxLatency=20048291us, Callers=[frontend-1×24]>
+- <17:26:00 (+16m)~+60s, Callee=productcatalogservice-2, Count=24, MaxLatency=24185us, Callers=[checkoutservice-2×1, frontend-0×12, frontend-1×11]>
+Three-hop call paths statistics:
+- "frontend-1 → frontend-1 → productcatalogservice-2" has occurred 214 times in the time window
+- "frontend-0 → frontend-0 → productcatalogservice-2" has occurred 193 times in the time window
+- "frontend-2 → frontend-2 → productcatalogservice-1" has occurred 140 times in the time window
+- "recommendationservice-0 → recommendationservice-0 → productcatalogservice-1" has occurred 82 times in the time window
+- "frontend-0 → cartservice-1 → redis" has occurred 57 times in the time window
+- "frontend-0 → frontend-0 → cartservice-1" has occurred 51 times in the time window
+- "frontend-1 → frontend-1 → recommendationservice-0" has occurred 34 times in the time window
+- "frontend-1 → recommendationservice-0 → recommendationservice-0" has occurred 33 times in the time window
+- "frontend-2 → cartservice-1 → redis" has occurred 32 times in the time window
+- "frontend-1 → frontend-1 → cartservice-1" has occurred 32 times in the time window
+- "frontend-1 → cartservice-1 → redis" has occurred 30 times in the time window
+- "frontend-2 → frontend-2 → recommendationservice-0" has occurred 28 times in the time window
+- "frontend-2 → recommendationservice-0 → recommendationservice-0" has occurred 27 times in the time window
+- "frontend-2 → frontend-2 → cartservice-1" has occurred 26 times in the time window
+- "frontend-0 → recommendationservice-0 → recommendationservice-0" has occurred 24 times in the time window
+- "frontend-0 → frontend-0 → recommendationservice-0" has occurred 22 times in the time window
+- "frontend-1 → checkoutservice-2 → checkoutservice-2" has occurred 11 times in the time window
+- "frontend-0 → frontend-0 → shippingservice-0" has occurred 11 times in the time window
+- "frontend-2 → frontend-2 → shippingservice-0" has occurred 10 times in the time window
+- "frontend-2 → checkoutservice-2 → checkoutservice-2" has occurred 9 times in the time window
+- "checkoutservice-2 → checkoutservice-2 → productcatalogservice-0" has occurred 5 times in the time window
+- "frontend-1 → frontend-1 → shippingservice-0" has occurred 4 times in the time window
+- "checkoutservice-2 → checkoutservice-2 → productcatalogservice-1" has occurred 3 times in the time window
+- "frontend-2 → frontend-2 → checkoutservice-2" has occurred 3 times in the time window

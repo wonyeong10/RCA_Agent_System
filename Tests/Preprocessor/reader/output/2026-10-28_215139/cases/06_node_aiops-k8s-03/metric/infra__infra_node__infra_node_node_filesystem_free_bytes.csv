@@ -1,0 +1,16 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,node_filesystem_free_bytes,object_type,pod,sql_type,type,ts
+2025-06-05T23:10:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_free_bytes,aiops-k8s-03,/,null,16434331648,node,null,null,null,2025-06-05 23:10:00+00:00
+2025-06-05T23:11:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_free_bytes,aiops-k8s-03,/,null,16447922176,node,null,null,null,2025-06-05 23:11:00+00:00
+2025-06-05T23:12:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_free_bytes,aiops-k8s-03,/,null,16450523136,node,null,null,null,2025-06-05 23:12:00+00:00
+2025-06-05T23:13:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_free_bytes,aiops-k8s-03,/,null,16449572864,node,null,null,null,2025-06-05 23:13:00+00:00
+2025-06-05T23:14:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_free_bytes,aiops-k8s-03,/,null,16449171456,node,null,null,null,2025-06-05 23:14:00+00:00
+2025-06-05T23:15:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_free_bytes,aiops-k8s-03,/,null,16447946752,node,null,null,null,2025-06-05 23:15:00+00:00
+2025-06-05T23:16:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_free_bytes,aiops-k8s-03,/,null,16446029824,node,null,null,null,2025-06-05 23:16:00+00:00
+2025-06-05T23:17:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_free_bytes,aiops-k8s-03,/,null,16442904576,node,null,null,null,2025-06-05 23:17:00+00:00
+2025-06-05T23:18:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_free_bytes,aiops-k8s-03,/,null,16441683968,node,null,null,null,2025-06-05 23:18:00+00:00
+2025-06-05T23:19:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_free_bytes,aiops-k8s-03,/,null,16454500352,node,null,null,null,2025-06-05 23:19:00+00:00
+2025-06-05T23:20:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_free_bytes,aiops-k8s-03,/,null,16456843264,node,null,null,null,2025-06-05 23:20:00+00:00
+2025-06-05T23:21:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_free_bytes,aiops-k8s-03,/,null,16452177920,node,null,null,null,2025-06-05 23:21:00+00:00
+2025-06-05T23:22:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_free_bytes,aiops-k8s-03,/,null,16446922752,node,null,null,null,2025-06-05 23:22:00+00:00
+2025-06-05T23:23:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_free_bytes,aiops-k8s-03,/,null,16447250432,node,null,null,null,2025-06-05 23:23:00+00:00
+2025-06-05T23:24:00Z,null,/dev/vda2,223.193.36.89,node_filesystem_free_bytes,aiops-k8s-03,/,null,16446812160,node,null,null,null,2025-06-05 23:24:00+00:00

@@ -1,0 +1,5 @@
+﻿time,cf,device,grpc_qps,instance,kpi_key,kubernetes_node,mountpoint,namespace,object_type,pod,sql_type,type,ts
+2025-06-06T04:03:00Z,null,null,0.76,10.233.85.101:20180,grpc_qps,null,null,tidb,tikv,null,null,kv_batch_get,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,0.02,10.233.85.101:20180,grpc_qps,null,null,tidb,tikv,null,null,kv_prewrite,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,0.02,10.233.85.101:20180,grpc_qps,null,null,tidb,tikv,null,null,kv_commit,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,73.13,10.233.85.101:20180,grpc_qps,null,null,tidb,tikv,null,null,kv_get,2025-06-06 04:03:00+00:00

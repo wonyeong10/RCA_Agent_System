@@ -1,0 +1,22 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,memory_usage,mountpoint,namespace,object_type,pod,sql_type,type,ts
+2025-06-06T15:50:00Z,null,null,10.233.85.101:20180,memory_usage,null,2069635072,null,tidb,tikv,null,null,null,2025-06-06 15:50:00+00:00
+2025-06-06T15:51:00Z,null,null,10.233.85.101:20180,memory_usage,null,2069737472,null,tidb,tikv,null,null,null,2025-06-06 15:51:00+00:00
+2025-06-06T15:52:00Z,null,null,10.233.85.101:20180,memory_usage,null,2066915328,null,tidb,tikv,null,null,null,2025-06-06 15:52:00+00:00
+2025-06-06T15:53:00Z,null,null,10.233.85.101:20180,memory_usage,null,2067042304,null,tidb,tikv,null,null,null,2025-06-06 15:53:00+00:00
+2025-06-06T15:54:00Z,null,null,10.233.85.101:20180,memory_usage,null,2068119552,null,tidb,tikv,null,null,null,2025-06-06 15:54:00+00:00
+2025-06-06T15:55:00Z,null,null,10.233.85.101:20180,memory_usage,null,2068070400,null,tidb,tikv,null,null,null,2025-06-06 15:55:00+00:00
+2025-06-06T15:56:00Z,null,null,10.233.85.101:20180,memory_usage,null,2069196800,null,tidb,tikv,null,null,null,2025-06-06 15:56:00+00:00
+2025-06-06T15:57:00Z,null,null,10.233.85.101:20180,memory_usage,null,2065829888,null,tidb,tikv,null,null,null,2025-06-06 15:57:00+00:00
+2025-06-06T15:58:00Z,null,null,10.233.85.101:20180,memory_usage,null,2067062784,null,tidb,tikv,null,null,null,2025-06-06 15:58:00+00:00
+2025-06-06T15:59:00Z,null,null,10.233.85.101:20180,memory_usage,null,2068099072,null,tidb,tikv,null,null,null,2025-06-06 15:59:00+00:00
+2025-06-06T16:00:00Z,null,null,10.233.85.101:20180,memory_usage,null,2067881984,null,tidb,tikv,null,null,null,2025-06-06 16:00:00+00:00
+2025-06-06T16:01:00Z,null,null,10.233.85.101:20180,memory_usage,null,2066595840,null,tidb,tikv,null,null,null,2025-06-06 16:01:00+00:00
+2025-06-06T16:02:00Z,null,null,10.233.85.101:20180,memory_usage,null,2066546688,null,tidb,tikv,null,null,null,2025-06-06 16:02:00+00:00
+2025-06-06T16:03:00Z,null,null,10.233.85.101:20180,memory_usage,null,2066833408,null,tidb,tikv,null,null,null,2025-06-06 16:03:00+00:00
+2025-06-06T16:04:00Z,null,null,10.233.85.101:20180,memory_usage,null,2069487616,null,tidb,tikv,null,null,null,2025-06-06 16:04:00+00:00
+2025-06-06T16:05:00Z,null,null,10.233.85.101:20180,memory_usage,null,2066636800,null,tidb,tikv,null,null,null,2025-06-06 16:05:00+00:00
+2025-06-06T16:06:00Z,null,null,10.233.85.101:20180,memory_usage,null,2066690048,null,tidb,tikv,null,null,null,2025-06-06 16:06:00+00:00
+2025-06-06T16:07:00Z,null,null,10.233.85.101:20180,memory_usage,null,2066882560,null,tidb,tikv,null,null,null,2025-06-06 16:07:00+00:00
+2025-06-06T16:08:00Z,null,null,10.233.85.101:20180,memory_usage,null,2067984384,null,tidb,tikv,null,null,null,2025-06-06 16:08:00+00:00
+2025-06-06T16:09:00Z,null,null,10.233.85.101:20180,memory_usage,null,2068275200,null,tidb,tikv,null,null,null,2025-06-06 16:09:00+00:00
+2025-06-06T16:10:00Z,null,null,10.233.85.101:20180,memory_usage,null,2070130688,null,tidb,tikv,null,null,null,2025-06-06 16:10:00+00:00

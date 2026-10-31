@@ -1,0 +1,98 @@
+요청 구간: 2025-06-05T20:10:09Z ~ 2025-06-05T20:34:09Z
+분석 범위 (기준 = source별 범위 전체, 시각 옆 ±Nm은 요청 구간 시작 분 기준): metric 2025-06-05T19:50:09Z ~ 2025-06-05T20:50:09Z, log 2025-06-05T20:10:09Z ~ 2025-06-05T20:40:09Z, trace 2025-06-05T20:10:09Z ~ 2025-06-05T20:40:09Z
+
+[metric] 시리즈 1119개, 최대 61포인트, 이상 시점 367개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, redis-cart-0, cartservice-1, frontend-0, frontend-1
+Top-5 metrics with largest deviations: error, pod_cpu_usage, rrt, error_ratio, server_error
+Metric descriptions sorted by deviation_score:
+- aiops-k8s-07 | node_network_receive_bytes_total | Multiple spikes: 19:56:00 (-14m), max deviation ≈ 7.7σ
+- pd | storage_size | Level shift up: 19:50:00 (-20m), max deviation ≈ 7.7σ
+- tikv | store_size{instance=10.233.85.101:20180} | Level shift up: 19:50:00 (-20m), max deviation ≈ 7.7σ
+- aiops-k8s-07 | node_disk_read_time_seconds_total{device=vda} | Single spike: 19:50:00 (-20m), max deviation ≈ 7.7σ
+- aiops-k8s-03 | node_disk_write_time_seconds_total{device=vda} | Single spike: 20:08:00 (-2m), max deviation ≈ 7.7σ
+- currencyservice-2 | pod_cpu_usage | Single spike: 20:31:00 (+21m), max deviation ≈ 7.7σ
+- tidb | duration_99th{instance=10.233.79.158:10080} | Single spike: 19:51:00 (-19m), max deviation ≈ 7.7σ
+- tikv | io_util{device=dm-0,instance=10.233.79.155:9100} | Single spike: 19:55:00 (-15m), max deviation ≈ 7.7σ
+- tikv | io_util{device=dm-0,instance=10.233.81.5:9100} | Single spike: 20:29:00 (+19m), max deviation ≈ 7.7σ
+- tikv | io_util{device=dm-0,instance=223.193.36.113} | Single spike: 20:11:00 (+1m), max deviation ≈ 7.7σ
+- tikv | io_util{device=dm-0,instance=223.193.36.128} | Single spike: 19:55:00 (-15m), max deviation ≈ 7.7σ
+- tikv | io_util{device=dm-0,instance=223.193.36.89} | Single spike: 20:29:00 (+19m), max deviation ≈ 7.7σ
+- tikv | io_util{device=vdb,instance=10.233.79.155:9100} | Single spike: 19:55:00 (-15m), max deviation ≈ 7.7σ
+- tikv | io_util{device=vdb,instance=10.233.81.5:9100} | Single spike: 20:29:00 (+19m), max deviation ≈ 7.7σ
+- tikv | io_util{device=vdb,instance=223.193.36.113} | Single spike: 20:11:00 (+1m), max deviation ≈ 7.7σ
+- tikv | io_util{device=vdb,instance=223.193.36.128} | Single spike: 19:55:00 (-15m), max deviation ≈ 7.7σ
+- tikv | io_util{device=vdb,instance=223.193.36.89} | Single spike: 20:29:00 (+19m), max deviation ≈ 7.7σ
+- checkoutservice-2 | client_error | Single spike: 20:49:00 (+39m), max deviation ≈ 7.7σ
+- checkoutservice-2 | error | Single spike: 20:49:00 (+39m), max deviation ≈ 7.7σ
+- checkoutservice | client_error | Single spike: 20:49:00 (+39m), max deviation ≈ 7.7σ
+- checkoutservice | error | Single spike: 20:49:00 (+39m), max deviation ≈ 7.7σ
+- cartservice-0 | pod_cpu_usage | Single spike: 20:45:00 (+35m), max deviation ≈ 7.7σ
+- checkoutservice-2 | client_error_ratio | Single spike: 20:49:00 (+39m), max deviation ≈ 7.7σ
+- checkoutservice-2 | error_ratio | Single spike: 20:49:00 (+39m), max deviation ≈ 7.7σ
+
+[log] 행 66292개, 키워드 일치 63개, 상위 20% 분위 이상·분당 템플릿 1건 12건
+Failure-indicative log entries after two-stage filtering:
+- 20:13:36 (+3m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: i/o timeout\"","http.req.id":"ca9b70f1-f411-4778-ad5b-49181d2f31d9","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"457e30fc-b1e9-4839-a74f-16ba4667e713","severity":"error","timestamp":"2025-06-05T20:13:36.255278642Z"}
+- 20:14:47 (+4m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: i/o timeout\"","http.req.id":"65a3e3fa-ce72-4cc1-8180-c3507d1d2836","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"c10aa3e5-72b9-4199-8f99-a8502fe5cbdd","severity":"error","timestamp":"2025-06-05T20:14:47.870076582Z"}
+- 20:15:05 (+5m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: i/o timeout\"","http.req.id":"700875ff-56b4-4710-a1f3-8ccebde6136f","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"9a9a23af-9785-448d-bf76-712f593aba40","severity":"error","timestamp":"2025-06-05T20:15:05.756303769Z"}
+- 20:18:02 (+8m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: i/o timeout\"","http.req.id":"869d69c0-64ad-448a-b98d-1c2d104d835e","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"7aa29c16-0142-4826-a063-123d574a343b","severity":"error","timestamp":"2025-06-05T20:18:02.551110263Z"}
+- 20:20:55 (+10m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: i/o timeout\"","http.req.id":"38cb2722-59ae-4162-b38d-8a399bfa4123","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"ef429e2f-f590-4fd7-84ec-b434b4f94632","severity":"error","timestamp":"2025-06-05T20:20:55.186375591Z"}
+- 20:21:19 (+11m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: i/o timeout\"","http.req.id":"c3c991ac-f51f-4cd6-9eef-9db1fc1ffdd6","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"06a21b7d-2dcd-42cd-8370-5e22ad7c58e7","severity":"error","timestamp":"2025-06-05T20:21:19.957626201Z"}
+- 20:24:38 (+14m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: i/o timeout\"","http.req.id":"a053e66a-1ecb-4cb7-94a0-2528ac7fb0e0","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"116d9845-2aee-4297-9113-3463a7fbb6eb","severity":"error","timestamp":"2025-06-05T20:24:38.148933415Z"}
+- 20:25:04 (+15m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: i/o timeout\"","http.req.id":"d21381b1-5c87-46a7-b025-5f0e17c10084","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"5b3c0063-35fb-4258-87e8-35cf791bdf60","severity":"error","timestamp":"2025-06-05T20:25:04.451562799Z"}
+- 20:26:28 (+16m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: i/o timeout\"","http.req.id":"8a32e82d-3869-47fe-8a26-776c1dbd0768","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"f4e46843-dbc8-4152-9750-f285cd4b2cf8","severity":"error","timestamp":"2025-06-05T20:26:28.970803725Z"}
+- 20:27:27 (+17m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: i/o timeout\"","http.req.id":"c3cacc86-82fb-489b-8f67-c56c7f75b977","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"ee29a67c-536a-44ba-9fb3-7949c3967c87","severity":"error","timestamp":"2025-06-05T20:27:27.04961776Z"}
+- 20:29:57 (+19m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: i/o timeout\"","http.req.id":"0eecd3bc-d3a1-48b7-ab3e-4ca301ac224a","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"18f1fc98-aa9f-46ba-90b3-c3bf8b653cc4","severity":"error","timestamp":"2025-06-05T20:29:57.810556248Z"}
+- 20:32:26 (+22m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: i/o timeout\"","http.req.id":"9493c2a8-63fb-460c-91c4-73803b27304c","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"366859a6-2f48-493d-85f9-e2d3dec270cb","severity":"error","timestamp":"2025-06-05T20:32:26.77861075Z"}
+
+[trace] span 68766개, 호출 유형별 p95 초과 3451건
+High-latency span descriptions:
+- <20:31:00 (+21m)~+60s, Callee=frontend-1, Count=52, MaxLatency=60000320us, Callers=[frontend-1×52]>
+- <20:24:00 (+14m)~+60s, Callee=frontend-1, Count=46, MaxLatency=20131119us, Callers=[frontend-1×46]>
+- <20:26:00 (+16m)~+60s, Callee=frontend-1, Count=45, MaxLatency=60001167us, Callers=[frontend-1×45]>
+- <20:36:00 (+26m)~+60s, Callee=frontend-1, Count=45, MaxLatency=246344us, Callers=[frontend-1×45]>
+- <20:38:00 (+28m)~+60s, Callee=frontend-1, Count=43, MaxLatency=231199us, Callers=[frontend-1×43]>
+- <20:28:00 (+18m)~+60s, Callee=frontend-1, Count=42, MaxLatency=20086935us, Callers=[frontend-1×42]>
+- <20:35:00 (+25m)~+60s, Callee=frontend-1, Count=41, MaxLatency=259068us, Callers=[frontend-1×41]>
+- <20:34:00 (+24m)~+60s, Callee=frontend-1, Count=41, MaxLatency=254625us, Callers=[frontend-1×41]>
+- <20:28:00 (+18m)~+60s, Callee=frontend-0, Count=39, MaxLatency=1052316us, Callers=[frontend-0×39]>
+- <20:28:00 (+18m)~+60s, Callee=productcatalogservice-2, Count=39, MaxLatency=25900us, Callers=[checkoutservice-2×2, frontend-0×15, frontend-1×22]>
+- <20:25:00 (+15m)~+60s, Callee=frontend-1, Count=36, MaxLatency=60001395us, Callers=[frontend-1×36]>
+- <20:30:00 (+20m)~+60s, Callee=frontend-1, Count=35, MaxLatency=20265332us, Callers=[frontend-1×35]>
+- <20:36:00 (+26m)~+60s, Callee=productcatalogservice-2, Count=35, MaxLatency=27451us, Callers=[frontend-0×17, frontend-1×18]>
+- <20:22:00 (+12m)~+60s, Callee=frontend-1, Count=34, MaxLatency=39297071us, Callers=[frontend-1×34]>
+- <20:29:00 (+19m)~+60s, Callee=frontend-1, Count=34, MaxLatency=32912994us, Callers=[frontend-1×34]>
+- <20:39:00 (+29m)~+60s, Callee=frontend-0, Count=33, MaxLatency=261018us, Callers=[frontend-0×33]>
+- <20:10:00 (+0m)~+60s, Callee=frontend-1, Count=32, MaxLatency=20135609us, Callers=[frontend-1×32]>
+- <20:20:00 (+10m)~+60s, Callee=frontend-1, Count=32, MaxLatency=20099501us, Callers=[frontend-1×32]>
+- <20:33:00 (+23m)~+60s, Callee=frontend-1, Count=32, MaxLatency=6580706us, Callers=[frontend-1×32]>
+- <20:21:00 (+11m)~+60s, Callee=frontend-1, Count=31, MaxLatency=1184570us, Callers=[frontend-1×31]>
+- <20:39:00 (+29m)~+60s, Callee=frontend-1, Count=31, MaxLatency=187708us, Callers=[frontend-1×31]>
+- <20:27:00 (+17m)~+60s, Callee=frontend-1, Count=30, MaxLatency=20099403us, Callers=[frontend-1×30]>
+- <20:11:00 (+1m)~+60s, Callee=frontend-1, Count=30, MaxLatency=141115us, Callers=[frontend-1×30]>
+- <20:31:00 (+21m)~+60s, Callee=productcatalogservice-2, Count=30, MaxLatency=33545us, Callers=[frontend-0×4, frontend-1×26]>
+Three-hop call paths statistics:
+- "frontend-1 → frontend-1 → productcatalogservice-2" has occurred 376 times in the time window
+- "frontend-0 → frontend-0 → productcatalogservice-2" has occurred 232 times in the time window
+- "frontend-2 → frontend-2 → productcatalogservice-1" has occurred 134 times in the time window
+- "recommendationservice-0 → recommendationservice-0 → productcatalogservice-1" has occurred 112 times in the time window
+- "frontend-1 → cartservice-0 → redis" has occurred 86 times in the time window
+- "frontend-1 → frontend-1 → cartservice-0" has occurred 83 times in the time window
+- "frontend-1 → recommendationservice-0 → recommendationservice-0" has occurred 54 times in the time window
+- "frontend-1 → frontend-1 → recommendationservice-0" has occurred 47 times in the time window
+- "frontend-0 → cartservice-0 → redis" has occurred 45 times in the time window
+- "frontend-0 → frontend-0 → recommendationservice-0" has occurred 41 times in the time window
+- "frontend-0 → frontend-0 → cartservice-0" has occurred 40 times in the time window
+- "frontend-0 → recommendationservice-0 → recommendationservice-0" has occurred 38 times in the time window
+- "frontend-2 → frontend-2 → recommendationservice-0" has occurred 27 times in the time window
+- "frontend-2 → recommendationservice-0 → recommendationservice-0" has occurred 23 times in the time window
+- "frontend-2 → cartservice-0 → redis" has occurred 23 times in the time window
+- "frontend-0 → checkoutservice-2 → checkoutservice-2" has occurred 22 times in the time window
+- "frontend-1 → checkoutservice-2 → checkoutservice-2" has occurred 20 times in the time window
+- "frontend-2 → frontend-2 → cartservice-0" has occurred 20 times in the time window
+- "frontend-0 → frontend-0 → shippingservice-0" has occurred 15 times in the time window
+- "frontend-1 → frontend-1 → shippingservice-0" has occurred 12 times in the time window
+- "checkoutservice-2 → checkoutservice-2 → productcatalogservice-2" has occurred 8 times in the time window
+- "checkoutservice-2 → cartservice-2 → redis" has occurred 7 times in the time window
+- "checkoutservice-2 → checkoutservice-2 → shippingservice-1" has occurred 6 times in the time window
+- "checkoutservice-2 → cartservice-0 → redis" has occurred 5 times in the time window

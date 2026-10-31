@@ -1,0 +1,1446 @@
+﻿traceID,spanID,flags,operationName,references,startTime,startTimeMillis,duration,tags,logs,process,ts
+0cd9bcb2d82389488734407b86a6ccf5,76eec9e435726e55,1.0,hipstershop.Frontend/Recv.,[],1749225000781789,1749225000781,56602,"[{'key': 'net.transport', 'type': 'string', 'value': 'IP.TCP'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.89.225'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '49720'}
+ {'key': 'net.host.name', 'type': 'string', 'value': 'frontend.hipstershop'}
+ {'key': 'net.host.port', 'type': 'int64', 'value': '80'}
+ {'key': 'http.method', 'type': 'string', 'value': 'GET'}
+ {'key': 'http.target', 'type': 'string', 'value': '/cart'}
+ {'key': 'http.server_name', 'type': 'string', 'value': 'hipstershop.Frontend/Recv.'}
+ {'key': 'http.user_agent', 'type': 'string', 'value': 'k6/0.33.0 (https://k6.io/)'}
+ {'key': 'http.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'http.host', 'type': 'string', 'value': 'frontend.hipstershop:80'}
+ {'key': 'http.flavor', 'type': 'string', 'value': '1.1'}
+ {'key': 'http.wrote_bytes', 'type': 'int64', 'value': '16415'}
+ {'key': 'http.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'http.status_text', 'type': 'string', 'value': 'OK'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/contrib/instrumentation/net/http'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': 'HTTP status code: 200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]",[],"{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.112'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.781789+00:00
+0cd9bcb2d82389488734407b86a6ccf5,6297d8ca138aa795,1.0,hipstershop.CurrencyService/GetSupportedCurrencies,"[{'refType': 'CHILD_OF', 'spanID': '76eec9e435726e55', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000782046,1749225000782,2223,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetSupportedCurrencies'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '0'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000782106}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '165'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000784264}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.112'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.782046+00:00
+0cd9bcb2d82389488734407b86a6ccf5,ccd16b51c50165b8,1.0,hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '76eec9e435726e55', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000784313,1749225000784,3413,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CartService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetCart'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7070'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '38'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000784337}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '70'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000787721}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.112'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.784313+00:00
+0cd9bcb2d82389488734407b86a6ccf5,35c711a773bd6813,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': 'ccd16b51c50165b8', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000784894,1749225000784,2595,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.120'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-0'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': 'a431774d-1328-48b9-8178-08c6a047b4f1'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-06 15:50:00.784894+00:00
+0cd9bcb2d82389488734407b86a6ccf5,77df7a268c61fdb5,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '35c711a773bd6813', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000785049,1749225000785,2293,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749225000785063}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749225000785073}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749225000787340}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.120'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-0'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '38f76538-1eed-494f-8e65-11c3e12d527e'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-06 15:50:00.785049+00:00
+0cd9bcb2d82389488734407b86a6ccf5,6ca57362502adbbd,1.0,/hipstershop.RecommendationService/ListRecommendations,"[{'refType': 'CHILD_OF', 'spanID': '400b603208b43119', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000786776,1749225000786,1555,"[{'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'SERVER'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]",[],"{'serviceName': 'recommendationservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.67'},
+       {'key': 'name', 'type': 'string', 'value': 'recommendationservice-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.786776+00:00
+0cd9bcb2d82389488734407b86a6ccf5,d9cf45d4d22e35b1,1.0,/hipstershop.ProductCatalogService/ListProducts,"[{'refType': 'CHILD_OF', 'spanID': '6ca57362502adbbd', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000786874,1749225000786,1058,"[{'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'CLIENT'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]",[],"{'serviceName': 'recommendationservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.67'},
+       {'key': 'name', 'type': 'string', 'value': 'recommendationservice-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.786874+00:00
+0cd9bcb2d82389488734407b86a6ccf5,3c4b9f65225562c8,1.0,hipstershop.ProductCatalogService/ListProducts,"[{'refType': 'CHILD_OF', 'spanID': 'd9cf45d4d22e35b1', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000787388,1749225000787,30,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'ListProducts'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.78.67'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '51800'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '0'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000787395}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '2541'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000787415}                           ]","{'serviceName': 'productcatalogservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.84'},
+       {'key': 'name', 'type': 'string', 'value': 'productcatalogservice-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.787388+00:00
+0cd9bcb2d82389488734407b86a6ccf5,400b603208b43119,1.0,hipstershop.RecommendationService/ListRecommendations,"[{'refType': 'CHILD_OF', 'spanID': '76eec9e435726e55', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000787761,1749225000787,3108,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.RecommendationService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'ListRecommendations'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'recommendationservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '8080'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '62'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000787779}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '56'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000790864}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.112'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.787761+00:00
+253bab2ad1761d8a99be7083475ee690,cf4edb1538ef1e27,1.0,hipstershop.Frontend/Recv.,[],1749225000788023,1749225000788,50237,"[{'key': 'net.transport', 'type': 'string', 'value': 'IP.TCP'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.89.225'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '45388'}
+ {'key': 'net.host.name', 'type': 'string', 'value': 'frontend.hipstershop'}
+ {'key': 'net.host.port', 'type': 'int64', 'value': '80'}
+ {'key': 'http.method', 'type': 'string', 'value': 'GET'}
+ {'key': 'http.target', 'type': 'string', 'value': '/cart'}
+ {'key': 'http.server_name', 'type': 'string', 'value': 'hipstershop.Frontend/Recv.'}
+ {'key': 'http.user_agent', 'type': 'string', 'value': 'k6/0.33.0 (https://k6.io/)'}
+ {'key': 'http.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'http.host', 'type': 'string', 'value': 'frontend.hipstershop:80'}
+ {'key': 'http.flavor', 'type': 'string', 'value': '1.1'}
+ {'key': 'http.wrote_bytes', 'type': 'int64', 'value': '15435'}
+ {'key': 'http.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'http.status_text', 'type': 'string', 'value': 'OK'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/contrib/instrumentation/net/http'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': 'HTTP status code: 200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]",[],"{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.81.15'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-0'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-03'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.788023+00:00
+253bab2ad1761d8a99be7083475ee690,e379ccd0f70ab9db,1.0,hipstershop.CurrencyService/GetSupportedCurrencies,"[{'refType': 'CHILD_OF', 'spanID': 'cf4edb1538ef1e27', 'traceID': '253bab2ad1761d8a99be7083475ee690'}]",1749225000788228,1749225000788,1972,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetSupportedCurrencies'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '0'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000788257}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '165'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000790180}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.81.15'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-0'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-03'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.788228+00:00
+0cd9bcb2d82389488734407b86a6ccf5,2df9dd64e0f093c5,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': '31ab1cf48e7da2d6', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000789086,1749225000789,6041,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.85.112'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '36312'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '10'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000789094}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '188'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000795122}                          ]","{'serviceName': 'productcatalogservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.84'},
+       {'key': 'name', 'type': 'string', 'value': 'productcatalogservice-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.789086+00:00
+253bab2ad1761d8a99be7083475ee690,a267e8c02699589b,1.0,hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': 'cf4edb1538ef1e27', 'traceID': '253bab2ad1761d8a99be7083475ee690'}]",1749225000790227,1749225000790,3297,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CartService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetCart'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7070'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '38'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000790243}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '54'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000793520}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.81.15'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-0'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-03'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.790227+00:00
+0cd9bcb2d82389488734407b86a6ccf5,31ab1cf48e7da2d6,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': '76eec9e435726e55', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000790893,1749225000790,6891,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'productcatalogservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '3550'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '10'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000790910}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '188'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000797776}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.112'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.790893+00:00
+253bab2ad1761d8a99be7083475ee690,6436c00669626d9b,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': 'a267e8c02699589b', 'traceID': '253bab2ad1761d8a99be7083475ee690'}]",1749225000791164,1749225000791,2703,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.81.24'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-2'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-03'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '9f733158-3678-43ad-a56d-7cb5b37b47b5'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-06 15:50:00.791164+00:00
+253bab2ad1761d8a99be7083475ee690,df02359e1e2aab6b,,HGET,"[{'refType': 'CHILD_OF', 'spanID': '6436c00669626d9b', 'traceID': '253bab2ad1761d8a99be7083475ee690'}]",1749225000791425,1749225000791,1485,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.StackExchangeRedis'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.10'}
+ {'key': 'db.system', 'type': 'string', 'value': 'redis'}
+ {'key': 'db.redis.flags', 'type': 'string', 'value': 'None'}
+ {'key': 'db.statement', 'type': 'string', 'value': 'HGET'}
+ {'key': 'net.peer.name', 'type': 'string', 'value': 'redis-cart'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '6379'}
+ {'key': 'db.redis.database_index', 'type': 'int64', 'value': '0'}
+ {'key': 'peer.service', 'type': 'string', 'value': 'redis-cart:6379'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]","[{'fields': array([{'key': 'event', 'type': 'string', 'value': 'Enqueued'}],
+       dtype=object), 'timestamp': 1749225000791757}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'Sent'}], dtype=object), 'timestamp': 1749225000791775}
+ {'fields': array([{'key': 'event', 'type': 'string', 'value': 'ResponseReceived'}],
+       dtype=object), 'timestamp': 1749225000792909}                                ]","{'serviceName': 'redis', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.81.24'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-2'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-03'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': 'de05632e-1281-4bfd-adc2-f40239001eea'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-06 15:50:00.791425+00:00
+253bab2ad1761d8a99be7083475ee690,2f1cdbe1b90fb86a,1.0,hipstershop.RecommendationService/ListRecommendations,"[{'refType': 'CHILD_OF', 'spanID': 'cf4edb1538ef1e27', 'traceID': '253bab2ad1761d8a99be7083475ee690'}]",1749225000793552,1749225000793,3665,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.RecommendationService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'ListRecommendations'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'recommendationservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '8080'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '50'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000793573}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '57'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000797211}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.81.15'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-0'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-03'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.793552+00:00
+253bab2ad1761d8a99be7083475ee690,659ebc60a227260f,1.0,/hipstershop.RecommendationService/ListRecommendations,"[{'refType': 'CHILD_OF', 'spanID': '2f1cdbe1b90fb86a', 'traceID': '253bab2ad1761d8a99be7083475ee690'}]",1749225000794193,1749225000794,1983,"[{'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'SERVER'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]",[],"{'serviceName': 'recommendationservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.67'},
+       {'key': 'name', 'type': 'string', 'value': 'recommendationservice-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.794193+00:00
+253bab2ad1761d8a99be7083475ee690,9d879919d844e2f3,1.0,/hipstershop.ProductCatalogService/ListProducts,"[{'refType': 'CHILD_OF', 'spanID': '659ebc60a227260f', 'traceID': '253bab2ad1761d8a99be7083475ee690'}]",1749225000794333,1749225000794,1257,"[{'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'CLIENT'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]",[],"{'serviceName': 'recommendationservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.67'},
+       {'key': 'name', 'type': 'string', 'value': 'recommendationservice-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.794333+00:00
+253bab2ad1761d8a99be7083475ee690,60ab76df93b0d8e4,1.0,hipstershop.ProductCatalogService/ListProducts,"[{'refType': 'CHILD_OF', 'spanID': '9d879919d844e2f3', 'traceID': '253bab2ad1761d8a99be7083475ee690'}]",1749225000794901,1749225000794,31,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'ListProducts'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.78.67'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '51800'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '0'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000794909}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '2541'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000794929}                           ]","{'serviceName': 'productcatalogservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.84'},
+       {'key': 'name', 'type': 'string', 'value': 'productcatalogservice-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.794901+00:00
+0cd9bcb2d82389488734407b86a6ccf5,6b6c45ff77016685,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': 'ee573c40ddd23970', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000796092,1749225000796,4312,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.85.112'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '36312'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '12'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000796101}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '161'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000800399}                          ]","{'serviceName': 'productcatalogservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.84'},
+       {'key': 'name', 'type': 'string', 'value': 'productcatalogservice-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.796092+00:00
+253bab2ad1761d8a99be7083475ee690,6623fa95e89f9c9f,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': 'b79b42786afcb685', 'traceID': '253bab2ad1761d8a99be7083475ee690'}]",1749225000797236,1749225000797,5676,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.81.15'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '39640'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '12'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000797240}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '175'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000802905}                          ]","{'serviceName': 'productcatalogservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.84'},
+       {'key': 'name', 'type': 'string', 'value': 'productcatalogservice-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.797236+00:00
+253bab2ad1761d8a99be7083475ee690,b79b42786afcb685,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': 'cf4edb1538ef1e27', 'traceID': '253bab2ad1761d8a99be7083475ee690'}]",1749225000797260,1749225000797,6505,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'productcatalogservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '3550'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '12'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000797292}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '175'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000803758}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.81.15'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-0'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-03'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.797260+00:00
+0cd9bcb2d82389488734407b86a6ccf5,ee573c40ddd23970,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': '76eec9e435726e55', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000797878,1749225000797,5097,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'productcatalogservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '3550'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '12'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000797913}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '161'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000802971}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.112'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.797878+00:00
+0cd9bcb2d82389488734407b86a6ccf5,d10e9f389b8e0bfa,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': '4cf2c8701611b25f', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000801169,1749225000801,5566,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.85.112'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '36312'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '12'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000801175}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '153'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000806731}                          ]","{'serviceName': 'productcatalogservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.84'},
+       {'key': 'name', 'type': 'string', 'value': 'productcatalogservice-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.801169+00:00
+0cd9bcb2d82389488734407b86a6ccf5,4cf2c8701611b25f,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': '76eec9e435726e55', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000802998,1749225000802,6418,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'productcatalogservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '3550'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '12'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000803015}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '153'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000809409}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.112'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.802998+00:00
+253bab2ad1761d8a99be7083475ee690,519c44c9d82f4365,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': 'c247c8e30607c989', 'traceID': '253bab2ad1761d8a99be7083475ee690'}]",1749225000803756,1749225000803,5326,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.81.15'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '39640'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '10'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000803763}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '182'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000809076}                          ]","{'serviceName': 'productcatalogservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.84'},
+       {'key': 'name', 'type': 'string', 'value': 'productcatalogservice-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.803756+00:00
+253bab2ad1761d8a99be7083475ee690,c247c8e30607c989,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': 'cf4edb1538ef1e27', 'traceID': '253bab2ad1761d8a99be7083475ee690'}]",1749225000803793,1749225000803,6044,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'productcatalogservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '3550'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '10'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000803828}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '182'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000809824}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.81.15'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-0'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-03'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.803793+00:00
+0cd9bcb2d82389488734407b86a6ccf5,d9cdc170c9779ca1,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': '0b5121a5cc4b8638', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000807726,1749225000807,4673,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.85.112'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '36312'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '11'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000807733}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '176'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000812390}                          ]","{'serviceName': 'productcatalogservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.84'},
+       {'key': 'name', 'type': 'string', 'value': 'productcatalogservice-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.807726+00:00
+0cd9bcb2d82389488734407b86a6ccf5,0b5121a5cc4b8638,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': '76eec9e435726e55', 'traceID': '0cd9bcb2d82389488734407b86a6ccf5'}]",1749225000809454,1749225000809,5653,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'productcatalogservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '3550'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '11'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000809488}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '176'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749225000815102}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.112'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 15:50:00.809454+00:00
+40279d0b2fa12c2062c81588ea00eb39,1c65307d745c6640,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': '954424331330f399', 'traceID': '40279d0b2fa12c2062c81588ea00eb39'}]",1749226199821101,1749226199821,7965,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.85.112'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '36312'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '12'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226199821112}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '161'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226199829055}                          ]","{'serviceName': 'productcatalogservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.84'},
+       {'key': 'name', 'type': 'string', 'value': 'productcatalogservice-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:09:59.821101+00:00
+40279d0b2fa12c2062c81588ea00eb39,954424331330f399,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': '3b1731f532d562ea', 'traceID': '40279d0b2fa12c2062c81588ea00eb39'}]",1749226199822518,1749226199822,9166,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'productcatalogservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '3550'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '12'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226199822574}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '161'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226199831677}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.112'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:09:59.822518+00:00
+40279d0b2fa12c2062c81588ea00eb39,458a5ba06c3347a0,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': '82f205551328742e', 'traceID': '40279d0b2fa12c2062c81588ea00eb39'}]",1749226199830223,1749226199830,5953,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.85.112'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '36312'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '12'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226199830232}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '153'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226199836165}                          ]","{'serviceName': 'productcatalogservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.84'},
+       {'key': 'name', 'type': 'string', 'value': 'productcatalogservice-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:09:59.830223+00:00
+40279d0b2fa12c2062c81588ea00eb39,82f205551328742e,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': '3b1731f532d562ea', 'traceID': '40279d0b2fa12c2062c81588ea00eb39'}]",1749226199831730,1749226199831,7026,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'productcatalogservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '3550'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '12'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226199831759}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '153'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226199838748}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.112'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:09:59.831730+00:00
+40279d0b2fa12c2062c81588ea00eb39,cda44d38fcba54ec,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': '5f02b70e82fcac04', 'traceID': '40279d0b2fa12c2062c81588ea00eb39'}]",1749226199837146,1749226199837,8170,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.85.112'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '36312'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '12'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226199837154}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '156'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226199845308}                          ]","{'serviceName': 'productcatalogservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.84'},
+       {'key': 'name', 'type': 'string', 'value': 'productcatalogservice-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:09:59.837146+00:00
+40279d0b2fa12c2062c81588ea00eb39,5f02b70e82fcac04,1.0,hipstershop.ProductCatalogService/GetProduct,"[{'refType': 'CHILD_OF', 'spanID': '3b1731f532d562ea', 'traceID': '40279d0b2fa12c2062c81588ea00eb39'}]",1749226199838792,1749226199838,12564,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetProduct'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'productcatalogservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '3550'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '12'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226199838828}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '156'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226199851347}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.112'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:09:59.838792+00:00
+40279d0b2fa12c2062c81588ea00eb39,689ca70ed9d69405,1.0,hipstershop.AdService/GetAds,"[{'refType': 'CHILD_OF', 'spanID': '3b1731f532d562ea', 'traceID': '40279d0b2fa12c2062c81588ea00eb39'}]",1749226199851452,1749226199851,3983,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.AdService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetAds'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'adservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '9555'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '28'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226199851482}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '96'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226199855430}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.85.112'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-07'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:09:59.851452+00:00
+88fa94198b00788df7d1c546df78e94b,c6b56f5973a58e62,1.0,hipstershop.Frontend/Recv.,[],1749226200721624,1749226200721,733,"[{'key': 'net.transport', 'type': 'string', 'value': 'IP.TCP'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.79.147'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '42442'}
+ {'key': 'net.host.name', 'type': 'string', 'value': 'frontend.hipstershop'}
+ {'key': 'net.host.port', 'type': 'int64', 'value': '80'}
+ {'key': 'http.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'http.target', 'type': 'string', 'value': '/setCurrency'}
+ {'key': 'http.server_name', 'type': 'string', 'value': 'hipstershop.Frontend/Recv.'}
+ {'key': 'http.user_agent', 'type': 'string', 'value': 'k6/0.33.0 (https://k6.io/)'}
+ {'key': 'http.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'http.host', 'type': 'string', 'value': 'frontend.hipstershop:80'}
+ {'key': 'http.flavor', 'type': 'string', 'value': '1.1'}
+ {'key': 'http.request_content_length', 'type': 'int64', 'value': '17'}
+ {'key': 'http.read_bytes', 'type': 'int64', 'value': '17'}
+ {'key': 'http.status_code', 'type': 'int64', 'value': '302'}
+ {'key': 'http.status_text', 'type': 'string', 'value': 'Found'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/contrib/instrumentation/net/http'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': 'HTTP status code: 302'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]",[],"{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.721624+00:00
+02e360f296f0ad2a49c998ebb1cade39,5d64dfc604636fda,1.0,hipstershop.Frontend/Recv.,[],1749226200723380,1749226200723,44658,"[{'key': 'net.transport', 'type': 'string', 'value': 'IP.TCP'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.79.147'}
+ {'key': 'net.peer.port', 'type': 'int64', 'value': '42442'}
+ {'key': 'net.host.name', 'type': 'string', 'value': 'frontend.hipstershop'}
+ {'key': 'net.host.port', 'type': 'int64', 'value': '80'}
+ {'key': 'http.method', 'type': 'string', 'value': 'GET'}
+ {'key': 'http.target', 'type': 'string', 'value': '/'}
+ {'key': 'http.server_name', 'type': 'string', 'value': 'hipstershop.Frontend/Recv.'}
+ {'key': 'http.user_agent', 'type': 'string', 'value': 'k6/0.33.0 (https://k6.io/)'}
+ {'key': 'http.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'http.host', 'type': 'string', 'value': 'frontend.hipstershop:80'}
+ {'key': 'http.flavor', 'type': 'string', 'value': '1.1'}
+ {'key': 'http.wrote_bytes', 'type': 'int64', 'value': '14919'}
+ {'key': 'http.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'http.status_text', 'type': 'string', 'value': 'OK'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/contrib/instrumentation/net/http'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': 'HTTP status code: 200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]",[],"{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.723380+00:00
+02e360f296f0ad2a49c998ebb1cade39,a28dcb53010bc533,1.0,hipstershop.CurrencyService/GetSupportedCurrencies,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200723590,1749226200723,1890,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetSupportedCurrencies'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '0'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200723663}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '165'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200725471}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.723590+00:00
+02e360f296f0ad2a49c998ebb1cade39,ff67cb9b8ff1e505,1.0,hipstershop.ProductCatalogService/ListProducts,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200725556,1749226200725,1900,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'ListProducts'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'productcatalogservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '3550'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '0'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200725620}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '2541'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200727451}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.725556+00:00
+02e360f296f0ad2a49c998ebb1cade39,e5a5fac32ec30f2a,1.0,hipstershop.ProductCatalogService/ListProducts,"[{'refType': 'CHILD_OF', 'spanID': 'ff67cb9b8ff1e505', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200726811,1749226200726,71,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.ProductCatalogService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'ListProducts'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': '10.233.77.230'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '56578'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '0'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200726827}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '2541'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200726877}                           ]","{'serviceName': 'productcatalogservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.78.84'},
+       {'key': 'name', 'type': 'string', 'value': 'productcatalogservice-1'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-01'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.726811+00:00
+02e360f296f0ad2a49c998ebb1cade39,6ebf034664059b57,1.0,hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200727485,1749226200727,2855,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CartService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetCart'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7070'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '38'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200727504}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '0'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200730336}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.727485+00:00
+02e360f296f0ad2a49c998ebb1cade39,38b6c6681557eb20,,POST /hipstershop.CartService/GetCart,"[{'refType': 'CHILD_OF', 'spanID': '6ebf034664059b57', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200729147,1749226200729,1569,"[{'key': 'otel.library.name', 'type': 'string', 'value': 'OpenTelemetry.Instrumentation.AspNetCore'}
+ {'key': 'otel.library.version', 'type': 'string', 'value': '1.0.0.0'}
+ {'key': 'server.address', 'type': 'string', 'value': 'cartservice'}
+ {'key': 'server.port', 'type': 'int64', 'value': '7070'}
+ {'key': 'http.request.method', 'type': 'string', 'value': 'POST'}
+ {'key': 'url.scheme', 'type': 'string', 'value': 'http'}
+ {'key': 'url.path', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'network.protocol.version', 'type': 'string', 'value': '2'}
+ {'key': 'user_agent.original', 'type': 'string', 'value': 'grpc-go/1.31.0'}
+ {'key': 'grpc.method', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'grpc.status_code', 'type': 'string', 'value': '0'}
+ {'key': 'http.route', 'type': 'string', 'value': '/hipstershop.CartService/GetCart'}
+ {'key': 'http.response.status_code', 'type': 'int64', 'value': '200'}
+ {'key': 'span.kind', 'type': 'string', 'value': 'server'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'otlp'}]",[],"{'serviceName': 'cartservice', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.81.24'},
+       {'key': 'podName', 'type': 'string', 'value': 'cartservice-2'},
+       {'key': 'nodeName', 'type': 'string', 'value': 'aiops-k8s-03'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'},
+       {'key': 'service.instance.id', 'type': 'string', 'value': '9f733158-3678-43ad-a56d-7cb5b37b47b5'},
+       {'key': 'telemetry.sdk.name', 'type': 'string', 'value': 'opentelemetry'},
+       {'key': 'telemetry.sdk.language', 'type': 'string', 'value': 'dotnet'},
+       {'key': 'telemetry.sdk.version', 'type': 'string', 'value': '1.6.0'}],
+      dtype=object)}",2025-06-06 16:10:00.729147+00:00
+02e360f296f0ad2a49c998ebb1cade39,4be6837d905db6ad,1.0,hipstershop.CurrencyService/Convert,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200730385,1749226200730,5523,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'Convert'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '20'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200730405}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '14'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200735900}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.730385+00:00
+02e360f296f0ad2a49c998ebb1cade39,08956e097fa960ad,1.0,hipstershop.CurrencyService/Convert,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200735983,1749226200735,1408,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'Convert'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '14'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200736026}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '14'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200737388}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.735983+00:00
+02e360f296f0ad2a49c998ebb1cade39,9a90ac4f6596a1e5,1.0,hipstershop.CurrencyService/Convert,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200737437,1749226200737,2323,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'Convert'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '15'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200737463}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '14'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200739756}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.737437+00:00
+02e360f296f0ad2a49c998ebb1cade39,656aa15a0b74b687,1.0,hipstershop.CurrencyService/Convert,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200739786,1749226200739,1438,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'Convert'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '20'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200739804}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '14'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200741217}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.739786+00:00
+02e360f296f0ad2a49c998ebb1cade39,f4d9f6b7c96fa04c,1.0,hipstershop.CurrencyService/Convert,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200741261,1749226200741,964,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'Convert'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '20'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200741290}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '13'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200742220}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.741261+00:00
+02e360f296f0ad2a49c998ebb1cade39,ace7fdea283271a8,1.0,hipstershop.CurrencyService/Convert,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200742261,1749226200742,1407,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'Convert'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '20'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200742278}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '14'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200743659}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.742261+00:00
+02e360f296f0ad2a49c998ebb1cade39,75159f2e4be3faa4,1.0,hipstershop.CurrencyService/Convert,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200743785,1749226200743,1896,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'Convert'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '21'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200743941}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '14'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200745179}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.743785+00:00
+02e360f296f0ad2a49c998ebb1cade39,63517730ce46094a,1.0,hipstershop.CurrencyService/Convert,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200746187,1749226200746,1335,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'Convert'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '20'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200746251}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '14'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200747512}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.746187+00:00
+02e360f296f0ad2a49c998ebb1cade39,e1ebdfa964907bd3,1.0,hipstershop.CurrencyService/Convert,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200747579,1749226200747,1604,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'Convert'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '20'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200747611}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '13'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200749175}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.747579+00:00
+02e360f296f0ad2a49c998ebb1cade39,0697c3b4e36c9635,1.0,hipstershop.CurrencyService/Convert,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200749234,1749226200749,3262,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'Convert'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '20'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200749275}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '14'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200752489}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.749234+00:00
+02e360f296f0ad2a49c998ebb1cade39,e96bca4711411013,1.0,hipstershop.CurrencyService/Convert,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200752542,1749226200752,1657,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'Convert'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '20'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200752586}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '14'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200754190}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.752542+00:00
+02e360f296f0ad2a49c998ebb1cade39,8db50d19118488a2,1.0,hipstershop.CurrencyService/Convert,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200754252,1749226200754,1500,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'Convert'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '20'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200754290}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '14'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200755743}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.754252+00:00
+02e360f296f0ad2a49c998ebb1cade39,34efa32e09b54254,1.0,hipstershop.CurrencyService/Convert,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200755803,1749226200755,1758,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'Convert'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '20'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200755834}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '13'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200757553}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.755803+00:00
+02e360f296f0ad2a49c998ebb1cade39,c58c214ad4a8abf1,1.0,hipstershop.CurrencyService/Convert,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200757614,1749226200757,2128,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'Convert'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '20'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200757643}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '14'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200759703}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.757614+00:00
+02e360f296f0ad2a49c998ebb1cade39,78bedc02047eee3f,1.0,hipstershop.CurrencyService/Convert,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200759808,1749226200759,1809,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.CurrencyService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'Convert'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'currencyservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '7000'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '20'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200759862}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '13'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200761614}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.759808+00:00
+02e360f296f0ad2a49c998ebb1cade39,233c466ecae11d01,1.0,hipstershop.AdService/GetAds,"[{'refType': 'CHILD_OF', 'spanID': '5d64dfc604636fda', 'traceID': '02e360f296f0ad2a49c998ebb1cade39'}]",1749226200761669,1749226200761,4796,"[{'key': 'rpc.system', 'type': 'string', 'value': 'grpc'}
+ {'key': 'rpc.service', 'type': 'string', 'value': 'hipstershop.AdService'}
+ {'key': 'rpc.method', 'type': 'string', 'value': 'GetAds'}
+ {'key': 'net.peer.ip', 'type': 'string', 'value': 'adservice'}
+ {'key': 'net.peer.port', 'type': 'string', 'value': '9555'}
+ {'key': 'instrumentation.name', 'type': 'string', 'value': 'go.opentelemetry.io/otel/sdk/tracer'}
+ {'key': 'status.code', 'type': 'int64', 'value': '0'}
+ {'key': 'status.message', 'type': 'string', 'value': ''}
+ {'key': 'span.kind', 'type': 'string', 'value': 'client'}
+ {'key': 'internal.span.format', 'type': 'string', 'value': 'jaeger'}]","[{'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'SENT'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '0'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200761692}
+ {'fields': array([{'key': 'message.type', 'type': 'string', 'value': 'RECEIVED'},
+        {'key': 'message.id', 'type': 'int64', 'value': '1'},
+        {'key': 'message.uncompressed_size', 'type': 'int64', 'value': '98'},
+        {'key': 'name', 'type': 'string', 'value': 'message'}],
+       dtype=object), 'timestamp': 1749226200766458}                              ]","{'serviceName': 'frontend', 'tags': array([{'key': 'exporter', 'type': 'string', 'value': 'jaeger'},
+       {'key': 'float', 'type': 'float64', 'value': '312.23'},
+       {'key': 'ip', 'type': 'string', 'value': '10.233.77.230'},
+       {'key': 'name', 'type': 'string', 'value': 'frontend-2'},
+       {'key': 'node_name', 'type': 'string', 'value': 'aiops-k8s-04'},
+       {'key': 'namespace', 'type': 'string', 'value': 'hipstershop'}],
+      dtype=object)}",2025-06-06 16:10:00.761669+00:00

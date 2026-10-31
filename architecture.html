@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RCA Agent Architecture</title>
+<style>
+  :root { --bg:#fff; --fg:#1f2328; --muted:#656d76; --box:#f6f8fa; --line:#8c959f; --accent:#0969da; --pre:#eef6ff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --box:#161b22; --line:#6e7681; --accent:#4493f8; --pre:#0f1d2e; }
+  }
+  body { margin:0; padding:24px 16px; background:var(--bg); color:var(--fg);
+         font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif; }
+  h1 { font-size:20px; margin:0 auto 16px; max-width:1100px; }
+  svg { display:block; width:100%; max-width:1100px; margin:0 auto; height:auto; }
+  .box { fill:var(--box); stroke:var(--line); stroke-width:1.5; }
+  .pre { fill:var(--pre); stroke:var(--accent); stroke-width:1.5; stroke-dasharray:6 4; }
+  .llm { fill:var(--box); stroke:var(--accent); stroke-width:2; }
+  .t  { fill:var(--fg); font-size:16px; font-weight:600; text-anchor:middle; }
+  .s  { fill:var(--muted); font-size:12px; text-anchor:middle; }
+  .lbl { fill:var(--accent); font-size:13px; text-anchor:middle; font-weight:600; }
+  .arr { stroke:var(--line); stroke-width:1.8; fill:none; marker-end:url(#ah); }
+  .arr2 { stroke:var(--accent); stroke-width:1.8; fill:none; marker-end:url(#ah2); }
+</style>
+</head>
+<body>
+<h1>RCA Agent 전체 흐름</h1>
+<svg viewBox="0 0 1100 290" role="img" aria-label="Data에서 Preprocessor, Decision LLM 루프, Answer LLM을 거쳐 output.jsonl로 가는 흐름">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--line)"/></marker>
+    <marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--accent)"/></marker>
+  </defs>
+
+  <!-- input -->
+  <rect class="box" x="260" y="10" width="120" height="44" rx="8"/>
+  <text class="t" x="320" y="30">input.json</text>
+  <text class="s" x="320" y="46">uuid · 장애 구간</text>
+  <path class="arr" d="M320,54 L320,88"/>
+
+  <!-- data -->
+  <rect class="box" x="20" y="130" width="110" height="70" rx="8"/>
+  <text class="t" x="75" y="160">Data</text>
+  <text class="s" x="75" y="180">log · metric · trace</text>
+  <path class="arr" d="M130,165 L188,165"/>
+
+  <!-- preprocessor -->
+  <rect class="pre" x="170" y="90" width="300" height="150" rx="12"/>
+  <text class="lbl" x="320" y="112">Preprocessor</text>
+  <rect class="box" x="190" y="135" width="110" height="60" rx="8"/>
+  <text class="t" x="245" y="160">reader</text>
+  <text class="s" x="245" y="178">구간 자르기 · 정렬</text>
+  <path class="arr" d="M300,165 L338,165"/>
+  <rect class="box" x="340" y="135" width="110" height="60" rx="8"/>
+  <text class="t" x="395" y="160">selector</text>
+  <text class="s" x="395" y="178">이상 탐지 · 텍스트화</text>
+
+  <!-- refine / re-search -->
+  <path class="arr" d="M470,140 L538,140"/>
+  <text class="s" x="504" y="130">정제 텍스트</text>
+  <path class="arr2" d="M540,195 L472,195"/>
+  <text class="lbl" x="506" y="215">재검색</text>
+
+  <!-- decision LLM -->
+  <rect class="llm" x="540" y="105" width="180" height="120" rx="10"/>
+  <text class="t" x="630" y="132">Decision LLM</text>
+  <text class="s" x="630" y="154">tool 반복 호출</text>
+  <text class="s" x="630" y="174">search(sources[ ]) · finish</text>
+  <text class="s" x="630" y="192">source별 구간 다르면 병렬 호출</text>
+  <path class="arr" d="M720,165 L798,165"/>
+  <text class="s" x="759" y="150">finish</text>
+  <text class="s" x="759" y="186">MAX_LOOPS</text>
+
+  <!-- answer -->
+  <rect class="llm" x="800" y="130" width="120" height="70" rx="10"/>
+  <text class="t" x="860" y="160">Answer LLM</text>
+  <text class="s" x="860" y="180">JSON 답변 1회</text>
+  <path class="arr" d="M920,165 L958,165"/>
+
+  <!-- output -->
+  <rect class="box" x="960" y="142" width="120" height="46" rx="8"/>
+  <text class="t" x="1020" y="170">output.jsonl</text>
+</svg>
+</body>
+</html>

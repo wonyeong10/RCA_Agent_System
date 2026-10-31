@@ -1,0 +1,93 @@
+조회 구간: 2025-06-20T10:10:24Z ~ 2025-06-20T10:30:24Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1155개, 최대 21포인트, 이상 261개 (기준 3σ)
+Top-5 instances with largest deviations: tidb, adservice-1, frontend-2, cartservice-2, frontend-1
+Top-5 metrics with largest deviations: pod_network_transmit_bytes, pod_network_transmit_packets, pod_network_receive_bytes, pod_network_receive_packets, pod_cpu_usage
+Metric descriptions sorted by deviation_score:
+- adservice-1 | client_error | 판정 불가(30포인트 미만): first 10:30:00 (+20m), peak 10:30:00 (+20m), deviation_score ≈ 4.5σ
+- adservice-1 | client_error_ratio | 판정 불가(30포인트 미만): first 10:30:00 (+20m), peak 10:30:00 (+20m), deviation_score ≈ 4.5σ
+- adservice-1 | error | 판정 불가(30포인트 미만): first 10:30:00 (+20m), peak 10:30:00 (+20m), deviation_score ≈ 4.5σ
+- adservice-1 | error_ratio | 판정 불가(30포인트 미만): first 10:30:00 (+20m), peak 10:30:00 (+20m), deviation_score ≈ 4.5σ
+- adservice-1 | pod_cpu_usage | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.5σ
+- tidb | qps{type=Commit,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 10:11:00 (+1m), peak 10:11:00 (+1m), deviation_score ≈ 4.5σ
+- tidb | qps{type=Rollback,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 10:12:00 (+2m), peak 10:12:00 (+2m), deviation_score ≈ 4.5σ
+- tidb | qps{type=Update,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 10:11:00 (+1m), peak 10:11:00 (+1m), deviation_score ≈ 4.5σ
+- cartservice-2 | timeout | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.5σ
+- frontend-2 | rrt_max | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.5σ
+- frontend-1 | rrt_max | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.5σ
+- tidb | qps{type=Begin,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 10:11:00 (+1m), peak 10:11:00 (+1m), deviation_score ≈ 4.4σ
+- adservice-1 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.4σ
+- adservice-1 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.4σ
+- adservice-1 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.4σ
+- adservice-1 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.4σ
+- tidb | qps{type=Insert,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 10:11:00 (+1m), peak 10:11:00 (+1m), deviation_score ≈ 4.4σ
+- frontend-2 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.4σ
+- frontend-2 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.4σ
+- frontend-2 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.4σ
+- frontend-2 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.4σ
+- cartservice-2 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.4σ
+- frontend-1 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.3σ
+- frontend-1 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.3σ
+- frontend-2 | pod_cpu_usage | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.3σ
+- cartservice-2 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.3σ
+- cartservice-2 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.3σ
+- frontend-1 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.3σ
+- cartservice-2 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.3σ
+- frontend-1 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 10:10:00 (+0m), peak 10:10:00 (+0m), deviation_score ≈ 4.3σ
+
+[log] 행 15113개, 키워드 일치 1828개, 템플릿 4종 중 상위 20% 1종, 출력 20건
+Failure-indicative log entries after two-stage filtering:
+- 10:11:06 (+1m) <productcatalogservice-2> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:11:06.088119444Z"}
+- 10:12:00 (+2m) <productcatalogservice-2> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:12:00.100274962Z"}
+- 10:13:00 (+3m) <productcatalogservice-2> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:13:00.059037933Z"}
+- 10:14:01 (+4m) <productcatalogservice-2> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:14:01.809048321Z"}
+- 10:15:00 (+5m) <productcatalogservice-1> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:15:00.822429059Z"}
+- 10:16:00 (+6m) <productcatalogservice-1> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:16:00.90855289Z"}
+- 10:17:02 (+7m) <productcatalogservice-2> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:17:02.337315936Z"}
+- 10:18:02 (+8m) <productcatalogservice-2> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:18:02.211515846Z"}
+- 10:19:03 (+9m) <productcatalogservice-2> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:19:03.689319945Z"}
+- 10:20:03 (+10m) <productcatalogservice-2> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:20:03.997320712Z"}
+- 10:21:00 (+11m) <productcatalogservice-2> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:21:00.575571509Z"}
+- 10:22:00 (+12m) <productcatalogservice-1> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:22:00.091188695Z"}
+- 10:23:00 (+13m) <productcatalogservice-1> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:23:00.048825159Z"}
+- 10:24:00 (+14m) <productcatalogservice-2> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:24:00.335184879Z"}
+- 10:25:00 (+15m) <productcatalogservice-1> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:25:00.584758127Z"}
+- 10:26:01 (+16m) <productcatalogservice-1> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:26:01.108392749Z"}
+- 10:27:00 (+17m) <productcatalogservice-2> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:27:00.122595829Z"}
+- 10:28:00 (+18m) <productcatalogservice-2> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:28:00.39544153Z"}
+- 10:29:00 (+19m) <productcatalogservice-2> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:29:00.171229354Z"}
+- 10:30:01 (+20m) <productcatalogservice-2> | {"message":"failed to query product by id: Error 9005 (HY000): Region is unavailable","severity":"warning","timestamp":"2025-06-20T10:30:01.558068463Z"}
+
+[trace] span 8895개, 호출 유형별 p95 초과 461건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <10:30:00 (+20m)~+60s, Callee=emailservice, Count=1 (100%), MaxLatency=873us, Callers=[checkoutservice×1]>
+- <10:12:00 (+2m)~+60s, Callee=checkoutservice, Count=2 (67%), MaxLatency=40304669us, Callers=[frontend×1, checkoutservice×1]>
+- <10:29:00 (+19m)~+60s, Callee=shippingservice, Count=2 (33%), MaxLatency=1544us, Callers=[checkoutservice×2]>
+- <10:13:00 (+3m)~+60s, Callee=checkoutservice, Count=1 (33%), MaxLatency=16719us, Callers=[checkoutservice×1]>
+- <10:19:00 (+9m)~+60s, Callee=checkoutservice, Count=2 (25%), MaxLatency=76545us, Callers=[checkoutservice×2]>
+- <10:15:00 (+5m)~+60s, Callee=emailservice, Count=1 (25%), MaxLatency=873us, Callers=[checkoutservice×1]>
+- <10:27:00 (+17m)~+60s, Callee=recommendationservice, Count=4 (22%), MaxLatency=7027us, Callers=[frontend×2, recommendationservice×2]>
+- <10:23:00 (+13m)~+60s, Callee=shippingservice, Count=2 (20%), MaxLatency=746us, Callers=[checkoutservice×2]>
+- <10:22:00 (+12m)~+60s, Callee=emailservice, Count=1 (20%), MaxLatency=889us, Callers=[checkoutservice×1]>
+- <10:13:00 (+3m)~+60s, Callee=redis, Count=2 (20%), MaxLatency=3877us, Callers=[cartservice×2]>
+- <10:13:00 (+3m)~+60s, Callee=cartservice, Count=2 (20%), MaxLatency=4519us, Callers=[checkoutservice×1, frontend×1]>
+- <10:12:00 (+2m)~+60s, Callee=recommendationservice, Count=2 (20%), MaxLatency=6712us, Callers=[frontend×1, recommendationservice×1]>
+- <10:10:00 (+0m)~+60s, Callee=redis, Count=4 (19%), MaxLatency=5073us, Callers=[cartservice×4]>
+- <10:27:00 (+17m)~+60s, Callee=checkoutservice, Count=3 (19%), MaxLatency=75909us, Callers=[checkoutservice×3]>
+- <10:11:00 (+1m)~+60s, Callee=checkoutservice, Count=2 (17%), MaxLatency=40299731us, Callers=[frontend×2]>
+- <10:19:00 (+9m)~+60s, Callee=recommendationservice, Count=2 (14%), MaxLatency=5477us, Callers=[frontend×1, recommendationservice×1]>
+- <10:10:00 (+0m)~+60s, Callee=cartservice, Count=3 (14%), MaxLatency=6549us, Callers=[frontend×2, checkoutservice×1]>
+- <10:20:00 (+10m)~+60s, Callee=cartservice, Count=2 (13%), MaxLatency=3420us, Callers=[frontend×1, checkoutservice×1]>
+- <10:30:00 (+20m)~+60s, Callee=checkoutservice, Count=1 (12%), MaxLatency=15357us, Callers=[checkoutservice×1]>
+- <10:28:00 (+18m)~+60s, Callee=checkoutservice, Count=1 (12%), MaxLatency=33121us, Callers=[(root)×1]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 232 times in the time window
+- "(root) → (root) → frontend" has occurred 62 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 56 times in the time window
+- "frontend → checkoutservice → checkoutservice" has occurred 19 times in the time window
+- "frontend → cartservice → redis" has occurred 15 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 13 times in the time window
+- "frontend → frontend → cartservice" has occurred 12 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 10 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 10 times in the time window
+- "checkoutservice → checkoutservice → cartservice" has occurred 10 times in the time window

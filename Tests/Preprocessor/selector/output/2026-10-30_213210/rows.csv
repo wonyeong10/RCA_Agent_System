@@ -1,0 +1,401 @@
+﻿uuid,fault_type,instance_type,gt,minutes,chars,sec,metric_no_judge,error,metric_top5,trace_top5,log_top5,metric_any,trace_any,log_any,any_top5,metric_top5_b,trace_top5_b,log_top5_b,metric_any_b,trace_any_b,log_any_b,any_top5_b
+345fbe93-80,cpu stress,service,emailservice,21.0,6904,3.4,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+74a44ae7-81,network corrupt,service,checkoutservice|shippingservice,23.0,15303,3.3,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+38ee3d45-82,pod failure,service,cartservice,24.0,15721,2.2,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+b1ab098d-83,node memory stress,node,aiops-k8s-06,23.0,8005,3.6,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+27956295-84,network corrupt,service,checkoutservice|paymentservice,24.0,13219,3.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+8a7a8a00-85,network delay,service,frontend|productcatalogservice,13.0,7595,2.4,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+ef2a4fbb-87,node cpu stress,node,aiops-k8s-03,14.0,6437,3.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+233e0282-88,cpu stress,service,currencyservice,19.0,7767,4.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+5f904167-89,network loss,service,frontend|adservice,11.0,11548,5.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+d3bd27f3-90,network corrupt,service,checkoutservice|shippingservice,13.0,11628,5.9,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+26c9ab68-91,cpu stress,service,emailservice,14.0,7944,8.1,False,,False,True,False,False,True,False,True,True,True,False,True,True,False,True
+0718e0f9-92,pod kill,service,productcatalogservice,0.016666666666666666,2137,4.3,True,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+31392fda-93,memory stress,pod,shippingservice-0,25.0,7533,10.4,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+20622318-94,jvm cpu,service,adservice,21.0,7716,5.9,False,,True,False,False,True,False,False,True,True,False,True,True,False,True,True
+c002ac2b-95,pod kill,service,shippingservice,0.016666666666666666,1625,2.4,True,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+4ab999b7-96,cpu stress,pod,shippingservice-0,17.0,7824,5.3,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+6ef260df-97,jvm gc,pod,adservice-1,12.0,7846,5.5,False,,True,False,True,True,False,True,True,True,False,True,True,False,True,True
+6375ea10-98,pod failure,service,recommendationservice,14.0,12858,4.1,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+555d145f-99,node memory stress,node,aiops-k8s-04,18.0,7414,6.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+342d4820-100,network corrupt,service,checkoutservice|productcatalogservice,23.0,16096,5.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+cd81a09b-101,pod kill,service,recommendationservice,0.016666666666666666,1762,2.1,True,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+b67cbc30-102,node cpu stress,node,aiops-k8s-01,25.0,8041,3.4,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+ae4abdbe-103,memory stress,pod,productcatalogservice-2,25.0,8309,3.1,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+d32bcd36-104,pod kill,service,cartservice,0.016666666666666666,764,2.9,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+3df3b41f-105,node memory stress,node,aiops-k8s-03,11.0,8583,2.6,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+744d4e2b-106,jvm cpu,service,adservice,23.0,7935,3.2,False,,False,False,False,False,False,False,False,False,False,True,False,False,True,True
+462e3353-107,node disk fill,node,aiops-k8s-06,12.0,6726,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+271c6b09-108,node disk fill,node,aiops-k8s-06,13.0,5981,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+55791019-109,network loss,service,frontend|cartservice,24.0,16397,2.0,False,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+abb62970-110,jvm cpu,service,adservice,19.0,7684,3.1,False,,False,False,False,False,False,False,False,True,False,True,True,False,True,True
+a54c75dc-111,node memory stress,node,aiops-k8s-01,22.0,7556,3.5,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+f48a6b60-112,pod failure,service,recommendationservice,17.0,13850,3.2,False,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+dc62e30c-113,network corrupt,service,cartservice|redis-cart|redis-cart-0,10.0,15158,2.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+bc2f1dfa-114,node memory stress,node,aiops-k8s-08,16.0,6379,5.1,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+541f72de-115,network corrupt,service,frontend|productcatalogservice,17.0,13400,2.4,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+e2750b43-116,network corrupt,service,checkoutservice|paymentservice,25.0,16644,5.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+a363d826-117,network loss,service,frontend|cartservice,22.0,15984,2.5,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+dc331a0b-118,network delay,service,frontend|recommendationservice,17.0,7980,4.9,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+f18b68cd-119,node cpu stress,node,aiops-k8s-07,16.0,7812,5.3,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+a85d0720-120,node disk fill,node,aiops-k8s-04,16.0,7630,5.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+66cfe1dd-121,cpu stress,service,emailservice,22.0,8098,6.5,False,,False,True,False,False,True,False,True,True,True,False,True,True,False,True
+8cf433b4-122,node memory stress,node,aiops-k8s-03,11.0,8041,3.7,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+bc454cd0-123,network delay,service,checkoutservice|emailservice,10.0,7081,2.8,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+ad84546c-124,network loss,service,checkoutservice|shippingservice,23.0,15824,2.7,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+0fccdcad-125,cpu stress,service,recommendationservice,22.0,7795,3.0,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+de4a919c-126,memory stress,service,paymentservice,22.0,7967,4.0,False,,False,False,False,False,False,False,False,False,False,True,False,False,True,True
+8d818070-127,network loss,service,frontend|adservice,12.0,11954,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+c1e7d172-128,network loss,service,frontend|checkoutservice,13.0,11480,2.3,False,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+343ba04c-129,jvm exception,service,adservice,14.0,14652,2.7,False,,False,False,False,False,False,False,False,False,False,True,False,False,True,True
+725d8034-130,node memory stress,node,aiops-k8s-06,24.0,7484,3.1,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+08e3187d-131,node disk fill,node,aiops-k8s-08,12.0,7155,2.5,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+21aa302f-132,node memory stress,node,aiops-k8s-07,11.0,6963,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+fc44280d-133,network delay,service,checkoutservice|emailservice,19.0,7717,2.9,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+36937f85-134,jvm latency,pod,adservice-1,16.0,8246,2.8,False,,False,False,True,False,False,True,True,False,False,True,False,False,True,True
+3400061d-135,pod failure,service,recommendationservice,21.0,15131,2.6,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+42c6ad6f-136,pod failure,pod,shippingservice-2,14.0,7913,3.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+f99b1645-137,node memory stress,node,aiops-k8s-05,11.0,7839,4.4,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+2272a5ff-138,jvm exception,service,adservice,13.0,12476,4.7,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+cc3b1830-139,jvm gc,pod,adservice-2,15.0,8337,4.6,False,,True,False,True,True,False,True,True,True,False,True,True,False,True,True
+6f84e51d-140,node memory stress,node,aiops-k8s-07,20.0,7706,5.5,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+5b520645-141,node memory stress,node,aiops-k8s-05,23.0,7842,6.1,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+ba74cb57-142,memory stress,pod,productcatalogservice-2,25.0,8056,6.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+fe25ee9b-143,network corrupt,service,frontend|recommendationservice,22.0,15282,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+94d48f2c-144,node disk fill,node,aiops-k8s-05,23.0,7814,6.3,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+f066e1dd-145,pod kill,pod,shippingservice-2,0.016666666666666666,1763,2.4,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+ad13b37a-146,memory stress,service,recommendationservice,10.0,7587,3.5,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+dce5cefa-147,pod failure,service,cartservice,20.0,11281,1.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+50f000ee-148,memory stress,pod,paymentservice-0,19.0,4513,1.8,False,,False,False,True,False,False,True,True,False,False,True,False,False,True,True
+0a373d08-149,jvm exception,service,adservice,12.0,3548,1.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+9a257bd5-150,jvm latency,service,adservice,15.0,9334,2.7,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+162fe36a-151,pod kill,service,productcatalogservice,0.016666666666666666,607,1.7,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+eba76009-152,jvm exception,pod,adservice-0,19.0,13468,1.9,False,,False,False,True,False,False,True,True,False,False,True,False,False,True,True
+168cdf19-153,jvm gc,service,adservice,21.0,4755,1.8,False,,False,False,False,False,False,False,False,True,False,True,True,False,True,True
+05b57997-154,network corrupt,service,checkoutservice|cartservice,19.0,10741,1.9,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+54002a5c-155,memory stress,pod,cartservice-1,23.0,4193,1.8,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+934844b2-156,network delay,service,checkoutservice|emailservice,25.0,7812,2.2,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+1c47d7bf-157,node disk fill,node,aiops-k8s-07,14.0,6905,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+3600f326-158,jvm gc,pod,adservice-0,24.0,7952,3.1,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+a9c6d6c9-159,network delay,service,frontend|cartservice,10.0,8079,2.4,False,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+0efb9550-160,memory stress,pod,productcatalogservice-2,12.0,7723,3.6,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+cb5815ce-161,jvm cpu,service,adservice,19.0,8281,5.3,False,,False,False,False,False,False,False,False,False,False,True,False,False,True,True
+89c85406-162,node cpu stress,node,aiops-k8s-05,18.0,8006,5.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+43e1b3bf-163,network loss,service,checkoutservice|paymentservice,12.0,11320,3.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+7bdc4b83-164,jvm latency,service,adservice,12.0,11385,4.1,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+cebb47f5-165,pod kill,pod,paymentservice-1,0.016666666666666666,1967,2.3,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+578fce7c-166,jvm gc,pod,adservice-2,24.0,7634,6.3,False,,True,False,True,True,False,True,True,True,False,True,True,False,True,True
+47fe21f6-167,jvm exception,service,adservice,15.0,15406,5.2,False,,False,False,False,False,False,False,False,True,False,True,True,False,True,True
+df892932-168,jvm cpu,service,adservice,13.0,7990,4.7,False,,False,False,False,False,False,False,False,True,False,True,True,False,True,True
+51fc47bf-169,node disk fill,node,aiops-k8s-06,13.0,4100,1.9,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+046aefa7-170,cpu stress,service,shippingservice,12.0,4363,1.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+e0a261ce-171,cpu stress,service,recommendationservice,25.0,4488,1.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+a0761b38-172,jvm latency,service,adservice,13.0,4266,1.7,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+e6c9989b-173,network delay,service,checkoutservice|paymentservice,11.0,4253,1.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+cc451a15-174,node cpu stress,node,aiops-k8s-04,14.0,2683,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+f78ef469-175,node memory stress,node,aiops-k8s-01,12.0,3602,1.7,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+49a506cd-176,network loss,service,cartservice|redis-cart|redis-cart-0,16.0,15790,1.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+6892c835-177,jvm gc,service,adservice,25.0,4804,1.8,False,,False,False,False,False,False,False,False,True,False,True,True,False,True,True
+d0be3c58-178,jvm cpu,service,adservice,18.0,4791,2.1,False,,True,False,False,True,False,False,True,True,False,True,True,False,True,True
+251c4f53-179,pod kill,service,cartservice,0.016666666666666666,1414,1.9,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+994849cc-180,node cpu stress,node,aiops-k8s-08,14.0,6459,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+7f595b45-181,network corrupt,service,recommendationservice|productcatalogservice,25.0,16619,2.0,False,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+eb0c4ea8-182,network delay,service,checkoutservice|productcatalogservice,21.0,7915,3.1,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+d3dd6ed7-183,pod kill,pod,shippingservice-1,0.016666666666666666,1765,2.2,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+fb327034-184,jvm exception,pod,adservice-1,23.0,8062,5.7,False,,False,False,True,False,False,True,True,False,False,True,False,False,True,True
+1fbef130-185,node cpu stress,node,aiops-k8s-03,16.0,6758,5.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+97d37c35-186,jvm exception,service,adservice,13.0,13920,4.4,False,,True,False,False,True,False,False,True,True,False,True,True,False,True,True
+9b0d8a50-187,jvm exception,service,adservice,21.0,16973,5.9,False,,False,False,False,False,False,False,False,True,False,True,True,False,True,True
+7e03b07d-188,pod failure,pod,shippingservice-1,18.0,8534,5.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+96e4b852-189,pod kill,pod,shippingservice-1,0.016666666666666666,1762,2.6,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+7513dbaf-190,jvm latency,service,adservice,17.0,7757,5.4,False,,False,False,False,False,False,False,False,True,False,True,True,False,True,True
+c9832b3e-191,pod failure,service,checkoutservice,12.0,11301,4.7,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+e55fb1cb-192,jvm gc,service,adservice,18.0,7390,5.9,False,,False,False,False,False,False,False,False,True,False,True,True,False,True,True
+e4ef8a12-193,network corrupt,service,frontend|recommendationservice,17.0,13250,2.4,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+913e1ecf-194,node disk fill,node,aiops-k8s-01,11.0,6573,3.5,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+7984364a-195,jvm latency,pod,adservice-0,18.0,13189,2.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+6a643823-196,jvm latency,pod,adservice-2,10.0,6739,2.5,False,,False,False,True,False,False,True,True,False,False,True,False,False,True,True
+de1d442d-197,network loss,service,frontend|checkoutservice,20.0,12835,3.3,False,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+4229b9c5-198,jvm latency,pod,adservice-0,18.0,7825,2.8,False,,False,False,True,False,False,True,True,False,False,True,False,False,True,True
+ff15d32c-199,jvm gc,service,adservice,13.0,7850,2.6,False,,False,False,False,False,False,False,False,True,False,True,True,False,True,True
+5c8eb611-200,network delay,service,frontend|cartservice,16.0,7687,2.5,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+40424656-201,node disk fill,node,aiops-k8s-04,24.0,7887,3.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+a499f40d-202,node memory stress,node,aiops-k8s-08,16.0,7676,2.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+e25d2429-203,cpu stress,service,adservice,13.0,7655,2.6,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+eb79e778-204,node disk fill,node,aiops-k8s-06,13.0,6804,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+56c934bb-205,pod failure,service,cartservice,18.0,13300,2.1,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+d9fb014e-206,jvm latency,service,adservice,19.0,14505,3.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+92e5a649-207,network corrupt,service,checkoutservice|paymentservice,23.0,14883,4.5,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+eaf978d7-208,pod kill,pod,currencyservice-2,0.016666666666666666,1847,2.4,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+74bd0298-209,jvm latency,pod,adservice-0,18.0,14114,5.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+6a9a1c00-210,jvm latency,service,adservice,11.0,11328,3.9,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+499d8ec0-211,jvm gc,service,adservice,20.0,7753,5.6,False,,True,False,False,True,False,False,True,True,False,True,True,False,True,True
+5a573d9d-212,network corrupt,service,checkoutservice|cartservice,20.0,14687,4.7,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+5d97906f-213,memory stress,pod,checkoutservice-1,14.0,7474,4.6,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+d1e74aa8-214,node memory stress,node,aiops-k8s-06,16.0,6775,5.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+2cce5582-215,jvm cpu,service,adservice,21.0,8052,6.7,False,,True,False,False,True,False,False,True,True,False,True,True,False,True,True
+13ebf32d-216,jvm cpu,service,adservice,13.0,7362,5.2,False,,False,False,False,False,False,False,False,False,False,True,False,False,True,True
+b1dff953-217,node cpu stress,node,aiops-k8s-07,10.0,6499,4.4,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+3ae307d9-218,jvm exception,service,adservice,20.0,16763,4.5,False,,True,False,False,True,False,False,True,True,False,True,True,False,True,True
+6e8c4acb-219,network delay,service,frontend|currencyservice,14.0,7435,2.2,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+aa100326-220,jvm latency,service,adservice,21.0,14894,3.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+10889e22-221,network corrupt,service,frontend|recommendationservice,16.0,12499,2.9,False,,False,False,False,False,True,False,False,True,False,False,True,True,False,True
+ee77456a-222,network delay,service,checkoutservice|cartservice,15.0,6361,2.6,False,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+87b43d57-223,jvm exception,service,adservice,19.0,16826,2.9,False,,False,False,False,False,False,False,False,False,False,True,False,False,True,True
+53212d72-224,network corrupt,service,frontend|productcatalogservice,18.0,13325,1.9,False,,False,False,False,False,True,False,False,True,False,False,True,True,False,True
+a061c961-225,node memory stress,node,aiops-k8s-08,25.0,7677,3.1,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+0410d710-226,pod kill,pod,paymentservice-1,0.016666666666666666,1574,2.1,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+ffabbbb0-227,network loss,service,cartservice|redis-cart|redis-cart-0,22.0,21046,2.1,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+7e7b6ea4-228,node disk fill,node,aiops-k8s-04,10.0,6643,2.4,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+df11e2f0-229,cpu stress,pod,adservice-2,21.0,7648,3.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+1193b5d8-230,pod failure,pod,cartservice-1,19.0,8005,3.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+e4ff5a70-231,node disk fill,node,aiops-k8s-08,16.0,8168,4.2,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+29f88351-232,node cpu stress,node,aiops-k8s-05,15.0,5841,4.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+d99a98a0-233,pod kill,pod,paymentservice-0,0.016666666666666666,1763,2.4,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+ee69c707-234,jvm gc,pod,adservice-0,13.0,7616,4.3,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+bc9db995-235,pod kill,pod,adservice-1,0.016666666666666666,1763,2.5,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+4be46c92-236,jvm gc,pod,adservice-0,24.0,8277,6.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+8c1e8ce9-237,jvm cpu,pod,adservice-0,23.0,8118,5.8,False,,False,False,True,False,False,True,True,False,False,True,False,False,True,True
+f887d7ff-238,jvm cpu,pod,adservice-1,13.0,6505,4.7,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+bc6f6978-239,network loss,service,recommendationservice|productcatalogservice,16.0,12977,2.4,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+980853cb-240,jvm exception,service,adservice,15.0,15035,4.3,False,,True,False,False,True,False,False,True,True,False,True,True,False,True,True
+1fb24317-241,node cpu stress,node,aiops-k8s-08,11.0,4311,1.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+36e2b5c1-242,pod failure,pod,emailservice-2,22.0,4441,1.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+f643fe98-243,memory stress,service,adservice,22.0,4195,1.7,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+98eacd31-244,pod failure,service,emailservice,11.0,7875,2.9,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+d4cf6596-245,node memory stress,node,aiops-k8s-06,15.0,7455,2.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+bdc8184e-246,jvm latency,pod,adservice-0,23.0,7936,3.1,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+741b801a-247,memory stress,service,emailservice,18.0,8167,2.8,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+5645565c-248,network loss,service,frontend|cartservice,20.0,19795,2.0,False,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+8c7ed41d-249,network delay,service,frontend|adservice,16.0,13541,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+6574656a-250,pod kill,service,paymentservice,0.016666666666666666,1576,2.0,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+4664a5e8-251,jvm exception,service,adservice,19.0,17117,2.9,False,,False,False,False,False,False,False,False,True,False,True,True,False,True,True
+91c4c773-252,jvm cpu,pod,adservice-0,25.0,7726,3.3,False,,False,False,True,False,False,True,True,False,False,True,False,False,True,True
+958ecb16-253,node memory stress,node,aiops-k8s-04,14.0,7667,2.7,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+71964944-254,node memory stress,node,aiops-k8s-07,18.0,7472,4.3,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+d36dd82b-255,node cpu stress,node,aiops-k8s-08,23.0,7741,5.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+14cf33ba-256,network delay,service,checkoutservice|currencyservice,24.0,7939,5.5,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+f35a1832-257,jvm latency,pod,adservice-0,21.0,7754,5.5,False,,True,False,True,True,False,True,True,True,False,True,True,False,True,True
+f62b1785-258,pod failure,pod,adservice-0,23.0,7733,5.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+aa53ee7c-259,jvm latency,pod,adservice-0,14.0,7545,4.5,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+c730da7b-260,cpu stress,service,recommendationservice,14.0,7769,4.4,False,,False,True,False,False,True,False,True,True,True,False,True,True,False,True
+db4628f8-261,node memory stress,node,aiops-k8s-01,12.0,6675,4.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+a7b21b38-262,pod failure,service,shippingservice,22.0,15647,5.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+757fa56f-263,cpu stress,service,recommendationservice,23.0,7293,2.2,False,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+d8a41a9d-264,pod failure,service,adservice,13.0,4578,1.7,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+b06b79b6-265,cpu stress,pod,shippingservice-0,18.0,4109,1.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+49e9814e-266,network corrupt,service,frontend|cartservice,10.0,4445,1.7,False,,False,False,False,False,False,False,False,True,False,False,False,False,False,True
+d0c7cd07-267,jvm exception,pod,adservice-2,24.0,4313,1.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+25368410-268,jvm cpu,service,adservice,12.0,4550,2.6,False,,False,False,False,False,False,False,False,True,False,True,True,False,True,True
+37de08d4-269,network loss,service,recommendationservice|productcatalogservice,10.0,10924,2.1,False,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+c6e9faa0-270,memory stress,pod,currencyservice-2,10.0,8198,2.5,False,,False,False,True,False,False,True,True,False,False,True,False,False,True,True
+864797d5-271,jvm gc,pod,adservice-0,24.0,8263,3.1,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+4b8e459c-272,memory stress,pod,shippingservice-0,23.0,7683,3.1,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+535dd1bd-273,node memory stress,node,aiops-k8s-06,10.0,6335,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+099ce7e2-274,node memory stress,node,aiops-k8s-01,21.0,7768,2.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+7e54232b-275,cpu stress,pod,checkoutservice-0,12.0,7973,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+f5d0349a-276,node memory stress,node,aiops-k8s-08,20.0,7696,2.9,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+4e221a94-277,memory stress,pod,paymentservice-1,12.0,8117,2.7,False,,False,False,True,False,False,True,True,False,False,True,False,False,True,True
+a1b60eea-278,jvm gc,pod,adservice-1,17.0,7864,4.1,False,,True,False,True,True,False,True,True,True,False,True,True,False,True,True
+825545e5-279,network corrupt,service,frontend|productcatalogservice,18.0,13655,2.4,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+e955714b-280,node cpu stress,node,aiops-k8s-06,25.0,6634,6.3,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+de83df2d-281,pod failure,service,adservice,21.0,15319,5.6,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+9c3b8fe7-282,network corrupt,service,checkoutservice|cartservice,21.0,15258,4.7,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+84f4b04a-283,memory stress,service,currencyservice,11.0,8030,4.0,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+e4dae239-284,node disk fill,node,aiops-k8s-05,17.0,6162,4.9,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+11f619f0-285,pod failure,service,productcatalogservice,22.0,18622,3.1,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+3da57a36-286,network delay,service,recommendationservice|productcatalogservice,16.0,7879,4.0,False,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+04418665-287,jvm gc,pod,adservice-1,15.0,8046,4.2,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+27914c5a-288,pod failure,pod,paymentservice-2,24.0,8458,4.4,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+53d5d618-289,network delay,service,checkoutservice|cartservice,15.0,7622,3.1,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+a63a0c8b-290,node cpu stress,node,aiops-k8s-05,21.0,8026,2.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+f370cf6d-291,jvm cpu,service,adservice,15.0,4448,1.8,False,,False,False,False,False,False,False,False,False,False,True,False,False,True,True
+50bce1c4-311,code error,service,cartservice,16.0,11481,2.6,False,,False,False,False,False,False,False,False,True,False,True,True,False,True,True
+b78dafc3-312,network corrupt,service,recommendationservice|productcatalogservice,19.0,13871,2.0,False,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+009be6db-313,code error,service,cartservice,14.0,12376,2.5,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+c0cdda5e-314,node disk fill,node,aiops-k8s-05,10.0,5896,1.9,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+a482d876-315,cpu stress,service,shippingservice,24.0,4414,1.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+3260fa48-316,pod failure,pod,tidb-tidb-0|tidb-tidb,19.0,4534,1.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+332adc3a-317,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,177,1.7,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+18b8cf77-318,dns error,service,checkoutservice,16.0,4721,1.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+a42d2eb4-319,target port misconfig,service,emailservice,22.0,4577,1.7,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+fc3737af-320,memory stress,service,productcatalogservice,13.0,4255,1.8,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+bbfefe10-321,node cpu stress,node,aiops-k8s-06,23.0,4545,1.9,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+e539dea4-322,code error,service,checkoutservice,25.0,16004,4.4,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+83524cef-323,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3698,3.1,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+ed40c5a3-324,network delay,service,frontend|recommendationservice,11.0,6238,4.0,False,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+55b23e04-325,dns error,pod,checkoutservice-2,18.0,14261,4.7,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+53ab3ccb-326,code error,service,frontend,20.0,7731,3.7,False,,False,False,False,False,False,False,False,True,False,True,True,False,True,True
+4fd42adb-327,memory stress,service,adservice,12.0,9707,4.5,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+d44478e6-328,dns error,pod,checkoutservice-0,25.0,7626,6.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+70d3b8b0-329,node memory stress,node,aiops-k8s-03,18.0,8125,5.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+c3f4fde9-330,network delay,service,checkoutservice|emailservice,23.0,7723,6.6,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+76222cb2-331,code error,service,currencyservice,24.0,18961,3.2,False,,False,False,False,False,False,False,False,False,False,True,False,False,True,True
+68bbf4fd-332,dns error,pod,checkoutservice-0,17.0,7884,4.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+3d284cf0-333,node cpu stress,node,aiops-k8s-06,10.0,6470,2.4,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+985de575-334,node disk fill,node,aiops-k8s-07,13.0,7053,2.6,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+e1562aa2-335,dns error,pod,checkoutservice-2,19.0,7956,3.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+8e7a3965-336,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3608,2.3,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+c3377c5c-337,network corrupt,service,frontend|adservice,19.0,14438,2.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+8c61bc09-338,code error,service,frontend,15.0,8204,2.3,False,,False,False,False,False,True,False,False,False,False,True,False,True,True,True
+0b81a605-339,cpu stress,pod,paymentservice-2,14.0,6783,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+0a9fce75-340,pod failure,pod,tidb-pd-0|tidb-pd,18.0,11969,2.3,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+b9319370-341,code error,service,productcatalogservice,24.0,15808,2.0,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+b96848a5-342,code error,service,cartservice,22.0,15323,2.8,False,,False,True,False,False,True,False,True,True,True,False,True,True,False,True
+88b7daff-343,network delay,service,cartservice|redis-cart|redis-cart-0,14.0,7303,2.3,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+09b7c00b-344,code error,service,cartservice,17.0,9768,2.8,False,,False,True,False,False,True,False,True,False,True,True,False,True,True,True
+b9539d8e-345,target port misconfig,service,productcatalogservice,20.0,18713,2.6,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+76937ba4-346,network corrupt,service,frontend|productcatalogservice,16.0,12839,2.3,False,,False,False,False,False,True,False,False,True,False,False,True,True,False,True
+1d868f8e-347,network delay,service,frontend|checkoutservice,23.0,7690,5.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+4b225f4a-348,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3637,3.1,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+0a4c5c18-349,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3727,2.8,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+fb20d6d2-350,dns error,pod,checkoutservice-2,15.0,4113,2.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+a87be781-351,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3689,3.2,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+1ef94bd7-352,node memory stress,node,aiops-k8s-04,22.0,8177,6.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+178aa45f-353,dns error,service,checkoutservice,13.0,12366,4.7,False,,False,True,False,False,True,False,True,True,True,False,True,True,False,True
+ad030412-354,node memory stress,node,aiops-k8s-06,19.0,8176,5.7,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+b168261d-355,target port misconfig,service,paymentservice,13.0,8978,2.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+ac95d601-356,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,192,1.8,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+b9e3efbd-357,pod failure,pod,tidb-tikv-0|tidb-tikv,12.0,7007,1.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+7bd681bb-358,code error,service,checkoutservice,21.0,10412,1.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+7c0d7152-359,target port misconfig,service,emailservice,16.0,9465,2.6,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+46fc7b93-360,pod failure,pod,tidb-pd-0|tidb-pd,21.0,12629,2.4,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+f5e2df8d-361,pod failure,pod,tidb-pd-0|tidb-pd,14.0,11440,2.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+f0015bac-362,pod failure,pod,tidb-tikv-0|tidb-tikv,19.0,11665,2.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+b06baad3-363,target port misconfig,service,adservice,16.0,13224,2.7,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+fe4efdc8-364,dns error,service,checkoutservice,20.0,15271,2.8,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+7dbfd4c3-365,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3673,2.2,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+14c1047f-366,code error,service,currencyservice,23.0,18976,2.2,False,,False,False,False,False,False,False,False,False,False,True,False,False,True,True
+68727566-367,target port misconfig,service,paymentservice,16.0,12683,2.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+aba2da7f-368,network delay,service,frontend|cartservice,22.0,7806,2.9,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+e3884815-369,pod failure,pod,tidb-tidb-0|tidb-tidb,15.0,16474,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+2e8873a5-370,dns error,pod,checkoutservice-2,12.0,12068,3.9,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+593e3d6b-371,node disk fill,node,aiops-k8s-08,15.0,8081,4.9,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+9450018e-372,code error,service,currencyservice,12.0,14442,2.8,False,,False,False,False,False,False,False,False,False,False,True,False,False,True,True
+0419ba04-373,target port misconfig,service,currencyservice,18.0,13599,3.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+80cdc066-374,network corrupt,service,checkoutservice|shippingservice,23.0,16102,8.4,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+371ba498-375,target port misconfig,service,paymentservice,18.0,14457,9.1,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+2878f9f0-376,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3743,6.1,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+9ee6b9ce-377,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3724,6.2,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+bf022434-378,network loss,service,frontend|checkoutservice,17.0,13663,8.1,False,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+d124f9b7-379,cpu stress,pod,productcatalogservice-0,23.0,7863,10.5,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+38d69375-380,pod failure,pod,tidb-tidb-0|tidb-tidb,17.0,17062,4.3,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+d0ecec7e-381,target port misconfig,service,checkoutservice,11.0,11572,4.6,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+a2047792-382,node memory stress,node,aiops-k8s-06,16.0,7764,3.3,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+9f49250a-383,target port misconfig,service,emailservice,24.0,16308,3.9,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+a0e512ba-384,node cpu stress,node,aiops-k8s-07,22.0,7319,3.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+9d5029d9-385,network corrupt,service,checkoutservice|productcatalogservice,24.0,16023,2.9,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+91b14fe1-386,pod failure,pod,tidb-tikv-0|tidb-tikv,15.0,10550,2.1,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+21950e63-387,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3567,2.4,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+8781f965-388,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3579,2.3,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+772b36d0-389,pod failure,pod,tidb-tikv-0|tidb-tikv,12.0,10196,2.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+9b0004fb-390,network loss,service,checkoutservice|shippingservice,21.0,15272,2.9,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+5028909d-391,dns error,service,checkoutservice,18.0,14186,2.9,False,,False,True,False,False,True,False,True,True,True,True,True,True,True,True
+fa555038-392,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3635,2.4,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+e1950aec-393,dns error,service,checkoutservice,12.0,12475,3.6,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+81a145a5-394,target port misconfig,service,paymentservice,15.0,13395,4.8,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+ec746a17-395,pod failure,pod,tidb-tikv-0|tidb-tikv,22.0,12259,2.5,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+3966f44b-396,network delay,service,frontend|currencyservice,25.0,7793,3.7,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+4153e4c6-397,network corrupt,service,frontend|cartservice,14.0,15599,2.4,False,,False,False,False,False,True,False,False,True,False,False,True,True,False,True
+652408d6-398,network loss,service,frontend|recommendationservice,17.0,12947,2.7,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+c1e38e2e-399,pod failure,pod,tidb-pd-0|tidb-pd,23.0,13196,3.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+cd049902-400,code error,service,frontend,23.0,7674,4.1,False,,False,False,False,False,True,False,False,True,False,False,True,True,False,True
+5cb1626b-401,pod failure,pod,tidb-tikv-0|tidb-tikv,20.0,11619,2.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+3f4b31ee-402,node cpu stress,node,aiops-k8s-06,14.0,6667,5.5,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+55759137-403,network loss,service,cartservice|redis-cart|redis-cart-0,20.0,20933,3.1,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+e566fa68-404,dns error,service,checkoutservice,22.0,15767,4.7,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+bc7e1bf2-405,dns error,pod,checkoutservice-2,24.0,15552,3.2,False,,False,False,True,False,False,True,True,False,False,True,False,False,True,True
+a7ed866b-406,target port misconfig,service,checkoutservice,20.0,14628,3.0,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+f9b9169c-407,node cpu stress,node,aiops-k8s-07,17.0,7090,3.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+e1c6a610-408,node disk fill,node,aiops-k8s-03,15.0,7077,2.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+b7177fa5-409,network corrupt,service,cartservice|redis-cart|redis-cart-0,12.0,16308,2.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+d9eb1e98-410,node memory stress,node,aiops-k8s-06,24.0,7740,3.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+e909315f-411,node cpu stress,node,aiops-k8s-03,22.0,8036,3.1,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+be622d9e-412,memory stress,pod,emailservice-2,14.0,7523,2.7,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+b4feec3f-413,target port misconfig,service,checkoutservice,24.0,16199,3.4,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+5d022708-414,target port misconfig,service,shippingservice,25.0,16795,4.9,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+67ca80f6-415,code error,service,frontend,23.0,7469,4.9,False,,False,False,False,False,True,False,False,True,False,False,True,True,False,True
+ba4ffa4e-416,pod failure,pod,tidb-tikv-0|tidb-tikv,18.0,11368,3.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+6e08f907-417,node memory stress,node,aiops-k8s-08,23.0,8278,6.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+11cdd935-418,code error,service,cartservice,16.0,9838,4.7,False,,False,True,False,False,True,False,True,False,True,True,False,True,True,True
+9d5bc038-419,pod failure,pod,tidb-tikv-0|tidb-tikv,23.0,12409,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+ac9112a4-420,code error,service,checkoutservice,15.0,12864,4.1,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+1003cbad-421,network delay,service,checkoutservice|cartservice,14.0,7675,4.7,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+e7f160ac-422,pod failure,pod,tidb-tikv-0|tidb-tikv,10.0,9853,2.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+7d463806-423,node cpu stress,node,aiops-k8s-01,10.0,6543,4.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+b1affa2a-424,node memory stress,node,aiops-k8s-08,11.0,6625,4.5,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+20af4918-425,pod failure,pod,tidb-tikv-0|tidb-tikv,25.0,12884,3.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+88f808ff-426,cpu stress,service,cartservice,12.0,8151,4.7,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+96fed9c7-427,network loss,service,checkoutservice|paymentservice,13.0,12298,3.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+83d06197-428,pod failure,pod,tidb-tikv-0|tidb-tikv,11.0,9816,2.4,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+6739d066-429,network loss,service,checkoutservice|paymentservice,19.0,14117,2.7,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+25ce9c41-430,network loss,service,frontend|adservice,22.0,15353,3.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+f625bd45-479,pod failure,pod,tidb-tikv-0|tidb-tikv,12.0,10021,3.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+6add78b2-480,cpu stress,service,paymentservice,17.0,8173,2.9,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+1e36872d-481,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3613,2.3,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+e1b52df0-482,code error,service,cartservice,14.0,14700,3.1,False,,False,True,False,False,True,False,True,True,True,True,True,True,True,True
+dac96ecf-483,memory stress,pod,adservice-1,11.0,5540,2.6,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+3c7d0c09-484,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3580,2.3,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+328b39df-485,dns error,service,checkoutservice,14.0,7010,2.7,False,,True,True,False,True,True,False,True,True,True,False,True,True,False,True
+192019ef-486,cpu stress,pod,currencyservice-1,16.0,7849,2.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+45c7bf97-487,code error,service,productcatalogservice,17.0,16715,2.1,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+01cf75fe-488,node disk fill,node,aiops-k8s-08,17.0,7317,2.9,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+a0d5329b-489,dns error,service,checkoutservice,16.0,7562,4.2,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+e7648f7d-490,node memory stress,node,aiops-k8s-05,23.0,8125,5.8,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+1c4a277a-491,network delay,service,recommendationservice|productcatalogservice,21.0,7401,5.9,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+d3691ad9-492,node cpu stress,node,aiops-k8s-04,21.0,7833,5.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+9ce187ea-493,pod failure,pod,tidb-tikv-0|tidb-tikv,13.0,6224,4.3,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+17ed37a5-494,pod failure,pod,tidb-tikv-0|tidb-tikv,20.0,7530,5.4,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+523bb271-495,target port misconfig,service,adservice,15.0,12242,4.9,False,,False,False,False,False,False,False,False,True,False,False,True,False,False,True
+7db04792-496,pod failure,pod,tidb-tikv-0|tidb-tikv,21.0,7610,6.5,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+6d1ad486-497,node cpu stress,node,aiops-k8s-08,12.0,6400,4.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+6a9c8dc7-498,node disk fill,node,aiops-k8s-06,20.0,7979,5.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+c4b46577-499,dns error,service,checkoutservice,15.0,13720,4.5,False,,False,True,False,False,True,False,True,False,True,True,False,True,True,True
+5fb39f4b-500,pod failure,pod,tidb-tidb-0|tidb-tidb,21.0,18247,2.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+2ff9d8a6-501,node memory stress,node,aiops-k8s-06,23.0,8812,3.3,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+959cfb67-502,target port misconfig,service,currencyservice,13.0,12000,2.4,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+5c4502b0-551,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3545,3.8,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+28eb3b8c-552,node memory stress,node,aiops-k8s-03,20.0,7880,3.3,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+ac8cf6cb-553,dns error,pod,checkoutservice-2,16.0,12313,3.0,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+3d3f68e9-554,node memory stress,node,aiops-k8s-08,14.0,7575,3.0,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+1ae8a5c3-555,pod failure,pod,tidb-tidb-0|tidb-tidb,24.0,13306,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+52c080d4-556,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3500,2.6,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+a9a3df0e-557,node disk fill,node,aiops-k8s-08,24.0,7507,3.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+20f9c3bc-558,code error,service,currencyservice,24.0,18854,2.6,False,,False,False,False,False,False,False,False,True,False,True,True,False,True,True
+448bc5e0-559,node memory stress,node,aiops-k8s-05,14.0,7309,3.1,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+4b98f078-560,network corrupt,service,checkoutservice|emailservice,10.0,9807,2.8,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+5934fe6f-561,code error,service,frontend,13.0,7639,3.5,False,,False,False,False,False,True,False,False,False,False,False,False,True,False,False
+7a54210f-562,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3660,3.5,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+6637fe70-563,cpu stress,pod,currencyservice-1,18.0,7530,5.3,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+62e9d294-564,network delay,service,checkoutservice|currencyservice,11.0,7818,4.3,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+cbd1f06b-565,dns error,service,checkoutservice,18.0,14318,5.6,False,,False,True,False,False,True,False,True,True,True,False,True,True,False,True
+c9ba0b22-566,network loss,service,frontend|currencyservice,18.0,12860,2.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+bd4bafd7-567,node memory stress,node,aiops-k8s-08,21.0,7876,6.4,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+bd9203a8-568,network delay,service,checkoutservice|cartservice,23.0,7528,6.7,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+732d8fff-569,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3678,3.9,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+aceeda23-570,network corrupt,service,checkoutservice|paymentservice,11.0,15275,3.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+52c722c7-571,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3627,3.2,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+569f2ed5-572,node memory stress,node,aiops-k8s-05,12.0,7466,3.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+238afe01-573,dns error,pod,checkoutservice-0,20.0,14564,2.8,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+25231384-574,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3641,2.3,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+33492fcd-575,cpu stress,service,currencyservice,25.0,7952,4.3,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+a6536c80-576,node memory stress,node,aiops-k8s-05,11.0,6015,2.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+7d23b182-577,memory stress,service,checkoutservice,24.0,7958,3.4,False,,False,True,False,False,True,False,True,True,True,False,True,True,False,True
+8ce0cd7e-578,pod failure,pod,tidb-pd-0|tidb-pd,13.0,11253,2.5,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+fbd6edf4-579,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3618,2.5,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+8440ee17-580,target port misconfig,service,shippingservice,25.0,16729,3.4,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+c54cf2d2-581,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3545,3.0,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+c9fbd527-582,code error,service,frontend,16.0,7531,4.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+cc62b887-583,pod failure,pod,tidb-tikv-0|tidb-tikv,14.0,10501,3.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+b531523c-584,node memory stress,node,aiops-k8s-01,22.0,7737,5.3,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+e50db6d8-585,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3606,4.9,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+146da42a-586,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3582,5.4,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+d6b961d4-587,dns error,pod,checkoutservice-2,19.0,7905,8.8,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+1573cbd5-588,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3619,5.4,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+bb585575-589,node cpu stress,node,aiops-k8s-08,19.0,8037,8.8,False,,True,False,False,True,False,False,True,True,False,False,True,False,False,True
+6dee3cf4-590,dns error,pod,checkoutservice-1,21.0,8068,8.9,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+e025b3a4-591,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3647,5.7,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+8c1e905b-592,pod failure,pod,tidb-tidb-0|tidb-tidb,16.0,17025,4.6,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+cc8e0450-593,node disk fill,node,aiops-k8s-08,17.0,7424,9.2,False,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+f475f2fe-594,io fault,pod,tidb-tikv-0|tidb-tikv,5.0,3637,5.8,True,,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+3d6c95dd-595,target port misconfig,service,shippingservice,16.0,14007,7.8,False,,False,True,False,False,True,False,True,True,True,False,True,True,False,True

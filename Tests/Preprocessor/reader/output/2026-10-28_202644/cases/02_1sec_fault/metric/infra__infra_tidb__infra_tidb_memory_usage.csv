@@ -1,0 +1,2 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,memory_usage,mountpoint,namespace,object_type,pod,sql_type,type,ts
+2025-06-06T04:03:00Z,null,null,10.233.79.158:10080,memory_usage,null,719409152,null,tidb,tidb,null,null,null,2025-06-06 04:03:00+00:00

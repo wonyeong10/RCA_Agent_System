@@ -1,0 +1,113 @@
+조회 구간: 2025-06-26T23:10:16Z ~ 2025-06-26T23:34:16Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1117개, 최대 25포인트, 이상 227개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, currencyservice-0, frontend-2, tidb, redis-cart-0
+Top-5 metrics with largest deviations: rrt_max, pod_network_receive_packets, pod_network_receive_bytes, timeout, pod_network_transmit_bytes
+Metric descriptions sorted by deviation_score:
+- tidb | duration_99th{instance=10.233.74.171:10080} | 판정 불가(30포인트 미만): first 23:23:00 (+13m), peak 23:23:00 (+13m), deviation_score ≈ 4.9σ
+- tidb | connection_count{instance=10.233.74.171:10080} | 판정 불가(30포인트 미만): first 23:27:00 (+17m), peak 23:27:00 (+17m), deviation_score ≈ 4.9σ
+- tidb | qps{type=Begin,instance=10.233.74.171:10080} | 판정 불가(30포인트 미만): first 23:19:00 (+9m), peak 23:19:00 (+9m), deviation_score ≈ 4.9σ
+- tidb | qps{type=Commit,instance=10.233.74.171:10080} | 판정 불가(30포인트 미만): first 23:19:00 (+9m), peak 23:19:00 (+9m), deviation_score ≈ 4.9σ
+- tidb | qps{type=Insert,instance=10.233.74.171:10080} | 판정 불가(30포인트 미만): first 23:19:00 (+9m), peak 23:19:00 (+9m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=dm-0,instance=10.233.77.67:9100} | 판정 불가(30포인트 미만): first 23:12:00 (+2m), peak 23:12:00 (+2m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=dm-0,instance=10.233.79.155:9100} | 판정 불가(30포인트 미만): first 23:12:00 (+2m), peak 23:12:00 (+2m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=dm-0,instance=10.233.84.23:9100} | 판정 불가(30포인트 미만): first 23:19:00 (+9m), peak 23:19:00 (+9m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=dm-0,instance=10.233.85.37:9100} | 판정 불가(30포인트 미만): first 23:29:00 (+19m), peak 23:29:00 (+19m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=dm-0,instance=223.193.36.128} | 판정 불가(30포인트 미만): first 23:12:00 (+2m), peak 23:12:00 (+2m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=dm-0,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 23:29:00 (+19m), peak 23:29:00 (+19m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=dm-0,instance=223.193.36.88} | 판정 불가(30포인트 미만): first 23:19:00 (+9m), peak 23:19:00 (+9m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vda,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 23:11:00 (+1m), peak 23:11:00 (+1m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vda,instance=223.193.36.130} | 판정 불가(30포인트 미만): first 23:11:00 (+1m), peak 23:11:00 (+1m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vdb,instance=10.233.77.67:9100} | 판정 불가(30포인트 미만): first 23:12:00 (+2m), peak 23:12:00 (+2m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vdb,instance=10.233.79.155:9100} | 판정 불가(30포인트 미만): first 23:12:00 (+2m), peak 23:12:00 (+2m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vdb,instance=10.233.84.23:9100} | 판정 불가(30포인트 미만): first 23:19:00 (+9m), peak 23:19:00 (+9m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vdb,instance=10.233.85.37:9100} | 판정 불가(30포인트 미만): first 23:29:00 (+19m), peak 23:29:00 (+19m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vdb,instance=223.193.36.128} | 판정 불가(30포인트 미만): first 23:12:00 (+2m), peak 23:12:00 (+2m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vdb,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 23:29:00 (+19m), peak 23:29:00 (+19m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vdb,instance=223.193.36.88} | 판정 불가(30포인트 미만): first 23:19:00 (+9m), peak 23:19:00 (+9m), deviation_score ≈ 4.9σ
+- frontend-2 | rrt_max | 판정 불가(30포인트 미만): first 23:10:00 (+0m), peak 23:10:00 (+0m), deviation_score ≈ 4.9σ
+- redis-cart-0 | rrt | 판정 불가(30포인트 미만): first 23:18:00 (+8m), peak 23:18:00 (+8m), deviation_score ≈ 4.9σ
+- redis-cart-0 | rrt_max | 판정 불가(30포인트 미만): first 23:18:00 (+8m), peak 23:18:00 (+8m), deviation_score ≈ 4.9σ
+- currencyservice-0 | pod_cpu_usage | 판정 불가(30포인트 미만): first 23:11:00 (+1m), peak 23:11:00 (+1m), deviation_score ≈ 4.8σ
+- currencyservice-0 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 23:11:00 (+1m), peak 23:11:00 (+1m), deviation_score ≈ 4.8σ
+- currencyservice-0 | rrt_max | 판정 불가(30포인트 미만): first 23:10:00 (+0m), peak 23:10:00 (+0m), deviation_score ≈ 4.8σ
+- currencyservice-0 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 23:11:00 (+1m), peak 23:11:00 (+1m), deviation_score ≈ 4.8σ
+- currencyservice-0 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 23:11:00 (+1m), peak 23:11:00 (+1m), deviation_score ≈ 4.8σ
+- currencyservice-0 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 23:11:00 (+1m), peak 23:11:00 (+1m), deviation_score ≈ 4.8σ
+
+[log] 행 19548개, 키워드 일치 330개, 템플릿 7종 중 상위 20% 2종, 출력 40건
+Failure-indicative log entries after two-stage filtering:
+- 23:10:48 (+0m) <currencyservice-2> | {"severity":"error","time":1750979448121,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-2","name":"currencyservice-server","v":1}
+- 23:11:32 (+1m) <currencyservice-1> | {"severity":"error","time":1750979492733,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:12:10 (+2m) <currencyservice-1> | {"severity":"error","time":1750979530798,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:12:32 (+2m) <frontend-2> | {"error":"failed to do currency conversion for product PHOTO202: rpc error: code = Canceled desc = context canceled","http.req.id":"24f1c769-e95b-4d94-a072-ce39b5721fc5","http.req.method":"GET","http.req.path":"/","message":"request error","session":"65e64e6c-0e16-4597-bb59-1f0a7b7334c2","severity":
+- 23:13:01 (+3m) <currencyservice-1> | {"severity":"error","time":1750979581147,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:13:29 (+3m) <frontend-1> | {"error":"failed to do currency conversion for product 1YMWWN1N4O: rpc error: code = Canceled desc = context canceled","http.req.id":"7caa8a73-7d9a-4a0e-a9a7-2a0a39c9abea","http.req.method":"GET","http.req.path":"/","message":"request error","session":"75fa0b3c-3b52-440b-a34e-9e8a4d59b645","severity
+- 23:14:00 (+4m) <currencyservice-1> | {"severity":"error","time":1750979640105,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:14:23 (+4m) <frontend-2> | {"error":"failed to do currency conversion for product L9ECAV7KIM: rpc error: code = Canceled desc = context canceled","http.req.id":"2c85a45e-135e-4924-bb8d-e3595a54cba4","http.req.method":"GET","http.req.path":"/","message":"request error","session":"bfcaa43f-f324-474c-bef8-e3d70c96cede","severity
+- 23:15:00 (+5m) <frontend-0> | {"error":"failed to do currency conversion for product 66VCHSJNUP: rpc error: code = Canceled desc = context canceled","http.req.id":"33c30617-ca6b-4f84-ac33-b0e1ffc8f993","http.req.method":"GET","http.req.path":"/","message":"request error","session":"cb9a4a12-60df-4c01-995a-48a1b8f752ea","severity
+- 23:15:02 (+5m) <currencyservice-1> | {"severity":"error","time":1750979702695,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:16:09 (+6m) <currencyservice-1> | {"severity":"error","time":1750979769121,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:16:25 (+6m) <frontend-2> | {"error":"failed to do currency conversion for product 7JSJCESPC9H: rpc error: code = Canceled desc = context canceled","http.req.id":"2f91d03b-7947-43dc-b720-194aaec5c503","http.req.method":"GET","http.req.path":"/","message":"request error","session":"ba68bd58-82ad-4588-8edc-30355bd1699a","severit
+- 23:17:18 (+7m) <currencyservice-1> | {"severity":"error","time":1750979838349,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:17:45 (+7m) <frontend-1> | {"error":"failed to do currency conversion for product COFFEE789: rpc error: code = Canceled desc = context canceled","http.req.id":"801d61cc-e21d-4f61-8cb2-83eb0868be49","http.req.method":"GET","http.req.path":"/","message":"request error","session":"63f676d1-d2dc-45d9-bea6-a5e6855ac8f0","severity"
+- 23:18:01 (+8m) <currencyservice-1> | {"severity":"error","time":1750979881484,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:18:18 (+8m) <frontend-0> | {"error":"failed to do currency conversion for product L9ECAV7KIM: rpc error: code = Canceled desc = context canceled","http.req.id":"b87f4c0d-14f2-42bd-9190-4f4e09702145","http.req.method":"GET","http.req.path":"/","message":"request error","session":"f96d9d05-a9a4-4e1e-be06-020ca6dbbf42","severity
+- 23:19:13 (+9m) <currencyservice-1> | {"severity":"error","time":1750979953614,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:19:24 (+9m) <frontend-0> | {"error":"failed to do currency conversion for product 2ZYFJ3GM2N: rpc error: code = Canceled desc = context canceled","http.req.id":"d69f32eb-f95b-4020-9143-b77853e4976f","http.req.method":"GET","http.req.path":"/","message":"request error","session":"a5991721-0d1b-48ef-b2af-afdbc66d26c9","severity
+- 23:20:06 (+10m) <currencyservice-1> | {"severity":"error","time":1750980006036,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:20:30 (+10m) <frontend-1> | {"error":"failed to do currency conversion for product PHOTO202: rpc error: code = Canceled desc = context canceled","http.req.id":"f5c525d6-f32d-4613-a330-efccdba0c0c9","http.req.method":"GET","http.req.path":"/","message":"request error","session":"cd8de10c-7b14-44ab-80a9-b9c2d31368be","severity":
+- 23:21:01 (+11m) <currencyservice-1> | {"severity":"error","time":1750980061715,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:21:20 (+11m) <frontend-1> | {"error":"failed to do currency conversion for product 2ZYFJ3GM2N: rpc error: code = Canceled desc = context canceled","http.req.id":"882796ae-3895-49e9-8a20-27de41cfb23a","http.req.method":"GET","http.req.path":"/","message":"request error","session":"06cfad5f-44d4-437e-a837-f1ea49b188a1","severity
+- 23:22:01 (+12m) <frontend-0> | {"error":"failed to do currency conversion for product 1YMWWN1N4O: rpc error: code = Canceled desc = context canceled","http.req.id":"6ebc577b-6ef7-4e21-8e7c-be44a9019d63","http.req.method":"GET","http.req.path":"/","message":"request error","session":"94c4b779-5d09-48df-af7d-433121eacb0e","severity
+- 23:22:02 (+12m) <currencyservice-1> | {"severity":"error","time":1750980122757,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:23:02 (+13m) <frontend-0> | {"error":"failed to do currency conversion for product VINTAGE123: rpc error: code = Canceled desc = context canceled","http.req.id":"b0cbf2a5-f1a3-46f3-9d20-1127ff030b0c","http.req.method":"GET","http.req.path":"/","message":"request error","session":"94c4b779-5d09-48df-af7d-433121eacb0e","severity
+- 23:23:05 (+13m) <currencyservice-1> | {"severity":"error","time":1750980185722,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:24:16 (+14m) <currencyservice-1> | {"severity":"error","time":1750980256995,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:24:27 (+14m) <frontend-0> | {"error":"failed to do currency conversion for product GARDEN101: rpc error: code = Canceled desc = context canceled","http.req.id":"9ed2d837-5a2f-491b-83b3-ca420d53e006","http.req.method":"GET","http.req.path":"/","message":"request error","session":"a62ef56a-8c65-4885-b9e3-df3ef67cb98e","severity"
+- 23:25:30 (+15m) <currencyservice-1> | {"severity":"error","time":1750980330186,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:25:48 (+15m) <frontend-1> | {"error":"failed to do currency conversion for product L9ECAV7KIM: rpc error: code = Canceled desc = context canceled","http.req.id":"fe7e730d-1e9a-4c76-91b0-3aa52b023ab6","http.req.method":"GET","http.req.path":"/","message":"request error","session":"f5503a32-7394-4808-8476-2b84289e1f98","severity
+- 23:26:04 (+16m) <currencyservice-1> | {"severity":"error","time":1750980364685,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:26:30 (+16m) <frontend-1> | {"error":"failed to do currency conversion for product 1YMWWN1N4O: rpc error: code = Canceled desc = context canceled","http.req.id":"1fc30ecb-4917-4591-a3e8-11f8a0d1f8ec","http.req.method":"GET","http.req.path":"/","message":"request error","session":"f005bc9b-d4ba-4909-b98d-248a65ece207","severity
+- 23:27:07 (+17m) <currencyservice-1> | {"severity":"error","time":1750980427538,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:28:00 (+18m) <currencyservice-1> | {"severity":"error","time":1750980480492,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:29:04 (+19m) <currencyservice-1> | {"severity":"error","time":1750980544615,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:30:00 (+20m) <currencyservice-1> | {"severity":"error","time":1750980600689,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:31:00 (+21m) <currencyservice-1> | {"severity":"error","time":1750980660389,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:32:13 (+22m) <currencyservice-1> | {"severity":"error","time":1750980733123,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:33:11 (+23m) <currencyservice-1> | {"severity":"error","time":1750980791413,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+- 23:34:01 (+24m) <currencyservice-1> | {"severity":"error","time":1750980841720,"message":"conversion request failed: RangeError: Maximum call stack size exceeded","pid":1,"hostname":"currencyservice-1","name":"currencyservice-server","v":1}
+
+[trace] span 20175개, 호출 유형별 p95 초과 1020건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <23:27:00 (+17m)~+60s, Callee=emailservice, Count=1 (50%), MaxLatency=1238us, Callers=[checkoutservice×1]>
+- <23:16:00 (+6m)~+60s, Callee=checkoutservice, Count=2 (50%), MaxLatency=1100825557us, Callers=[frontend×1, (root)×1]>
+- <23:28:00 (+18m)~+60s, Callee=emailservice, Count=1 (33%), MaxLatency=870us, Callers=[checkoutservice×1]>
+- <23:25:00 (+15m)~+60s, Callee=checkoutservice, Count=4 (20%), MaxLatency=530954883us, Callers=[checkoutservice×3, (root)×1]>
+- <23:23:00 (+13m)~+60s, Callee=shippingservice, Count=1 (20%), MaxLatency=725us, Callers=[frontend×1]>
+- <23:18:00 (+8m)~+60s, Callee=cartservice, Count=4 (19%), MaxLatency=80838us, Callers=[frontend×4]>
+- <23:13:00 (+3m)~+60s, Callee=shippingservice, Count=2 (18%), MaxLatency=672us, Callers=[frontend×1, checkoutservice×1]>
+- <23:18:00 (+8m)~+60s, Callee=redis, Count=4 (16%), MaxLatency=80031us, Callers=[cartservice×4]>
+- <23:22:00 (+12m)~+60s, Callee=cartservice, Count=4 (13%), MaxLatency=6872us, Callers=[frontend×2, checkoutservice×2]>
+- <23:26:00 (+16m)~+60s, Callee=cartservice, Count=4 (13%), MaxLatency=13127us, Callers=[frontend×4]>
+- <23:22:00 (+12m)~+60s, Callee=redis, Count=4 (13%), MaxLatency=5994us, Callers=[cartservice×4]>
+- <23:33:00 (+23m)~+60s, Callee=shippingservice, Count=1 (12%), MaxLatency=519us, Callers=[frontend×1]>
+- <23:26:00 (+16m)~+60s, Callee=recommendationservice, Count=5 (12%), MaxLatency=9247us, Callers=[frontend×3, recommendationservice×2]>
+- <23:12:00 (+2m)~+60s, Callee=redis, Count=5 (12%), MaxLatency=6719us, Callers=[cartservice×5]>
+- <23:26:00 (+16m)~+60s, Callee=redis, Count=4 (12%), MaxLatency=5342us, Callers=[cartservice×4]>
+- <23:29:00 (+19m)~+60s, Callee=checkoutservice, Count=2 (11%), MaxLatency=318045419us, Callers=[(root)×1, checkoutservice×1]>
+- <23:12:00 (+2m)~+60s, Callee=cartservice, Count=4 (11%), MaxLatency=7432us, Callers=[frontend×3, checkoutservice×1]>
+- <23:32:00 (+22m)~+60s, Callee=cartservice, Count=4 (10%), MaxLatency=5865us, Callers=[frontend×4]>
+- <23:32:00 (+22m)~+60s, Callee=redis, Count=4 (9%), MaxLatency=5099us, Callers=[cartservice×4]>
+- <23:29:00 (+19m)~+60s, Callee=shippingservice, Count=1 (9%), MaxLatency=541us, Callers=[frontend×1]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 496 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 216 times in the time window
+- "(root) → (root) → frontend" has occurred 51 times in the time window
+- "frontend → cartservice → redis" has occurred 49 times in the time window
+- "frontend → frontend → cartservice" has occurred 47 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 35 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 34 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 34 times in the time window
+- "frontend → checkoutservice → checkoutservice" has occurred 17 times in the time window
+- "frontend → frontend → shippingservice" has occurred 13 times in the time window

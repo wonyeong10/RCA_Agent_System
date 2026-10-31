@@ -1,0 +1,40 @@
+조회 구간: 2025-06-18T07:10:16Z ~ 2025-06-18T07:25:16Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1097개, 최대 16포인트, 이상 61개 (기준 3σ)
+Top-5 instances with largest deviations: adservice-2, adservice, tikv, hipstershop, tidb
+Top-5 metrics with largest deviations: client_error, client_error_ratio, error, error_ratio, timeout
+Metric descriptions sorted by deviation_score:
+- adservice-2 | client_error_ratio | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.9σ
+- adservice-2 | error_ratio | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.9σ
+- adservice-2 | client_error | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.9σ
+- adservice-2 | error | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.9σ
+- adservice-2 | timeout | 판정 불가(30포인트 미만): first 07:12:00 (+2m), peak 07:12:00 (+2m), deviation_score ≈ 3.9σ
+- hipstershop | client_error | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.9σ
+- hipstershop | client_error_ratio | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.9σ
+- hipstershop | error | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.9σ
+- hipstershop | error_ratio | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.9σ
+- adservice | client_error | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.9σ
+- adservice | client_error_ratio | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.9σ
+- adservice | error | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.9σ
+- adservice | error_ratio | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.9σ
+- adservice | timeout | 판정 불가(30포인트 미만): first 07:12:00 (+2m), peak 07:12:00 (+2m), deviation_score ≈ 3.9σ
+- tikv | store_size{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 07:10:00 (+0m), peak 07:10:00 (+0m), deviation_score ≈ 3.9σ
+- tidb | qps{type=Update,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.8σ
+- adservice-2 | pod_fs_reads_bytes{device=/dev/dm-0} | 판정 불가(30포인트 미만): first 07:10:00 (+0m), peak 07:10:00 (+0m), deviation_score ≈ 3.7σ
+- adservice-2 | pod_fs_reads_bytes{device=/dev/vdb} | 판정 불가(30포인트 미만): first 07:10:00 (+0m), peak 07:10:00 (+0m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=dm-0,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 07:10:00 (+0m), peak 07:10:00 (+0m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=dm-0,instance=223.193.36.130} | 판정 불가(30포인트 미만): first 07:10:00 (+0m), peak 07:10:00 (+0m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=vdb,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 07:10:00 (+0m), peak 07:10:00 (+0m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=vdb,instance=223.193.36.130} | 판정 불가(30포인트 미만): first 07:10:00 (+0m), peak 07:10:00 (+0m), deviation_score ≈ 3.7σ
+- tidb | qps{type=Insert,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.7σ
+- tidb | qps{type=Begin,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.6σ
+- tidb | qps{type=Commit,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.6σ
+- adservice-2 | rrt | 판정 불가(30포인트 미만): first 07:12:00 (+2m), peak 07:12:00 (+2m), deviation_score ≈ 3.4σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.3σ
+- adservice-2 | response | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.3σ
+- adservice-2 | request | 판정 불가(30포인트 미만): first 07:11:00 (+1m), peak 07:11:00 (+1m), deviation_score ≈ 3.3σ
+- adservice | rrt_max | 판정 불가(30포인트 미만): first 07:12:00 (+2m), peak 07:12:00 (+2m), deviation_score ≈ 3.1σ
+
+[log] 행 117658개, 키워드 일치 0개
+
+[trace] span 3개, 고지연 0건

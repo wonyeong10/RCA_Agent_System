@@ -1,0 +1,72 @@
+조회 구간: 2025-06-05T19:10:07Z ~ 2025-06-05T19:33:07Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1119개, 최대 24포인트, 이상 101개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, redis-cart-0, cartservice-2, tidb, aiops-k8s-06
+Top-5 metrics with largest deviations: client_error, duration_95th{instance=10.233.79.158:10080}, error, io_util{device=dm-0,instance=10.233.85.137:9100}, io_util{device=dm-0,instance=223.193.36.129}
+Metric descriptions sorted by deviation_score:
+- cartservice-2 | client_error | 판정 불가(30포인트 미만): first 19:16:00 (+6m), peak 19:16:00 (+6m), deviation_score ≈ 4.8σ
+- cartservice-2 | error | 판정 불가(30포인트 미만): first 19:16:00 (+6m), peak 19:16:00 (+6m), deviation_score ≈ 4.8σ
+- aiops-k8s-06 | node_disk_read_bytes_total{device=vda} | 판정 불가(30포인트 미만): first 19:25:00 (+15m), peak 19:25:00 (+15m), deviation_score ≈ 4.8σ
+- tidb | duration_95th{instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.8σ
+- tikv | io_util{device=dm-0,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.8σ
+- tikv | io_util{device=dm-0,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.8σ
+- tikv | io_util{device=vda,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.8σ
+- tikv | io_util{device=vda,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.8σ
+- tikv | io_util{device=vdb,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.8σ
+- tikv | io_util{device=vdb,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.8σ
+- tikv | raft_apply_wait{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 19:14:00 (+4m), peak 19:14:00 (+4m), deviation_score ≈ 4.8σ
+- cartservice-2 | client_error_ratio | 판정 불가(30포인트 미만): first 19:16:00 (+6m), peak 19:16:00 (+6m), deviation_score ≈ 4.8σ
+- cartservice-2 | error_ratio | 판정 불가(30포인트 미만): first 19:16:00 (+6m), peak 19:16:00 (+6m), deviation_score ≈ 4.8σ
+- redis-cart-0 | timeout | 판정 불가(30포인트 미만): first 19:24:00 (+14m), peak 19:24:00 (+14m), deviation_score ≈ 4.8σ
+- redis-cart-0 | pod_cpu_usage | 판정 불가(30포인트 미만): first 19:26:00 (+16m), peak 19:26:00 (+16m), deviation_score ≈ 4.8σ
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/dm-0} | 판정 불가(30포인트 미만): first 19:26:00 (+16m), peak 19:26:00 (+16m), deviation_score ≈ 4.8σ
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/vdb} | 판정 불가(30포인트 미만): first 19:26:00 (+16m), peak 19:26:00 (+16m), deviation_score ≈ 4.8σ
+- redis-cart-0 | pod_processes | 판정 불가(30포인트 미만): first 19:26:00 (+16m), peak 19:26:00 (+16m), deviation_score ≈ 4.8σ
+- aiops-k8s-06 | node_memory_usage_rate | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.8σ
+- aiops-k8s-06 | node_memory_MemAvailable_bytes | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.8σ
+- tikv | grpc_qps{type=kv_prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.8σ
+- tikv | snapshot_apply_count{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.8σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.8σ
+- tikv | qps{type=prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.8σ
+- tidb | qps{type=Begin,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.7σ
+- tidb | qps{type=Commit,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.7σ
+- tidb | qps{type=Update,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.7σ
+- tikv | read_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 19:10:00 (+0m), peak 19:10:00 (+0m), deviation_score ≈ 4.0σ
+- tikv | write_wal_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 19:10:00 (+0m), peak 19:10:00 (+0m), deviation_score ≈ 4.0σ
+- tikv | cpu_usage{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 4.0σ
+
+[log] 행 60020개, 키워드 일치 0개
+
+[trace] span 62515개, 호출 유형별 p95 초과 3134건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <19:30:00 (+20m)~+60s, Callee=emailservice-2, Count=1 (100%), MaxLatency=1231us, Callers=[checkoutservice-2×1]>
+- <19:12:00 (+2m)~+60s, Callee=cartservice-2, Count=2 (100%), MaxLatency=5819us, Callers=[checkoutservice-2×2]>
+- <19:26:00 (+16m)~+60s, Callee=emailservice-0, Count=1 (50%), MaxLatency=3135us, Callers=[checkoutservice-2×1]>
+- <19:25:00 (+15m)~+60s, Callee=emailservice-0, Count=1 (50%), MaxLatency=1107us, Callers=[checkoutservice-2×1]>
+- <19:18:00 (+8m)~+60s, Callee=cartservice-1, Count=1 (50%), MaxLatency=4075us, Callers=[checkoutservice-2×1]>
+- <19:14:00 (+4m)~+60s, Callee=shippingservice-1, Count=1 (50%), MaxLatency=1308us, Callers=[checkoutservice-2×1]>
+- <19:14:00 (+4m)~+60s, Callee=cartservice-2, Count=1 (50%), MaxLatency=5041us, Callers=[checkoutservice-2×1]>
+- <19:31:00 (+21m)~+60s, Callee=shippingservice-2, Count=2 (40%), MaxLatency=1219us, Callers=[checkoutservice-2×2]>
+- <19:31:00 (+21m)~+60s, Callee=emailservice-1, Count=1 (33%), MaxLatency=1032us, Callers=[checkoutservice-2×1]>
+- <19:24:00 (+14m)~+60s, Callee=cartservice-1, Count=1 (33%), MaxLatency=7943us, Callers=[checkoutservice-2×1]>
+- <19:19:00 (+9m)~+60s, Callee=emailservice-0, Count=1 (33%), MaxLatency=955us, Callers=[checkoutservice-2×1]>
+- <19:11:00 (+1m)~+60s, Callee=emailservice-0, Count=1 (33%), MaxLatency=1002us, Callers=[checkoutservice-2×1]>
+- <19:19:00 (+9m)~+60s, Callee=shippingservice-2, Count=1 (25%), MaxLatency=810us, Callers=[checkoutservice-2×1]>
+- <19:31:00 (+21m)~+60s, Callee=cartservice-2, Count=1 (20%), MaxLatency=14110us, Callers=[checkoutservice-2×1]>
+- <19:29:00 (+19m)~+60s, Callee=shippingservice-2, Count=1 (20%), MaxLatency=557us, Callers=[checkoutservice-2×1]>
+- <19:25:00 (+15m)~+60s, Callee=cartservice-2, Count=1 (20%), MaxLatency=5112us, Callers=[checkoutservice-2×1]>
+- <19:19:00 (+9m)~+60s, Callee=cartservice-1, Count=1 (20%), MaxLatency=12147us, Callers=[checkoutservice-2×1]>
+- <19:17:00 (+7m)~+60s, Callee=cartservice-1, Count=1 (20%), MaxLatency=6577us, Callers=[checkoutservice-2×1]>
+- <19:13:00 (+3m)~+60s, Callee=cartservice-2, Count=1 (20%), MaxLatency=7620us, Callers=[checkoutservice-2×1]>
+- <19:12:00 (+2m)~+60s, Callee=checkoutservice-2, Count=7 (19%), MaxLatency=225349us, Callers=[checkoutservice-2×4, frontend-2×1, (root)×1]>
+Three-hop call paths statistics:
+- "(root) → frontend-1 → frontend-1" has occurred 643 times in the time window
+- "(root) → frontend-0 → frontend-0" has occurred 474 times in the time window
+- "(root) → frontend-2 → frontend-2" has occurred 455 times in the time window
+- "frontend-1 → frontend-1 → productcatalogservice-2" has occurred 305 times in the time window
+- "frontend-0 → frontend-0 → productcatalogservice-2" has occurred 194 times in the time window
+- "frontend-2 → frontend-2 → productcatalogservice-1" has occurred 176 times in the time window
+- "recommendationservice-0 → recommendationservice-0 → productcatalogservice-1" has occurred 104 times in the time window
+- "(root) → (root) → frontend-1" has occurred 64 times in the time window
+- "frontend-1 → cartservice-0 → redis" has occurred 54 times in the time window
+- "frontend-1 → frontend-1 → cartservice-0" has occurred 52 times in the time window

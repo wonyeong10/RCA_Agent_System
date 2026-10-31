@@ -1,0 +1,109 @@
+조회 구간: 2025-06-12T20:10:09Z ~ 2025-06-12T20:30:09Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1137개, 최대 21포인트, 이상 228개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, productcatalogservice-1, adservice-1, currencyservice-1, cartservice-2
+Top-5 metrics with largest deviations: pod_network_receive_packets, pod_network_transmit_bytes, pod_network_transmit_packets, pod_network_receive_bytes, response
+Metric descriptions sorted by deviation_score:
+- cartservice-2 | pod_cpu_usage | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.5σ
+- currencyservice-1 | pod_cpu_usage | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.5σ
+- productcatalogservice-1 | pod_cpu_usage | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=dm-0,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=dm-0,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=vda,instance=10.233.79.155:9100} | 판정 불가(30포인트 미만): first 20:16:00 (+6m), peak 20:16:00 (+6m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=vda,instance=223.193.36.128} | 판정 불가(30포인트 미만): first 20:16:00 (+6m), peak 20:16:00 (+6m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=vdb,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=vdb,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- tikv | raft_propose_wait{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:13:00 (+3m), peak 20:13:00 (+3m), deviation_score ≈ 4.5σ
+- productcatalogservice-1 | client_error | 판정 불가(30포인트 미만): first 20:20:00 (+10m), peak 20:20:00 (+10m), deviation_score ≈ 4.5σ
+- productcatalogservice-1 | client_error_ratio | 판정 불가(30포인트 미만): first 20:20:00 (+10m), peak 20:20:00 (+10m), deviation_score ≈ 4.5σ
+- productcatalogservice-1 | error | 판정 불가(30포인트 미만): first 20:20:00 (+10m), peak 20:20:00 (+10m), deviation_score ≈ 4.5σ
+- productcatalogservice-1 | error_ratio | 판정 불가(30포인트 미만): first 20:20:00 (+10m), peak 20:20:00 (+10m), deviation_score ≈ 4.5σ
+- cartservice-2 | rrt | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- cartservice-2 | rrt_max | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- tikv | read_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- tikv | write_wal_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- tikv | grpc_qps{type=kv_prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.4σ
+- tikv | qps{type=prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.4σ
+- adservice-1 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.4σ
+- adservice-1 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.4σ
+- currencyservice-1 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.4σ
+- currencyservice-1 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.4σ
+- productcatalogservice-1 | request | 판정 불가(30포인트 미만): first 20:30:00 (+20m), peak 20:30:00 (+20m), deviation_score ≈ 4.4σ
+- currencyservice-1 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.4σ
+- productcatalogservice-1 | response | 판정 불가(30포인트 미만): first 20:30:00 (+20m), peak 20:30:00 (+20m), deviation_score ≈ 4.4σ
+- cartservice-2 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.4σ
+- tikv | io_util{device=vda,instance=223.193.36.126} | 판정 불가(30포인트 미만): first 20:23:00 (+13m), peak 20:23:00 (+13m), deviation_score ≈ 4.4σ
+
+[log] 행 4648개, 키워드 일치 587개, 템플릿 7종 중 상위 20% 2종, 출력 36건
+Failure-indicative log entries after two-stage filtering:
+- 20:11:14 (+1m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"0b1bb7dc-b3cd-49d1-9281-27f0933ae969","http.req.method":"GET","http.req.path":"/product/66VCHSJNUP","message":"request error","session":"7dbbf7bf-d94d-4eca-810b-c29f467c6a25","severity":"error","tim
+- 20:12:12 (+2m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"087989c0-a497-4b82-8f93-3131e35c9668","http.req.method":"GET","http.req.path":"/product/0PUK6V6EV0","message":"request error","session":"78e759a6-ebd7-4135-8be8-3160408c44b7","severity":"error","tim
+- 20:13:19 (+3m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"c02df69f-a6db-41bf-8c82-0e96202f7e83","http.req.method":"GET","http.req.path":"/product/66VCHSJNUP","message":"request error","session":"78e759a6-ebd7-4135-8be8-3160408c44b7","severity":"error","tim
+- 20:14:21 (+4m) <frontend-0> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"e88f9d60-b779-43e2-9fa4-898386218a0b","http.req.method":"GET","http.req.path":"/product/6E92ZMYYFZ","message":"request error","session":"78e759a6-ebd7-4135-8be8-3160408c44b7","severity":"error","tim
+- 20:14:34 (+4m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"f157f939-f1ea-41a1-badb-3ba0d8be7d0c","http.req.method":"GET","http.req.path":"/product/L9ECAV7KIM","message":"
+- 20:15:16 (+5m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"01d18f7c-2c6b-491c-bccf-41439d5821a2","http.req.method":"GET","http.req.path":"/product/6E92ZMYYFZ","message":"
+- 20:15:31 (+5m) <frontend-1> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"c109e605-81f7-4ad6-bcc1-e951dd01a0cb","http.req.method":"GET","http.req.path":"/product/0PUK6V6EV0","message":"request error","session":"78e759a6-ebd7-4135-8be8-3160408c44b7","severity":"error","tim
+- 20:16:03 (+6m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"2e560b05-f968-4d40-8cc8-124f083507b7","http.req.method":"GET","http.req.path":"/product/66VCHSJNUP","message":"
+- 20:16:51 (+6m) <frontend-0> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"1e9d51d2-db04-4b57-a255-002051c25ec6","http.req.method":"GET","http.req.path":"/cart","message":"request error","session":"5a60b131-0470-4a9f-85a8-4953492c3a3d","severity":"error","timestamp":"2025-
+- 20:17:01 (+7m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"407b7351-5b7d-4872-b446-9e453cb838b6","http.req.method":"GET","http.req.path":"/product/9SIQT8TOJO","message":"
+- 20:17:03 (+7m) <frontend-0> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"eea01af5-ef67-46dd-bf82-0fc11d4ac3a1","http.req.method":"GET","http.req.path":"/product/OLJCESPC7Z","message":"request error","session":"354642cf-0a3f-4096-a8c0-bc19affd33f5","severity":"error","tim
+- 20:18:00 (+8m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"f1752270-bbd2-4989-ae3d-4df17bd8da55","http.req.method":"GET","http.req.path":"/cart","message":"request error"
+- 20:18:01 (+8m) <frontend-1> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"e72a11f3-924f-4ee8-9f3f-1e6459aee938","http.req.method":"GET","http.req.path":"/","message":"request error","session":"8a3ad229-5ccd-4058-a16b-feca0220061f","severity":"error","timestamp":"2025-06-1
+- 20:19:00 (+9m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"061c8654-e3d3-431e-b496-62b41f48dd7c","http.req.method":"GET","http.req.path":"/cart","message":"request error"
+- 20:19:05 (+9m) <frontend-1> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"efca04e5-b8eb-4c6d-b689-270cb6ce7a18","http.req.method":"GET","http.req.path":"/","message":"request error","session":"27924d6c-1a0e-42ff-88f4-b8c3d21f65b7","severity":"error","timestamp":"2025-06-1
+- 20:20:15 (+10m) <frontend-0> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"143fbc96-8dd4-4b06-b6a1-444243938f44","http.req.method":"GET","http.req.path":"/","message":"request error","session":"27924d6c-1a0e-42ff-88f4-b8c3d21f65b7","severity":"error","timestamp":"2025-06-1
+- 20:20:47 (+10m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"3ca9d99c-261e-4eaf-a685-2dca7292cdef","http.req.method":"GET","http.req.path":"/product/6E92ZMYYFZ","message":"
+- 20:21:07 (+11m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"9743df22-6045-44f9-bd5b-6618f0e9795a","http.req.method":"GET","http.req.path":"/product/0PUK6V6EV0","message":"
+- 20:21:23 (+11m) <frontend-1> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"d7883116-987c-4d34-a4ff-5f67b28883ab","http.req.method":"GET","http.req.path":"/product/LS4PSXUNUM","message":"request error","session":"27924d6c-1a0e-42ff-88f4-b8c3d21f65b7","severity":"error","tim
+- 20:22:00 (+12m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"26649240-03bb-4d51-9a70-b0d18e86dfd0","http.req.method":"GET","http.req.path":"/product/9SIQT8TOJO","message":"
+- 20:22:39 (+12m) <frontend-0> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"08eca1e4-09b3-4dfd-ab49-a90b78318818","http.req.method":"GET","http.req.path":"/product/6E92ZMYYFZ","message":"request error","session":"39b9d612-3448-4261-b63f-11585ac10c37","severity":"error","tim
+- 20:23:07 (+13m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"38349dc5-ff24-439f-9687-38b6476b2675","http.req.method":"GET","http.req.path":"/","message":"request error","session":"25b2993c-318f-49e3-81b5-4aa28b95be93","severity":"error","timestamp":"2025-06-1
+- 20:23:45 (+13m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"9ccea2ad-c951-4194-93bf-d9609776645b","http.req.method":"GET","http.req.path":"/","message":"request error","se
+- 20:24:02 (+14m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"d7931b2e-f642-4a77-ba75-c77acbe4fcbc","http.req.method":"GET","http.req.path":"/product/L9ECAV7KIM","message":"
+- 20:24:12 (+14m) <frontend-1> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"d0e4216a-7b4c-4b2b-938c-396689ff48a9","http.req.method":"GET","http.req.path":"/product/66VCHSJNUP","message":"request error","session":"a8217369-5e0b-42ec-9c9e-b028893e8863","severity":"error","tim
+- 20:25:00 (+15m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"09481df2-4302-42d1-9ed1-2ae8b0b75fb1","http.req.method":"GET","http.req.path":"/product/OLJCESPC7Z","message":"
+- 20:25:15 (+15m) <frontend-1> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"b5c15e71-b154-43e6-bd9f-9c4d0f34a354","http.req.method":"GET","http.req.path":"/product/66VCHSJNUP","message":"request error","session":"19fd61a9-b61f-4977-b888-c9b49a3b5ffb","severity":"error","tim
+- 20:26:04 (+16m) <frontend-0> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"6e802cee-7ab7-489c-871e-07e57b15774e","http.req.method":"GET","http.req.path":"/cart","message":"request error","session":"10bf27f1-8fa9-406d-bb44-47618b021e2f","severity":"error","timestamp":"2025-
+- 20:26:26 (+16m) <frontend-1> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"70f16413-65e9-4095-a31b-3fce5c1ae79c","http.req.method":"GET","http.req.path":"/cart","message":"request error"
+- 20:27:09 (+17m) <frontend-1> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"dcad64f5-9156-4b29-a1de-74f98cd1a90d","http.req.method":"GET","http.req.path":"/cart","message":"request error"
+- 20:28:02 (+18m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"afe3d437-007e-4c14-b1bd-cd40080b0ae0","http.req.method":"GET","http.req.path":"/","message":"request error","se
+- 20:28:39 (+18m) <frontend-0> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"c1230c38-03c8-44d3-ae31-807f79671b70","http.req.method":"GET","http.req.path":"/","message":"request error","session":"7e73168f-9a1d-4532-b453-262f3da1c113","severity":"error","timestamp":"2025-06-1
+- 20:29:00 (+19m) <frontend-1> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"67f2ff6e-b0b1-4a89-a3c8-930577c25c4f","http.req.method":"GET","http.req.path":"/product/2ZYFJ3GM2N","message":"
+- 20:29:44 (+19m) <frontend-0> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"bfadffe4-5d7e-4bda-a331-9bbf4ceaa446","http.req.method":"GET","http.req.path":"/cart","message":"request error","session":"1d42f855-cb5a-44ff-86e6-b9ff1d36de44","severity":"error","timestamp":"2025-
+- 20:30:00 (+20m) <frontend-1> | {"error":"could not retrieve cart: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.46.196:7070: i/o timeout\"","http.req.id":"ad26ea84-2cd2-41a3-b54c-117dbe1bc558","http.req.method":"GET","http.req.path":"/product/9SIQT8TOJO","message":"
+- 20:30:02 (+20m) <frontend-2> | {"error":"could not retrieve cart: rpc error: code = Canceled desc = context canceled","http.req.id":"7c286e7d-afbc-45bb-8911-bd8d69cd3ffc","http.req.method":"GET","http.req.path":"/product/OLJCESPC7Z","message":"request error","session":"656842b5-4979-41d2-b307-f56dbd73d983","severity":"error","tim
+
+[trace] span 4111개, 호출 유형별 p95 초과 218건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <20:27:00 (+17m)~+60s, Callee=emailservice, Count=1 (50%), MaxLatency=988us, Callers=[checkoutservice×1]>
+- <20:13:00 (+3m)~+60s, Callee=recommendationservice, Count=1 (50%), MaxLatency=3963us, Callers=[recommendationservice×1]>
+- <20:10:00 (+0m)~+60s, Callee=emailservice, Count=1 (50%), MaxLatency=1370us, Callers=[checkoutservice×1]>
+- <20:24:00 (+14m)~+60s, Callee=recommendationservice, Count=2 (33%), MaxLatency=8883us, Callers=[frontend×1, recommendationservice×1]>
+- <20:27:00 (+17m)~+60s, Callee=cartservice, Count=2 (29%), MaxLatency=22944us, Callers=[frontend×2]>
+- <20:13:00 (+3m)~+60s, Callee=checkoutservice, Count=3 (25%), MaxLatency=162990us, Callers=[checkoutservice×2, frontend×1]>
+- <20:11:00 (+1m)~+60s, Callee=checkoutservice, Count=3 (25%), MaxLatency=206377us, Callers=[checkoutservice×2, frontend×1]>
+- <20:15:00 (+5m)~+60s, Callee=productcatalogservice, Count=3 (20%), MaxLatency=27975us, Callers=[frontend×3]>
+- <20:28:00 (+18m)~+60s, Callee=shippingservice, Count=1 (17%), MaxLatency=468us, Callers=[checkoutservice×1]>
+- <20:24:00 (+14m)~+60s, Callee=redis, Count=1 (17%), MaxLatency=2486us, Callers=[cartservice×1]>
+- <20:24:00 (+14m)~+60s, Callee=cartservice, Count=1 (17%), MaxLatency=5425us, Callers=[checkoutservice×1]>
+- <20:21:00 (+11m)~+60s, Callee=shippingservice, Count=1 (17%), MaxLatency=631us, Callers=[checkoutservice×1]>
+- <20:21:00 (+11m)~+60s, Callee=redis, Count=1 (17%), MaxLatency=3599us, Callers=[cartservice×1]>
+- <20:21:00 (+11m)~+60s, Callee=recommendationservice, Count=1 (17%), MaxLatency=5399us, Callers=[frontend×1]>
+- <20:21:00 (+11m)~+60s, Callee=cartservice, Count=1 (17%), MaxLatency=4644us, Callers=[checkoutservice×1]>
+- <20:20:00 (+10m)~+60s, Callee=productcatalogservice, Count=2 (17%), MaxLatency=14789us, Callers=[frontend×2]>
+- <20:16:00 (+6m)~+60s, Callee=shippingservice, Count=1 (17%), MaxLatency=488us, Callers=[checkoutservice×1]>
+- <20:13:00 (+3m)~+60s, Callee=frontend, Count=8 (16%), MaxLatency=60002958us, Callers=[frontend×5, (root)×3]>
+- <20:29:00 (+19m)~+60s, Callee=cartservice, Count=1 (14%), MaxLatency=3586us, Callers=[frontend×1]>
+- <20:15:00 (+5m)~+60s, Callee=frontend, Count=9 (13%), MaxLatency=60001746us, Callers=[frontend×7, (root)×2]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 106 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 36 times in the time window
+- "(root) → (root) → frontend" has occurred 35 times in the time window
+- "frontend → checkoutservice → checkoutservice" has occurred 13 times in the time window
+- "checkoutservice → checkoutservice → shippingservice" has occurred 4 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 3 times in the time window
+- "checkoutservice → checkoutservice → cartservice" has occurred 3 times in the time window
+- "checkoutservice → cartservice → redis" has occurred 3 times in the time window
+- "frontend → frontend → cartservice" has occurred 3 times in the time window
+- "(root) → (root) → checkoutservice" has occurred 2 times in the time window

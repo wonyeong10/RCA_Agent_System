@@ -1,0 +1,97 @@
+조회 구간: 2025-06-19T18:10:03Z ~ 2025-06-19T18:34:03Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1127개, 최대 25포인트, 이상 160개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, paymentservice-1, paymentservice-2, shippingservice-1, currencyservice-1
+Top-5 metrics with largest deviations: pod_network_transmit_packets, pod_network_receive_packets, pod_network_transmit_bytes, pod_network_receive_bytes, pod_memory_working_set_bytes
+Metric descriptions sorted by deviation_score:
+- paymentservice-1 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 18:10:00 (+0m), peak 18:10:00 (+0m), deviation_score ≈ 4.9σ
+- paymentservice-2 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 18:17:00 (+7m), peak 18:17:00 (+7m), deviation_score ≈ 4.9σ
+- paymentservice-2 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 18:17:00 (+7m), peak 18:17:00 (+7m), deviation_score ≈ 4.9σ
+- paymentservice-1 | pod_memory_working_set_bytes | 판정 불가(30포인트 미만): first 18:10:00 (+0m), peak 18:10:00 (+0m), deviation_score ≈ 4.9σ
+- paymentservice-1 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 18:10:00 (+0m), peak 18:10:00 (+0m), deviation_score ≈ 4.9σ
+- paymentservice-2 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 18:17:00 (+7m), peak 18:17:00 (+7m), deviation_score ≈ 4.9σ
+- paymentservice-1 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 18:10:00 (+0m), peak 18:10:00 (+0m), deviation_score ≈ 4.9σ
+- paymentservice-2 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 18:17:00 (+7m), peak 18:17:00 (+7m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=dm-0,instance=10.233.79.155:9100} | 판정 불가(30포인트 미만): first 18:11:00 (+1m), peak 18:11:00 (+1m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=dm-0,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 18:28:00 (+18m), peak 18:28:00 (+18m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=dm-0,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 18:28:00 (+18m), peak 18:28:00 (+18m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vda,instance=10.233.78.243:9100} | 판정 불가(30포인트 미만): first 18:31:00 (+21m), peak 18:31:00 (+21m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vda,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 18:28:00 (+18m), peak 18:28:00 (+18m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vda,instance=223.193.36.130} | 판정 불가(30포인트 미만): first 18:28:00 (+18m), peak 18:28:00 (+18m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vda,instance=223.193.36.56} | 판정 불가(30포인트 미만): first 18:31:00 (+21m), peak 18:31:00 (+21m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vdb,instance=10.233.79.155:9100} | 판정 불가(30포인트 미만): first 18:11:00 (+1m), peak 18:11:00 (+1m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vdb,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 18:28:00 (+18m), peak 18:28:00 (+18m), deviation_score ≈ 4.9σ
+- tikv | io_util{device=vdb,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 18:28:00 (+18m), peak 18:28:00 (+18m), deviation_score ≈ 4.9σ
+- paymentservice-1 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 18:10:00 (+0m), peak 18:10:00 (+0m), deviation_score ≈ 4.9σ
+- tikv | grpc_qps{type=kv_prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 18:28:00 (+18m), peak 18:28:00 (+18m), deviation_score ≈ 4.9σ
+- paymentservice-2 | pod_memory_working_set_bytes | 판정 불가(30포인트 미만): first 18:17:00 (+7m), peak 18:17:00 (+7m), deviation_score ≈ 4.8σ
+- tikv | snapshot_apply_count{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 18:28:00 (+18m), peak 18:28:00 (+18m), deviation_score ≈ 4.7σ
+- tikv | write_wal_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 18:11:00 (+1m), peak 18:11:00 (+1m), deviation_score ≈ 4.7σ
+- tikv | qps{type=prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 18:28:00 (+18m), peak 18:28:00 (+18m), deviation_score ≈ 4.6σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 18:28:00 (+18m), peak 18:28:00 (+18m), deviation_score ≈ 4.5σ
+- currencyservice-1 | pod_memory_working_set_bytes | 판정 불가(30포인트 미만): first 18:10:00 (+0m), peak 18:10:00 (+0m), deviation_score ≈ 4.3σ
+- currencyservice-1 | request | 판정 불가(30포인트 미만): first 18:34:00 (+24m), peak 18:34:00 (+24m), deviation_score ≈ 4.2σ
+- currencyservice-1 | response | 판정 불가(30포인트 미만): first 18:34:00 (+24m), peak 18:34:00 (+24m), deviation_score ≈ 4.2σ
+- currencyservice-1 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 18:10:00 (+0m), peak 18:10:00 (+0m), deviation_score ≈ 3.9σ
+- tikv | io_util{device=vda,instance=223.193.36.109} | 판정 불가(30포인트 미만): first 18:34:00 (+24m), peak 18:34:00 (+24m), deviation_score ≈ 3.9σ
+
+[log] 행 47509개, 키워드 일치 95개, 템플릿 2종 중 상위 20% 1종, 출력 24건
+Failure-indicative log entries after two-stage filtering:
+- 18:10:32 (+0m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"2ZYFJ3GM2N\"","http.req.id":"f2076898-45fd-404a-ab21-a6306c94e3dc","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"91943e53-03eb-
+- 18:11:12 (+1m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"LS4PSXUNUM\"","http.req.id":"fa7b1bb9-3852-4b65-8cbb-4435458a6c40","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"f7a02408-4a89-
+- 18:12:42 (+2m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"9SIQT8TOJO\"","http.req.id":"e5394232-24d9-410c-8c5f-8864a4525288","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"ccba6e76-4ee0-
+- 18:13:01 (+3m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"66VCHSJNUP\"","http.req.id":"2030555d-b093-43f2-bbb2-e0eb5440635f","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"49a0e158-1be1-
+- 18:14:28 (+4m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"6E92ZMYYFZ\"","http.req.id":"a0701872-17d9-471d-99c1-e233bde9bf48","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"48eb4768-1889-
+- 18:15:14 (+5m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"L9ECAV7KIM\"","http.req.id":"7643811d-0416-4411-833b-00877651712a","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"206b6047-6d8e-
+- 18:16:39 (+6m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"9SIQT8TOJO\"","http.req.id":"dfa229b9-6290-49ff-8e01-1b28c90ffb51","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"5fdd7dce-5750-
+- 18:17:02 (+7m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"1YMWWN1N4O\"","http.req.id":"883f11c6-f186-4068-b6fb-e6e65a116819","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"49be532a-cd76-
+- 18:18:06 (+8m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"1YMWWN1N4O\"","http.req.id":"fea7eadb-446d-49b4-8328-991be5da0412","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"f0ce7d15-54f2-
+- 18:19:47 (+9m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"OLJCESPC7Z\"","http.req.id":"b070f25d-db58-481b-90b3-fd8afb63fdac","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"e0923164-9f3f-
+- 18:20:26 (+10m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"2ZYFJ3GM2N\"","http.req.id":"28cd7ec9-ac56-41ed-bcd0-b05b563336da","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"937b1cbf-6773-
+- 18:21:04 (+11m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"9SIQT8TOJO\"","http.req.id":"b020e243-88c6-44e9-aca3-90b255078847","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"288c1930-b7f6-
+- 18:22:05 (+12m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"2ZYFJ3GM2N\"","http.req.id":"560a5712-90f8-4d0b-ac61-e05c957d073e","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"39d591b5-442a-
+- 18:23:08 (+13m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"1YMWWN1N4O\"","http.req.id":"ff4c4278-b596-42bb-a4cb-9bafea6605ef","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"d53fc7fe-db54-
+- 18:24:09 (+14m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"66VCHSJNUP\"","http.req.id":"76abad34-4406-4142-8888-0fefc7411718","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"ce51518c-01e4-
+- 18:25:07 (+15m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"66VCHSJNUP\"","http.req.id":"3909d5b4-079c-47ad-ae33-f7f6ad382489","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"0036fd0b-94f7-
+- 18:26:04 (+16m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"2ZYFJ3GM2N\"","http.req.id":"c9baeefc-1ed8-4ce6-bc5f-c1e9c62a40d4","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"97266715-76d2-
+- 18:27:20 (+17m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"L9ECAV7KIM\"","http.req.id":"4d2eb1eb-61d4-466d-92d4-83edc5abe791","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"aef73c35-af0e-
+- 18:28:01 (+18m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"OLJCESPC7Z\"","http.req.id":"1a899a32-2c32-4f3e-ac24-b08c16d8ddf0","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"3953ab78-ac04-
+- 18:29:26 (+19m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"0PUK6V6EV0\"","http.req.id":"85cfd4a1-3457-45fc-8e80-0ee4bae7b4da","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"ea965420-cc48-
+- 18:30:10 (+20m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"LS4PSXUNUM\"","http.req.id":"f546d8b5-99ca-4092-91f9-48ebd23ae441","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"95e99716-206b-
+- 18:31:28 (+21m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"66VCHSJNUP\"","http.req.id":"8c01ec15-5aa9-4771-b038-7e9759a7f0fe","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"8e8f0817-201e-
+- 18:32:13 (+22m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"9SIQT8TOJO\"","http.req.id":"f891a081-080e-48b7-982c-3105488f5cde","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"c9885395-0f60-
+- 18:33:08 (+23m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to prepare order: failed to get product #\"2ZYFJ3GM2N\"","http.req.id":"69edb675-a479-4f9d-b89a-8ea6e7f84ec6","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"ce9ed0f9-2bb8-
+
+[trace] span 49130개, 호출 유형별 p95 초과 2467건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <18:16:00 (+6m)~+60s, Callee=emailservice, Count=1 (100%), MaxLatency=717us, Callers=[checkoutservice×1]>
+- <18:27:00 (+17m)~+60s, Callee=checkoutservice, Count=3 (20%), MaxLatency=60000592us, Callers=[checkoutservice×2, frontend×1]>
+- <18:30:00 (+20m)~+60s, Callee=shippingservice, Count=1 (17%), MaxLatency=624us, Callers=[frontend×1]>
+- <18:28:00 (+18m)~+60s, Callee=checkoutservice, Count=2 (17%), MaxLatency=59992131us, Callers=[checkoutservice×2]>
+- <18:23:00 (+13m)~+60s, Callee=shippingservice, Count=4 (17%), MaxLatency=2115us, Callers=[frontend×4]>
+- <18:16:00 (+6m)~+60s, Callee=checkoutservice, Count=3 (17%), MaxLatency=60000761us, Callers=[(root)×1, checkoutservice×1, frontend×1]>
+- <18:24:00 (+14m)~+60s, Callee=checkoutservice, Count=2 (13%), MaxLatency=60000821us, Callers=[frontend×1, checkoutservice×1]>
+- <18:18:00 (+8m)~+60s, Callee=shippingservice, Count=2 (13%), MaxLatency=771us, Callers=[frontend×2]>
+- <18:33:00 (+23m)~+60s, Callee=cartservice, Count=12 (12%), MaxLatency=86132us, Callers=[frontend×12]>
+- <18:29:00 (+19m)~+60s, Callee=checkoutservice, Count=2 (12%), MaxLatency=59994138us, Callers=[checkoutservice×2]>
+- <18:27:00 (+17m)~+60s, Callee=shippingservice, Count=2 (11%), MaxLatency=617us, Callers=[frontend×2]>
+- <18:22:00 (+12m)~+60s, Callee=checkoutservice, Count=1 (11%), MaxLatency=59991872us, Callers=[checkoutservice×1]>
+- <18:26:00 (+16m)~+60s, Callee=checkoutservice, Count=2 (11%), MaxLatency=9399us, Callers=[checkoutservice×2]>
+- <18:20:00 (+10m)~+60s, Callee=shippingservice, Count=2 (11%), MaxLatency=712us, Callers=[frontend×2]>
+- <18:15:00 (+5m)~+60s, Callee=shippingservice, Count=2 (11%), MaxLatency=700us, Callers=[frontend×2]>
+- <18:33:00 (+23m)~+60s, Callee=redis, Count=11 (10%), MaxLatency=85114us, Callers=[cartservice×11]>
+- <18:20:00 (+10m)~+60s, Callee=redis, Count=10 (10%), MaxLatency=58778us, Callers=[cartservice×10]>
+- <18:12:00 (+2m)~+60s, Callee=checkoutservice, Count=2 (10%), MaxLatency=60001132us, Callers=[frontend×1, checkoutservice×1]>
+- <18:33:00 (+23m)~+60s, Callee=recommendationservice, Count=14 (9%), MaxLatency=7570us, Callers=[frontend×8, recommendationservice×6]>
+- <18:10:00 (+0m)~+60s, Callee=shippingservice, Count=3 (9%), MaxLatency=766us, Callers=[frontend×3]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 1270 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 530 times in the time window
+- "(root) → (root) → frontend" has occurred 123 times in the time window
+- "frontend → cartservice → redis" has occurred 115 times in the time window
+- "frontend → frontend → cartservice" has occurred 107 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 88 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 83 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 83 times in the time window
+- "frontend → frontend → shippingservice" has occurred 25 times in the time window
+- "frontend → checkoutservice → checkoutservice" has occurred 16 times in the time window

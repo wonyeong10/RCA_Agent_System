@@ -1,0 +1,83 @@
+조회 구간: 2025-06-13T17:10:04Z ~ 2025-06-13T17:20:04Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1141개, 최대 11포인트, 이상 170개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, adservice-0, frontend-1, productcatalogservice-0, frontend-2
+Top-5 metrics with largest deviations: pod_cpu_usage, pod_network_transmit_packets, pod_network_transmit_bytes, pod_network_receive_bytes, pod_network_receive_packets
+Metric descriptions sorted by deviation_score:
+- tikv | io_util{device=vda,instance=10.233.83.32:9100} | 판정 불가(30포인트 미만): first 17:11:00 (+1m), peak 17:11:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vda,instance=223.193.36.124} | 판정 불가(30포인트 미만): first 17:11:00 (+1m), peak 17:11:00 (+1m), deviation_score ≈ 3.2σ
+- frontend-1 | timeout | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.2σ
+- adservice-0 | pod_cpu_usage | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.2σ
+- frontend-1 | pod_cpu_usage | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.2σ
+- frontend-2 | pod_cpu_usage | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.2σ
+- productcatalogservice-0 | pod_cpu_usage | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=dm-0,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 17:11:00 (+1m), peak 17:11:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vdb,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 17:11:00 (+1m), peak 17:11:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | qps{type=scan_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 17:11:00 (+1m), peak 17:11:00 (+1m), deviation_score ≈ 3.2σ
+- frontend-2 | rrt_max | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.2σ
+- frontend-1 | rrt_max | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.2σ
+- productcatalogservice-0 | rrt | 판정 불가(30포인트 미만): first 17:15:00 (+5m), peak 17:15:00 (+5m), deviation_score ≈ 3.2σ
+- productcatalogservice-0 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.2σ
+- productcatalogservice-0 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.2σ
+- productcatalogservice-0 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.2σ
+- adservice-0 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.2σ
+- adservice-0 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.2σ
+- tikv | read_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 17:11:00 (+1m), peak 17:11:00 (+1m), deviation_score ≈ 3.2σ
+- productcatalogservice-0 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.2σ
+- adservice-0 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.2σ
+- adservice-0 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.2σ
+- frontend-2 | response | 판정 불가(30포인트 미만): first 17:20:00 (+10m), peak 17:20:00 (+10m), deviation_score ≈ 3.1σ
+- frontend-2 | request | 판정 불가(30포인트 미만): first 17:20:00 (+10m), peak 17:20:00 (+10m), deviation_score ≈ 3.1σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 17:11:00 (+1m), peak 17:11:00 (+1m), deviation_score ≈ 3.1σ
+- tikv | write_wal_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 17:11:00 (+1m), peak 17:11:00 (+1m), deviation_score ≈ 3.1σ
+- frontend-1 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.1σ
+- frontend-1 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.1σ
+- frontend-1 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 17:10:00 (+0m), peak 17:10:00 (+0m), deviation_score ≈ 3.1σ
+- adservice-0 | request | 판정 불가(30포인트 미만): first 17:20:00 (+10m), peak 17:20:00 (+10m), deviation_score ≈ 3.1σ
+
+[log] 행 2375개, 키워드 일치 88개, 템플릿 2종 중 상위 20% 1종, 출력 10건
+Failure-indicative log entries after two-stage filtering:
+- 17:11:10 (+1m) <frontend-1> | {"error":"failed to get product recommendations: rpc error: code = Canceled desc = context canceled","http.req.id":"e7891e9a-3947-4eee-8398-21b4e4d3e500","http.req.method":"GET","http.req.path":"/product/2ZYFJ3GM2N","message":"request error","session":"ad2a2fc7-a80a-4620-8716-eba7f4d640c9","severity
+- 17:12:12 (+2m) <frontend-1> | {"error":"failed to get product recommendations: rpc error: code = Canceled desc = context canceled","http.req.id":"8fd4ccd3-863f-4788-a57e-3bf872bb7a27","http.req.method":"GET","http.req.path":"/product/1YMWWN1N4O","message":"request error","session":"affce7a8-b283-4c49-a9d0-73d72f4a4a11","severity
+- 17:13:17 (+3m) <frontend-2> | {"error":"failed to get product recommendations: rpc error: code = Canceled desc = context canceled","http.req.id":"a9aaeb66-737d-47a3-97e6-4dfbe86d003b","http.req.method":"GET","http.req.path":"/cart","message":"request error","session":"29a6d12e-6e6c-4a84-8c7e-555c5bb8b6fc","severity":"error","tim
+- 17:14:23 (+4m) <frontend-0> | {"error":"failed to get product recommendations: rpc error: code = Canceled desc = context canceled","http.req.id":"4093c59d-7600-46ef-b3b9-60f93135b681","http.req.method":"GET","http.req.path":"/product/6E92ZMYYFZ","message":"request error","session":"29a6d12e-6e6c-4a84-8c7e-555c5bb8b6fc","severity
+- 17:15:31 (+5m) <frontend-1> | {"error":"failed to get product recommendations: rpc error: code = Canceled desc = context canceled","http.req.id":"38668792-2282-4c84-a6bf-a179a7b4be86","http.req.method":"GET","http.req.path":"/product/L9ECAV7KIM","message":"request error","session":"237f8a7c-c996-4344-a4f9-19c517ce4c27","severity
+- 17:16:35 (+6m) <frontend-2> | {"error":"failed to get product recommendations: rpc error: code = Canceled desc = context canceled","http.req.id":"b7f411d8-a612-47b3-b5b7-78e2d5667688","http.req.method":"GET","http.req.path":"/cart","message":"request error","session":"29a6d12e-6e6c-4a84-8c7e-555c5bb8b6fc","severity":"error","tim
+- 17:17:37 (+7m) <frontend-0> | {"error":"failed to get product recommendations: rpc error: code = Canceled desc = context canceled","http.req.id":"a8f8c5de-a657-4137-bcbc-61e486d449ed","http.req.method":"GET","http.req.path":"/product/9SIQT8TOJO","message":"request error","session":"237f8a7c-c996-4344-a4f9-19c517ce4c27","severity
+- 17:18:06 (+8m) <frontend-0> | {"error":"failed to get product recommendations: rpc error: code = Canceled desc = context canceled","http.req.id":"10aee189-5608-46c9-b8b4-48e11cfe958f","http.req.method":"GET","http.req.path":"/product/L9ECAV7KIM","message":"request error","session":"95b1a1c6-a5bd-4ecb-9290-8ed9aa0a1c7d","severity
+- 17:19:08 (+9m) <frontend-1> | {"error":"failed to get product recommendations: rpc error: code = Canceled desc = context canceled","http.req.id":"5a3cc6cf-1851-44c2-8435-f570d90dfe66","http.req.method":"GET","http.req.path":"/product/2ZYFJ3GM2N","message":"request error","session":"616a805f-6189-4759-8b61-93cee12f7887","severity
+- 17:20:00 (+10m) <frontend-1> | {"error":"failed to get product recommendations: rpc error: code = Canceled desc = context canceled","http.req.id":"6af14076-3d88-4508-8da3-08236a6c9591","http.req.method":"GET","http.req.path":"/product/1YMWWN1N4O","message":"request error","session":"445ceec2-cab8-4a01-843d-aad9f5690b55","severity
+
+[trace] span 1408개, 호출 유형별 p95 초과 88건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <17:19:00 (+9m)~+60s, Callee=emailservice, Count=1 (100%), MaxLatency=831us, Callers=[checkoutservice×1]>
+- <17:20:00 (+10m)~+60s, Callee=cartservice, Count=1 (25%), MaxLatency=7477us, Callers=[frontend×1]>
+- <17:18:00 (+8m)~+60s, Callee=shippingservice, Count=1 (25%), MaxLatency=318us, Callers=[checkoutservice×1]>
+- <17:10:00 (+0m)~+60s, Callee=shippingservice, Count=1 (25%), MaxLatency=764us, Callers=[checkoutservice×1]>
+- <17:18:00 (+8m)~+60s, Callee=checkoutservice, Count=5 (23%), MaxLatency=219217us, Callers=[checkoutservice×4, frontend×1]>
+- <17:13:00 (+3m)~+60s, Callee=productcatalogservice, Count=2 (22%), MaxLatency=21771us, Callers=[frontend×2]>
+- <17:10:00 (+0m)~+60s, Callee=checkoutservice, Count=2 (17%), MaxLatency=26544us, Callers=[checkoutservice×2]>
+- <17:17:00 (+7m)~+60s, Callee=redis, Count=2 (15%), MaxLatency=6027us, Callers=[cartservice×2]>
+- <17:18:00 (+8m)~+60s, Callee=productcatalogservice, Count=1 (14%), MaxLatency=17417us, Callers=[checkoutservice×1]>
+- <17:17:00 (+7m)~+60s, Callee=productcatalogservice, Count=1 (14%), MaxLatency=19136us, Callers=[frontend×1]>
+- <17:12:00 (+2m)~+60s, Callee=cartservice, Count=2 (14%), MaxLatency=19058us, Callers=[frontend×2]>
+- <17:12:00 (+2m)~+60s, Callee=redis, Count=2 (11%), MaxLatency=6783us, Callers=[cartservice×2]>
+- <17:10:00 (+0m)~+60s, Callee=recommendationservice, Count=4 (11%), MaxLatency=611250555us, Callers=[frontend×2, recommendationservice×2]>
+- <17:12:00 (+2m)~+60s, Callee=frontend, Count=6 (9%), MaxLatency=25854us, Callers=[frontend×6]>
+- <17:16:00 (+6m)~+60s, Callee=frontend, Count=4 (9%), MaxLatency=60003128us, Callers=[frontend×3, (root)×1]>
+- <17:13:00 (+3m)~+60s, Callee=cartservice, Count=1 (9%), MaxLatency=6329us, Callers=[frontend×1]>
+- <17:10:00 (+0m)~+60s, Callee=cartservice, Count=2 (9%), MaxLatency=8849us, Callers=[frontend×1, checkoutservice×1]>
+- <17:17:00 (+7m)~+60s, Callee=frontend, Count=8 (9%), MaxLatency=60001760us, Callers=[frontend×7, (root)×1]>
+- <17:10:00 (+0m)~+60s, Callee=redis, Count=2 (9%), MaxLatency=5198us, Callers=[cartservice×2]>
+- <17:19:00 (+9m)~+60s, Callee=checkoutservice, Count=1 (8%), MaxLatency=11003us, Callers=[(root)×1]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 40 times in the time window
+- "frontend → cartservice → redis" has occurred 8 times in the time window
+- "(root) → (root) → frontend" has occurred 7 times in the time window
+- "frontend → frontend → cartservice" has occurred 7 times in the time window
+- "frontend → checkoutservice → checkoutservice" has occurred 7 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 6 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 2 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 2 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 2 times in the time window
+- "checkoutservice → checkoutservice → shippingservice" has occurred 2 times in the time window

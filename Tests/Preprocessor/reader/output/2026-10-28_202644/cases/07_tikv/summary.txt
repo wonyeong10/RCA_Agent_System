@@ -1,0 +1,24 @@
+case: 07_tikv
+
+[log] 0행
+
+[trace] 0행
+
+[metric] file 수 17, 총 행 2728
+  other/infra_tikv_available_size: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_capacity_size: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_cpu_usage: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_grpc_qps: 88행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_io_util: 1408행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_memory_usage: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_qps: 924행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_raft_apply_wait: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_raft_propose_wait: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_read_mbps: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_region_pending: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_rocksdb_write_stall: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_server_is_up: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_snapshot_apply_count: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_store_size: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_threadpool_readpool_cpu: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  other/infra_tikv_write_wal_mbps: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00

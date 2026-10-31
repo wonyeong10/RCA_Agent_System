@@ -1,0 +1,56 @@
+조회 구간: 2025-06-12T20:10:09Z ~ 2025-06-12T20:30:09Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1137개, 최대 21포인트, 이상 228개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, productcatalogservice-1, adservice-1, currencyservice-1
+Top-5 metrics with largest deviations: pod_network_receive_packets, pod_network_transmit_bytes, pod_network_transmit_packets, pod_network_receive_bytes, response
+Metric descriptions sorted by deviation_score:
+- currencyservice-1 | pod_cpu_usage | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.5σ
+- productcatalogservice-1 | pod_cpu_usage | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=dm-0,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=dm-0,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=vda,instance=10.233.79.155:9100} | 판정 불가(30포인트 미만): first 20:16:00 (+6m), peak 20:16:00 (+6m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=vda,instance=223.193.36.128} | 판정 불가(30포인트 미만): first 20:16:00 (+6m), peak 20:16:00 (+6m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=vdb,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- tikv | io_util{device=vdb,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- tikv | raft_propose_wait{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:13:00 (+3m), peak 20:13:00 (+3m), deviation_score ≈ 4.5σ
+- productcatalogservice-1 | client_error | 판정 불가(30포인트 미만): first 20:20:00 (+10m), peak 20:20:00 (+10m), deviation_score ≈ 4.5σ
+- productcatalogservice-1 | client_error_ratio | 판정 불가(30포인트 미만): first 20:20:00 (+10m), peak 20:20:00 (+10m), deviation_score ≈ 4.5σ
+- productcatalogservice-1 | error | 판정 불가(30포인트 미만): first 20:20:00 (+10m), peak 20:20:00 (+10m), deviation_score ≈ 4.5σ
+- productcatalogservice-1 | error_ratio | 판정 불가(30포인트 미만): first 20:20:00 (+10m), peak 20:20:00 (+10m), deviation_score ≈ 4.5σ
+- tikv | read_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- tikv | write_wal_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.5σ
+- tikv | grpc_qps{type=kv_prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.4σ
+- tikv | qps{type=prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 20:11:00 (+1m), peak 20:11:00 (+1m), deviation_score ≈ 4.4σ
+- adservice-1 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.4σ
+- adservice-1 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.4σ
+- currencyservice-1 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.4σ
+- currencyservice-1 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.4σ
+- productcatalogservice-1 | request | 판정 불가(30포인트 미만): first 20:30:00 (+20m), peak 20:30:00 (+20m), deviation_score ≈ 4.4σ
+- currencyservice-1 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 20:10:00 (+0m), peak 20:10:00 (+0m), deviation_score ≈ 4.4σ
+- productcatalogservice-1 | response | 판정 불가(30포인트 미만): first 20:30:00 (+20m), peak 20:30:00 (+20m), deviation_score ≈ 4.4σ
+- tikv | io_util{device=vda,instance=223.193.36.126} | 판정 불가(30포인트 미만): first 20:23:00 (+13m), peak 20:23:00 (+13m), deviation_score ≈ 4.4σ
+
+[log] 행 4648개, 키워드 일치 587개, 템플릿 7종 중 상위 20% 2종, 출력 36건
+Failure-indicative log entries after two-stage filtering:
+
+[trace] span 4111개, 호출 유형별 p95 초과 218건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <20:27:00 (+17m)~+60s, Callee=emailservice, Count=1 (50%), MaxLatency=988us, Callers=[checkoutservice×1]>
+- <20:13:00 (+3m)~+60s, Callee=recommendationservice, Count=1 (50%), MaxLatency=3963us, Callers=[recommendationservice×1]>
+- <20:10:00 (+0m)~+60s, Callee=emailservice, Count=1 (50%), MaxLatency=1370us, Callers=[checkoutservice×1]>
+- <20:24:00 (+14m)~+60s, Callee=recommendationservice, Count=2 (33%), MaxLatency=8883us, Callers=[frontend×1, recommendationservice×1]>
+- <20:13:00 (+3m)~+60s, Callee=checkoutservice, Count=3 (25%), MaxLatency=162990us, Callers=[checkoutservice×2, frontend×1]>
+- <20:11:00 (+1m)~+60s, Callee=checkoutservice, Count=3 (25%), MaxLatency=206377us, Callers=[checkoutservice×2, frontend×1]>
+- <20:15:00 (+5m)~+60s, Callee=productcatalogservice, Count=3 (20%), MaxLatency=27975us, Callers=[frontend×3]>
+- <20:28:00 (+18m)~+60s, Callee=shippingservice, Count=1 (17%), MaxLatency=468us, Callers=[checkoutservice×1]>
+- <20:24:00 (+14m)~+60s, Callee=redis, Count=1 (17%), MaxLatency=2486us, Callers=[cartservice×1]>
+- <20:21:00 (+11m)~+60s, Callee=shippingservice, Count=1 (17%), MaxLatency=631us, Callers=[checkoutservice×1]>
+- <20:21:00 (+11m)~+60s, Callee=redis, Count=1 (17%), MaxLatency=3599us, Callers=[cartservice×1]>
+- <20:21:00 (+11m)~+60s, Callee=recommendationservice, Count=1 (17%), MaxLatency=5399us, Callers=[frontend×1]>
+- <20:20:00 (+10m)~+60s, Callee=productcatalogservice, Count=2 (17%), MaxLatency=14789us, Callers=[frontend×2]>
+- <20:16:00 (+6m)~+60s, Callee=shippingservice, Count=1 (17%), MaxLatency=488us, Callers=[checkoutservice×1]>
+Three-hop call paths statistics:
+- "checkoutservice → checkoutservice → shippingservice" has occurred 4 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 3 times in the time window
+- "(root) → (root) → checkoutservice" has occurred 2 times in the time window

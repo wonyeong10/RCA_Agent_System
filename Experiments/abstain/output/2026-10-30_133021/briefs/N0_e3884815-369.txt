@@ -1,0 +1,105 @@
+조회 구간: 2025-06-19T02:10:11Z ~ 2025-06-19T02:25:11Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1125개, 최대 16포인트, 이상 183개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, cartservice-2, redis-cart-0, adservice-2, cartservice-0
+Top-5 metrics with largest deviations: client_error, error, client_error_ratio, error_ratio, rrt
+Metric descriptions sorted by deviation_score:
+- adservice-2 | client_error | 판정 불가(30포인트 미만): first 02:25:00 (+15m), peak 02:25:00 (+15m), deviation_score ≈ 3.9σ
+- adservice-2 | client_error_ratio | 판정 불가(30포인트 미만): first 02:25:00 (+15m), peak 02:25:00 (+15m), deviation_score ≈ 3.9σ
+- adservice-2 | error | 판정 불가(30포인트 미만): first 02:25:00 (+15m), peak 02:25:00 (+15m), deviation_score ≈ 3.9σ
+- adservice-2 | error_ratio | 판정 불가(30포인트 미만): first 02:25:00 (+15m), peak 02:25:00 (+15m), deviation_score ≈ 3.9σ
+- cartservice-0 | client_error | 판정 불가(30포인트 미만): first 02:17:00 (+7m), peak 02:17:00 (+7m), deviation_score ≈ 3.9σ
+- cartservice-0 | client_error_ratio | 판정 불가(30포인트 미만): first 02:17:00 (+7m), peak 02:17:00 (+7m), deviation_score ≈ 3.9σ
+- cartservice-0 | error | 판정 불가(30포인트 미만): first 02:17:00 (+7m), peak 02:17:00 (+7m), deviation_score ≈ 3.9σ
+- cartservice-0 | error_ratio | 판정 불가(30포인트 미만): first 02:17:00 (+7m), peak 02:17:00 (+7m), deviation_score ≈ 3.9σ
+- cartservice-2 | client_error | 판정 불가(30포인트 미만): first 02:17:00 (+7m), peak 02:17:00 (+7m), deviation_score ≈ 3.9σ
+- cartservice-2 | error | 판정 불가(30포인트 미만): first 02:17:00 (+7m), peak 02:17:00 (+7m), deviation_score ≈ 3.9σ
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/dm-0} | 판정 불가(30포인트 미만): first 02:11:00 (+1m), peak 02:11:00 (+1m), deviation_score ≈ 3.9σ
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/vdb} | 판정 불가(30포인트 미만): first 02:11:00 (+1m), peak 02:11:00 (+1m), deviation_score ≈ 3.9σ
+- cartservice-2 | client_error_ratio | 판정 불가(30포인트 미만): first 02:17:00 (+7m), peak 02:17:00 (+7m), deviation_score ≈ 3.9σ
+- cartservice-2 | error_ratio | 판정 불가(30포인트 미만): first 02:17:00 (+7m), peak 02:17:00 (+7m), deviation_score ≈ 3.9σ
+- redis-cart-0 | timeout | 판정 불가(30포인트 미만): first 02:25:00 (+15m), peak 02:25:00 (+15m), deviation_score ≈ 3.9σ
+- redis-cart-0 | pod_cpu_usage | 판정 불가(30포인트 미만): first 02:11:00 (+1m), peak 02:11:00 (+1m), deviation_score ≈ 3.9σ
+- redis-cart-0 | pod_processes | 판정 불가(30포인트 미만): first 02:11:00 (+1m), peak 02:11:00 (+1m), deviation_score ≈ 3.9σ
+- tikv | region_pending{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 02:10:00 (+0m), peak 02:10:00 (+0m), deviation_score ≈ 3.9σ
+- tikv | write_wal_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 02:11:00 (+1m), peak 02:11:00 (+1m), deviation_score ≈ 3.9σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 02:11:00 (+1m), peak 02:11:00 (+1m), deviation_score ≈ 3.9σ
+- tikv | qps{type=prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 02:11:00 (+1m), peak 02:11:00 (+1m), deviation_score ≈ 3.8σ
+- cartservice-0 | rrt_max | 판정 불가(30포인트 미만): first 02:10:00 (+0m), peak 02:10:00 (+0m), deviation_score ≈ 3.8σ
+- tikv | io_util{device=vda,instance=223.193.36.126} | 판정 불가(30포인트 미만): first 02:21:00 (+11m), peak 02:21:00 (+11m), deviation_score ≈ 3.8σ
+- tikv | grpc_qps{type=kv_prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 02:11:00 (+1m), peak 02:11:00 (+1m), deviation_score ≈ 3.8σ
+- redis-cart-0 | rrt | 판정 불가(30포인트 미만): first 02:11:00 (+1m), peak 02:11:00 (+1m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=vda,instance=10.233.88.24:9100} | 판정 불가(30포인트 미만): first 02:21:00 (+11m), peak 02:21:00 (+11m), deviation_score ≈ 3.7σ
+- tikv | snapshot_apply_count{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 02:11:00 (+1m), peak 02:11:00 (+1m), deviation_score ≈ 3.7σ
+- redis-cart-0 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 02:10:00 (+0m), peak 02:10:00 (+0m), deviation_score ≈ 3.6σ
+- redis-cart-0 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 02:10:00 (+0m), peak 02:10:00 (+0m), deviation_score ≈ 3.6σ
+- redis-cart-0 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 02:10:00 (+0m), peak 02:10:00 (+0m), deviation_score ≈ 3.6σ
+
+[log] 행 27490개, 키워드 일치 2908개, 템플릿 7종 중 상위 20% 2종, 출력 32건
+Failure-indicative log entries after two-stage filtering:
+- 02:10:42 (+0m) <frontend-1> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"f28c65d5-7526-4947-aed9-45a4dcfec2ff","http.req.method":"GET","http.req.path":"/product/66VCHSJNUP","message":"request error","session":"b5853029-e8e3-4842
+- 02:10:42 (+0m) <productcatalogservice-1> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:10:42.676745122Z"}
+- 02:11:00 (+1m) <frontend-2> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"caed5b59-cb70-4399-91c3-cb5287973482","http.req.method":"GET","http.req.path":"/product/LS4PSXUNUM","message":"request error","session":"356ce2b5-b182-4c53
+- 02:11:00 (+1m) <productcatalogservice-1> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:11:00.108585026Z"}
+- 02:12:00 (+2m) <frontend-0> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"fc22c7d1-ca6b-44c9-9a13-1c643b009cd1","http.req.method":"GET","http.req.path":"/product/OLJCESPC7Z","message":"request error","session":"f53bce6c-0946-4e18
+- 02:12:00 (+2m) <productcatalogservice-2> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:12:00.126351934Z"}
+- 02:13:00 (+3m) <productcatalogservice-2> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:13:00.029250492Z"}
+- 02:13:00 (+3m) <frontend-0> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"ffb55afa-7301-4aa1-b962-1fbcf7afc718","http.req.method":"GET","http.req.path":"/product/0PUK6V6EV0","message":"request error","session":"d9dd15e0-088d-4505
+- 02:14:00 (+4m) <productcatalogservice-2> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:14:00.246816008Z"}
+- 02:14:00 (+4m) <frontend-0> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"1930ae47-c3c5-4575-8330-3bf5e196eee4","http.req.method":"GET","http.req.path":"/product/OLJCESPC7Z","message":"request error","session":"479419b5-5b76-4d9e
+- 02:15:00 (+5m) <productcatalogservice-2> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:15:00.412559961Z"}
+- 02:15:01 (+5m) <frontend-2> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"3e36f2a0-d5e8-46cb-9be1-45106ae2a509","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"b4e44b77-5731-4300-be76-3f153dd
+- 02:16:00 (+6m) <productcatalogservice-2> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:16:00.791440232Z"}
+- 02:16:00 (+6m) <frontend-0> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"07cc42c6-e94a-4c8b-8bd6-9448153aeed4","http.req.method":"GET","http.req.path":"/product/6E92ZMYYFZ","message":"request error","session":"e6a4dd39-6425-4abc
+- 02:17:00 (+7m) <productcatalogservice-2> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:17:00.438580675Z"}
+- 02:17:00 (+7m) <frontend-0> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"efe82c0a-6d16-46ff-a60e-c23ea273ca0a","http.req.method":"GET","http.req.path":"/product/L9ECAV7KIM","message":"request error","session":"a88ece56-2fb8-41d1
+- 02:18:00 (+8m) <frontend-1> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"dbea531d-66e1-4376-9472-6b0f630995d8","http.req.method":"GET","http.req.path":"/product/OLJCESPC7Z","message":"request error","session":"37847e4e-b331-4149
+- 02:18:00 (+8m) <productcatalogservice-1> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:18:00.126371062Z"}
+- 02:19:00 (+9m) <frontend-1> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"5daa9083-3968-4c7b-9634-70fba8bd7601","http.req.method":"GET","http.req.path":"/product/66VCHSJNUP","message":"request error","session":"37847e4e-b331-4149
+- 02:19:00 (+9m) <productcatalogservice-1> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:19:00.843014655Z"}
+- 02:20:00 (+10m) <productcatalogservice-2> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:20:00.150392741Z"}
+- 02:20:00 (+10m) <frontend-0> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"bc776193-c63a-422f-821a-003d4c8eb1d8","http.req.method":"GET","http.req.path":"/product/1YMWWN1N4O","message":"request error","session":"adc1eacf-698c-4e74
+- 02:21:00 (+11m) <frontend-0> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"42d3aa8d-1652-47a3-ad36-2ea213db2a74","http.req.method":"GET","http.req.path":"/product/9SIQT8TOJO","message":"request error","session":"38aee0b0-0ac0-4fb8
+- 02:21:00 (+11m) <productcatalogservice-2> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:21:00.886341264Z"}
+- 02:22:00 (+12m) <frontend-1> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"e42c88a9-c2f1-4cd7-ae79-e29119a53639","http.req.method":"GET","http.req.path":"/product/OLJCESPC7Z","message":"request error","session":"0a690348-e1ba-46ff
+- 02:22:00 (+12m) <productcatalogservice-1> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:22:00.190087861Z"}
+- 02:23:00 (+13m) <frontend-0> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"de0d11db-fcc0-49b4-ade8-cbcef470afe0","http.req.method":"GET","http.req.path":"/product/6E92ZMYYFZ","message":"request error","session":"1dc5c7d7-b3e8-473e
+- 02:23:00 (+13m) <productcatalogservice-2> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:23:00.100053414Z"}
+- 02:24:00 (+14m) <productcatalogservice-2> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:24:00.13207954Z"}
+- 02:24:00 (+14m) <frontend-1> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"17e1f150-4a72-4bc8-b016-93b2ed7f9d1c","http.req.method":"GET","http.req.path":"/product/LS4PSXUNUM","message":"request error","session":"b28dfb32-6ce0-4638
+- 02:25:00 (+15m) <productcatalogservice-2> | {"message":"failed to query product by id: dial tcp 223.193.36.56:32187: connect: connection refused","severity":"warning","timestamp":"2025-06-19T02:25:00.346930078Z"}
+- 02:25:01 (+15m) <frontend-0> | {"error":"could not retrieve product: rpc error: code = Unknown desc = dial tcp 223.193.36.56:32187: connect: connection refused","http.req.id":"1ac24ed6-38e0-42e1-8128-4885b95b26d3","http.req.method":"GET","http.req.path":"/product/OLJCESPC7Z","message":"request error","session":"9be28919-3a79-4458
+
+[trace] span 17323개, 호출 유형별 p95 초과 882건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <02:21:00 (+11m)~+60s, Callee=emailservice, Count=1 (33%), MaxLatency=1498us, Callers=[checkoutservice×1]>
+- <02:13:00 (+3m)~+60s, Callee=emailservice, Count=1 (20%), MaxLatency=1020us, Callers=[checkoutservice×1]>
+- <02:22:00 (+12m)~+60s, Callee=shippingservice, Count=2 (17%), MaxLatency=544us, Callers=[checkoutservice×2]>
+- <02:16:00 (+6m)~+60s, Callee=shippingservice, Count=1 (17%), MaxLatency=861us, Callers=[checkoutservice×1]>
+- <02:16:00 (+6m)~+60s, Callee=recommendationservice, Count=2 (17%), MaxLatency=8592us, Callers=[frontend×1, recommendationservice×1]>
+- <02:14:00 (+4m)~+60s, Callee=emailservice, Count=1 (17%), MaxLatency=1298us, Callers=[checkoutservice×1]>
+- <02:15:00 (+5m)~+60s, Callee=recommendationservice, Count=10 (16%), MaxLatency=8718us, Callers=[frontend×6, recommendationservice×4]>
+- <02:10:00 (+0m)~+60s, Callee=checkoutservice, Count=9 (15%), MaxLatency=197477us, Callers=[checkoutservice×6, frontend×2, (root)×1]>
+- <02:19:00 (+9m)~+60s, Callee=shippingservice, Count=2 (14%), MaxLatency=601us, Callers=[checkoutservice×2]>
+- <02:11:00 (+1m)~+60s, Callee=emailservice, Count=1 (14%), MaxLatency=1015us, Callers=[checkoutservice×1]>
+- <02:24:00 (+14m)~+60s, Callee=emailservice, Count=1 (12%), MaxLatency=1257us, Callers=[checkoutservice×1]>
+- <02:23:00 (+13m)~+60s, Callee=shippingservice, Count=1 (12%), MaxLatency=543us, Callers=[checkoutservice×1]>
+- <02:18:00 (+8m)~+60s, Callee=checkoutservice, Count=4 (12%), MaxLatency=126990us, Callers=[checkoutservice×2, frontend×1, (root)×1]>
+- <02:12:00 (+2m)~+60s, Callee=checkoutservice, Count=6 (12%), MaxLatency=151586us, Callers=[checkoutservice×5, frontend×1]>
+- <02:20:00 (+10m)~+60s, Callee=productcatalogservice, Count=14 (12%), MaxLatency=131485856us, Callers=[frontend×13, recommendationservice×1]>
+- <02:12:00 (+2m)~+60s, Callee=recommendationservice, Count=4 (11%), MaxLatency=6756us, Callers=[recommendationservice×3, frontend×1]>
+- <02:13:00 (+3m)~+60s, Callee=shippingservice, Count=1 (10%), MaxLatency=426us, Callers=[checkoutservice×1]>
+- <02:21:00 (+11m)~+60s, Callee=productcatalogservice, Count=13 (10%), MaxLatency=130892627us, Callers=[frontend×11, recommendationservice×2]>
+- <02:22:00 (+12m)~+60s, Callee=productcatalogservice, Count=13 (9%), MaxLatency=132368545us, Callers=[frontend×8, recommendationservice×5]>
+- <02:25:00 (+15m)~+60s, Callee=redis, Count=1 (9%), MaxLatency=9106us, Callers=[cartservice×1]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 449 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 121 times in the time window
+- "(root) → (root) → frontend" has occurred 104 times in the time window
+- "frontend → cartservice → redis" has occurred 34 times in the time window
+- "frontend → frontend → cartservice" has occurred 33 times in the time window
+- "frontend → checkoutservice → checkoutservice" has occurred 31 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 23 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 22 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 22 times in the time window
+- "checkoutservice → checkoutservice → shippingservice" has occurred 10 times in the time window

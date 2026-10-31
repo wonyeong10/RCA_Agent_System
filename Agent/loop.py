@@ -240,7 +240,13 @@ def main():
     ap.add_argument("--limit", type=int, help="앞에서 N건")
     ap.add_argument("--workers", type=int, default=4)  # 분당 100요청 한도 안
     ap.add_argument("--check", action="store_true", help="API 없는 자체 점검")
+    ap.add_argument("--system-card", action="store_true", help="SYSTEM에 루트 system_card.py 주입 (ablation, 생각.txt 아이디어 1)")
     args = ap.parse_args()
+    if args.system_card:
+        global SYSTEM
+        sys.path.insert(0, str(ROOT))
+        from system_card import SYSTEM_CARD
+        SYSTEM += "\n\n## 시스템 구조 (system card)\n" + json.dumps(SYSTEM_CARD, ensure_ascii=False)
     if args.check:
         return check()
 
@@ -249,7 +255,7 @@ def main():
         items = [x for x in items if x[0] in set(args.uuid)]
     items = items[:args.limit] if args.limit else items
     llm.client()  # 키 없으면 selector 돌리기 전에 바로 실패
-    out = ROOT / "Agent" / "output" / datetime.now().strftime("%Y-%m-%d_%H%M%S")
+    out = ROOT / "Agent" / "output" / (datetime.now().strftime("%Y-%m-%d_%H%M%S") + ("_card" if args.system_card else ""))
     (out / "histories").mkdir(parents=True)
 
     def job(item):

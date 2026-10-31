@@ -1,0 +1,2 @@
+﻿time,client_error,client_error_ratio,error,error_ratio,object_id,object_type,request,response,rrt,rrt_max,server_error,server_error_ratio,timeout,ts
+2025-06-06T04:03:00Z,0,0,0,0,currencyservice,service,286,282,1172.34,5408,0,0,0,2025-06-06 04:03:00+00:00

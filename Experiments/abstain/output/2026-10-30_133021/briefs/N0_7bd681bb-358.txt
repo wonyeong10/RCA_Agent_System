@@ -1,0 +1,59 @@
+조회 구간: 2025-06-18T15:10:30Z ~ 2025-06-18T15:31:30Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1130개, 최대 22포인트, 이상 160개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, adservice-1, cartservice-2, cartservice-0, cartservice
+Top-5 metrics with largest deviations: client_error_ratio, error_ratio, client_error, error, rrt
+Metric descriptions sorted by deviation_score:
+- tikv | io_util{device=vda,instance=10.233.77.67:9100} | 판정 불가(30포인트 미만): first 15:11:00 (+1m), peak 15:11:00 (+1m), deviation_score ≈ 4.6σ
+- cartservice-2 | client_error | 판정 불가(30포인트 미만): first 15:12:00 (+2m), peak 15:12:00 (+2m), deviation_score ≈ 4.6σ
+- cartservice-2 | client_error_ratio | 판정 불가(30포인트 미만): first 15:12:00 (+2m), peak 15:12:00 (+2m), deviation_score ≈ 4.6σ
+- cartservice-2 | error | 판정 불가(30포인트 미만): first 15:12:00 (+2m), peak 15:12:00 (+2m), deviation_score ≈ 4.6σ
+- cartservice-2 | error_ratio | 판정 불가(30포인트 미만): first 15:12:00 (+2m), peak 15:12:00 (+2m), deviation_score ≈ 4.6σ
+- cartservice | client_error | 판정 불가(30포인트 미만): first 15:12:00 (+2m), peak 15:12:00 (+2m), deviation_score ≈ 4.6σ
+- cartservice | client_error_ratio | 판정 불가(30포인트 미만): first 15:12:00 (+2m), peak 15:12:00 (+2m), deviation_score ≈ 4.6σ
+- cartservice | error | 판정 불가(30포인트 미만): first 15:12:00 (+2m), peak 15:12:00 (+2m), deviation_score ≈ 4.6σ
+- cartservice | error_ratio | 판정 불가(30포인트 미만): first 15:12:00 (+2m), peak 15:12:00 (+2m), deviation_score ≈ 4.6σ
+- tikv | io_util{device=dm-0,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 15:31:00 (+21m), peak 15:31:00 (+21m), deviation_score ≈ 4.6σ
+- tikv | io_util{device=vda,instance=10.233.81.5:9100} | 판정 불가(30포인트 미만): first 15:27:00 (+17m), peak 15:27:00 (+17m), deviation_score ≈ 4.6σ
+- tikv | io_util{device=vdb,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 15:31:00 (+21m), peak 15:31:00 (+21m), deviation_score ≈ 4.6σ
+- adservice-1 | pod_cpu_usage | 판정 불가(30포인트 미만): first 15:26:00 (+16m), peak 15:26:00 (+16m), deviation_score ≈ 4.6σ
+- tikv | io_util{device=dm-0,instance=10.233.74.183:9100} | 판정 불가(30포인트 미만): first 15:11:00 (+1m), peak 15:11:00 (+1m), deviation_score ≈ 4.6σ
+- tikv | io_util{device=dm-0,instance=10.233.77.67:9100} | 판정 불가(30포인트 미만): first 15:11:00 (+1m), peak 15:11:00 (+1m), deviation_score ≈ 4.6σ
+- tikv | io_util{device=dm-0,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 15:11:00 (+1m), peak 15:11:00 (+1m), deviation_score ≈ 4.6σ
+- tikv | io_util{device=dm-0,instance=223.193.36.113} | 판정 불가(30포인트 미만): first 15:11:00 (+1m), peak 15:11:00 (+1m), deviation_score ≈ 4.6σ
+- tikv | io_util{device=dm-0,instance=223.193.36.130} | 판정 불가(30포인트 미만): first 15:11:00 (+1m), peak 15:11:00 (+1m), deviation_score ≈ 4.6σ
+- tikv | io_util{device=vdb,instance=10.233.74.183:9100} | 판정 불가(30포인트 미만): first 15:11:00 (+1m), peak 15:11:00 (+1m), deviation_score ≈ 4.6σ
+- tikv | io_util{device=vdb,instance=10.233.77.67:9100} | 판정 불가(30포인트 미만): first 15:11:00 (+1m), peak 15:11:00 (+1m), deviation_score ≈ 4.6σ
+- tikv | io_util{device=vdb,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 15:11:00 (+1m), peak 15:11:00 (+1m), deviation_score ≈ 4.6σ
+- tikv | io_util{device=vdb,instance=223.193.36.113} | 판정 불가(30포인트 미만): first 15:11:00 (+1m), peak 15:11:00 (+1m), deviation_score ≈ 4.6σ
+- tikv | io_util{device=vdb,instance=223.193.36.130} | 판정 불가(30포인트 미만): first 15:11:00 (+1m), peak 15:11:00 (+1m), deviation_score ≈ 4.6σ
+- tikv | raft_apply_wait{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 15:15:00 (+5m), peak 15:15:00 (+5m), deviation_score ≈ 4.6σ
+- tikv | io_util{device=vda,instance=10.233.83.32:9100} | 판정 불가(30포인트 미만): first 15:11:00 (+1m), peak 15:11:00 (+1m), deviation_score ≈ 4.6σ
+- cartservice-0 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 15:10:00 (+0m), peak 15:10:00 (+0m), deviation_score ≈ 4.5σ
+- cartservice-2 | rrt_max | 판정 불가(30포인트 미만): first 15:14:00 (+4m), peak 15:14:00 (+4m), deviation_score ≈ 4.5σ
+- cartservice-0 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 15:10:00 (+0m), peak 15:10:00 (+0m), deviation_score ≈ 4.5σ
+- cartservice-0 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 15:10:00 (+0m), peak 15:10:00 (+0m), deviation_score ≈ 4.4σ
+- cartservice-0 | request | 판정 불가(30포인트 미만): first 15:10:00 (+0m), peak 15:10:00 (+0m), deviation_score ≈ 4.4σ
+
+[log] 행 34245개, 키워드 일치 71개, 템플릿 2종 중 상위 20% 1종, 출력 18건
+Failure-indicative log entries after two-stage filtering:
+- 15:11:58 (+1m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"5c3a234a-543f-4930-9224-7c4701f02563","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"bb7feab0-019a-47eb-9cb5-a8da52cee172","severity":"error","ti
+- 15:12:23 (+2m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"ec26a58f-1b4f-4123-a682-89ed4cb39a6a","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"16bcf605-2bbf-4933-b8ce-40f127eae366","severity":"error","ti
+- 15:13:13 (+3m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"63606e51-32a7-4205-8fa2-e041fb2f8456","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"5374a426-dc61-404d-abd4-72431b9deeaa","severity":"error","ti
+- 15:15:14 (+5m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"11996250-b42b-4c96-aaf1-6212d2709461","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"a07c739a-3dc0-4b70-a21b-fc140871ac1a","severity":"error","ti
+- 15:16:11 (+6m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"6dea4442-b017-4a95-b4e8-b64697d01876","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"974c7989-236c-4198-9f64-d0e53414f1b5","severity":"error","ti
+- 15:18:00 (+8m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"998cb219-ae7b-4dae-ba24-6b2cff0ca3f1","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"a528334e-21de-45fc-819e-5eaf3e5880f1","severity":"error","ti
+- 15:19:17 (+9m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"54dab02b-7951-4fc1-8d8a-8d68687fe20d","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"d9db6324-c561-4f1a-906e-4d251cbe3173","severity":"error","ti
+- 15:20:57 (+10m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"ef8da6bb-80b8-43c0-a9e4-b48bf347aa2d","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"ee01190c-3eca-487b-9718-4208e01a43c0","severity":"error","ti
+- 15:21:06 (+11m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"86fd52f6-4d55-4928-940d-fcd793abed2c","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"b3e862d3-3e89-4a45-8dc2-da2c3ebed853","severity":"error","ti
+- 15:22:30 (+12m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"8cf179e6-1537-4797-ad08-cafb118f965c","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"00e50015-5cd6-4ea7-b4fd-89ecf0e0c402","severity":"error","ti
+- 15:23:53 (+13m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"61a301bb-4f0f-464a-b122-6c7bba1094ba","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"32426fc4-dc10-4b48-aa78-74b7bc1fc5d3","severity":"error","ti
+- 15:24:08 (+14m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"eebb0f43-a86d-4416-bdd4-03b23f0ac4e2","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"fd153177-2635-4d4f-bc38-f92097223691","severity":"error","ti
+- 15:25:37 (+15m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"7234b15f-27d2-4411-a2aa-314ad5a159cd","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"bc408546-9435-410d-9df4-209a40f40004","severity":"error","ti
+- 15:26:10 (+16m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"c4e470ec-2df4-40aa-ae21-01d09d816c7d","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"c2336b66-d98b-4bcd-838f-16d530e3d60a","severity":"error","ti
+- 15:27:16 (+17m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"aa47f5fe-3e72-43ba-a435-22b93774fa36","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"3079c50e-690d-4a3d-8683-d9949f9e4860","severity":"error","ti
+- 15:28:26 (+18m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"f282fb29-743f-481d-ab36-e81498e1a5c9","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"7b4295e9-6f41-403f-9f1c-b068aaf491c5","severity":"error","ti
+- 15:29:10 (+19m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"28d9293c-21ab-4a7d-be48-fa7b979fdc97","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"55fc9bd0-ef7b-43c2-a0b4-28b8a67d0882","severity":"error","ti
+- 15:30:07 (+20m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Canceled desc = context canceled","http.req.id":"445e5680-e466-4984-b93c-e2e28370f813","http.req.method":"POST","http.req.path":"/cart/checkout","message":"request error","session":"e9318aaf-3b95-4df0-a898-36b45a22036b","severity":"error","ti
+
+[trace] 행 없음

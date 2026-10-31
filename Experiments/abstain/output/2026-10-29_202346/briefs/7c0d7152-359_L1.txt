@@ -1,0 +1,45 @@
+조회 구간: 2025-06-18T16:10:01Z ~ 2025-06-18T16:26:01Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1127개, 최대 17포인트, 이상 87개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, adservice-1, adservice-0
+Top-5 metrics with largest deviations: pod_memory_working_set_bytes, client_error, client_error_ratio, error, error_ratio
+Metric descriptions sorted by deviation_score:
+- adservice-0 | pod_cpu_usage | 판정 불가(30포인트 미만): first 16:18:00 (+8m), peak 16:18:00 (+8m), deviation_score ≈ 4.0σ
+- tikv | io_util{device=dm-0,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 16:19:00 (+9m), peak 16:19:00 (+9m), deviation_score ≈ 4.0σ
+- tikv | io_util{device=dm-0,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 16:19:00 (+9m), peak 16:19:00 (+9m), deviation_score ≈ 4.0σ
+- tikv | io_util{device=vdb,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 16:19:00 (+9m), peak 16:19:00 (+9m), deviation_score ≈ 4.0σ
+- tikv | io_util{device=vdb,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 16:19:00 (+9m), peak 16:19:00 (+9m), deviation_score ≈ 4.0σ
+- adservice-0 | client_error | 판정 불가(30포인트 미만): first 16:19:00 (+9m), peak 16:19:00 (+9m), deviation_score ≈ 4.0σ
+- adservice-0 | client_error_ratio | 판정 불가(30포인트 미만): first 16:19:00 (+9m), peak 16:19:00 (+9m), deviation_score ≈ 4.0σ
+- adservice-0 | error | 판정 불가(30포인트 미만): first 16:19:00 (+9m), peak 16:19:00 (+9m), deviation_score ≈ 4.0σ
+- adservice-0 | error_ratio | 판정 불가(30포인트 미만): first 16:19:00 (+9m), peak 16:19:00 (+9m), deviation_score ≈ 4.0σ
+- adservice-1 | client_error | 판정 불가(30포인트 미만): first 16:10:00 (+0m), peak 16:10:00 (+0m), deviation_score ≈ 4.0σ
+- adservice-1 | client_error_ratio | 판정 불가(30포인트 미만): first 16:10:00 (+0m), peak 16:10:00 (+0m), deviation_score ≈ 4.0σ
+- adservice-1 | error | 판정 불가(30포인트 미만): first 16:10:00 (+0m), peak 16:10:00 (+0m), deviation_score ≈ 4.0σ
+- adservice-1 | error_ratio | 판정 불가(30포인트 미만): first 16:10:00 (+0m), peak 16:10:00 (+0m), deviation_score ≈ 4.0σ
+- tikv | qps{type=scan_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 16:19:00 (+9m), peak 16:19:00 (+9m), deviation_score ≈ 4.0σ
+- adservice-1 | pod_memory_working_set_bytes | 판정 불가(30포인트 미만): first 16:15:00 (+5m), peak 16:15:00 (+5m), deviation_score ≈ 4.0σ
+- tikv | io_util{device=vda,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 16:13:00 (+3m), peak 16:13:00 (+3m), deviation_score ≈ 4.0σ
+- tikv | io_util{device=vda,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 16:13:00 (+3m), peak 16:13:00 (+3m), deviation_score ≈ 3.9σ
+- adservice-1 | rrt_max | 판정 불가(30포인트 미만): first 16:12:00 (+2m), peak 16:12:00 (+2m), deviation_score ≈ 3.6σ
+
+[log] 행 41471개, 키워드 일치 78개, 템플릿 1종 중 상위 20% 1종, 출력 16건
+Failure-indicative log entries after two-stage filtering:
+- 16:10:21 (+0m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:10:21.738680884Z"}
+- 16:11:03 (+1m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:11:03.853312223Z"}
+- 16:12:14 (+2m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:12:14.939806928Z"}
+- 16:13:10 (+3m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:13:10.033577486Z"}
+- 16:14:07 (+4m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:14:07.151513495Z"}
+- 16:15:10 (+5m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:15:10.737566627Z"}
+- 16:16:01 (+6m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:16:01.337174876Z"}
+- 16:17:18 (+7m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:17:18.142547732Z"}
+- 16:18:02 (+8m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:18:02.068416401Z"}
+- 16:19:01 (+9m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:19:01.646969032Z"}
+- 16:20:03 (+10m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:20:03.153978081Z"}
+- 16:21:31 (+11m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:21:31.762651718Z"}
+- 16:22:01 (+12m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:22:01.032368774Z"}
+- 16:23:00 (+13m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:23:00.533739834Z"}
+- 16:24:10 (+14m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:24:10.447488104Z"}
+- 16:25:00 (+15m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.49.244:5000: connect: connection refused\"","severity":"warning","timestamp":"2025-06-18T16:25:00.231291508Z"}
+
+[trace] 행 없음

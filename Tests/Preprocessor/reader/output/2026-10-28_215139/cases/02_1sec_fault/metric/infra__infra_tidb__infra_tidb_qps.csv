@@ -1,0 +1,10 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,object_type,pod,qps,sql_type,type,ts
+2025-06-06T04:03:00Z,null,null,10.233.79.158:10080,qps,null,null,tidb,tidb,null,0.0,null,Update,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,10.233.79.158:10080,qps,null,null,tidb,tidb,null,0.0,null,Rollback,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,10.233.79.158:10080,qps,null,null,tidb,tidb,null,71.38,null,Use,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,10.233.79.158:10080,qps,null,null,tidb,tidb,null,0.0,null,Set,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,10.233.79.158:10080,qps,null,null,tidb,tidb,null,71.4,null,Select,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,10.233.79.158:10080,qps,null,null,tidb,tidb,null,0.0,null,Insert,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,10.233.79.158:10080,qps,null,null,tidb,tidb,null,0.0,null,Delete,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,10.233.79.158:10080,qps,null,null,tidb,tidb,null,0.0,null,Begin,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,10.233.79.158:10080,qps,null,null,tidb,tidb,null,0.0,null,Commit,2025-06-06 04:03:00+00:00

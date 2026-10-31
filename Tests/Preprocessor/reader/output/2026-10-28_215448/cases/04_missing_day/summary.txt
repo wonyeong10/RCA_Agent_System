@@ -1,0 +1,7 @@
+case: 04_missing_day
+
+[log] 0행
+
+[trace] 0행
+
+[metric] file 수 0, 총 행 0

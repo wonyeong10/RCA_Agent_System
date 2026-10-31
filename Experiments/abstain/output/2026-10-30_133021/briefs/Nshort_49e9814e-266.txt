@@ -1,0 +1,40 @@
+조회 구간: 2025-06-13T14:11:24Z ~ 2025-06-13T14:21:24Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1137개, 최대 11포인트, 이상 133개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, cartservice-2, adservice-0, productcatalogservice-1, frontend-0
+Top-5 metrics with largest deviations: response, request, pod_network_receive_packets, pod_network_receive_bytes, pod_network_transmit_packets
+Metric descriptions sorted by deviation_score:
+- tikv | io_util{device=vda,instance=10.233.83.32:9100} | 판정 불가(30포인트 미만): first 14:12:00 (+1m), peak 14:12:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vda,instance=10.233.88.24:9100} | 판정 불가(30포인트 미만): first 14:18:00 (+7m), peak 14:18:00 (+7m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vda,instance=223.193.36.124} | 판정 불가(30포인트 미만): first 14:12:00 (+1m), peak 14:12:00 (+1m), deviation_score ≈ 3.2σ
+- adservice-0 | request | 판정 불가(30포인트 미만): first 14:11:00 (+0m), peak 14:11:00 (+0m), deviation_score ≈ 3.2σ
+- adservice-0 | response | 판정 불가(30포인트 미만): first 14:11:00 (+0m), peak 14:11:00 (+0m), deviation_score ≈ 3.2σ
+- cartservice-2 | pod_cpu_usage | 판정 불가(30포인트 미만): first 14:11:00 (+0m), peak 14:11:00 (+0m), deviation_score ≈ 3.2σ
+- productcatalogservice-1 | pod_cpu_usage | 판정 불가(30포인트 미만): first 14:11:00 (+0m), peak 14:11:00 (+0m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=dm-0,instance=10.233.79.155:9100} | 판정 불가(30포인트 미만): first 14:21:00 (+10m), peak 14:21:00 (+10m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=dm-0,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 14:12:00 (+1m), peak 14:12:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=dm-0,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 14:12:00 (+1m), peak 14:12:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vdb,instance=10.233.79.155:9100} | 판정 불가(30포인트 미만): first 14:21:00 (+10m), peak 14:21:00 (+10m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vdb,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 14:12:00 (+1m), peak 14:12:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vdb,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 14:12:00 (+1m), peak 14:12:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | raft_apply_wait{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 14:15:00 (+4m), peak 14:15:00 (+4m), deviation_score ≈ 3.2σ
+- cartservice-2 | pod_fs_reads_bytes{device=/dev/dm-0} | 판정 불가(30포인트 미만): first 14:12:00 (+1m), peak 14:12:00 (+1m), deviation_score ≈ 3.2σ
+- cartservice-2 | pod_fs_reads_bytes{device=/dev/vdb} | 판정 불가(30포인트 미만): first 14:12:00 (+1m), peak 14:12:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=dm-0,instance=223.193.36.128} | 판정 불가(30포인트 미만): first 14:21:00 (+10m), peak 14:21:00 (+10m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vdb,instance=223.193.36.128} | 판정 불가(30포인트 미만): first 14:21:00 (+10m), peak 14:21:00 (+10m), deviation_score ≈ 3.2σ
+- tikv | qps{type=scan_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 14:13:00 (+2m), peak 14:13:00 (+2m), deviation_score ≈ 3.2σ
+- cartservice-2 | rrt_max | 판정 불가(30포인트 미만): first 14:11:00 (+0m), peak 14:11:00 (+0m), deviation_score ≈ 3.2σ
+- tikv | write_wal_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 14:13:00 (+2m), peak 14:13:00 (+2m), deviation_score ≈ 3.2σ
+- tikv | read_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 14:13:00 (+2m), peak 14:13:00 (+2m), deviation_score ≈ 3.2σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 14:12:00 (+1m), peak 14:12:00 (+1m), deviation_score ≈ 3.2σ
+- productcatalogservice-1 | request | 판정 불가(30포인트 미만): first 14:11:00 (+0m), peak 14:11:00 (+0m), deviation_score ≈ 3.2σ
+- productcatalogservice-1 | response | 판정 불가(30포인트 미만): first 14:11:00 (+0m), peak 14:11:00 (+0m), deviation_score ≈ 3.2σ
+- tikv | qps{type=prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 14:12:00 (+1m), peak 14:12:00 (+1m), deviation_score ≈ 3.1σ
+- tikv | grpc_qps{type=kv_prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 14:12:00 (+1m), peak 14:12:00 (+1m), deviation_score ≈ 3.1σ
+- cartservice-2 | rrt | 판정 불가(30포인트 미만): first 14:11:00 (+0m), peak 14:11:00 (+0m), deviation_score ≈ 3.1σ
+- cartservice-2 | request | 판정 불가(30포인트 미만): first 14:11:00 (+0m), peak 14:11:00 (+0m), deviation_score ≈ 3.1σ
+- cartservice-2 | response | 판정 불가(30포인트 미만): first 14:11:00 (+0m), peak 14:11:00 (+0m), deviation_score ≈ 3.1σ
+
+[log] 행 없음
+
+[trace] 행 없음

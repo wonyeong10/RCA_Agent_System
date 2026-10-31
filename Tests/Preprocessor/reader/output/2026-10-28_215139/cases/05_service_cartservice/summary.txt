@@ -1,0 +1,22 @@
+case: 05_service_cartservice
+
+[log] 22779행, ts 2025-06-05 16:10:02.678000+00:00 ~ 2025-06-05 16:31:02.739000+00:00
+  pod 분포: cartservice-1=21537, cartservice-0=621, cartservice-2=621
+
+[trace] 5273행, ts 2025-06-05 16:10:02.678302+00:00 ~ 2025-06-05 16:31:02.738209+00:00
+  pod 분포: cartservice-1=4997, cartservice-0=138, cartservice-2=138
+
+[metric] file 수 13, 총 행 814
+  apm/service/service_cartservice: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  apm/pod/pod_cartservice-0: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  apm/pod/pod_cartservice-1: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  apm/pod/pod_cartservice-2: 22행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  infra/infra_pod/infra_pod_pod_cpu_usage: 66행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  infra/infra_pod/infra_pod_pod_fs_reads_bytes: 132행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  infra/infra_pod/infra_pod_pod_fs_writes_bytes: 132행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  infra/infra_pod/infra_pod_pod_memory_working_set_bytes: 66행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  infra/infra_pod/infra_pod_pod_network_receive_bytes: 66행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  infra/infra_pod/infra_pod_pod_network_receive_packets: 66행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  infra/infra_pod/infra_pod_pod_network_transmit_bytes: 66행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  infra/infra_pod/infra_pod_pod_network_transmit_packets: 66행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00
+  infra/infra_pod/infra_pod_pod_processes: 66행, ts 2025-06-05 16:10:00+00:00 ~ 2025-06-05 16:31:00+00:00

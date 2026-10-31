@@ -1,0 +1,2 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,object_type,pod,sql_type,store_down_count,type,ts
+2025-06-06T04:03:00Z,null,null,null,store_down_count,null,null,null,pd,null,null,0,null,2025-06-06 04:03:00+00:00

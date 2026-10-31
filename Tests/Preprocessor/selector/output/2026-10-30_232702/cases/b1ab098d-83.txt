@@ -1,0 +1,85 @@
+요청 구간: 2025-06-05T19:10:07Z ~ 2025-06-05T19:33:07Z
+분석 범위 (기준 = source별 범위 전체, 시각 옆 ±Nm은 요청 구간 시작 분 기준): metric 2025-06-05T18:50:07Z ~ 2025-06-05T19:50:07Z, log 2025-06-05T19:10:07Z ~ 2025-06-05T19:40:07Z, trace 2025-06-05T19:10:07Z ~ 2025-06-05T19:40:07Z
+
+[metric] 시리즈 1119개, 최대 61포인트, 이상 시점 312개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, adservice-1, adservice-2, cartservice-2, cartservice
+Top-5 metrics with largest deviations: client_error_ratio, error_ratio, client_error, error, response
+Metric descriptions sorted by deviation_score:
+- adservice | timeout | Single spike: 19:44:00 (+34m), max deviation ≈ 7.7σ
+- aiops-k8s-07 | node_disk_read_bytes_total{device=vda} | Single spike: 19:50:00 (+40m), max deviation ≈ 7.7σ
+- cartservice-2 | pod_cpu_usage | Single spike: 19:01:00 (-9m), max deviation ≈ 7.7σ
+- tidb | duration_95th{instance=10.233.79.158:10080} | Single spike: 19:11:00 (+1m), max deviation ≈ 7.7σ
+- tidb | qps{type=Delete,instance=10.233.79.158:10080} | Single spike: 19:05:00 (-5m), max deviation ≈ 7.7σ
+- tikv | io_util{device=dm-0,instance=10.233.77.67:9100} | Single spike: 19:37:00 (+27m), max deviation ≈ 7.7σ
+- tikv | io_util{device=dm-0,instance=10.233.84.23:9100} | Single spike: 19:01:00 (-9m), max deviation ≈ 7.7σ
+- tikv | io_util{device=dm-0,instance=223.193.36.109} | Single spike: 19:37:00 (+27m), max deviation ≈ 7.7σ
+- tikv | io_util{device=dm-0,instance=223.193.36.130} | Single spike: 19:01:00 (-9m), max deviation ≈ 7.7σ
+- tikv | io_util{device=vda,instance=10.233.85.137:9100} | Single spike: 19:11:00 (+1m), max deviation ≈ 7.7σ
+- tikv | io_util{device=vda,instance=223.193.36.129} | Single spike: 19:11:00 (+1m), max deviation ≈ 7.7σ
+- tikv | io_util{device=vdb,instance=10.233.77.67:9100} | Single spike: 19:37:00 (+27m), max deviation ≈ 7.7σ
+- tikv | io_util{device=vdb,instance=10.233.84.23:9100} | Single spike: 19:01:00 (-9m), max deviation ≈ 7.7σ
+- tikv | io_util{device=vdb,instance=223.193.36.109} | Single spike: 19:37:00 (+27m), max deviation ≈ 7.7σ
+- tikv | io_util{device=vdb,instance=223.193.36.130} | Single spike: 19:01:00 (-9m), max deviation ≈ 7.7σ
+- aiops-k8s-06 | node_disk_read_bytes_total{device=vda} | Single spike: 19:25:00 (+15m), max deviation ≈ 7.7σ
+- aiops-k8s-07 | node_disk_read_time_seconds_total{device=vda} | Single spike: 19:50:00 (+40m), max deviation ≈ 7.7σ
+- aiops-k8s-04 | node_disk_write_time_seconds_total{device=vda} | Single spike: 19:49:00 (+39m), max deviation ≈ 7.7σ
+- adservice-1 | client_error_ratio | Single spike: 19:44:00 (+34m), max deviation ≈ 7.7σ
+- adservice-1 | error_ratio | Single spike: 19:44:00 (+34m), max deviation ≈ 7.7σ
+- adservice-2 | client_error_ratio | Single spike: 19:44:00 (+34m), max deviation ≈ 7.7σ
+- adservice-2 | error_ratio | Single spike: 19:44:00 (+34m), max deviation ≈ 7.7σ
+- adservice-0 | timeout | Single spike: 19:44:00 (+34m), max deviation ≈ 7.7σ
+- adservice-1 | client_error | Single spike: 19:44:00 (+34m), max deviation ≈ 7.7σ
+
+[log] 행 78789개, 키워드 일치 0개
+
+[trace] span 81917개, 호출 유형별 p95 초과 4102건
+High-latency span descriptions:
+- <19:11:00 (+1m)~+60s, Callee=frontend-1, Count=52, MaxLatency=235740us, Callers=[frontend-1×52]>
+- <19:30:00 (+20m)~+60s, Callee=frontend-1, Count=45, MaxLatency=219547us, Callers=[frontend-1×45]>
+- <19:11:00 (+1m)~+60s, Callee=productcatalogservice-2, Count=45, MaxLatency=30380us, Callers=[frontend-0×20, frontend-1×25]>
+- <19:24:00 (+14m)~+60s, Callee=frontend-1, Count=43, MaxLatency=234122us, Callers=[frontend-1×43]>
+- <19:27:00 (+17m)~+60s, Callee=frontend-0, Count=40, MaxLatency=177020us, Callers=[frontend-0×40]>
+- <19:37:00 (+27m)~+60s, Callee=frontend-2, Count=39, MaxLatency=248836us, Callers=[frontend-2×39]>
+- <19:31:00 (+21m)~+60s, Callee=frontend-1, Count=39, MaxLatency=229662us, Callers=[frontend-1×39]>
+- <19:23:00 (+13m)~+60s, Callee=frontend-1, Count=38, MaxLatency=220527us, Callers=[frontend-1×38]>
+- <19:22:00 (+12m)~+60s, Callee=frontend-2, Count=38, MaxLatency=209512us, Callers=[frontend-2×38]>
+- <19:39:00 (+29m)~+60s, Callee=frontend-0, Count=35, MaxLatency=255393us, Callers=[frontend-0×35]>
+- <19:32:00 (+22m)~+60s, Callee=frontend-1, Count=35, MaxLatency=213809us, Callers=[frontend-1×35]>
+- <19:19:00 (+9m)~+60s, Callee=frontend-1, Count=34, MaxLatency=274532us, Callers=[frontend-1×34]>
+- <19:21:00 (+11m)~+60s, Callee=frontend-1, Count=34, MaxLatency=234764us, Callers=[frontend-1×34]>
+- <19:10:00 (+0m)~+60s, Callee=productcatalogservice-2, Count=34, MaxLatency=30456us, Callers=[frontend-0×15, frontend-1×19]>
+- <19:17:00 (+7m)~+60s, Callee=frontend-1, Count=33, MaxLatency=267244us, Callers=[frontend-1×33]>
+- <19:10:00 (+0m)~+60s, Callee=frontend-1, Count=33, MaxLatency=244696us, Callers=[frontend-1×33]>
+- <19:16:00 (+6m)~+60s, Callee=frontend-1, Count=33, MaxLatency=187360us, Callers=[frontend-1×33]>
+- <19:31:00 (+21m)~+60s, Callee=frontend-0, Count=32, MaxLatency=291658us, Callers=[frontend-0×32]>
+- <19:11:00 (+1m)~+60s, Callee=frontend-0, Count=32, MaxLatency=239510us, Callers=[frontend-0×32]>
+- <19:31:00 (+21m)~+60s, Callee=frontend-2, Count=32, MaxLatency=220122us, Callers=[frontend-2×32]>
+- <19:11:00 (+1m)~+60s, Callee=productcatalogservice-1, Count=31, MaxLatency=27348us, Callers=[frontend-2×15, recommendationservice-0×16]>
+- <19:35:00 (+25m)~+60s, Callee=frontend-2, Count=30, MaxLatency=355584us, Callers=[frontend-2×30]>
+- <19:27:00 (+17m)~+60s, Callee=frontend-1, Count=30, MaxLatency=278505us, Callers=[frontend-1×30]>
+- <19:21:00 (+11m)~+60s, Callee=frontend-2, Count=30, MaxLatency=234220us, Callers=[frontend-2×30]>
+Three-hop call paths statistics:
+- "frontend-1 → frontend-1 → productcatalogservice-2" has occurred 387 times in the time window
+- "frontend-0 → frontend-0 → productcatalogservice-2" has occurred 258 times in the time window
+- "frontend-2 → frontend-2 → productcatalogservice-1" has occurred 238 times in the time window
+- "recommendationservice-0 → recommendationservice-0 → productcatalogservice-1" has occurred 133 times in the time window
+- "frontend-1 → frontend-1 → cartservice-0" has occurred 68 times in the time window
+- "frontend-1 → cartservice-0 → redis" has occurred 67 times in the time window
+- "frontend-1 → recommendationservice-0 → recommendationservice-0" has occurred 66 times in the time window
+- "frontend-2 → cartservice-0 → redis" has occurred 64 times in the time window
+- "frontend-1 → frontend-1 → recommendationservice-0" has occurred 62 times in the time window
+- "frontend-0 → frontend-0 → cartservice-0" has occurred 49 times in the time window
+- "frontend-2 → frontend-2 → cartservice-0" has occurred 48 times in the time window
+- "frontend-0 → cartservice-0 → redis" has occurred 47 times in the time window
+- "frontend-2 → frontend-2 → recommendationservice-0" has occurred 44 times in the time window
+- "frontend-2 → recommendationservice-0 → recommendationservice-0" has occurred 41 times in the time window
+- "frontend-0 → frontend-0 → recommendationservice-0" has occurred 32 times in the time window
+- "frontend-0 → recommendationservice-0 → recommendationservice-0" has occurred 30 times in the time window
+- "frontend-2 → checkoutservice-2 → checkoutservice-2" has occurred 22 times in the time window
+- "frontend-1 → checkoutservice-2 → checkoutservice-2" has occurred 21 times in the time window
+- "frontend-0 → checkoutservice-2 → checkoutservice-2" has occurred 20 times in the time window
+- "frontend-2 → frontend-2 → shippingservice-0" has occurred 15 times in the time window
+- "frontend-1 → frontend-1 → shippingservice-0" has occurred 15 times in the time window
+- "frontend-0 → frontend-0 → shippingservice-0" has occurred 13 times in the time window
+- "checkoutservice-2 → cartservice-2 → redis" has occurred 9 times in the time window
+- "checkoutservice-2 → checkoutservice-2 → cartservice-1" has occurred 8 times in the time window

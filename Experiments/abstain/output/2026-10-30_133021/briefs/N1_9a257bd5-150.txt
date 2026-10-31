@@ -1,0 +1,56 @@
+조회 구간: 2025-06-08T16:10:02Z ~ 2025-06-08T16:25:02Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1127개, 최대 16포인트, 이상 90개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, checkoutservice, checkoutservice-2, adservice-2, hipstershop
+Top-5 metrics with largest deviations: client_error, error, client_error_ratio, error_ratio, rrt_max
+Metric descriptions sorted by deviation_score:
+- checkoutservice-2 | client_error | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.9σ
+- checkoutservice-2 | client_error_ratio | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.9σ
+- checkoutservice-2 | error | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.9σ
+- checkoutservice-2 | error_ratio | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.9σ
+- checkoutservice | client_error | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.9σ
+- checkoutservice | client_error_ratio | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.9σ
+- checkoutservice | error | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.9σ
+- checkoutservice | error_ratio | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.9σ
+- adservice-2 | request | 판정 불가(30포인트 미만): first 16:22:00 (+12m), peak 16:22:00 (+12m), deviation_score ≈ 3.9σ
+- adservice-2 | response | 판정 불가(30포인트 미만): first 16:22:00 (+12m), peak 16:22:00 (+12m), deviation_score ≈ 3.9σ
+- tikv | io_util{device=vda,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 16:12:00 (+2m), peak 16:12:00 (+2m), deviation_score ≈ 3.9σ
+- tikv | io_util{device=vda,instance=223.193.36.130} | 판정 불가(30포인트 미만): first 16:12:00 (+2m), peak 16:12:00 (+2m), deviation_score ≈ 3.9σ
+- adservice-2 | pod_memory_working_set_bytes | 판정 불가(30포인트 미만): first 16:21:00 (+11m), peak 16:21:00 (+11m), deviation_score ≈ 3.9σ
+- tikv | read_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.9σ
+- tikv | write_wal_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.7σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.6σ
+- tikv | qps{type=prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.5σ
+- adservice-2 | rrt | 판정 불가(30포인트 미만): first 16:22:00 (+12m), peak 16:22:00 (+12m), deviation_score ≈ 3.3σ
+- hipstershop | rrt | 판정 불가(30포인트 미만): first 16:25:00 (+15m), peak 16:25:00 (+15m), deviation_score ≈ 3.3σ
+- tikv | snapshot_apply_count{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.3σ
+- tikv | io_util{device=vda,instance=223.193.36.113} | 판정 불가(30포인트 미만): first 16:20:00 (+10m), peak 16:20:00 (+10m), deviation_score ≈ 3.3σ
+- hipstershop | client_error | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.3σ
+- hipstershop | error | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.3σ
+- hipstershop | client_error_ratio | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.2σ
+- hipstershop | error_ratio | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | grpc_qps{type=kv_commit,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | grpc_qps{type=kv_prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | grpc_qps{type=kv_batch_get,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | qps{type=batch_get,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.2σ
+- checkoutservice-2 | rrt_max | 판정 불가(30포인트 미만): first 16:11:00 (+1m), peak 16:11:00 (+1m), deviation_score ≈ 3.1σ
+
+[log] 행 13363개, 키워드 일치 330개, 템플릿 3종 중 상위 20% 1종, 출력 15건
+Failure-indicative log entries after two-stage filtering:
+- 16:10:09 (+0m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"127f57b4-1bf3-47e5-815f-9cb9c365b14d","http.req.method":"GET","http.req.path":"/product/2ZYFJ3GM2N","message":"failed to retrieve ads","session":"74928d0b-89ed-4152-8878-6c861b367ae7","se
+- 16:11:01 (+1m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"dddefb50-717e-4139-8376-788780b03999","http.req.method":"GET","http.req.path":"/product/L9ECAV7KIM","message":"failed to retrieve ads","session":"74928d0b-89ed-4152-8878-6c861b367ae7","se
+- 16:12:03 (+2m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"237804a8-ce9e-481d-8606-fad1923768a9","http.req.method":"GET","http.req.path":"/product/9SIQT8TOJO","message":"failed to retrieve ads","session":"4516e9a0-a1c0-4609-a517-a32d953779a7","se
+- 16:13:02 (+3m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"70c7d731-81dc-4de1-9daa-b286eacad20d","http.req.method":"GET","http.req.path":"/product/6E92ZMYYFZ","message":"failed to retrieve ads","session":"4516e9a0-a1c0-4609-a517-a32d953779a7","se
+- 16:14:01 (+4m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"dd1725d3-acd0-438e-8bae-130b22555462","http.req.method":"GET","http.req.path":"/product/6E92ZMYYFZ","message":"failed to retrieve ads","session":"fc310d2d-6d25-4495-aabd-9493bf71b2d3","se
+- 16:15:00 (+5m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"769fb7f6-5a05-4e11-9ba7-b2e70682bcf9","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"aeb885e0-a64e-4b83-ad68-797f666e04a5","severity":"warning",
+- 16:16:02 (+6m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"73b981f8-6cc3-4de2-966f-9738fe2e61eb","http.req.method":"GET","http.req.path":"/product/L9ECAV7KIM","message":"failed to retrieve ads","session":"aeb885e0-a64e-4b83-ad68-797f666e04a5","se
+- 16:17:00 (+7m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"b443e4d6-55f8-45d1-99d3-02f7c3221d84","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"b167db41-4bfe-4228-83b5-7a815f4bb310","severity":"warning",
+- 16:18:02 (+8m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"d2fde5e1-0888-4702-b50b-4644d3850d22","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"875776d1-c1bf-4bf4-9f41-641bd37ccaa9","severity":"warning",
+- 16:19:03 (+9m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"d19cfb96-6661-4f33-b20d-2794d962532d","http.req.method":"GET","http.req.path":"/product/9SIQT8TOJO","message":"failed to retrieve ads","session":"875776d1-c1bf-4bf4-9f41-641bd37ccaa9","se
+- 16:20:00 (+10m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"b24466ab-a01b-4ad0-859f-ea9314d92cae","http.req.method":"GET","http.req.path":"/product/LS4PSXUNUM","message":"failed to retrieve ads","session":"bbd0aeb8-4320-4786-b0cf-ee3ec86b531e","se
+- 16:21:06 (+11m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"3183fbbd-cac5-49b4-8cd3-f3444448eb6c","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"b6e5efee-401f-4e4e-a0fb-77c786676f2d","severity":"warning",
+- 16:22:01 (+12m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"fab08f14-895e-481e-aa08-ffa0b9cc6f90","http.req.method":"GET","http.req.path":"/product/LS4PSXUNUM","message":"failed to retrieve ads","session":"373dcbe7-2b7e-4b08-a250-7b4d856fff5b","se
+- 16:23:00 (+13m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"0e894b64-3f44-4299-8da3-2a007c01cb53","http.req.method":"GET","http.req.path":"/product/L9ECAV7KIM","message":"failed to retrieve ads","session":"744e13c2-0be0-4c4c-acaf-9d0bfc9be1aa","se
+- 16:24:02 (+14m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"390da64b-1eaa-4384-b152-571c771494aa","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"8e06baac-e71a-4ed6-9c36-46c2cb511cfb","severity":"warning",
+
+[trace] 행 없음

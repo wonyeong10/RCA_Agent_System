@@ -1,0 +1,83 @@
+조회 구간: 2025-06-19T00:10:09Z ~ 2025-06-19T00:26:09Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1125개, 최대 17포인트, 이상 61개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, redis-cart-0, adservice-1, aiops-k8s-02, adservice-0
+Top-5 metrics with largest deviations: rrt_max, request, response, pod_memory_working_set_bytes, node_filesystem_usage_rate{device=/dev/vda2,mountpoint=/}
+Metric descriptions sorted by deviation_score:
+- aiops-k8s-02 | node_filesystem_usage_rate{device=/dev/vda2,mountpoint=/} | 판정 불가(30포인트 미만): first 00:10:00 (+0m), peak 00:10:00 (+0m), deviation_score ≈ 4.0σ
+- aiops-k8s-02 | node_filesystem_usage_rate{device=/dev/mapper/aiops-aiops,mountpoint=/data} | 판정 불가(30포인트 미만): first 00:26:00 (+16m), peak 00:26:00 (+16m), deviation_score ≈ 4.0σ
+- adservice-0 | request | 판정 불가(30포인트 미만): first 00:24:00 (+14m), peak 00:24:00 (+14m), deviation_score ≈ 4.0σ
+- adservice-0 | response | 판정 불가(30포인트 미만): first 00:24:00 (+14m), peak 00:24:00 (+14m), deviation_score ≈ 4.0σ
+- adservice-1 | request | 판정 불가(30포인트 미만): first 00:24:00 (+14m), peak 00:24:00 (+14m), deviation_score ≈ 4.0σ
+- adservice-1 | response | 판정 불가(30포인트 미만): first 00:24:00 (+14m), peak 00:24:00 (+14m), deviation_score ≈ 4.0σ
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/dm-0} | 판정 불가(30포인트 미만): first 00:14:00 (+4m), peak 00:14:00 (+4m), deviation_score ≈ 4.0σ
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/vdb} | 판정 불가(30포인트 미만): first 00:14:00 (+4m), peak 00:14:00 (+4m), deviation_score ≈ 4.0σ
+- adservice-0 | pod_memory_working_set_bytes | 판정 불가(30포인트 미만): first 00:23:00 (+13m), peak 00:23:00 (+13m), deviation_score ≈ 4.0σ
+- adservice-1 | pod_memory_working_set_bytes | 판정 불가(30포인트 미만): first 00:19:00 (+9m), peak 00:19:00 (+9m), deviation_score ≈ 4.0σ
+- aiops-k8s-02 | node_filesystem_free_bytes{device=/dev/vda2,mountpoint=/} | 판정 불가(30포인트 미만): first 00:10:00 (+0m), peak 00:10:00 (+0m), deviation_score ≈ 4.0σ
+- redis-cart-0 | pod_cpu_usage | 판정 불가(30포인트 미만): first 00:14:00 (+4m), peak 00:14:00 (+4m), deviation_score ≈ 4.0σ
+- tikv | io_util{device=vda,instance=10.233.68.28:9100} | 판정 불가(30포인트 미만): first 00:10:00 (+0m), peak 00:10:00 (+0m), deviation_score ≈ 4.0σ
+- tikv | io_util{device=vda,instance=223.193.36.127} | 판정 불가(30포인트 미만): first 00:10:00 (+0m), peak 00:10:00 (+0m), deviation_score ≈ 4.0σ
+- redis-cart-0 | rrt | 판정 불가(30포인트 미만): first 00:23:00 (+13m), peak 00:23:00 (+13m), deviation_score ≈ 3.9σ
+- tikv | io_util{device=vda,instance=223.193.36.126} | 판정 불가(30포인트 미만): first 00:20:00 (+10m), peak 00:20:00 (+10m), deviation_score ≈ 3.8σ
+- tikv | io_util{device=vda,instance=10.233.88.24:9100} | 판정 불가(30포인트 미만): first 00:20:00 (+10m), peak 00:20:00 (+10m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=vda,instance=10.233.85.137:9100} | 판정 불가(30포인트 미만): first 00:11:00 (+1m), peak 00:11:00 (+1m), deviation_score ≈ 3.6σ
+- tikv | io_util{device=vda,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 00:11:00 (+1m), peak 00:11:00 (+1m), deviation_score ≈ 3.6σ
+- adservice-1 | rrt_max | 판정 불가(30포인트 미만): first 00:11:00 (+1m), peak 00:11:00 (+1m), deviation_score ≈ 3.5σ
+- aiops-k8s-02 | node_disk_written_bytes_total{device=vda} | 판정 불가(30포인트 미만): first 00:25:00 (+15m), peak 00:25:00 (+15m), deviation_score ≈ 3.2σ
+- redis-cart-0 | rrt_max | 판정 불가(30포인트 미만): first 00:23:00 (+13m), peak 00:23:00 (+13m), deviation_score ≈ 3.1σ
+- adservice-0 | rrt_max | 판정 불가(30포인트 미만): first 00:11:00 (+1m), peak 00:11:00 (+1m), deviation_score ≈ 3.0σ
+
+[log] 행 40775개, 키워드 일치 83개, 템플릿 1종 중 상위 20% 1종, 출력 17건
+Failure-indicative log entries after two-stage filtering:
+- 00:10:18 (+0m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"df85d44
+- 00:11:08 (+1m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"f776e7c
+- 00:12:06 (+2m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"9a2c3da
+- 00:13:01 (+3m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"f889601
+- 00:14:03 (+4m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"cd0f243
+- 00:15:08 (+5m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"b2204fa
+- 00:16:03 (+6m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"6859f14
+- 00:17:01 (+7m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"86aed81
+- 00:18:01 (+8m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"5f67070
+- 00:19:07 (+9m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"7ab3928
+- 00:20:07 (+10m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"95711af
+- 00:21:23 (+11m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"7a66fdd
+- 00:22:04 (+12m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"5cbb672
+- 00:23:05 (+13m) <frontend-2> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"0a8e4cb
+- 00:24:06 (+14m) <frontend-1> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"0d3016e
+- 00:25:11 (+15m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"9bc3193
+- 00:26:02 (+16m) <frontend-0> | {"error":"failed to complete the order: rpc error: code = Internal desc = failed to charge card: could not charge the card: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.55.4:50051: connect: connection refused\"","http.req.id":"2744c6b
+
+[trace] span 42094개, 호출 유형별 p95 초과 2114건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <00:26:00 (+16m)~+60s, Callee=checkoutservice, Count=3 (19%), MaxLatency=66678us, Callers=[checkoutservice×3]>
+- <00:21:00 (+11m)~+60s, Callee=checkoutservice, Count=3 (17%), MaxLatency=150263us, Callers=[frontend×1, checkoutservice×1, (root)×1]>
+- <00:16:00 (+6m)~+60s, Callee=shippingservice, Count=5 (12%), MaxLatency=2015us, Callers=[frontend×4, checkoutservice×1]>
+- <00:23:00 (+13m)~+60s, Callee=redis, Count=15 (12%), MaxLatency=72979us, Callers=[cartservice×15]>
+- <00:23:00 (+13m)~+60s, Callee=cartservice, Count=13 (11%), MaxLatency=73564us, Callers=[frontend×13]>
+- <00:10:00 (+0m)~+60s, Callee=recommendationservice, Count=17 (10%), MaxLatency=12368us, Callers=[recommendationservice×9, frontend×8]>
+- <00:24:00 (+14m)~+60s, Callee=shippingservice, Count=3 (10%), MaxLatency=688us, Callers=[frontend×3]>
+- <00:20:00 (+10m)~+60s, Callee=shippingservice, Count=4 (10%), MaxLatency=951us, Callers=[checkoutservice×2, frontend×2]>
+- <00:26:00 (+16m)~+60s, Callee=cartservice, Count=2 (10%), MaxLatency=5197us, Callers=[checkoutservice×1, frontend×1]>
+- <00:10:00 (+0m)~+60s, Callee=shippingservice, Count=3 (9%), MaxLatency=1072us, Callers=[frontend×3]>
+- <00:26:00 (+16m)~+60s, Callee=redis, Count=2 (9%), MaxLatency=4331us, Callers=[cartservice×2]>
+- <00:13:00 (+3m)~+60s, Callee=shippingservice, Count=2 (8%), MaxLatency=2017us, Callers=[frontend×2]>
+- <00:18:00 (+8m)~+60s, Callee=cartservice, Count=10 (8%), MaxLatency=11906us, Callers=[frontend×9, checkoutservice×1]>
+- <00:12:00 (+2m)~+60s, Callee=recommendationservice, Count=14 (8%), MaxLatency=13044us, Callers=[frontend×8, recommendationservice×6]>
+- <00:18:00 (+8m)~+60s, Callee=recommendationservice, Count=13 (7%), MaxLatency=8708us, Callers=[frontend×7, recommendationservice×6]>
+- <00:20:00 (+10m)~+60s, Callee=recommendationservice, Count=12 (7%), MaxLatency=10574us, Callers=[recommendationservice×7, frontend×5]>
+- <00:24:00 (+14m)~+60s, Callee=productcatalogservice, Count=43 (7%), MaxLatency=32890us, Callers=[frontend×36, recommendationservice×6, checkoutservice×1]>
+- <00:19:00 (+9m)~+60s, Callee=productcatalogservice, Count=48 (7%), MaxLatency=30864us, Callers=[frontend×42, recommendationservice×6]>
+- <00:19:00 (+9m)~+60s, Callee=cartservice, Count=8 (7%), MaxLatency=8357us, Callers=[frontend×8]>
+- <00:23:00 (+13m)~+60s, Callee=recommendationservice, Count=12 (7%), MaxLatency=11565us, Callers=[recommendationservice×7, frontend×5]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 1076 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 453 times in the time window
+- "(root) → (root) → frontend" has occurred 104 times in the time window
+- "frontend → cartservice → redis" has occurred 102 times in the time window
+- "frontend → frontend → cartservice" has occurred 91 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 72 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 70 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 70 times in the time window
+- "frontend → frontend → shippingservice" has occurred 20 times in the time window
+- "frontend → checkoutservice → checkoutservice" has occurred 20 times in the time window

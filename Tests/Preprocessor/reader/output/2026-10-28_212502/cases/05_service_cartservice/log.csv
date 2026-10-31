@@ -1,0 +1,61 @@
+﻿k8_namespace,@timestamp,agent_name,k8_pod,message,k8_node_name,ts
+hipstershop,2025-06-05T16:10:02.678Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1],aiops-k8s-08,2025-06-05 16:10:02.678+00:00
+hipstershop,2025-06-05T16:10:02.678Z,filebeat-filebeat-htfz4,cartservice-1,      Request starting HTTP/2 POST http://cartservice:7070/hipstershop.CartService/GetCart application/grpc -,aiops-k8s-08,2025-06-05 16:10:02.678+00:00
+hipstershop,2025-06-05T16:10:02.679Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0],aiops-k8s-08,2025-06-05 16:10:02.679+00:00
+hipstershop,2025-06-05T16:10:02.679Z,filebeat-filebeat-htfz4,cartservice-1,      Executing endpoint 'gRPC - /hipstershop.CartService/GetCart',aiops-k8s-08,2025-06-05 16:10:02.679+00:00
+hipstershop,2025-06-05T16:10:02.679Z,filebeat-filebeat-htfz4,cartservice-1,GetCartAsync called with userId=2f0eb5a3-a4d5-4233-8009-8f8169fd7b1e,aiops-k8s-08,2025-06-05 16:10:02.679+00:00
+hipstershop,2025-06-05T16:10:02.681Z,filebeat-filebeat-htfz4,cartservice-1,      Request finished HTTP/2 POST http://cartservice:7070/hipstershop.CartService/GetCart application/grpc - - 200 - application/grpc 2.6304ms,aiops-k8s-08,2025-06-05 16:10:02.681+00:00
+hipstershop,2025-06-05T16:10:02.681Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1],aiops-k8s-08,2025-06-05 16:10:02.681+00:00
+hipstershop,2025-06-05T16:10:02.681Z,filebeat-filebeat-htfz4,cartservice-1,      Executed endpoint 'gRPC - /hipstershop.CartService/GetCart',aiops-k8s-08,2025-06-05 16:10:02.681+00:00
+hipstershop,2025-06-05T16:10:02.681Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2],aiops-k8s-08,2025-06-05 16:10:02.681+00:00
+hipstershop,2025-06-05T16:10:02.739Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1],aiops-k8s-08,2025-06-05 16:10:02.739+00:00
+hipstershop,2025-06-05T16:10:02.739Z,filebeat-filebeat-htfz4,cartservice-1,      Request starting HTTP/2 POST http://cartservice:7070/hipstershop.CartService/GetCart application/grpc -,aiops-k8s-08,2025-06-05 16:10:02.739+00:00
+hipstershop,2025-06-05T16:10:02.740Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0],aiops-k8s-08,2025-06-05 16:10:02.740+00:00
+hipstershop,2025-06-05T16:10:02.740Z,filebeat-filebeat-htfz4,cartservice-1,      Executing endpoint 'gRPC - /hipstershop.CartService/GetCart',aiops-k8s-08,2025-06-05 16:10:02.740+00:00
+hipstershop,2025-06-05T16:10:02.740Z,filebeat-filebeat-htfz4,cartservice-1,GetCartAsync called with userId=3da97ced-ec9a-4405-b920-0a572ffe264e,aiops-k8s-08,2025-06-05 16:10:02.740+00:00
+hipstershop,2025-06-05T16:10:02.741Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1],aiops-k8s-08,2025-06-05 16:10:02.741+00:00
+hipstershop,2025-06-05T16:10:02.741Z,filebeat-filebeat-htfz4,cartservice-1,      Executed endpoint 'gRPC - /hipstershop.CartService/GetCart',aiops-k8s-08,2025-06-05 16:10:02.741+00:00
+hipstershop,2025-06-05T16:10:02.741Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2],aiops-k8s-08,2025-06-05 16:10:02.741+00:00
+hipstershop,2025-06-05T16:10:02.741Z,filebeat-filebeat-htfz4,cartservice-1,      Request finished HTTP/2 POST http://cartservice:7070/hipstershop.CartService/GetCart application/grpc - - 200 - application/grpc 1.8038ms,aiops-k8s-08,2025-06-05 16:10:02.741+00:00
+hipstershop,2025-06-05T16:10:03.454Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1],aiops-k8s-08,2025-06-05 16:10:03.454+00:00
+hipstershop,2025-06-05T16:10:03.454Z,filebeat-filebeat-htfz4,cartservice-1,      Request starting HTTP/2 POST http://cartservice:7070/hipstershop.CartService/GetCart application/grpc -,aiops-k8s-08,2025-06-05 16:10:03.454+00:00
+hipstershop,2025-06-05T16:10:03.454Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0],aiops-k8s-08,2025-06-05 16:10:03.454+00:00
+hipstershop,2025-06-05T16:10:03.454Z,filebeat-filebeat-htfz4,cartservice-1,      Executing endpoint 'gRPC - /hipstershop.CartService/GetCart',aiops-k8s-08,2025-06-05 16:10:03.454+00:00
+hipstershop,2025-06-05T16:10:03.454Z,filebeat-filebeat-htfz4,cartservice-1,GetCartAsync called with userId=08840e18-0d99-45fc-819e-268eda702f66,aiops-k8s-08,2025-06-05 16:10:03.454+00:00
+hipstershop,2025-06-05T16:10:03.456Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1],aiops-k8s-08,2025-06-05 16:10:03.456+00:00
+hipstershop,2025-06-05T16:10:03.456Z,filebeat-filebeat-htfz4,cartservice-1,      Executed endpoint 'gRPC - /hipstershop.CartService/GetCart',aiops-k8s-08,2025-06-05 16:10:03.456+00:00
+hipstershop,2025-06-05T16:10:03.456Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2],aiops-k8s-08,2025-06-05 16:10:03.456+00:00
+hipstershop,2025-06-05T16:10:03.456Z,filebeat-filebeat-htfz4,cartservice-1,      Request finished HTTP/2 POST http://cartservice:7070/hipstershop.CartService/GetCart application/grpc - - 200 - application/grpc 1.6807ms,aiops-k8s-08,2025-06-05 16:10:03.456+00:00
+hipstershop,2025-06-05T16:10:03.713Z,filebeat-filebeat-htfz4,cartservice-1,GetCartAsync called with userId=2f1e94ae-28c6-454d-9400-53b357b8b02e,aiops-k8s-08,2025-06-05 16:10:03.713+00:00
+hipstershop,2025-06-05T16:10:03.713Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1],aiops-k8s-08,2025-06-05 16:10:03.713+00:00
+hipstershop,2025-06-05T16:10:03.713Z,filebeat-filebeat-htfz4,cartservice-1,      Executing endpoint 'gRPC - /hipstershop.CartService/GetCart',aiops-k8s-08,2025-06-05 16:10:03.713+00:00
+hipstershop,2025-06-05T16:31:02.148Z,filebeat-filebeat-htfz4,cartservice-1,      Request finished HTTP/2 POST http://cartservice:7070/hipstershop.CartService/GetCart application/grpc - - 200 - application/grpc 1.2725ms,aiops-k8s-08,2025-06-05 16:31:02.148+00:00
+hipstershop,2025-06-05T16:31:02.148Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1],aiops-k8s-08,2025-06-05 16:31:02.148+00:00
+hipstershop,2025-06-05T16:31:02.148Z,filebeat-filebeat-htfz4,cartservice-1,      Executed endpoint 'gRPC - /hipstershop.CartService/GetCart',aiops-k8s-08,2025-06-05 16:31:02.148+00:00
+hipstershop,2025-06-05T16:31:02.285Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0],aiops-k8s-08,2025-06-05 16:31:02.285+00:00
+hipstershop,2025-06-05T16:31:02.285Z,filebeat-filebeat-htfz4,cartservice-1,      Request starting HTTP/2 POST http://cartservice:7070/hipstershop.CartService/GetCart application/grpc -,aiops-k8s-08,2025-06-05 16:31:02.285+00:00
+hipstershop,2025-06-05T16:31:02.285Z,filebeat-filebeat-htfz4,cartservice-1,      Executing endpoint 'gRPC - /hipstershop.CartService/GetCart',aiops-k8s-08,2025-06-05 16:31:02.285+00:00
+hipstershop,2025-06-05T16:31:02.285Z,filebeat-filebeat-htfz4,cartservice-1,GetCartAsync called with userId=e2d81b53-7613-4f57-a298-cbbb86d1aa79,aiops-k8s-08,2025-06-05 16:31:02.285+00:00
+hipstershop,2025-06-05T16:31:02.285Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1],aiops-k8s-08,2025-06-05 16:31:02.285+00:00
+hipstershop,2025-06-05T16:31:02.286Z,filebeat-filebeat-htfz4,cartservice-1,      Executed endpoint 'gRPC - /hipstershop.CartService/GetCart',aiops-k8s-08,2025-06-05 16:31:02.286+00:00
+hipstershop,2025-06-05T16:31:02.286Z,filebeat-filebeat-htfz4,cartservice-1,      Request finished HTTP/2 POST http://cartservice:7070/hipstershop.CartService/GetCart application/grpc - - 200 - application/grpc 1.1124ms,aiops-k8s-08,2025-06-05 16:31:02.286+00:00
+hipstershop,2025-06-05T16:31:02.286Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2],aiops-k8s-08,2025-06-05 16:31:02.286+00:00
+hipstershop,2025-06-05T16:31:02.286Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1],aiops-k8s-08,2025-06-05 16:31:02.286+00:00
+hipstershop,2025-06-05T16:31:02.731Z,filebeat-filebeat-htfz4,cartservice-1,      Request starting HTTP/2 POST http://cartservice:7070/hipstershop.CartService/AddItem application/grpc -,aiops-k8s-08,2025-06-05 16:31:02.731+00:00
+hipstershop,2025-06-05T16:31:02.731Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1],aiops-k8s-08,2025-06-05 16:31:02.731+00:00
+hipstershop,2025-06-05T16:31:02.731Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0],aiops-k8s-08,2025-06-05 16:31:02.731+00:00
+hipstershop,2025-06-05T16:31:02.731Z,filebeat-filebeat-htfz4,cartservice-1,      Executing endpoint 'gRPC - /hipstershop.CartService/AddItem',aiops-k8s-08,2025-06-05 16:31:02.731+00:00
+hipstershop,2025-06-05T16:31:02.731Z,filebeat-filebeat-htfz4,cartservice-1,"AddItemAsync called with userId=42f82cbb-71f6-451a-bea1-0fbaf5958337, productId=9SIQT8TOJO, quantity=5",aiops-k8s-08,2025-06-05 16:31:02.731+00:00
+hipstershop,2025-06-05T16:31:02.733Z,filebeat-filebeat-htfz4,cartservice-1,      Executed endpoint 'gRPC - /hipstershop.CartService/AddItem',aiops-k8s-08,2025-06-05 16:31:02.733+00:00
+hipstershop,2025-06-05T16:31:02.733Z,filebeat-filebeat-htfz4,cartservice-1,      Request finished HTTP/2 POST http://cartservice:7070/hipstershop.CartService/AddItem application/grpc - - 200 - application/grpc 1.9929ms,aiops-k8s-08,2025-06-05 16:31:02.733+00:00
+hipstershop,2025-06-05T16:31:02.733Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1],aiops-k8s-08,2025-06-05 16:31:02.733+00:00
+hipstershop,2025-06-05T16:31:02.733Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2],aiops-k8s-08,2025-06-05 16:31:02.733+00:00
+hipstershop,2025-06-05T16:31:02.738Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1],aiops-k8s-08,2025-06-05 16:31:02.738+00:00
+hipstershop,2025-06-05T16:31:02.738Z,filebeat-filebeat-htfz4,cartservice-1,      Request starting HTTP/2 POST http://cartservice:7070/hipstershop.CartService/GetCart application/grpc -,aiops-k8s-08,2025-06-05 16:31:02.738+00:00
+hipstershop,2025-06-05T16:31:02.738Z,filebeat-filebeat-htfz4,cartservice-1,GetCartAsync called with userId=42f82cbb-71f6-451a-bea1-0fbaf5958337,aiops-k8s-08,2025-06-05 16:31:02.738+00:00
+hipstershop,2025-06-05T16:31:02.738Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0],aiops-k8s-08,2025-06-05 16:31:02.738+00:00
+hipstershop,2025-06-05T16:31:02.738Z,filebeat-filebeat-htfz4,cartservice-1,      Executing endpoint 'gRPC - /hipstershop.CartService/GetCart',aiops-k8s-08,2025-06-05 16:31:02.738+00:00
+hipstershop,2025-06-05T16:31:02.739Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1],aiops-k8s-08,2025-06-05 16:31:02.739+00:00
+hipstershop,2025-06-05T16:31:02.739Z,filebeat-filebeat-htfz4,cartservice-1,      Executed endpoint 'gRPC - /hipstershop.CartService/GetCart',aiops-k8s-08,2025-06-05 16:31:02.739+00:00
+hipstershop,2025-06-05T16:31:02.739Z,filebeat-filebeat-htfz4,cartservice-1,      Request finished HTTP/2 POST http://cartservice:7070/hipstershop.CartService/GetCart application/grpc - - 200 - application/grpc 1.0095ms,aiops-k8s-08,2025-06-05 16:31:02.739+00:00
+hipstershop,2025-06-05T16:31:02.739Z,filebeat-filebeat-htfz4,cartservice-1,[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2],aiops-k8s-08,2025-06-05 16:31:02.739+00:00

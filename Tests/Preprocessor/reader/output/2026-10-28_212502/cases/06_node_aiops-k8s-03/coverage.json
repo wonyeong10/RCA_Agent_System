@@ -1,0 +1,17 @@
+{
+  "log": {
+    "status": "no_target_rows",
+    "minutes_present": 15,
+    "minutes_total": 15
+  },
+  "trace": {
+    "status": "no_target_rows",
+    "minutes_present": 15,
+    "minutes_total": 15
+  },
+  "metric": {
+    "status": "ok",
+    "minutes_present": 15,
+    "minutes_total": 15
+  }
+}

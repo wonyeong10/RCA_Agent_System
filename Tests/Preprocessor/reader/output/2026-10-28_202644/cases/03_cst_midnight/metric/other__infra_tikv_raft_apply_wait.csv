@@ -1,0 +1,22 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,object_type,pod,raft_apply_wait,sql_type,type,ts
+2025-06-06T15:50:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 15:50:00+00:00
+2025-06-06T15:51:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 15:51:00+00:00
+2025-06-06T15:52:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 15:52:00+00:00
+2025-06-06T15:53:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 15:53:00+00:00
+2025-06-06T15:54:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 15:54:00+00:00
+2025-06-06T15:55:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 15:55:00+00:00
+2025-06-06T15:56:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 15:56:00+00:00
+2025-06-06T15:57:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 15:57:00+00:00
+2025-06-06T15:58:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 15:58:00+00:00
+2025-06-06T15:59:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 15:59:00+00:00
+2025-06-06T16:00:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 16:00:00+00:00
+2025-06-06T16:01:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 16:01:00+00:00
+2025-06-06T16:02:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 16:02:00+00:00
+2025-06-06T16:03:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 16:03:00+00:00
+2025-06-06T16:04:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 16:04:00+00:00
+2025-06-06T16:05:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 16:05:00+00:00
+2025-06-06T16:06:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 16:06:00+00:00
+2025-06-06T16:07:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 16:07:00+00:00
+2025-06-06T16:08:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 16:08:00+00:00
+2025-06-06T16:09:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 16:09:00+00:00
+2025-06-06T16:10:00Z,null,null,10.233.85.101:20180,raft_apply_wait,null,null,tidb,tikv,null,0.0,null,null,2025-06-06 16:10:00+00:00

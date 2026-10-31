@@ -1,0 +1,89 @@
+조회 구간: 2025-06-24T12:10:42Z ~ 2025-06-24T12:25:42Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1116개, 최대 16포인트, 이상 76개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, redis-cart-0, tidb, emailservice-2, emailservice-0
+Top-5 metrics with largest deviations: pod_network_receive_packets, pod_network_receive_bytes, pod_network_transmit_bytes, pod_network_transmit_packets, qps{type=Begin,instance=10.233.79.158:10080}
+Metric descriptions sorted by deviation_score:
+- tidb | qps{type=Begin,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.9σ
+- tidb | qps{type=Commit,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.9σ
+- tidb | qps{type=Update,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.9σ
+- redis-cart-0 | pod_cpu_usage | 판정 불가(30포인트 미만): first 12:19:00 (+9m), peak 12:19:00 (+9m), deviation_score ≈ 3.9σ
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/dm-0} | 판정 불가(30포인트 미만): first 12:19:00 (+9m), peak 12:19:00 (+9m), deviation_score ≈ 3.9σ
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/vdb} | 판정 불가(30포인트 미만): first 12:19:00 (+9m), peak 12:19:00 (+9m), deviation_score ≈ 3.9σ
+- redis-cart-0 | pod_processes | 판정 불가(30포인트 미만): first 12:19:00 (+9m), peak 12:19:00 (+9m), deviation_score ≈ 3.9σ
+- tidb | qps{type=Insert,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.9σ
+- tikv | io_util{device=dm-0,instance=10.233.85.37:9100} | 판정 불가(30포인트 미만): first 12:13:00 (+3m), peak 12:13:00 (+3m), deviation_score ≈ 3.9σ
+- tikv | io_util{device=dm-0,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 12:17:00 (+7m), peak 12:17:00 (+7m), deviation_score ≈ 3.9σ
+- tikv | io_util{device=vdb,instance=10.233.85.37:9100} | 판정 불가(30포인트 미만): first 12:13:00 (+3m), peak 12:13:00 (+3m), deviation_score ≈ 3.9σ
+- tikv | io_util{device=vdb,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 12:17:00 (+7m), peak 12:17:00 (+7m), deviation_score ≈ 3.9σ
+- tikv | write_wal_mbps{instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 12:12:00 (+2m), peak 12:12:00 (+2m), deviation_score ≈ 3.8σ
+- tikv | io_util{device=vda,instance=10.233.74.60:9100} | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.8σ
+- tikv | io_util{device=vda,instance=223.193.36.113} | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.8σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 12:12:00 (+2m), peak 12:12:00 (+2m), deviation_score ≈ 3.7σ
+- emailservice-2 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 12:10:00 (+0m), peak 12:10:00 (+0m), deviation_score ≈ 3.7σ
+- emailservice-2 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 12:10:00 (+0m), peak 12:10:00 (+0m), deviation_score ≈ 3.7σ
+- emailservice-2 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 12:10:00 (+0m), peak 12:10:00 (+0m), deviation_score ≈ 3.7σ
+- emailservice-2 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 12:10:00 (+0m), peak 12:10:00 (+0m), deviation_score ≈ 3.6σ
+- tikv | qps{type=prewrite,instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 12:12:00 (+2m), peak 12:12:00 (+2m), deviation_score ≈ 3.6σ
+- tikv | grpc_qps{type=kv_prewrite,instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.5σ
+- emailservice-0 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.3σ
+- emailservice-0 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.3σ
+- redis-cart-0 | timeout | 판정 불가(30포인트 미만): first 12:24:00 (+14m), peak 12:24:00 (+14m), deviation_score ≈ 3.2σ
+- emailservice-0 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | snapshot_apply_count{instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | grpc_qps{type=kv_batch_get,instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 12:12:00 (+2m), peak 12:12:00 (+2m), deviation_score ≈ 3.1σ
+- tikv | qps{type=batch_get,instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 12:12:00 (+2m), peak 12:12:00 (+2m), deviation_score ≈ 3.1σ
+- emailservice-0 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 12:11:00 (+1m), peak 12:11:00 (+1m), deviation_score ≈ 3.1σ
+
+[log] 행 132035개, 키워드 일치 258개, 템플릿 1종 중 상위 20% 1종, 출력 16건
+Failure-indicative log entries after two-stage filtering:
+- 12:10:47 (+0m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:10:47.0645
+- 12:11:03 (+1m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:11:03.2513
+- 12:12:02 (+2m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:12:02.2990
+- 12:13:02 (+3m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:13:02.6913
+- 12:14:06 (+4m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:14:06.1512
+- 12:15:01 (+5m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:15:01.2335
+- 12:16:10 (+6m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:16:10.1699
+- 12:17:02 (+7m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:17:02.3270
+- 12:18:00 (+8m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:18:00.9454
+- 12:19:00 (+9m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:19:00.6990
+- 12:20:07 (+10m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:20:07.7355
+- 12:21:02 (+11m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:21:02.7402
+- 12:22:01 (+12m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:22:01.5194
+- 12:23:01 (+13m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:23:01.5243
+- 12:24:13 (+14m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:24:13.5974
+- 12:25:01 (+15m) <checkoutservice-1> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp: lookup emailservice on 10.233.33.139:53: server misbehaving\"","severity":"warning","timestamp":"2025-06-24T12:25:01.5305
+
+[trace] span 112625개, 호출 유형별 p95 초과 5637건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <12:18:00 (+8m)~+60s, Callee=cartservice, Count=52 (16%), MaxLatency=93015us, Callers=[frontend×39, (root)×9, checkoutservice×4]>
+- <12:16:00 (+6m)~+60s, Callee=checkoutservice, Count=17 (12%), MaxLatency=6114189us, Callers=[(root)×9, checkoutservice×6, frontend×2]>
+- <12:18:00 (+8m)~+60s, Callee=redis, Count=38 (11%), MaxLatency=89874us, Callers=[cartservice×37, (root)×1]>
+- <12:10:00 (+0m)~+60s, Callee=shippingservice, Count=2 (11%), MaxLatency=364us, Callers=[frontend×1, (root)×1]>
+- <12:24:00 (+14m)~+60s, Callee=cartservice, Count=33 (11%), MaxLatency=84605us, Callers=[frontend×17, (root)×16]>
+- <12:13:00 (+3m)~+60s, Callee=cartservice, Count=40 (11%), MaxLatency=81687us, Callers=[frontend×32, (root)×6, checkoutservice×2]>
+- <12:24:00 (+14m)~+60s, Callee=redis, Count=38 (10%), MaxLatency=83858us, Callers=[cartservice×32, (root)×6]>
+- <12:18:00 (+8m)~+60s, Callee=recommendationservice, Count=39 (9%), MaxLatency=11135us, Callers=[recommendationservice×20, frontend×17, (root)×2]>
+- <12:13:00 (+3m)~+60s, Callee=redis, Count=32 (8%), MaxLatency=67555us, Callers=[cartservice×29, (root)×3]>
+- <12:24:00 (+14m)~+60s, Callee=recommendationservice, Count=38 (8%), MaxLatency=10046us, Callers=[frontend×19, recommendationservice×18, (root)×1]>
+- <12:22:00 (+12m)~+60s, Callee=shippingservice, Count=9 (8%), MaxLatency=779us, Callers=[frontend×5, checkoutservice×3, (root)×1]>
+- <12:19:00 (+9m)~+60s, Callee=shippingservice, Count=6 (8%), MaxLatency=3623us, Callers=[checkoutservice×4, (root)×1, frontend×1]>
+- <12:10:00 (+0m)~+60s, Callee=checkoutservice, Count=2 (8%), MaxLatency=62246us, Callers=[(root)×2]>
+- <12:12:00 (+2m)~+60s, Callee=checkoutservice, Count=13 (8%), MaxLatency=4688853us, Callers=[checkoutservice×9, frontend×2, (root)×2]>
+- <12:13:00 (+3m)~+60s, Callee=recommendationservice, Count=38 (7%), MaxLatency=9527us, Callers=[recommendationservice×20, frontend×17, (root)×1]>
+- <12:10:00 (+0m)~+60s, Callee=redis, Count=5 (7%), MaxLatency=11633us, Callers=[cartservice×3, (root)×2]>
+- <12:23:00 (+13m)~+60s, Callee=shippingservice, Count=6 (7%), MaxLatency=2001us, Callers=[frontend×4, (root)×1, checkoutservice×1]>
+- <12:23:00 (+13m)~+60s, Callee=checkoutservice, Count=11 (7%), MaxLatency=5373416us, Callers=[(root)×7, checkoutservice×3, frontend×1]>
+- <12:14:00 (+4m)~+60s, Callee=recommendationservice, Count=43 (7%), MaxLatency=12877us, Callers=[recommendationservice×22, frontend×19, (root)×2]>
+- <12:18:00 (+8m)~+60s, Callee=checkoutservice, Count=9 (7%), MaxLatency=3188820us, Callers=[checkoutservice×6, (root)×3]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 2588 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 1041 times in the time window
+- "(root) → (root) → frontend" has occurred 506 times in the time window
+- "frontend → frontend → cartservice" has occurred 174 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 174 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 172 times in the time window
+- "frontend → cartservice → redis" has occurred 161 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 160 times in the time window
+- "(root) → frontend → productcatalogservice" has occurred 99 times in the time window
+- "(root) → (root) → productcatalogservice" has occurred 90 times in the time window

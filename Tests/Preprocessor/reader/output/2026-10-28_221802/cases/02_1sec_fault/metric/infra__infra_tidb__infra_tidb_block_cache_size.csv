@@ -1,0 +1,2 @@
+﻿time,block_cache_size,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,object_type,pod,sql_type,type,ts
+2025-06-06T04:03:00Z,52122784,all,null,10.233.85.101:20180,block_cache_size,null,null,tidb,tidb,null,null,null,2025-06-06 04:03:00+00:00

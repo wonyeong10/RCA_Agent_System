@@ -1,0 +1,17 @@
+{
+  "log": {
+    "status": "no_file",
+    "minutes_present": 0,
+    "minutes_total": 11
+  },
+  "trace": {
+    "status": "no_file",
+    "minutes_present": 0,
+    "minutes_total": 11
+  },
+  "metric": {
+    "status": "no_file",
+    "minutes_present": 0,
+    "minutes_total": 11
+  }
+}

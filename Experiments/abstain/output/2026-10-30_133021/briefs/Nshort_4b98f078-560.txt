@@ -1,0 +1,81 @@
+조회 구간: 2025-06-27T01:10:19Z ~ 2025-06-27T01:20:19Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1120개, 최대 11포인트, 이상 73개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, paymentservice-1, adservice-0, frontend-1, adservice
+Top-5 metrics with largest deviations: error, error_ratio, client_error, client_error_ratio, store_size{instance=10.233.85.118:20180}
+Metric descriptions sorted by deviation_score:
+- tikv | store_size{instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 01:10:00 (+0m), peak 01:10:00 (+0m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vda,instance=10.233.68.28:9100} | 판정 불가(30포인트 미만): first 01:12:00 (+2m), peak 01:12:00 (+2m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vda,instance=223.193.36.127} | 판정 불가(30포인트 미만): first 01:12:00 (+2m), peak 01:12:00 (+2m), deviation_score ≈ 3.2σ
+- adservice-0 | client_error | 판정 불가(30포인트 미만): first 01:17:00 (+7m), peak 01:17:00 (+7m), deviation_score ≈ 3.2σ
+- adservice-0 | error | 판정 불가(30포인트 미만): first 01:17:00 (+7m), peak 01:17:00 (+7m), deviation_score ≈ 3.2σ
+- frontend-1 | error | 판정 불가(30포인트 미만): first 01:17:00 (+7m), peak 01:17:00 (+7m), deviation_score ≈ 3.2σ
+- frontend-1 | server_error | 판정 불가(30포인트 미만): first 01:17:00 (+7m), peak 01:17:00 (+7m), deviation_score ≈ 3.2σ
+- adservice | client_error | 판정 불가(30포인트 미만): first 01:17:00 (+7m), peak 01:17:00 (+7m), deviation_score ≈ 3.2σ
+- adservice | error | 판정 불가(30포인트 미만): first 01:17:00 (+7m), peak 01:17:00 (+7m), deviation_score ≈ 3.2σ
+- paymentservice-1 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 01:12:00 (+2m), peak 01:12:00 (+2m), deviation_score ≈ 3.2σ
+- frontend-1 | error_ratio | 판정 불가(30포인트 미만): first 01:17:00 (+7m), peak 01:17:00 (+7m), deviation_score ≈ 3.2σ
+- frontend-1 | server_error_ratio | 판정 불가(30포인트 미만): first 01:17:00 (+7m), peak 01:17:00 (+7m), deviation_score ≈ 3.2σ
+- paymentservice-1 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 01:12:00 (+2m), peak 01:12:00 (+2m), deviation_score ≈ 3.2σ
+- paymentservice-1 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 01:12:00 (+2m), peak 01:12:00 (+2m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=dm-0,instance=10.233.74.74:9100} | 판정 불가(30포인트 미만): first 01:18:00 (+8m), peak 01:18:00 (+8m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=dm-0,instance=10.233.85.37:9100} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=dm-0,instance=223.193.36.113} | 판정 불가(30포인트 미만): first 01:18:00 (+8m), peak 01:18:00 (+8m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=dm-0,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vda,instance=10.233.74.74:9100} | 판정 불가(30포인트 미만): first 01:15:00 (+5m), peak 01:15:00 (+5m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vda,instance=223.193.36.113} | 판정 불가(30포인트 미만): first 01:15:00 (+5m), peak 01:15:00 (+5m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vdb,instance=10.233.74.74:9100} | 판정 불가(30포인트 미만): first 01:18:00 (+8m), peak 01:18:00 (+8m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vdb,instance=10.233.85.37:9100} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vdb,instance=223.193.36.113} | 판정 불가(30포인트 미만): first 01:18:00 (+8m), peak 01:18:00 (+8m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vdb,instance=223.193.36.129} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 3.2σ
+- adservice-0 | client_error_ratio | 판정 불가(30포인트 미만): first 01:17:00 (+7m), peak 01:17:00 (+7m), deviation_score ≈ 3.2σ
+- adservice-0 | error_ratio | 판정 불가(30포인트 미만): first 01:17:00 (+7m), peak 01:17:00 (+7m), deviation_score ≈ 3.2σ
+- adservice | client_error_ratio | 판정 불가(30포인트 미만): first 01:17:00 (+7m), peak 01:17:00 (+7m), deviation_score ≈ 3.2σ
+- adservice | error_ratio | 판정 불가(30포인트 미만): first 01:17:00 (+7m), peak 01:17:00 (+7m), deviation_score ≈ 3.2σ
+- paymentservice-1 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 01:12:00 (+2m), peak 01:12:00 (+2m), deviation_score ≈ 3.2σ
+- adservice-0 | pod_memory_working_set_bytes | 판정 불가(30포인트 미만): first 01:19:00 (+9m), peak 01:19:00 (+9m), deviation_score ≈ 3.2σ
+
+[log] 행 21014개, 키워드 일치 44개, 템플릿 4종 중 상위 20% 1종, 출력 8건
+Failure-indicative log entries after two-stage filtering:
+- 01:11:34 (+1m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = timed out waiting for server handshake","severity":"warning","timestamp":"2025-06-27T01:11:34.475305056Z"}
+- 01:12:39 (+2m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = timed out waiting for server handshake","severity":"warning","timestamp":"2025-06-27T01:12:39.785983233Z"}
+- 01:14:10 (+4m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = timed out waiting for server handshake","severity":"warning","timestamp":"2025-06-27T01:14:10.887799635Z"}
+- 01:16:09 (+6m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = timed out waiting for server handshake","severity":"warning","timestamp":"2025-06-27T01:16:09.875121614Z"}
+- 01:17:39 (+7m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = timed out waiting for server handshake","severity":"warning","timestamp":"2025-06-27T01:17:39.392920851Z"}
+- 01:18:37 (+8m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = timed out waiting for server handshake","severity":"warning","timestamp":"2025-06-27T01:18:37.783024557Z"}
+- 01:19:20 (+9m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = timed out waiting for server handshake","severity":"warning","timestamp":"2025-06-27T01:19:20.508375436Z"}
+- 01:20:06 (+10m) <checkoutservice-2> | {"message":"failed to send order confirmation to \"someone@example.com\": rpc error: code = Unavailable desc = timed out waiting for server handshake","severity":"warning","timestamp":"2025-06-27T01:20:06.996743116Z"}
+
+[trace] span 21829개, 호출 유형별 p95 초과 1100건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <01:13:00 (+3m)~+60s, Callee=emailservice, Count=1 (100%), MaxLatency=844us, Callers=[checkoutservice×1]>
+- <01:15:00 (+5m)~+60s, Callee=shippingservice, Count=4 (16%), MaxLatency=662us, Callers=[frontend×4]>
+- <01:16:00 (+6m)~+60s, Callee=checkoutservice, Count=8 (13%), MaxLatency=60001293us, Callers=[checkoutservice×5, (root)×2, frontend×1]>
+- <01:16:00 (+6m)~+60s, Callee=cartservice, Count=10 (10%), MaxLatency=76158us, Callers=[frontend×8, checkoutservice×2]>
+- <01:17:00 (+7m)~+60s, Callee=cartservice, Count=8 (9%), MaxLatency=13960us, Callers=[frontend×8]>
+- <01:12:00 (+2m)~+60s, Callee=recommendationservice, Count=14 (9%), MaxLatency=12514us, Callers=[frontend×8, recommendationservice×6]>
+- <01:16:00 (+6m)~+60s, Callee=redis, Count=9 (8%), MaxLatency=75565us, Callers=[cartservice×9]>
+- <01:14:00 (+4m)~+60s, Callee=checkoutservice, Count=3 (8%), MaxLatency=60000793us, Callers=[(root)×1, frontend×1, checkoutservice×1]>
+- <01:13:00 (+3m)~+60s, Callee=checkoutservice, Count=6 (8%), MaxLatency=59897610us, Callers=[checkoutservice×5, (root)×1]>
+- <01:10:00 (+0m)~+60s, Callee=checkoutservice, Count=1 (8%), MaxLatency=85100us, Callers=[checkoutservice×1]>
+- <01:20:00 (+10m)~+60s, Callee=recommendationservice, Count=4 (7%), MaxLatency=9866us, Callers=[frontend×2, recommendationservice×2]>
+- <01:17:00 (+7m)~+60s, Callee=redis, Count=7 (7%), MaxLatency=5926us, Callers=[cartservice×7]>
+- <01:12:00 (+2m)~+60s, Callee=shippingservice, Count=1 (7%), MaxLatency=1462us, Callers=[frontend×1]>
+- <01:11:00 (+1m)~+60s, Callee=shippingservice, Count=3 (7%), MaxLatency=414us, Callers=[checkoutservice×2, frontend×1]>
+- <01:15:00 (+5m)~+60s, Callee=redis, Count=7 (7%), MaxLatency=4261us, Callers=[cartservice×7]>
+- <01:12:00 (+2m)~+60s, Callee=productcatalogservice, Count=40 (7%), MaxLatency=23040us, Callers=[frontend×39, recommendationservice×1]>
+- <01:14:00 (+4m)~+60s, Callee=recommendationservice, Count=9 (7%), MaxLatency=9132us, Callers=[frontend×5, recommendationservice×4]>
+- <01:13:00 (+3m)~+60s, Callee=productcatalogservice, Count=41 (7%), MaxLatency=27640us, Callers=[frontend×35, recommendationservice×5, checkoutservice×1]>
+- <01:18:00 (+8m)~+60s, Callee=redis, Count=7 (6%), MaxLatency=9079us, Callers=[cartservice×7]>
+- <01:18:00 (+8m)~+60s, Callee=productcatalogservice, Count=38 (6%), MaxLatency=39651us, Callers=[frontend×34, recommendationservice×4]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 553 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 240 times in the time window
+- "(root) → (root) → frontend" has occurred 52 times in the time window
+- "frontend → cartservice → redis" has occurred 47 times in the time window
+- "frontend → frontend → cartservice" has occurred 44 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 37 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 37 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 34 times in the time window
+- "frontend → checkoutservice → checkoutservice" has occurred 16 times in the time window
+- "frontend → frontend → shippingservice" has occurred 10 times in the time window

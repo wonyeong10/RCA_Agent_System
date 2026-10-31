@@ -1,0 +1,93 @@
+조회 구간: 2025-06-11T01:10:22Z ~ 2025-06-11T01:29:22Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1140개, 최대 20포인트, 이상 93개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, cartservice-1, cartservice, redis-cart-0, tidb
+Top-5 metrics with largest deviations: rrt, client_error, client_error_ratio, error, error_ratio
+Metric descriptions sorted by deviation_score:
+- cartservice-1 | client_error | 판정 불가(30포인트 미만): first 01:24:00 (+14m), peak 01:24:00 (+14m), deviation_score ≈ 4.4σ
+- cartservice-1 | client_error_ratio | 판정 불가(30포인트 미만): first 01:24:00 (+14m), peak 01:24:00 (+14m), deviation_score ≈ 4.4σ
+- cartservice-1 | error | 판정 불가(30포인트 미만): first 01:24:00 (+14m), peak 01:24:00 (+14m), deviation_score ≈ 4.4σ
+- cartservice-1 | error_ratio | 판정 불가(30포인트 미만): first 01:24:00 (+14m), peak 01:24:00 (+14m), deviation_score ≈ 4.4σ
+- cartservice | client_error | 판정 불가(30포인트 미만): first 01:24:00 (+14m), peak 01:24:00 (+14m), deviation_score ≈ 4.4σ
+- cartservice | client_error_ratio | 판정 불가(30포인트 미만): first 01:24:00 (+14m), peak 01:24:00 (+14m), deviation_score ≈ 4.4σ
+- cartservice | error | 판정 불가(30포인트 미만): first 01:24:00 (+14m), peak 01:24:00 (+14m), deviation_score ≈ 4.4σ
+- cartservice | error_ratio | 판정 불가(30포인트 미만): first 01:24:00 (+14m), peak 01:24:00 (+14m), deviation_score ≈ 4.4σ
+- redis-cart-0 | pod_processes | 판정 불가(30포인트 미만): first 01:27:00 (+17m), peak 01:27:00 (+17m), deviation_score ≈ 4.4σ
+- tidb | qps{type=Begin,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 4.4σ
+- tidb | qps{type=Commit,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 4.4σ
+- tidb | qps{type=Insert,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 4.4σ
+- tidb | qps{type=Update,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 4.4σ
+- tikv | io_util{device=dm-0,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 4.4σ
+- tikv | io_util{device=dm-0,instance=223.193.36.130} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 4.4σ
+- tikv | io_util{device=vda,instance=10.233.77.67:9100} | 판정 불가(30포인트 미만): first 01:29:00 (+19m), peak 01:29:00 (+19m), deviation_score ≈ 4.4σ
+- tikv | io_util{device=vdb,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 4.4σ
+- tikv | io_util{device=vdb,instance=223.193.36.130} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 4.4σ
+- tikv | raft_propose_wait{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 01:25:00 (+15m), peak 01:25:00 (+15m), deviation_score ≈ 4.4σ
+- tikv | read_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 4.4σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 4.3σ
+- tikv | grpc_qps{type=kv_prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 4.3σ
+- tikv | qps{type=prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 4.3σ
+- tikv | snapshot_apply_count{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 4.2σ
+- tikv | write_wal_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 01:11:00 (+1m), peak 01:11:00 (+1m), deviation_score ≈ 4.2σ
+- cartservice-1 | rrt_max | 판정 불가(30포인트 미만): first 01:16:00 (+6m), peak 01:16:00 (+6m), deviation_score ≈ 3.9σ
+- redis-cart-0 | rrt | 판정 불가(30포인트 미만): first 01:26:00 (+16m), peak 01:26:00 (+16m), deviation_score ≈ 3.7σ
+- cartservice-1 | rrt | 판정 불가(30포인트 미만): first 01:16:00 (+6m), peak 01:16:00 (+6m), deviation_score ≈ 3.6σ
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/vdb} | 판정 불가(30포인트 미만): first 01:14:00 (+4m), peak 01:14:00 (+4m), deviation_score ≈ 3.5σ
+- redis-cart-0 | pod_fs_writes_bytes{device=/dev/dm-0} | 판정 불가(30포인트 미만): first 01:14:00 (+4m), peak 01:14:00 (+4m), deviation_score ≈ 3.5σ
+
+[log] 행 55611개, 키워드 일치 1492개, 템플릿 3종 중 상위 20% 1종, 출력 20건
+Failure-indicative log entries after two-stage filtering:
+- 01:10:25 (+0m) <frontend-2> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"3c10d848-d44b-4491-aed2-b21d5afa41f3","http.req.method":"GET","http.req.path":"/product/OLJCESPC7Z","message":"failed to retrieve ads","session":"34e11e13-1f1b-45cf-b01a-4eac9042de3f","se
+- 01:11:00 (+1m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"df7042e5-ca8e-4957-8c0e-45eafccf2351","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"bf250738-d830-4042-8c49-dfeaa04fd924","severity":"warning",
+- 01:12:00 (+2m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"946a02d0-0a89-4bc5-b87c-e42e43fdfdf5","http.req.method":"GET","http.req.path":"/product/LS4PSXUNUM","message":"failed to retrieve ads","session":"bf250738-d830-4042-8c49-dfeaa04fd924","se
+- 01:13:00 (+3m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"83fd863e-5eb4-4635-9e45-f511295fd726","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"c5c896ad-3637-41c2-b2e3-4e46256039bc","severity":"warning",
+- 01:14:00 (+4m) <frontend-0> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"8c161316-10d9-4d5d-a3df-f79d11da7362","http.req.method":"GET","http.req.path":"/product/L9ECAV7KIM","message":"failed to retrieve ads","session":"b5cebbb6-6a1e-4fc2-808a-5a97a9f86f30","se
+- 01:15:00 (+5m) <frontend-0> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"1656f221-0d28-4110-ba5c-b254d1f2d068","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"7cbfaaff-195c-46d9-8444-5dbdee878341","severity":"warning",
+- 01:16:00 (+6m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"315a49b4-7abe-4b6a-97df-141ef2fbf9bc","http.req.method":"GET","http.req.path":"/product/2ZYFJ3GM2N","message":"failed to retrieve ads","session":"b880a726-dd41-49a4-bda2-3b69cbf79d80","se
+- 01:17:00 (+7m) <frontend-2> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"20f7c6f2-649f-4fdb-8bf7-db98ab5bd468","http.req.method":"GET","http.req.path":"/product/2ZYFJ3GM2N","message":"failed to retrieve ads","session":"464123ac-77aa-48eb-a99e-6809bb7ee43c","se
+- 01:18:02 (+8m) <frontend-2> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"62f2b05e-7da5-4505-9845-358c3a48c3df","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"f79f5295-5cc9-4910-bc0d-35afe6c4d5a4","severity":"warning",
+- 01:19:01 (+9m) <frontend-0> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"19e38360-7a45-4cc3-a4b0-f2d95c23e7a1","http.req.method":"GET","http.req.path":"/product/9SIQT8TOJO","message":"failed to retrieve ads","session":"fca9dced-2f93-49ab-aafd-cb556f5272db","se
+- 01:20:00 (+10m) <frontend-2> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"8db3156d-005c-4835-8c26-76bed5ac01f3","http.req.method":"GET","http.req.path":"/product/0PUK6V6EV0","message":"failed to retrieve ads","session":"87fed2a4-d40e-4877-bd8c-7ad2d4635859","se
+- 01:21:01 (+11m) <frontend-0> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"b15e42e0-37c0-4bf3-bf05-2dd94ab4d779","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"3fcc3dc0-1815-4f9c-bd85-758388a7f74e","severity":"warning",
+- 01:22:00 (+12m) <frontend-0> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"62311c0f-a9ba-49ba-8e91-fc16b106077a","http.req.method":"GET","http.req.path":"/product/1YMWWN1N4O","message":"failed to retrieve ads","session":"3de9b338-7275-4ece-8237-ba8190f9f310","se
+- 01:23:00 (+13m) <frontend-2> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"94b30f62-a149-43be-808e-ba3f5e3d9c95","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"e082b514-8b27-46e2-9e03-c7e7359018be","severity":"warning",
+- 01:24:01 (+14m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"3649706b-397f-4698-939b-8bad15e56072","http.req.method":"GET","http.req.path":"/product/6E92ZMYYFZ","message":"failed to retrieve ads","session":"b19a4a51-596c-42a7-bde3-c4dbcf17dbdf","se
+- 01:25:00 (+15m) <frontend-2> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"36191e47-ad1f-4171-8df0-eb3cf8433860","http.req.method":"GET","http.req.path":"/product/OLJCESPC7Z","message":"failed to retrieve ads","session":"eb204d1e-e3aa-4874-92cc-747ee27bd0b2","se
+- 01:26:00 (+16m) <frontend-0> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"ca5b175a-9bfb-43d1-8a8b-75be253253c7","http.req.method":"GET","http.req.path":"/product/9SIQT8TOJO","message":"failed to retrieve ads","session":"b7da297a-4981-4b34-a8f6-fe35d2347128","se
+- 01:27:00 (+17m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"f253f4b7-e6df-432d-930a-6ed02e48909d","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"315c05ef-f8d5-4586-99f1-b16306d3ab70","severity":"warning",
+- 01:28:00 (+18m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"c6168eae-8cca-4fe1-b937-1d7e05016263","http.req.method":"GET","http.req.path":"/product/9SIQT8TOJO","message":"failed to retrieve ads","session":"315c05ef-f8d5-4586-99f1-b16306d3ab70","se
+- 01:29:00 (+19m) <frontend-1> | {"error":"failed to get ads: rpc error: code = DeadlineExceeded desc = context deadline exceeded","http.req.id":"977a73ac-aa18-4abd-b728-f32775e804e6","http.req.method":"GET","http.req.path":"/","message":"failed to retrieve ads","session":"f32ca30d-b58d-491e-9265-77720560c79b","severity":"warning",
+
+[trace] span 52952개, 호출 유형별 p95 초과 2653건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <01:10:00 (+0m)~+60s, Callee=emailservice, Count=1 (33%), MaxLatency=2969us, Callers=[checkoutservice×1]>
+- <01:23:00 (+13m)~+60s, Callee=emailservice, Count=1 (20%), MaxLatency=1298us, Callers=[checkoutservice×1]>
+- <01:29:00 (+19m)~+60s, Callee=redis, Count=10 (18%), MaxLatency=6456us, Callers=[cartservice×10]>
+- <01:19:00 (+9m)~+60s, Callee=emailservice, Count=1 (17%), MaxLatency=1673us, Callers=[checkoutservice×1]>
+- <01:29:00 (+19m)~+60s, Callee=cartservice, Count=8 (15%), MaxLatency=7000us, Callers=[frontend×8]>
+- <01:15:00 (+5m)~+60s, Callee=emailservice, Count=1 (14%), MaxLatency=1223us, Callers=[checkoutservice×1]>
+- <01:13:00 (+3m)~+60s, Callee=emailservice, Count=1 (14%), MaxLatency=1211us, Callers=[checkoutservice×1]>
+- <01:12:00 (+2m)~+60s, Callee=shippingservice, Count=3 (12%), MaxLatency=656us, Callers=[frontend×2, checkoutservice×1]>
+- <01:26:00 (+16m)~+60s, Callee=cartservice, Count=16 (11%), MaxLatency=80300us, Callers=[frontend×15, checkoutservice×1]>
+- <01:25:00 (+15m)~+60s, Callee=checkoutservice, Count=5 (10%), MaxLatency=224783us, Callers=[(root)×2, checkoutservice×2, frontend×1]>
+- <01:13:00 (+3m)~+60s, Callee=cartservice, Count=12 (10%), MaxLatency=59223us, Callers=[frontend×11, checkoutservice×1]>
+- <01:19:00 (+9m)~+60s, Callee=checkoutservice, Count=7 (10%), MaxLatency=215429us, Callers=[checkoutservice×5, (root)×1, frontend×1]>
+- <01:28:00 (+18m)~+60s, Callee=checkoutservice, Count=9 (10%), MaxLatency=225373us, Callers=[checkoutservice×6, (root)×2, frontend×1]>
+- <01:11:00 (+1m)~+60s, Callee=checkoutservice, Count=8 (10%), MaxLatency=233749us, Callers=[checkoutservice×5, (root)×2, frontend×1]>
+- <01:11:00 (+1m)~+60s, Callee=shippingservice, Count=4 (9%), MaxLatency=761us, Callers=[frontend×3, checkoutservice×1]>
+- <01:27:00 (+17m)~+60s, Callee=recommendationservice, Count=18 (9%), MaxLatency=8361us, Callers=[frontend×9, recommendationservice×9]>
+- <01:26:00 (+16m)~+60s, Callee=redis, Count=14 (9%), MaxLatency=79770us, Callers=[cartservice×14]>
+- <01:21:00 (+11m)~+60s, Callee=recommendationservice, Count=14 (9%), MaxLatency=9151us, Callers=[recommendationservice×9, frontend×5]>
+- <01:18:00 (+8m)~+60s, Callee=shippingservice, Count=3 (9%), MaxLatency=890us, Callers=[frontend×2, checkoutservice×1]>
+- <01:22:00 (+12m)~+60s, Callee=recommendationservice, Count=16 (9%), MaxLatency=7188us, Callers=[recommendationservice×9, frontend×7]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 1335 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 568 times in the time window
+- "(root) → (root) → frontend" has occurred 125 times in the time window
+- "frontend → cartservice → redis" has occurred 117 times in the time window
+- "frontend → frontend → cartservice" has occurred 108 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 90 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 89 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 89 times in the time window
+- "frontend → checkoutservice → checkoutservice" has occurred 40 times in the time window
+- "frontend → frontend → shippingservice" has occurred 25 times in the time window

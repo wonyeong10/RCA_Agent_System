@@ -1,0 +1,82 @@
+조회 구간: 2025-06-23T19:10:05Z ~ 2025-06-23T19:24:05Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1122개, 최대 15포인트, 이상 88개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, redis-cart-0, cartservice-2, frontend-2, productcatalogservice-1
+Top-5 metrics with largest deviations: pod_network_transmit_bytes, rrt_max, pod_network_transmit_packets, pod_network_receive_bytes, pod_network_receive_packets
+Metric descriptions sorted by deviation_score:
+- frontend-2 | pod_cpu_usage | 판정 불가(30포인트 미만): first 19:23:00 (+13m), peak 19:23:00 (+13m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=vda,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 19:13:00 (+3m), peak 19:13:00 (+3m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=vda,instance=223.193.36.130} | 판정 불가(30포인트 미만): first 19:13:00 (+3m), peak 19:13:00 (+3m), deviation_score ≈ 3.7σ
+- tikv | qps{type=scan_lock,instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 19:17:00 (+7m), peak 19:17:00 (+7m), deviation_score ≈ 3.7σ
+- frontend-2 | timeout | 판정 불가(30포인트 미만): first 19:10:00 (+0m), peak 19:10:00 (+0m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=dm-0,instance=10.233.77.67:9100} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=dm-0,instance=10.233.81.5:9100} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=dm-0,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=dm-0,instance=223.193.36.109} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=dm-0,instance=223.193.36.130} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=dm-0,instance=223.193.36.89} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=vdb,instance=10.233.77.67:9100} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=vdb,instance=10.233.81.5:9100} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=vdb,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=vdb,instance=223.193.36.109} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=vdb,instance=223.193.36.130} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- tikv | io_util{device=vdb,instance=223.193.36.89} | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- frontend-2 | rrt_max | 판정 불가(30포인트 미만): first 19:24:00 (+14m), peak 19:24:00 (+14m), deviation_score ≈ 3.7σ
+- productcatalogservice-1 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- redis-cart-0 | rrt | 판정 불가(30포인트 미만): first 19:10:00 (+0m), peak 19:10:00 (+0m), deviation_score ≈ 3.7σ
+- frontend-2 | rrt | 판정 불가(30포인트 미만): first 19:24:00 (+14m), peak 19:24:00 (+14m), deviation_score ≈ 3.7σ
+- productcatalogservice-1 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- redis-cart-0 | rrt_max | 판정 불가(30포인트 미만): first 19:10:00 (+0m), peak 19:10:00 (+0m), deviation_score ≈ 3.7σ
+- productcatalogservice-1 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- productcatalogservice-1 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.7σ
+- cartservice-2 | pod_cpu_usage | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.6σ
+- redis-cart-0 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 19:11:00 (+1m), peak 19:11:00 (+1m), deviation_score ≈ 3.6σ
+- cartservice-2 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 19:10:00 (+0m), peak 19:10:00 (+0m), deviation_score ≈ 3.5σ
+- cartservice-2 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 19:10:00 (+0m), peak 19:10:00 (+0m), deviation_score ≈ 3.5σ
+- cartservice-2 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 19:10:00 (+0m), peak 19:10:00 (+0m), deviation_score ≈ 3.5σ
+
+[log] 행 33515개, 키워드 일치 276개, 템플릿 2종 중 상위 20% 2종, 출력 30건
+Failure-indicative log entries after two-stage filtering:
+- 19:10:27 (+0m) <frontend-2> | {"error":"failed to add to cart: rpc error: code = FailedPrecondition desc = Can't access cart storage.","http.req.id":"3d0a7e62-bcd8-494d-92ae-fe2ad509c203","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"d3380852-91fc-45bf-9e8d-7a3bd3ed05b7","severity":"error"
+- 19:11:03 (+1m) <frontend-0> | {"error":"failed to add to cart: rpc error: code = FailedPrecondition desc = Can't access cart storage.","http.req.id":"ac119f46-c99c-4cc5-afbb-2d5490d301b2","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"a2355f50-5a39-40db-b357-068fbe43736a","severity":"error"
+- 19:12:06 (+2m) <frontend-2> | {"error":"failed to add to cart: rpc error: code = FailedPrecondition desc = Can't access cart storage.","http.req.id":"624feb5a-abd3-4c31-9907-91f0c80f73a9","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"f61e8e17-a913-4555-ad2c-e09a10ebcb36","severity":"error"
+- 19:13:08 (+3m) <frontend-2> | {"error":"failed to add to cart: rpc error: code = FailedPrecondition desc = Can't access cart storage.","http.req.id":"37a1e9e3-be46-4995-bdcd-d12dfb924333","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"5420a280-aeda-4100-8d69-33f69385a589","severity":"error"
+- 19:14:00 (+4m) <frontend-0> | {"error":"failed to add to cart: rpc error: code = FailedPrecondition desc = Can't access cart storage.","http.req.id":"295250a6-a31c-45da-87c7-f99e157c21f9","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"4a3d8ed2-8b86-4728-b630-d5e0624f1364","severity":"error"
+- 19:15:08 (+5m) <frontend-2> | {"error":"failed to add to cart: rpc error: code = FailedPrecondition desc = Can't access cart storage.","http.req.id":"022ab349-1632-4a89-bd74-94596ececc18","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"88332997-e515-42d6-ab0c-b4f5ebee9956","severity":"error"
+- 19:16:05 (+6m) <frontend-2> | {"error":"failed to add to cart: rpc error: code = FailedPrecondition desc = Can't access cart storage.","http.req.id":"557f3493-25e7-4ba7-8796-292b38ac0b7a","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"29cee11e-9f33-4d19-bad6-671f5c343826","severity":"error"
+- 19:17:03 (+7m) <frontend-2> | {"error":"failed to add to cart: rpc error: code = FailedPrecondition desc = Can't access cart storage.","http.req.id":"6fc064eb-e7b8-40ff-9490-e46e8fee13cf","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"eb4dd69b-37c0-4422-b730-4131bdfdcf1e","severity":"error"
+- 19:18:10 (+8m) <frontend-2> | {"error":"failed to add to cart: rpc error: code = FailedPrecondition desc = Can't access cart storage.","http.req.id":"b3f5b07b-8227-4d31-801e-efc50815b3b2","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"9773b257-a3b7-47a5-b49c-24147b0187c0","severity":"error"
+- 19:19:04 (+9m) <frontend-0> | {"error":"failed to add to cart: rpc error: code = FailedPrecondition desc = Can't access cart storage.","http.req.id":"c4471df0-44ac-44f6-8cd7-c96236306aa7","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"7f545e99-8044-43af-bb2b-c2325a887330","severity":"error"
+- 19:20:00 (+10m) <frontend-1> | {"error":"failed to add to cart: rpc error: code = FailedPrecondition desc = Can't access cart storage.","http.req.id":"011bb30a-6975-4a0a-a5e5-c75ae0c4df39","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"a648f794-5bbc-4bcb-b6d1-fc8b4a3f7bd4","severity":"error"
+- 19:21:03 (+11m) <frontend-0> | {"error":"failed to add to cart: rpc error: code = FailedPrecondition desc = Can't access cart storage.","http.req.id":"9a6b3229-9935-4aa6-acca-9df9d163f4b4","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"9cc5ef5a-9263-4a73-9066-1cf3632cad24","severity":"error"
+- 19:22:05 (+12m) <frontend-1> | {"error":"failed to add to cart: rpc error: code = FailedPrecondition desc = Can't access cart storage.","http.req.id":"ea9c20d1-301d-4a61-9c3a-372469703924","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"70e54e69-cb72-46b6-8bc2-2cd915e762fb","severity":"error"
+- 19:23:03 (+13m) <frontend-1> | {"error":"failed to add to cart: rpc error: code = FailedPrecondition desc = Can't access cart storage.","http.req.id":"31452a45-6d14-402b-a17d-74691304295c","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"a0995b75-4711-4cd4-884c-85bea2364872","severity":"error"
+- 19:24:02 (+14m) <frontend-2> | {"error":"failed to add to cart: rpc error: code = FailedPrecondition desc = Can't access cart storage.","http.req.id":"81da1c09-5950-49f3-997c-d738db3a95a3","http.req.method":"POST","http.req.path":"/cart","message":"request error","session":"297c8622-d235-4a1c-8271-86a121b24de1","severity":"error"
+
+[trace] span 32762개, 호출 유형별 p95 초과 1655건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <19:23:00 (+13m)~+60s, Callee=emailservice, Count=2 (33%), MaxLatency=1123us, Callers=[checkoutservice×2]>
+- <19:10:00 (+0m)~+60s, Callee=redis, Count=22 (22%), MaxLatency=711269us, Callers=[cartservice×22]>
+- <19:10:00 (+0m)~+60s, Callee=checkoutservice, Count=16 (21%), MaxLatency=4324906us, Callers=[checkoutservice×10, frontend×4, (root)×2]>
+- <19:19:00 (+9m)~+60s, Callee=emailservice, Count=1 (20%), MaxLatency=10529us, Callers=[checkoutservice×1]>
+- <19:10:00 (+0m)~+60s, Callee=recommendationservice, Count=23 (14%), MaxLatency=15218us, Callers=[recommendationservice×12, frontend×11]>
+- <19:12:00 (+2m)~+60s, Callee=emailservice, Count=1 (12%), MaxLatency=2214us, Callers=[checkoutservice×1]>
+- <19:23:00 (+13m)~+60s, Callee=checkoutservice, Count=5 (10%), MaxLatency=78525us, Callers=[checkoutservice×4, (root)×1]>
+- <19:14:00 (+4m)~+60s, Callee=checkoutservice, Count=4 (10%), MaxLatency=79683us, Callers=[checkoutservice×3, (root)×1]>
+- <19:22:00 (+12m)~+60s, Callee=shippingservice, Count=2 (9%), MaxLatency=623us, Callers=[frontend×2]>
+- <19:13:00 (+3m)~+60s, Callee=checkoutservice, Count=2 (8%), MaxLatency=50153us, Callers=[checkoutservice×2]>
+- <19:10:00 (+0m)~+60s, Callee=shippingservice, Count=3 (8%), MaxLatency=4409us, Callers=[checkoutservice×3]>
+- <19:22:00 (+12m)~+60s, Callee=productcatalogservice, Count=48 (8%), MaxLatency=24178us, Callers=[frontend×46, recommendationservice×2]>
+- <19:21:00 (+11m)~+60s, Callee=recommendationservice, Count=13 (8%), MaxLatency=12252us, Callers=[frontend×7, recommendationservice×6]>
+- <19:13:00 (+3m)~+60s, Callee=redis, Count=8 (8%), MaxLatency=7403us, Callers=[cartservice×8]>
+- <19:12:00 (+2m)~+60s, Callee=shippingservice, Count=3 (8%), MaxLatency=757us, Callers=[checkoutservice×2, frontend×1]>
+- <19:12:00 (+2m)~+60s, Callee=frontend, Count=96 (8%), MaxLatency=183510us, Callers=[frontend×86, (root)×10]>
+- <19:10:00 (+0m)~+60s, Callee=frontend, Count=100 (8%), MaxLatency=4392754us, Callers=[frontend×88, (root)×12]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 836 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 360 times in the time window
+- "(root) → (root) → frontend" has occurred 83 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 58 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 58 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 47 times in the time window
+- "frontend → checkoutservice → checkoutservice" has occurred 25 times in the time window

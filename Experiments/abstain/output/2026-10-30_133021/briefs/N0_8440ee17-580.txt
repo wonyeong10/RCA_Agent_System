@@ -1,0 +1,99 @@
+조회 구간: 2025-06-27T21:10:07Z ~ 2025-06-27T21:35:07Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1053개, 최대 26포인트, 이상 133개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, tidb, adservice-2, paymentservice-1, paymentservice-2
+Top-5 metrics with largest deviations: pod_memory_working_set_bytes, pod_network_receive_bytes, pod_network_receive_packets, pod_network_transmit_bytes, pod_network_transmit_packets
+Metric descriptions sorted by deviation_score:
+- paymentservice-1 | pod_memory_working_set_bytes | 판정 불가(30포인트 미만): first 21:10:00 (+0m), peak 21:10:00 (+0m), deviation_score ≈ 5.0σ
+- paymentservice-2 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 21:10:00 (+0m), peak 21:10:00 (+0m), deviation_score ≈ 5.0σ
+- tidb | qps{type=Insert,instance=10.233.74.171:10080} | 판정 불가(30포인트 미만): first 21:35:00 (+25m), peak 21:35:00 (+25m), deviation_score ≈ 5.0σ
+- tidb | qps{type=Update,instance=10.233.74.171:10080} | 판정 불가(30포인트 미만): first 21:16:00 (+6m), peak 21:16:00 (+6m), deviation_score ≈ 5.0σ
+- adservice-2 | client_error | 판정 불가(30포인트 미만): first 21:35:00 (+25m), peak 21:35:00 (+25m), deviation_score ≈ 5.0σ
+- adservice-2 | client_error_ratio | 판정 불가(30포인트 미만): first 21:35:00 (+25m), peak 21:35:00 (+25m), deviation_score ≈ 5.0σ
+- adservice-2 | error | 판정 불가(30포인트 미만): first 21:35:00 (+25m), peak 21:35:00 (+25m), deviation_score ≈ 5.0σ
+- adservice-2 | error_ratio | 판정 불가(30포인트 미만): first 21:35:00 (+25m), peak 21:35:00 (+25m), deviation_score ≈ 5.0σ
+- paymentservice-1 | pod_network_receive_bytes | 판정 불가(30포인트 미만): first 21:10:00 (+0m), peak 21:10:00 (+0m), deviation_score ≈ 5.0σ
+- paymentservice-1 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 21:10:00 (+0m), peak 21:10:00 (+0m), deviation_score ≈ 5.0σ
+- paymentservice-2 | pod_network_receive_packets | 판정 불가(30포인트 미만): first 21:10:00 (+0m), peak 21:10:00 (+0m), deviation_score ≈ 5.0σ
+- paymentservice-1 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 21:10:00 (+0m), peak 21:10:00 (+0m), deviation_score ≈ 5.0σ
+- paymentservice-2 | pod_network_transmit_bytes | 판정 불가(30포인트 미만): first 21:10:00 (+0m), peak 21:10:00 (+0m), deviation_score ≈ 5.0σ
+- paymentservice-1 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 21:10:00 (+0m), peak 21:10:00 (+0m), deviation_score ≈ 5.0σ
+- tidb | duration_99th{instance=10.233.74.171:10080} | 판정 불가(30포인트 미만): first 21:16:00 (+6m), peak 21:16:00 (+6m), deviation_score ≈ 5.0σ
+- paymentservice-2 | pod_memory_working_set_bytes | 판정 불가(30포인트 미만): first 21:10:00 (+0m), peak 21:10:00 (+0m), deviation_score ≈ 5.0σ
+- paymentservice-2 | pod_network_transmit_packets | 판정 불가(30포인트 미만): first 21:10:00 (+0m), peak 21:10:00 (+0m), deviation_score ≈ 5.0σ
+- tikv | io_util{device=vda,instance=10.233.89.240:9100} | 판정 불가(30포인트 미만): first 21:18:00 (+8m), peak 21:18:00 (+8m), deviation_score ≈ 5.0σ
+- tikv | io_util{device=vda,instance=223.193.36.130} | 판정 불가(30포인트 미만): first 21:18:00 (+8m), peak 21:18:00 (+8m), deviation_score ≈ 5.0σ
+- tikv | write_wal_mbps{instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 21:16:00 (+6m), peak 21:16:00 (+6m), deviation_score ≈ 5.0σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 21:16:00 (+6m), peak 21:16:00 (+6m), deviation_score ≈ 4.9σ
+- tidb | qps{type=Begin,instance=10.233.74.171:10080} | 판정 불가(30포인트 미만): first 21:16:00 (+6m), peak 21:16:00 (+6m), deviation_score ≈ 4.9σ
+- tidb | qps{type=Commit,instance=10.233.74.171:10080} | 판정 불가(30포인트 미만): first 21:16:00 (+6m), peak 21:16:00 (+6m), deviation_score ≈ 4.9σ
+- tikv | grpc_qps{type=kv_prewrite,instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 21:16:00 (+6m), peak 21:16:00 (+6m), deviation_score ≈ 4.9σ
+- tikv | snapshot_apply_count{instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 21:16:00 (+6m), peak 21:16:00 (+6m), deviation_score ≈ 4.7σ
+- tikv | read_mbps{instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 21:16:00 (+6m), peak 21:16:00 (+6m), deviation_score ≈ 4.6σ
+- tikv | io_util{device=vda,instance=223.193.36.109} | 판정 불가(30포인트 미만): first 21:29:00 (+19m), peak 21:29:00 (+19m), deviation_score ≈ 4.5σ
+- tikv | qps{type=prewrite,instance=10.233.85.118:20180} | 판정 불가(30포인트 미만): first 21:16:00 (+6m), peak 21:16:00 (+6m), deviation_score ≈ 4.4σ
+- adservice-2 | rrt_max | 판정 불가(30포인트 미만): first 21:26:00 (+16m), peak 21:26:00 (+16m), deviation_score ≈ 3.8σ
+- tikv | io_util{device=vda,instance=10.233.77.67:9100} | 판정 불가(30포인트 미만): first 21:29:00 (+19m), peak 21:29:00 (+19m), deviation_score ≈ 3.7σ
+
+[log] 행 57839개, 키워드 일치 754개, 템플릿 3종 중 상위 20% 1종, 출력 26건
+Failure-indicative log entries after two-stage filtering:
+- 21:10:18 (+0m) <frontend-1> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"f13aeb0d-ea5b-4e09-9920-c0ce34fe60c0","http.req.method":"GET","http.req.path":"/cart","me
+- 21:11:00 (+1m) <frontend-2> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"1e4eeeda-f27f-4712-9027-3cea5222e705","http.req.method":"GET","http.req.path":"/cart","me
+- 21:12:02 (+2m) <frontend-1> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"3904f640-14de-486b-ad6c-153333cc4ea8","http.req.method":"GET","http.req.path":"/cart","me
+- 21:13:05 (+3m) <frontend-2> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"37da4f88-54ae-4be7-97ac-a7fb5ceba8fa","http.req.method":"GET","http.req.path":"/cart","me
+- 21:14:06 (+4m) <frontend-1> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"b5dbf275-83aa-4f20-9aa5-573f0b4ea038","http.req.method":"GET","http.req.path":"/cart","me
+- 21:15:01 (+5m) <frontend-2> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"338a0a46-0ad1-4a7b-b02c-4308c025dbc2","http.req.method":"GET","http.req.path":"/cart","me
+- 21:16:00 (+6m) <frontend-1> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"c3785c6d-5d0d-4d9d-90f8-082f16a68101","http.req.method":"GET","http.req.path":"/cart","me
+- 21:17:03 (+7m) <frontend-1> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"bb9ab58d-0dd7-41fd-a83e-1cf569c14031","http.req.method":"GET","http.req.path":"/cart","me
+- 21:18:02 (+8m) <frontend-1> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"d7a83c44-4e5d-4434-8936-26fa4db2aa77","http.req.method":"GET","http.req.path":"/cart","me
+- 21:19:08 (+9m) <frontend-1> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"48ee7e42-ae42-4a14-ab3b-39139cab59e5","http.req.method":"GET","http.req.path":"/cart","me
+- 21:20:00 (+10m) <frontend-1> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"468a7949-05a2-4469-8d04-c0bee2f0b6c2","http.req.method":"GET","http.req.path":"/cart","me
+- 21:21:02 (+11m) <frontend-1> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"be27bd1d-c4c9-468d-a7b3-8f82b2940f46","http.req.method":"GET","http.req.path":"/cart","me
+- 21:22:02 (+12m) <frontend-0> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"f3c0f9f9-4547-4f34-be95-537d983bc415","http.req.method":"GET","http.req.path":"/cart","me
+- 21:23:01 (+13m) <frontend-1> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"d72375b8-247f-469f-8eb8-90629012bdc0","http.req.method":"GET","http.req.path":"/cart","me
+- 21:24:04 (+14m) <frontend-2> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"1116e976-ce20-4529-a416-d62af8ed87ab","http.req.method":"GET","http.req.path":"/cart","me
+- 21:25:03 (+15m) <frontend-2> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"9214817d-8187-4a5d-a07b-fd66b3505c74","http.req.method":"GET","http.req.path":"/cart","me
+- 21:26:01 (+16m) <frontend-1> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"88b36e8d-b3cc-4b57-a4fb-fa8edc8e5873","http.req.method":"GET","http.req.path":"/cart","me
+- 21:27:02 (+17m) <frontend-1> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"5c978995-cc45-4b4c-8c81-d28decf15ac6","http.req.method":"GET","http.req.path":"/cart","me
+- 21:28:00 (+18m) <frontend-1> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"19d57406-d935-44d4-98cc-f0ec2e9ebf43","http.req.method":"GET","http.req.path":"/cart","me
+- 21:29:21 (+19m) <frontend-0> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"f0ec0255-ed2f-4532-a4d6-2da718ce489c","http.req.method":"GET","http.req.path":"/cart","me
+- 21:30:01 (+20m) <frontend-2> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"c48ae462-f7d6-49dd-afc6-303c0608931d","http.req.method":"GET","http.req.path":"/cart","me
+- 21:31:00 (+21m) <frontend-2> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"af58442e-34ee-4381-8234-575bcb269ab3","http.req.method":"GET","http.req.path":"/cart","me
+- 21:32:03 (+22m) <frontend-2> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"13a2b2f9-407f-43e5-8b8f-90fc76a001cf","http.req.method":"GET","http.req.path":"/cart","me
+- 21:33:01 (+23m) <frontend-0> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"d483989a-12a4-45e0-9e20-2e5c45ba5ebb","http.req.method":"GET","http.req.path":"/cart","me
+- 21:34:00 (+24m) <frontend-2> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"ce1e27f7-a045-4dcc-8489-1357b83bb5fe","http.req.method":"GET","http.req.path":"/cart","me
+- 21:35:04 (+25m) <frontend-2> | {"error":"failed to get shipping quote: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing dial tcp 10.233.27.213:50051: connect: connection refused\"","http.req.id":"8f4692fc-1cff-41ee-ad3b-d95b18e42be5","http.req.method":"GET","http.req.path":"/cart","me
+
+[trace] span 59690개, 호출 유형별 p95 초과 2990건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <21:35:00 (+25m)~+60s, Callee=recommendationservice, Count=4 (18%), MaxLatency=8697us, Callers=[frontend×2, recommendationservice×2]>
+- <21:10:00 (+0m)~+60s, Callee=redis, Count=19 (15%), MaxLatency=85276us, Callers=[cartservice×19]>
+- <21:10:00 (+0m)~+60s, Callee=cartservice, Count=17 (15%), MaxLatency=86790us, Callers=[frontend×16, checkoutservice×1]>
+- <21:29:00 (+19m)~+60s, Callee=checkoutservice, Count=1 (14%), MaxLatency=23393us, Callers=[checkoutservice×1]>
+- <21:35:00 (+25m)~+60s, Callee=redis, Count=2 (12%), MaxLatency=4327us, Callers=[cartservice×2]>
+- <21:11:00 (+1m)~+60s, Callee=checkoutservice, Count=3 (12%), MaxLatency=100929us, Callers=[frontend×1, (root)×1, checkoutservice×1]>
+- <21:10:00 (+0m)~+60s, Callee=checkoutservice, Count=3 (12%), MaxLatency=103406us, Callers=[(root)×1, frontend×1, checkoutservice×1]>
+- <21:34:00 (+24m)~+60s, Callee=checkoutservice, Count=4 (11%), MaxLatency=35418us, Callers=[checkoutservice×3, (root)×1]>
+- <21:14:00 (+4m)~+60s, Callee=checkoutservice, Count=3 (11%), MaxLatency=94383us, Callers=[frontend×1, (root)×1, checkoutservice×1]>
+- <21:31:00 (+21m)~+60s, Callee=redis, Count=13 (10%), MaxLatency=69924us, Callers=[cartservice×13]>
+- <21:20:00 (+10m)~+60s, Callee=cartservice, Count=12 (10%), MaxLatency=84844us, Callers=[frontend×12]>
+- <21:16:00 (+6m)~+60s, Callee=checkoutservice, Count=5 (10%), MaxLatency=109839us, Callers=[checkoutservice×4, frontend×1]>
+- <21:19:00 (+9m)~+60s, Callee=cartservice, Count=11 (10%), MaxLatency=7002us, Callers=[frontend×11]>
+- <21:20:00 (+10m)~+60s, Callee=redis, Count=12 (9%), MaxLatency=83012us, Callers=[cartservice×12]>
+- <21:12:00 (+2m)~+60s, Callee=recommendationservice, Count=16 (9%), MaxLatency=7679us, Callers=[frontend×8, recommendationservice×8]>
+- <21:33:00 (+23m)~+60s, Callee=checkoutservice, Count=3 (9%), MaxLatency=12865us, Callers=[checkoutservice×2, (root)×1]>
+- <21:15:00 (+5m)~+60s, Callee=recommendationservice, Count=17 (9%), MaxLatency=10726us, Callers=[frontend×9, recommendationservice×8]>
+- <21:21:00 (+11m)~+60s, Callee=cartservice, Count=10 (9%), MaxLatency=52567us, Callers=[frontend×10]>
+- <21:19:00 (+9m)~+60s, Callee=recommendationservice, Count=16 (9%), MaxLatency=10360us, Callers=[frontend×8, recommendationservice×8]>
+- <21:30:00 (+20m)~+60s, Callee=recommendationservice, Count=13 (9%), MaxLatency=11588us, Callers=[recommendationservice×7, frontend×6]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 1507 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 642 times in the time window
+- "(root) → (root) → frontend" has occurred 161 times in the time window
+- "frontend → cartservice → redis" has occurred 153 times in the time window
+- "frontend → frontend → cartservice" has occurred 140 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 108 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 107 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 98 times in the time window
+- "frontend → checkoutservice → checkoutservice" has occurred 26 times in the time window
+- "checkoutservice → checkoutservice → productcatalogservice" has occurred 17 times in the time window

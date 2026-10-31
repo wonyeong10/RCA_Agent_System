@@ -1,0 +1,12 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,node_memory_MemAvailable_bytes,object_type,pod,sql_type,type,ts
+2025-06-06T04:03:00Z,null,null,223.193.36.109,node_memory_MemAvailable_bytes,aiops-k8s-04,null,null,8377360384,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.113,node_memory_MemAvailable_bytes,aiops-k8s-05,null,null,10494251008,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.124,node_memory_MemAvailable_bytes,k8s-master3,null,null,11806183424,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.126,node_memory_MemAvailable_bytes,k8s-master2,null,null,10788253696,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.127,node_memory_MemAvailable_bytes,k8s-master1,null,null,12501348352,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.128,node_memory_MemAvailable_bytes,aiops-k8s-06,null,null,24876871680,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.129,node_memory_MemAvailable_bytes,aiops-k8s-07,null,null,10444689408,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.130,node_memory_MemAvailable_bytes,aiops-k8s-08,null,null,15884410880,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.56,node_memory_MemAvailable_bytes,aiops-k8s-01,null,null,8682954752,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.88,node_memory_MemAvailable_bytes,aiops-k8s-02,null,null,13896404992,node,null,null,null,2025-06-06 04:03:00+00:00
+2025-06-06T04:03:00Z,null,null,223.193.36.89,node_memory_MemAvailable_bytes,aiops-k8s-03,null,null,10738171904,node,null,null,null,2025-06-06 04:03:00+00:00

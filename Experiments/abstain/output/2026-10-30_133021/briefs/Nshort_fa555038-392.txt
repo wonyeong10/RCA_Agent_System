@@ -1,0 +1,39 @@
+조회 구간: 2025-06-20T01:10:12Z ~ 2025-06-20T01:15:12Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1131개, 최대 6포인트, 이상 0개 (기준 3σ) — 포인트 6개로는 3σ 판정 불가
+
+[log] 행 12602개, 키워드 일치 0개
+
+[trace] span 13267개, 호출 유형별 p95 초과 682건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <01:14:00 (+4m)~+60s, Callee=emailservice, Count=2 (40%), MaxLatency=1345us, Callers=[checkoutservice×2]>
+- <01:15:00 (+5m)~+60s, Callee=shippingservice, Count=2 (29%), MaxLatency=1622us, Callers=[checkoutservice×1, frontend×1]>
+- <01:14:00 (+4m)~+60s, Callee=cartservice, Count=15 (13%), MaxLatency=59641us, Callers=[frontend×15]>
+- <01:14:00 (+4m)~+60s, Callee=redis, Count=15 (12%), MaxLatency=58907us, Callers=[cartservice×15]>
+- <01:14:00 (+4m)~+60s, Callee=checkoutservice, Count=7 (12%), MaxLatency=223167us, Callers=[checkoutservice×4, (root)×2, frontend×1]>
+- <01:15:00 (+5m)~+60s, Callee=checkoutservice, Count=1 (10%), MaxLatency=57310us, Callers=[checkoutservice×1]>
+- <01:13:00 (+3m)~+60s, Callee=checkoutservice, Count=6 (10%), MaxLatency=83021us, Callers=[checkoutservice×6]>
+- <01:13:00 (+3m)~+60s, Callee=recommendationservice, Count=14 (7%), MaxLatency=13192us, Callers=[recommendationservice×8, frontend×6]>
+- <01:12:00 (+2m)~+60s, Callee=shippingservice, Count=2 (7%), MaxLatency=531us, Callers=[checkoutservice×1, frontend×1]>
+- <01:10:00 (+0m)~+60s, Callee=shippingservice, Count=1 (7%), MaxLatency=1028us, Callers=[checkoutservice×1]>
+- <01:10:00 (+0m)~+60s, Callee=productcatalogservice, Count=30 (7%), MaxLatency=14104771us, Callers=[frontend×29, recommendationservice×1]>
+- <01:10:00 (+0m)~+60s, Callee=frontend, Count=60 (7%), MaxLatency=14177179us, Callers=[frontend×49, (root)×11]>
+- <01:13:00 (+3m)~+60s, Callee=productcatalogservice, Count=47 (7%), MaxLatency=35751us, Callers=[frontend×43, recommendationservice×3, checkoutservice×1]>
+- <01:13:00 (+3m)~+60s, Callee=frontend, Count=97 (6%), MaxLatency=303828us, Callers=[frontend×92, (root)×5]>
+- <01:15:00 (+5m)~+60s, Callee=recommendationservice, Count=3 (6%), MaxLatency=5173us, Callers=[frontend×2, recommendationservice×1]>
+- <01:12:00 (+2m)~+60s, Callee=recommendationservice, Count=11 (6%), MaxLatency=8625us, Callers=[recommendationservice×7, frontend×4]>
+- <01:10:00 (+0m)~+60s, Callee=recommendationservice, Count=6 (5%), MaxLatency=6167us, Callers=[recommendationservice×3, frontend×3]>
+- <01:12:00 (+2m)~+60s, Callee=checkoutservice, Count=3 (5%), MaxLatency=77408us, Callers=[checkoutservice×2, (root)×1]>
+- <01:14:00 (+4m)~+60s, Callee=frontend, Count=69 (5%), MaxLatency=293991us, Callers=[frontend×64, (root)×5]>
+- <01:14:00 (+4m)~+60s, Callee=recommendationservice, Count=8 (5%), MaxLatency=9461us, Callers=[frontend×6, recommendationservice×2]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 337 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 146 times in the time window
+- "(root) → (root) → frontend" has occurred 31 times in the time window
+- "frontend → cartservice → redis" has occurred 31 times in the time window
+- "frontend → frontend → cartservice" has occurred 30 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 23 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 23 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 23 times in the time window
+- "frontend → checkoutservice → checkoutservice" has occurred 15 times in the time window
+- "frontend → frontend → shippingservice" has occurred 5 times in the time window

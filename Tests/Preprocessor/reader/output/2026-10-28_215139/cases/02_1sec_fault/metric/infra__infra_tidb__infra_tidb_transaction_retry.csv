@@ -1,0 +1,2 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,object_type,pod,sql_type,transaction_retry,type,ts
+2025-06-06T04:03:00Z,null,null,10.233.79.158:10080,transaction_retry,null,null,tidb,tidb,null,null,0,null,2025-06-06 04:03:00+00:00

@@ -1,0 +1,17 @@
+{
+  "log": {
+    "status": "ok",
+    "minutes_present": 1,
+    "minutes_total": 1
+  },
+  "trace": {
+    "status": "ok",
+    "minutes_present": 1,
+    "minutes_total": 1
+  },
+  "metric": {
+    "status": "ok",
+    "minutes_present": 1,
+    "minutes_total": 1
+  }
+}

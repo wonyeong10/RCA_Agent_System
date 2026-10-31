@@ -1,0 +1,4 @@
+﻿uuid,fault_type,instance_type,gt,minutes,chars,sec,metric_no_judge,error,metric_top5,trace_top5,log_top5,metric_any,trace_any,log_any,any_top5,metric_top5_b,trace_top5_b,log_top5_b,metric_any_b,trace_any_b,log_any_b,any_top5_b
+345fbe93-80,cpu stress,service,emailservice,21.0,6904,4.7,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+74a44ae7-81,network corrupt,service,checkoutservice|shippingservice,23.0,15303,3.2,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True
+38ee3d45-82,pod failure,service,cartservice,24.0,15721,2.2,False,,False,True,False,False,True,False,True,False,True,False,False,True,False,True

@@ -1,0 +1,59 @@
+조회 구간: 2025-06-07T13:11:01Z ~ 2025-06-07T13:21:01Z (기준 = 이 구간 전체, 시각 옆 +Nm은 구간 시작 분 기준)
+
+[metric] 시리즈 1134개, 최대 11포인트, 이상 36개 (기준 3σ)
+Top-5 instances with largest deviations: tikv, tidb, aiops-k8s-05, adservice-1, adservice-2
+Top-5 metrics with largest deviations: request, response, node_network_receive_bytes_total, connection_count{instance=10.233.79.158:10080}, duration_99th{instance=10.233.79.158:10080}
+Metric descriptions sorted by deviation_score:
+- aiops-k8s-05 | node_network_receive_bytes_total | 판정 불가(30포인트 미만): first 13:20:00 (+9m), peak 13:20:00 (+9m), deviation_score ≈ 3.2σ
+- tidb | connection_count{instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 13:15:00 (+4m), peak 13:15:00 (+4m), deviation_score ≈ 3.2σ
+- tidb | duration_99th{instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 13:12:00 (+1m), peak 13:12:00 (+1m), deviation_score ≈ 3.2σ
+- tidb | qps{type=Insert,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 13:12:00 (+1m), peak 13:12:00 (+1m), deviation_score ≈ 3.2σ
+- tidb | qps{type=Update,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 13:12:00 (+1m), peak 13:12:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=dm-0,instance=10.233.79.155:9100} | 판정 불가(30포인트 미만): first 13:21:00 (+10m), peak 13:21:00 (+10m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vdb,instance=10.233.79.155:9100} | 판정 불가(30포인트 미만): first 13:21:00 (+10m), peak 13:21:00 (+10m), deviation_score ≈ 3.2σ
+- tikv | qps{type=scan_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 13:17:00 (+6m), peak 13:17:00 (+6m), deviation_score ≈ 3.2σ
+- tidb | qps{type=Begin,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 13:12:00 (+1m), peak 13:12:00 (+1m), deviation_score ≈ 3.2σ
+- tidb | qps{type=Commit,instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 13:12:00 (+1m), peak 13:12:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vda,instance=10.233.68.28:9100} | 판정 불가(30포인트 미만): first 13:18:00 (+7m), peak 13:18:00 (+7m), deviation_score ≈ 3.2σ
+- tikv | io_util{device=vda,instance=223.193.36.127} | 판정 불가(30포인트 미만): first 13:18:00 (+7m), peak 13:18:00 (+7m), deviation_score ≈ 3.2σ
+- adservice-1 | request | 판정 불가(30포인트 미만): first 13:18:00 (+7m), peak 13:18:00 (+7m), deviation_score ≈ 3.2σ
+- adservice-1 | response | 판정 불가(30포인트 미만): first 13:18:00 (+7m), peak 13:18:00 (+7m), deviation_score ≈ 3.2σ
+- adservice-2 | request | 판정 불가(30포인트 미만): first 13:18:00 (+7m), peak 13:18:00 (+7m), deviation_score ≈ 3.2σ
+- adservice-2 | response | 판정 불가(30포인트 미만): first 13:18:00 (+7m), peak 13:18:00 (+7m), deviation_score ≈ 3.2σ
+- aiops-k8s-05 | node_network_receive_packets_total | 판정 불가(30포인트 미만): first 13:20:00 (+9m), peak 13:20:00 (+9m), deviation_score ≈ 3.2σ
+- aiops-k8s-05 | node_network_transmit_packets_total | 판정 불가(30포인트 미만): first 13:20:00 (+9m), peak 13:20:00 (+9m), deviation_score ≈ 3.2σ
+- tikv | read_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 13:12:00 (+1m), peak 13:12:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | write_wal_mbps{instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 13:12:00 (+1m), peak 13:12:00 (+1m), deviation_score ≈ 3.2σ
+- tikv | qps{type=acquire_pessimistic_lock,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 13:12:00 (+1m), peak 13:12:00 (+1m), deviation_score ≈ 3.1σ
+- tidb | memory_usage{instance=10.233.79.158:10080} | 판정 불가(30포인트 미만): first 13:11:00 (+0m), peak 13:11:00 (+0m), deviation_score ≈ 3.1σ
+- tikv | qps{type=prewrite,instance=10.233.85.101:20180} | 판정 불가(30포인트 미만): first 13:12:00 (+1m), peak 13:12:00 (+1m), deviation_score ≈ 3.1σ
+
+[log] 행 59325개, 키워드 일치 0개
+
+[trace] span 40018개, 호출 유형별 p95 초과 2010건
+High-latency span descriptions (rank = 그 분 callee span 중 고지연 비율):
+- <13:21:00 (+10m)~+60s, Callee=recommendationservice, Count=4 (29%), MaxLatency=6177us, Callers=[frontend×2, recommendationservice×2]>
+- <13:13:00 (+2m)~+60s, Callee=shippingservice, Count=6 (10%), MaxLatency=758us, Callers=[frontend×3, (root)×2, checkoutservice×1]>
+- <13:17:00 (+6m)~+60s, Callee=shippingservice, Count=6 (9%), MaxLatency=888us, Callers=[(root)×4, frontend×2]>
+- <13:12:00 (+1m)~+60s, Callee=redis, Count=15 (8%), MaxLatency=11752us, Callers=[cartservice×9, (root)×6]>
+- <13:18:00 (+7m)~+60s, Callee=shippingservice, Count=4 (8%), MaxLatency=464us, Callers=[frontend×3, (root)×1]>
+- <13:16:00 (+5m)~+60s, Callee=redis, Count=16 (8%), MaxLatency=74504us, Callers=[cartservice×14, (root)×2]>
+- <13:13:00 (+2m)~+60s, Callee=recommendationservice, Count=18 (8%), MaxLatency=12649us, Callers=[recommendationservice×9, frontend×6, (root)×3]>
+- <13:11:00 (+0m)~+60s, Callee=productcatalogservice, Count=68 (8%), MaxLatency=28886us, Callers=[frontend×55, (root)×11, recommendationservice×1]>
+- <13:14:00 (+3m)~+60s, Callee=productcatalogservice, Count=75 (8%), MaxLatency=33935us, Callers=[frontend×62, (root)×11, recommendationservice×2]>
+- <13:15:00 (+4m)~+60s, Callee=redis, Count=21 (7%), MaxLatency=10444us, Callers=[cartservice×15, (root)×6]>
+- <13:14:00 (+3m)~+60s, Callee=frontend, Count=147 (7%), MaxLatency=5680660us, Callers=[frontend×112, (root)×35]>
+- <13:16:00 (+5m)~+60s, Callee=cartservice, Count=14 (7%), MaxLatency=83931us, Callers=[frontend×10, (root)×3, checkoutservice×1]>
+- <13:13:00 (+2m)~+60s, Callee=frontend, Count=150 (7%), MaxLatency=5754584us, Callers=[frontend×98, (root)×52]>
+- <13:17:00 (+6m)~+60s, Callee=recommendationservice, Count=16 (7%), MaxLatency=14761us, Callers=[recommendationservice×8, frontend×5, (root)×3]>
+Three-hop call paths statistics:
+- "(root) → frontend → frontend" has occurred 799 times in the time window
+- "(root) → (root) → frontend" has occurred 302 times in the time window
+- "frontend → frontend → productcatalogservice" has occurred 296 times in the time window
+- "(root) → (root) → productcatalogservice" has occurred 86 times in the time window
+- "(root) → frontend → productcatalogservice" has occurred 63 times in the time window
+- "frontend → recommendationservice → recommendationservice" has occurred 47 times in the time window
+- "recommendationservice → recommendationservice → productcatalogservice" has occurred 47 times in the time window
+- "frontend → frontend → cartservice" has occurred 39 times in the time window
+- "frontend → cartservice → redis" has occurred 37 times in the time window
+- "frontend → frontend → recommendationservice" has occurred 33 times in the time window

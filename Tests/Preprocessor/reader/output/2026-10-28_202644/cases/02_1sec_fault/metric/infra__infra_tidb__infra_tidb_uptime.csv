@@ -1,0 +1,2 @@
+﻿time,cf,device,instance,kpi_key,kubernetes_node,mountpoint,namespace,object_type,pod,sql_type,type,uptime,ts
+2025-06-06T04:03:00Z,null,null,10.233.79.158:10080,uptime,null,null,tidb,tidb,null,null,null,272567.95,2025-06-06 04:03:00+00:00
