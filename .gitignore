@@ -7,3 +7,5 @@ logs/
 .venv/
 __pycache__/
 Tests/**/output/
+Experiments/**/output/
+Agent/output/
